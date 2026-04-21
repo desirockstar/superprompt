@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ES2021",
+    "module": "ESNext",
+    "lib": ["ES2021"],
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "composite": true,
+    "paths": {
+      "@superprompt/db": ["./packages/db/src"],
+      "@superprompt/types": ["./packages/types/src"],
+      "@superprompt/utils": ["./packages/utils/src"]
+    }
+  },
+  "references": [
+    { "path": "./packages/db" },
+    { "path": "./packages/types" },
+    { "path": "./packages/utils" }
+  ]
+}
