@@ -27,6 +27,42 @@ superprompt/
 
 ---
 
+# 🧱 Frontend UI Implementation (Current)
+
+## Header/Navbar (`src/components/header.tsx`)
+
+- **Position**: Fixed at top, centered horizontally
+- **Style**: Circular pill shape, black background
+- **Logo**: Responsive (logo.png for md+, logo_small.png for small screens)
+- **Elements**:
+  - Theme toggle (sun/moon with SVG icons)
+  - User profile icon
+  - Logout icon button
+  - Login/Sign Up buttons (when not authenticated)
+
+## Bottom Search Bar (`src/components/bottom-search-bar.tsx`)
+
+- **Position**: Fixed at bottom, centered horizontally
+- **Max Width**: 700px
+- **Style**: Black background with gradient border (Framer-style)
+- **Rows**:
+  1. Applied Filters (shows when active, click to remove)
+  2. Search input + Date/Tier dropdowns
+  3. Category chips with scroll arrows
+
+## Prompt Cards Grid (`src/app/page.tsx`)
+
+- **Layout**: CSS Grid with `auto-fill, minmax(380px, 1fr)`
+- **Theme Consistency**: All cards follow theme (all light in light mode, all dark in dark mode)
+- **No more alternating pattern**
+
+## Login/Register Pages
+
+- **Style**: Inline component definitions to avoid import issues
+- **OAuth Buttons**: All use inline SVG icons (no external icon dependencies)
+
+---
+
 # 🧱 Backend Architecture (NestJS Modules)
 
 ```bash
@@ -367,7 +403,7 @@ volumes:
 {
   "name": "SuperPrompt Dev",
   "dockerComposeFile": "docker-compose.yml",
-  "service": "app",
+  "service": "backend",
   "workspaceFolder": "/workspace",
   "forwardPorts": [3000, 4000, 5432],
   "postCreateCommand": "pnpm install",
@@ -403,12 +439,12 @@ RUN apt-get update && apt-get install -y git
 
 # 🔥 How This Maps to Your Architecture
 
-| Layer      | Dev Container             |
-| ---------- | ------------------------- |
-| Backend    | inside `app` container    |
-| Frontend   | same container (monorepo) |
-| DB         | separate `db` container   |
-| FS storage | local volume              |
+| Layer      | Dev Container               |
+| ---------- | --------------------------- |
+| Backend    | `backend` container (4000)  |
+| Frontend   | `frontend` container (3000) |
+| DB         | `db` container (5432)       |
+| FS storage | shared workspace volume     |
 
 ---
 
@@ -428,13 +464,19 @@ DATABASE_URL=postgres://postgres:postgres@db:5432/superprompt
 
 ---
 
-## 2. Run services separately
+## 2. Run services independently
 
-Inside container:
+Each service runs in its own container. Restart/rebuild without affecting the other:
 
 ```bash
-pnpm dev:backend
-pnpm dev:frontend
+# restart only the backend (does not touch frontend)
+docker compose -f .devcontainer/docker-compose.yml restart backend
+
+# tail backend logs only
+docker compose -f .devcontainer/docker-compose.yml logs backend -f
+
+# tail frontend logs only
+docker compose -f .devcontainer/docker-compose.yml logs frontend -f
 ```
 
 ---

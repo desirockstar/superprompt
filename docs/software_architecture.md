@@ -39,6 +39,35 @@ Discovery → Login → Unlock → Copy → Use
 
 ---
 
+## UI/UX Implementation
+
+### Header/Navbar
+- Fixed position at top, centered horizontally
+- Circular pill shape with black background
+- Responsive logo (full logo on desktop, small logo on mobile)
+- Theme toggle, user profile, logout, login/register buttons
+
+### Bottom Search Bar
+- Fixed position at bottom, centered horizontally
+- 700px max-width with gradient border (Framer-style purple gradient)
+- 3-row layout:
+  1. Applied filters row (visible when filters active)
+  2. Search input + Date/Tier dropdowns
+  3. Horizontally scrollable category chips with arrow navigation
+- Categories displayed in uppercase
+
+### Prompt Cards
+- CSS Grid layout with responsive columns (auto-fill, minmax 380px)
+- Theme-consistent styling (all light in light mode, all dark in dark mode)
+- No alternating pattern
+
+### Login/Register Pages
+- Inline component definitions to avoid SSR import issues
+- OAuth buttons with inline SVG icons
+- Email/password login form
+
+---
+
 ## Method
 
 ### High-Level Architecture
@@ -68,6 +97,11 @@ Cloudflare --> Backend
 * Hosted on Vercel/Cloudflare Pages
 * SSR/CSR
 * Calls backend APIs
+* Key components:
+  - Header (navbar)
+  - BottomSearchBar (search + filters)
+  - PromptCard (prompt display)
+  - CircularScore (grading score)
 
 #### Backend (NestJS Monolith)
 

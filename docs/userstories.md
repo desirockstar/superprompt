@@ -1,5 +1,30 @@
 # SuperPrompt - User Stories
 
+## Implementation Notes (Current)
+
+### UI Implementation Changes
+
+1. **Preview Display**:
+   - 150 characters maximum with "..." truncation
+   - Data is trimmed at source, not UI-clamped
+
+2. **Search & Filters**:
+   - Bottom search bar (fixed at bottom of screen)
+   - 3 rows: Applied filters, Search+dropdowns, Category chips
+   - URL-based search params for shareable links
+   - Categories in uppercase with horizontal scroll
+
+3. **Card Theme**:
+   - All cards use consistent theme based on theme mode
+   - Light mode: all light cards
+   - Dark mode: all dark cards
+
+4. **Navigation**:
+   - Sticky circular black navbar at top
+   - Responsive logo (different sizes for mobile/desktop)
+
+---
+
 ## Prioritized User Stories (INVEST Criteria)
 
 ---
@@ -24,10 +49,10 @@
 | # | Category | Criteria |
 |---|----------|----------|
 | 1 | Functionality | Visitor can view homepage with prompt library loaded |
-| 2 | Functionality | Partial preview (first 2-3 lines) displays for each prompt |
+| 2 | Functionality | Partial preview (max 150 chars with "...") displays for each prompt |
 | 3 | Functionality | Full prompt content is hidden/obscured for non-logged-in users |
 | 4 | Functionality | Category navigation (Starter/Builder/Pro/Super Prompt) is accessible |
-| 5 | Functionality | Search bar visible but prompts remain partially previewed |
+| 5 | Functionality | Search bar visible (bottom search bar) but prompts remain partially previewed |
 | 6 | Performance | Page loads within 2 seconds |
 | 7 | Performance | Lazy loading works for 50+ prompts on single page |
 | 8 | User Interaction | "Log in to unlock" prompt appears on full prompt attempt |

@@ -1,12 +1,16 @@
-import { Controller, Post, Body, UseGuards, Req } from '@nestjs/common';
+import { Controller, Post, Get, Body, UseGuards, Req, UnauthorizedException } from '@nestjs/common';
 import { UnlockService } from './unlock.service';
-import { AuthGuard } from '../../common/guards/auth.guard';
+import { RequiredAuthGuard } from '../../common/guards/auth.guard';
+import { AdMobProvider } from '../ad/ad.provider';
 
 @Controller('prompts')
 export class UnlockController {
-  constructor(private readonly unlockService: UnlockService) {}
+  constructor(
+    private readonly unlockService: UnlockService,
+    private readonly adProvider: AdMobProvider,
+  ) {}
 
-  @UseGuards(AuthGuard)
+  @UseGuards(RequiredAuthGuard)
   @Post(':id/unlock')
   async unlock(
     @Req() req: any,
@@ -16,23 +20,36 @@ export class UnlockController {
     const userId = req.user.id;
 
     if (body.adToken) {
-      const unlocked = await this.unlockService.unlockViaAd(userId, promptId);
-      return unlocked;
-    }
-
-    const unlocked = await this.unlockService.unlockViaSubscription(userId, promptId);
-    return unlocked;
-  }
-
-  @UseGuards(AuthGuard)
-  @Post('ads/callback')
-  async adCallback(@Body() body: { token: string; userId: string; promptId: string }) {
-    const { token, userId, promptId } = body;
-    if (!token || token !== 'valid-ad-token') {
-      return { success: false, message: 'Invalid token' };
+      const verification = await this.adProvider.verifyCompletion(body.adToken);
+      if (!verification.valid) {
+        throw new UnauthorizedException('Invalid ad token');
+      }
     }
 
     const unlocked = await this.unlockService.unlockViaAd(userId, promptId);
-    return { success: true, unlock: unlocked };
+    return { ...unlocked, unlockedVia: 'ad' };
+  }
+
+  @UseGuards(RequiredAuthGuard)
+  @Post(':id/unlock-intent')
+  async startUnlock(
+    @Req() req: any,
+  ) {
+    const promptId = req.params.id;
+    const userId = req.user.id;
+
+    const adData = await this.adProvider.loadAd(userId, promptId);
+    return { token: adData.token };
+  }
+}
+
+@Controller('unlocks')
+export class UnlocksController {
+  constructor(private readonly unlockService: UnlockService) {}
+
+  @UseGuards(RequiredAuthGuard)
+  @Get()
+  async getUserUnlocks(@Req() req: any) {
+    return this.unlockService.getUnlocks(req.user.id);
   }
 }

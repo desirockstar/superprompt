@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "concurrently \"pnpm dev:backend\" \"pnpm dev:frontend\"",
-    "dev:backend": "pnpm --filter db build && pnpm --filter backend dev",
+    "dev:backend": "pnpm --filter backend dev",
     "dev:frontend": "pnpm --filter frontend dev",
     "build": "pnpm -r build",
     "build:backend": "pnpm --filter backend build",
@@ -25,5 +25,8 @@
     "node": ">=20",
     "pnpm": ">=8"
   },
-  "packageManager": "pnpm@8.15.0"
+  "packageManager": "pnpm@8.15.0",
+  "dependencies": {
+    "tsx": "^4.21.0"
+  }
 }

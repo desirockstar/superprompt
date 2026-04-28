@@ -1,7 +1,7 @@
 {
   "name": "SuperPrompt Dev",
   "dockerComposeFile": "docker-compose.yml",
-  "service": "app",
+  "service": "backend",
   "workspaceFolder": "/workspace",
   "forwardPorts": [3000, 4000, 5432],
   "portsAttributes": {

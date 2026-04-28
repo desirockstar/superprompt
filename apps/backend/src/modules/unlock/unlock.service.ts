@@ -1,15 +1,14 @@
 import { Injectable, Inject } from '@nestjs/common';
 import { DB_KEY } from '../db/db.module';
-import { drizzle } from 'drizzle-orm/postgres-js';
+import type { Database } from '../db/db.module';
 import { unlocks as unlocksTable } from '@superprompt/db';
 import { eq, and } from 'drizzle-orm';
-import * as schema from '@superprompt/db';
 
 @Injectable()
 export class UnlockService {
   constructor(
     @Inject(DB_KEY)
-    private readonly db: ReturnType<typeof drizzle<typeof schema>>,
+    private readonly db: Database,
   ) {}
 
   async unlockViaAd(userId: string, promptId: string) {

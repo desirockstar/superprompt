@@ -1,6 +1,7 @@
 import 'reflect-metadata';
 import express from 'express';
 import { drizzle } from 'drizzle-orm/postgres-js';
+import type { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
 import Postgres from 'postgres';
 import * as schema from '@superprompt/db';
 import { eq } from 'drizzle-orm';
@@ -18,7 +19,7 @@ app.use((req, res, next) => {
 
 const connectionString = 'postgres://postgres:postgres@superprompt_devcontainer-db-1:5432/superprompt';
 const client = Postgres(connectionString);
-const db = drizzle(client, { schema });
+const db: PostgresJsDatabase<typeof schema> = drizzle(client, { schema });
 
 const { prompts, users, subscriptions, unlocks } = schema;
 

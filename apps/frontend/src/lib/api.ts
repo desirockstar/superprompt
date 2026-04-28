@@ -1,4 +1,4 @@
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000';
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api';
 
 interface FetchOptions extends RequestInit {
   params?: Record<string, string | number | undefined>;
@@ -11,19 +11,13 @@ class ApiError extends Error {
   }
 }
 
-let authToken: string | null = null;
-
-export function setAuthToken(token: string | null) {
-  authToken = token;
-}
+export function setAuthToken(_token: string | null) { }
 
 export function getAuthToken(): string | null {
-  return authToken;
+  return null;
 }
 
-export function clearAuthToken() {
-  authToken = null;
-}
+export function clearAuthToken() { }
 
 async function fetchApi<T>(
   endpoint: string,
@@ -51,6 +45,7 @@ async function fetchApi<T>(
     ...fetchOptions.headers,
   };
 
+  const authToken = getAuthToken();
   if (authToken) {
     headers['Authorization'] = `Bearer ${authToken}`;
   }

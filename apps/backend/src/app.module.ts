@@ -10,6 +10,7 @@ import { RatingModule } from './modules/rating/rating.module';
 import { GradingModule } from './modules/grading/grading.module';
 import { AdminModule } from './modules/admin/admin.module';
 import { CacheModule } from './modules/cache/cache.module';
+import { AdModule } from './modules/ad/ad.module';
 
 @Module({
   imports: [
@@ -24,6 +25,7 @@ import { CacheModule } from './modules/cache/cache.module';
     GradingModule,
     AdminModule,
     CacheModule,
+    AdModule,
   ],
 })
 export class AppModule {}

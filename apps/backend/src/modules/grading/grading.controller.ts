@@ -1,22 +1,22 @@
-import { forwardRef, Inject, Controller, Post, Get, Body, UseGuards, Req } from '@nestjs/common';
+import { Controller, Post, Get, UseGuards, Req, ForbiddenException } from '@nestjs/common';
 import { GradingService } from './grading.service';
-import { AuthGuard } from '../../common/guards/auth.guard';
+import { RequiredAuthGuard } from '../../common/guards/auth.guard';
 
 @Controller('grading')
 export class GradingController {
   constructor(private readonly gradingService: GradingService) {}
 
-  @UseGuards(AuthGuard)
+  @UseGuards(RequiredAuthGuard)
   @Post('run')
   async triggerGrading(@Req() req: any) {
     if (!req.user.isAdmin) {
-      throw new Error('Admin access required');
+      throw new ForbiddenException('Admin access required');
     }
     return this.gradingService.triggerManualGrading();
   }
 
   @Get('status')
   async getStatus() {
-    return { status: 'ok' };
+    return { status: 'ok', message: 'Evaluation system ready' };
   }
 }

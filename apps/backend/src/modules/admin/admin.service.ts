@@ -1,15 +1,14 @@
 import { Injectable, Inject } from '@nestjs/common';
 import { DB_KEY } from '../db/db.module';
-import { drizzle } from 'drizzle-orm/postgres-js';
+import type { Database } from '../db/db.module';
 import { prompts as promptsTable } from '@superprompt/db';
 import { eq } from 'drizzle-orm';
-import * as schema from '@superprompt/db';
 
 @Injectable()
 export class AdminService {
   constructor(
     @Inject(DB_KEY)
-    private readonly db: ReturnType<typeof drizzle<typeof schema>>,
+    private readonly db: Database,
   ) {}
 
   async getPendingPrompts() {

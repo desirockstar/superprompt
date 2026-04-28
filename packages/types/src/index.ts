@@ -14,6 +14,11 @@ export interface PromptWithVersion {
   currentVersion: number;
   isMultiVersion: boolean;
   createdAt: Date;
+  primaryTag?: string;
+  secondaryTags?: string;
+  views?: number;
+  isViral?: boolean;
+  isNano?: boolean;
 }
 
 export interface PromptDetail extends PromptWithVersion {

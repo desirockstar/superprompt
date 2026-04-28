@@ -1,80 +1,31 @@
--- Clean seed data with consistent UUIDs
+-- Clean seed data - let DB generate UUIDs
 
--- Insert prompts (IDs starting with 1)
-INSERT INTO prompts (id, title, category, status, base_path, current_version, is_multi_version) VALUES
-('10000000-0000-0000-0000-000000000001', 'Professional Email Responder', 'Business Communication', 'approved', 'prompts/1', 1, true),
-('10000000-0000-0000-0000-000000000002', 'Blog Post Writer', 'Content Marketing', 'approved', 'prompts/2', 1, true),
-('10000000-0000-0000-0000-000000000003', 'Code Commenter', 'Developer Tools', 'approved', 'prompts/3', 1, true),
-('10000000-0000-0000-0000-000000000004', 'Meeting Notes', 'Productivity', 'approved', 'prompts/4', 1, true),
-('10000000-0000-0000-0000-000000000005', 'Social Media Manager', 'Marketing', 'approved', 'prompts/5', 1, true),
-('10000000-0000-0000-0000-000000000006', 'Product Description', 'Product Marketing', 'approved', 'prompts/6', 1, true),
-('10000000-0000-0000-0000-000000000007', 'Customer Support Response', 'Customer Success', 'approved', 'prompts/7', 1, true),
-('10000000-0000-0000-0000-000000000008', 'FAQ Writer', 'Content Creation', 'approved', 'prompts/8', 1, true),
-('10000000-0000-0000-0000-000000000009', 'Press Release', 'Corporate Communications', 'approved', 'prompts/9', 1, true),
-('10000000-0000-0000-0000-000000000010', 'Video Script', 'Video Production', 'approved', 'prompts/10', 1, true);
+-- Insert prompts
+INSERT INTO prompts (title, category, status, base_path, current_version, is_multi_version) VALUES
+('Professional Email Responder', 'Business Communication', 'approved', 'prompts/1', 1, true),
+('Blog Post Writer', 'Content Marketing', 'approved', 'prompts/2', 1, true),
+('Code Commenter', 'Developer Tools', 'approved', 'prompts/3', 1, true),
+('Meeting Notes', 'Productivity', 'approved', 'prompts/4', 1, true),
+('Social Media Manager', 'Marketing', 'approved', 'prompts/5', 1, true),
+('Product Description', 'Product Marketing', 'approved', 'prompts/6', 1, true),
+('Customer Support Response', 'Customer Success', 'approved', 'prompts/7', 1, true),
+('FAQ Writer', 'Content Creation', 'approved', 'prompts/8', 1, true),
+('Press Release', 'Corporate Communications', 'approved', 'prompts/9', 1, true),
+('Video Script', 'Video Production', 'approved', 'prompts/10', 1, true);
 
--- Insert versions (IDs starting with 2)
-INSERT INTO prompt_versions (id, prompt_id, version_number, needs_grading) VALUES
-('20000000-0000-0000-0000-000000000001', '10000000-0000-0000-0000-000000000001', 1, true),
-('20000000-0000-0000-0000-000000000002', '10000000-0000-0000-0000-000000000002', 1, true),
-('20000000-0000-0000-0000-000000000003', '10000000-0000-0000-0000-000000000003', 1, true),
-('20000000-0000-0000-0000-000000000004', '10000000-0000-0000-0000-000000000004', 1, true),
-('20000000-0000-0000-0000-000000000005', '10000000-0000-0000-0000-000000000005', 1, true),
-('20000000-0000-0000-0000-000000000006', '10000000-0000-0000-0000-000000000006', 1, true),
-('20000000-0000-0000-0000-000000000007', '10000000-0000-0000-0000-000000000007', 1, true),
-('20000000-0000-0000-0000-000000000008', '10000000-0000-0000-0000-000000000008', 1, true),
-('20000000-0000-0000-0000-000000000009', '10000000-0000-0000-0000-000000000009', 1, true),
-('20000000-0000-0000-0000-000000000010', '10000000-0000-0000-0000-000000000010', 1, true);
+-- Insert versions (one per prompt)
+INSERT INTO prompt_versions (prompt_id, version_number, needs_grading)
+SELECT id, 1, false FROM prompts;
 
--- Insert version files (IDs starting with 3)
-INSERT INTO prompt_version_files (id, prompt_version_id, level, file_name) VALUES
--- Prompt 1: Email Responder
-('30000000-0000-0000-0000-000000000101', '20000000-0000-0000-0000-000000000001', 'starter', 'starter.md'),
-('30000000-0000-0000-0000-000000000102', '20000000-0000-0000-0000-000000000001', 'builder', 'builder.md'),
-('30000000-0000-0000-0000-000000000103', '20000000-0000-0000-0000-000000000001', 'pro', 'pro.md'),
-('30000000-0000-0000-0000-000000000104', '20000000-0000-0000-0000-000000000001', 'super', 'super.md'),
--- Prompt 2: Blog Post Writer
-('30000000-0000-0000-0000-000000000201', '20000000-0000-0000-0000-000000000002', 'starter', 'starter.md'),
-('30000000-0000-0000-0000-000000000202', '20000000-0000-0000-0000-000000000002', 'builder', 'builder.md'),
-('30000000-0000-0000-0000-000000000203', '20000000-0000-0000-0000-000000000002', 'pro', 'pro.md'),
-('30000000-0000-0000-0000-000000000204', '20000000-0000-0000-0000-000000000002', 'super', 'super.md'),
--- Prompt 3: Code Commenter
-('30000000-0000-0000-0000-000000000301', '20000000-0000-0000-0000-000000000003', 'starter', 'starter.md'),
-('30000000-0000-0000-0000-000000000302', '20000000-0000-0000-0000-000000000003', 'builder', 'builder.md'),
-('30000000-0000-0000-0000-000000000303', '20000000-0000-0000-0000-000000000003', 'pro', 'pro.md'),
-('30000000-0000-0000-0000-000000000304', '20000000-0000-0000-0000-000000000003', 'super', 'super.md'),
--- Prompt 4: Meeting Notes
-('30000000-0000-0000-0000-000000000401', '20000000-0000-0000-0000-000000000004', 'starter', 'starter.md'),
-('30000000-0000-0000-0000-000000000402', '20000000-0000-0000-0000-000000000004', 'builder', 'builder.md'),
-('30000000-0000-0000-0000-000000000403', '20000000-0000-0000-0000-000000000004', 'pro', 'pro.md'),
-('30000000-0000-0000-0000-000000000404', '20000000-0000-0000-0000-000000000004', 'super', 'super.md'),
--- Prompt 5: Social Media
-('30000000-0000-0000-0000-000000000501', '20000000-0000-0000-0000-000000000005', 'starter', 'starter.md'),
-('30000000-0000-0000-0000-000000000502', '20000000-0000-0000-0000-000000000005', 'builder', 'builder.md'),
-('30000000-0000-0000-0000-000000000503', '20000000-0000-0000-0000-000000000005', 'pro', 'pro.md'),
-('30000000-0000-0000-0000-000000000504', '20000000-0000-0000-0000-000000000005', 'super', 'super.md'),
--- Prompt 6: Product Description
-('30000000-0000-0000-0000-000000000601', '20000000-0000-0000-0000-000000000006', 'starter', 'starter.md'),
-('30000000-0000-0000-0000-000000000602', '20000000-0000-0000-0000-000000000006', 'builder', 'builder.md'),
-('30000000-0000-0000-0000-000000000603', '20000000-0000-0000-0000-000000000006', 'pro', 'pro.md'),
-('30000000-0000-0000-0000-000000000604', '20000000-0000-0000-0000-000000000006', 'super', 'super.md'),
--- Prompt 7: Customer Support
-('30000000-0000-0000-0000-000000000701', '20000000-0000-0000-0000-000000000007', 'starter', 'starter.md'),
-('30000000-0000-0000-0000-000000000702', '20000000-0000-0000-0000-000000000007', 'builder', 'builder.md'),
-('30000000-0000-0000-0000-000000000703', '20000000-0000-0000-0000-000000000007', 'pro', 'pro.md'),
-('30000000-0000-0000-0000-000000000704', '20000000-0000-0000-0000-000000000007', 'super', 'super.md'),
--- Prompt 8: FAQ Writer
-('30000000-0000-0000-0000-000000000801', '20000000-0000-0000-0000-000000000008', 'starter', 'starter.md'),
-('30000000-0000-0000-0000-000000000802', '20000000-0000-0000-0000-000000000008', 'builder', 'builder.md'),
-('30000000-0000-0000-0000-000000000803', '20000000-0000-0000-0000-000000000008', 'pro', 'pro.md'),
-('30000000-0000-0000-0000-000000000804', '20000000-0000-0000-0000-000000000008', 'super', 'super.md'),
--- Prompt 9: Press Release
-('30000000-0000-0000-0000-000000000901', '20000000-0000-0000-0000-000000000009', 'starter', 'starter.md'),
-('30000000-0000-0000-0000-000000000902', '20000000-0000-0000-0000-000000000009', 'builder', 'builder.md'),
-('30000000-0000-0000-0000-000000000903', '20000000-0000-0000-0000-000000000009', 'pro', 'pro.md'),
-('30000000-0000-0000-0000-000000000904', '20000000-0000-0000-0000-000000000009', 'super', 'super.md'),
--- Prompt 10: Video Script
-('30000000-0000-0000-0000-000000001001', '20000000-0000-0000-0000-000000000010', 'starter', 'starter.md'),
-('30000000-0000-0000-0000-000000001002', '20000000-0000-0000-0000-000000000010', 'builder', 'builder.md'),
-('30000000-0000-0000-0000-000000001003', '20000000-0000-0000-0000-000000000010', 'pro', 'pro.md'),
-('30000000-0000-0000-0000-000000001004', '20000000-0000-0000-0000-000000000010', 'super', 'super.md');
+-- Insert version files (4 per prompt version) with explicit cast
+INSERT INTO prompt_version_files (prompt_version_id, level, file_name)
+SELECT pv.id, pv.level::prompt_level, pv.file_name
+FROM (
+  SELECT pv.id, 'starter' as level, 'starter.md' as file_name FROM prompt_versions pv
+  UNION ALL
+  SELECT pv.id, 'builder', 'builder.md' FROM prompt_versions pv
+  UNION ALL
+  SELECT pv.id, 'pro', 'pro.md' FROM prompt_versions pv
+  UNION ALL
+  SELECT pv.id, 'super', 'super.md' FROM prompt_versions pv
+) pv;

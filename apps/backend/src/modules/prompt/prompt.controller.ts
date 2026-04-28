@@ -1,6 +1,6 @@
 import { Controller, Get, Post, Put, Param, Query, Body, Req, UseGuards } from '@nestjs/common';
 import { PromptService } from './prompt.service';
-import { AuthGuard } from '../../common/guards/auth.guard';
+import { AuthGuard, RequiredAuthGuard } from '../../common/guards/auth.guard';
 
 @Controller('prompts')
 export class PromptController {
@@ -14,25 +14,52 @@ export class PromptController {
     @Query('limit') limit?: number,
     @Query('rating') rating?: number,
     @Query('date') date?: string,
+    @Query('tier') tier?: string,
   ) {
-    return this.promptService.findAll({ category, search, page, limit, rating, date });
+    return this.promptService.findAll({ category, search, page, limit, rating, date, tier });
   }
 
+  @Get(':id/preview')
+  async getPreview(@Param('id') id: string) {
+    const prompt = await this.promptService.findOne(id, false);
+    return {
+      id: prompt.id,
+      title: prompt.title,
+      category: prompt.category,
+      status: prompt.status,
+      basePath: prompt.basePath,
+      currentVersion: prompt.currentVersion,
+      isMultiVersion: prompt.isMultiVersion,
+      createdAt: prompt.createdAt,
+      preview: prompt.preview,
+    };
+  }
+
+  @UseGuards(AuthGuard)
   @Get(':id')
   async findOne(@Param('id') id: string, @Req() req: any) {
-    const prompt = await this.promptService.findOne(id);
     const userId = req.user?.id;
+    const isLoggedIn = !!userId;
     
-    if (!userId) {
-      return { ...prompt, content: undefined, preview: prompt.preview };
+    const entitlement = isLoggedIn 
+      ? await this.promptService.checkEntitlement(userId, id)
+      : { hasAccess: false, hasSubscription: false, hasUnlock: false };
+    
+    const prompt = await this.promptService.findOne(id, false);
+    prompt.isLoggedIn = isLoggedIn;
+    
+    if (!isLoggedIn) {
+      return { ...prompt, content: undefined };
     }
 
-    const hasAccess = await this.promptService.checkEntitlement(userId, id);
-    if (!hasAccess) {
-      return { ...prompt, content: undefined, preview: prompt.preview };
+    const fullContent = await this.promptService.getFullContent(prompt.basePath, prompt.currentVersion, prompt.isMultiVersion);
+    
+    if (!entitlement.hasAccess) {
+      const { super: _, ...filteredContent } = fullContent;
+      return { ...prompt, content: filteredContent };
     }
 
-    return prompt;
+    return { ...prompt, content: fullContent };
   }
 
   @Get(':id/version/:v')
@@ -42,34 +69,51 @@ export class PromptController {
     @Query('level') level: string = 'starter',
     @Req() req: any,
   ) {
+    const prompt = await this.promptService.findOne(id);
     const userId = req.user?.id;
     let hasAccess = false;
 
     if (userId) {
-      hasAccess = await this.promptService.checkEntitlement(userId, id);
+      const entitlement = await this.promptService.checkEntitlement(userId, id);
+      hasAccess = entitlement.hasAccess;
     }
 
     if (!hasAccess) {
-      const preview = await this.promptService.getPreview(id, version);
+      const preview = await this.promptService.getPreview(prompt.basePath, version, prompt.isMultiVersion);
       return { id, version, level, content: preview, locked: true };
     }
 
-    const content = await this.promptService.getContent(id, level, version);
+    const content = await this.promptService.getContentByPath(prompt.basePath, level, version);
     return { id, version, level, content, locked: false };
   }
 
-  @UseGuards(AuthGuard)
+  @UseGuards(RequiredAuthGuard)
+  @Get('my')
+  async getMyPrompts(@Req() req: any) {
+    return this.promptService.findByUser(req.user.id);
+  }
+
+  @UseGuards(RequiredAuthGuard)
   @Post()
-  async create(@Body() body: { title: string; category: string; content: Record<string, string> }, @Req() req: any) {
-    return this.promptService.create(body);
+  async create(@Body() body: { title: string; category: string; content: Record<string, string>; isMultiVersion?: boolean }, @Req() req: any) {
+    return this.promptService.createWithUser(req.user.id, body);
   }
 
   @UseGuards(AuthGuard)
   @Put(':id')
   async update(
     @Param('id') id: string,
-    @Body() body: { content: Record<string, string> },
+    @Body() body: { content: Record<string, string>; isMultiVersion?: boolean },
   ) {
-    return this.promptService.update(id, body);
+    return this.promptService.updateWithUser(id, body);
+  }
+
+  @Get(':id/evaluation')
+  async getEvaluation(@Param('id') id: string) {
+    const evaluation = await this.promptService.getEvaluation(id);
+    if (!evaluation) {
+      return { level: null, status: 'not_evaluated', scores: [] };
+    }
+    return evaluation;
   }
 }
