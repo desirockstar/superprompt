@@ -156,7 +156,7 @@ export function BottomSearchBar({
             </div>
 
             <Select value={date} onValueChange={setDate}>
-              <SelectTrigger className="h-10 w-[100px] rounded-full border-white/10 bg-black/16 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.04),0_10px_30px_rgba(0,0,0,0.12)]">
+              <SelectTrigger className="h-10 w-[110px] rounded-full border-white/10 bg-black/16 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.04),0_10px_30px_rgba(0,0,0,0.12)]">
                 <SelectValue placeholder="Date" />
               </SelectTrigger>
               <SelectContent>
@@ -167,7 +167,7 @@ export function BottomSearchBar({
             </Select>
 
             <Select value={tier} onValueChange={setTier}>
-              <SelectTrigger className="h-10 w-[90px] rounded-full border-white/10 bg-black/16 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.04),0_10px_30px_rgba(0,0,0,0.12)]">
+              <SelectTrigger className="h-10 w-[110px] rounded-full border-white/10 bg-black/16 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.04),0_10px_30px_rgba(0,0,0,0.12)]">
                 <SelectValue placeholder="Tier" />
               </SelectTrigger>
               <SelectContent>

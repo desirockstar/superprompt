@@ -1,9 +1,11 @@
 import { Injectable, Inject } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
+import { EventEmitter2 } from '@nestjs/event-emitter';
 import { DB_KEY } from '../db/db.module';
 import type { Database } from '../db/db.module';
 import { subscriptions as subscriptionsTable } from '@superprompt/db';
 import { eq } from 'drizzle-orm';
+import { DOMAIN_EVENTS, SubscriptionActivatedEvent, SubscriptionCanceledEvent } from '../shared/events/domain-events';
 
 @Injectable()
 export class BillingService {
@@ -11,6 +13,7 @@ export class BillingService {
     @Inject(DB_KEY)
     private readonly db: Database,
     private readonly config: ConfigService,
+    private readonly eventEmitter: EventEmitter2,
   ) {}
 
   async createCheckoutSession(userId: string, plan: 'monthly' | 'yearly') {
@@ -94,14 +97,25 @@ export class BillingService {
       case 'checkout.session.completed': {
         const session = event.data.object;
         const userId = session.metadata.userId;
-        await this.activateSubscription(userId, session.subscription);
+        const subscription = await this.activateSubscription(userId, session.subscription);
+        this.eventEmitter.emit(
+          DOMAIN_EVENTS.SUBSCRIPTION_ACTIVATED,
+          new SubscriptionActivatedEvent(userId, subscription.expiresAt!),
+        );
         break;
       }
       case 'customer.subscription.deleted': {
         const sub = event.data.object;
-        await this.db.update(subscriptionsTable)
+        const [updated] = await this.db.update(subscriptionsTable)
           .set({ status: 'canceled' })
-          .where(eq(subscriptionsTable.stripeSubscriptionId, sub.id));
+          .where(eq(subscriptionsTable.stripeSubscriptionId, sub.id))
+          .returning();
+        if (updated) {
+          this.eventEmitter.emit(
+            DOMAIN_EVENTS.SUBSCRIPTION_CANCELED,
+            new SubscriptionCanceledEvent(updated.userId),
+          );
+        }
         break;
       }
     }
