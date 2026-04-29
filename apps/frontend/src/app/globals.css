@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 @layer base {
   :root {
@@ -78,13 +76,14 @@
     --font-sans: var(--font-sans);
   }
   * {
-    @apply border-border;
+    border-color: var(--border);
   }
   body {
-    @apply text-foreground;
+    color: var(--foreground);
+    background-color: var(--background);
   }
   html {
-    @apply font-sans;
+    font-family: var(--font-sans, sans-serif);
   }
 }
 
