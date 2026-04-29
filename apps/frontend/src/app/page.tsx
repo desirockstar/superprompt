@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useMemo, useState, useCallback, useRef } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, useRouter } from 'next/navigation';
 import { api } from '@/lib/api';
 import { Button } from '@/components/ui/button';
 import { BottomSearchBar } from '@/components/bottom-search-bar';
@@ -177,6 +177,7 @@ function DeepSeekLogo({ className }: { className?: string }) {
 
 export default function TestPromptsPage() {
     const searchParams = useSearchParams();
+    const router = useRouter();
     const urlSearch = searchParams.get('search') || '';
     const { theme } = useTheme();
     const isDarkMode = theme === 'dark';
@@ -186,7 +187,7 @@ export default function TestPromptsPage() {
     const [error, setError] = useState('');
     const [selectedCardIndex, setSelectedCardIndex] = useState<number | null>(null);
 
-const [search, setSearch] = useState(urlSearch);
+    const [search, setSearch] = useState(urlSearch);
     const [debouncedSearch, setDebouncedSearch] = useState('');
 
     // Sync search with URL when URL changes
@@ -396,8 +397,9 @@ const [search, setSearch] = useState(urlSearch);
                         return (
                             <div
                                 key={card.id}
-                                className="w-full"
+                                className="w-full cursor-pointer"
                                 data-card-index={index}
+                                onClick={() => router.push(`/prompts/${card.id}`)}
                             >
                                 <article
                                     style={isSelected ? {
