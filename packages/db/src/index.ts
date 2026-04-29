@@ -36,6 +36,7 @@ export const prompts = pgTable('prompts', {
   currentVersion: integer('current_version').default(1).notNull(),
   isMultiVersion: boolean('is_multi_version').default(false).notNull(),
   views: integer('views').default(0).notNull(),
+  preview: text('preview'),
   searchVector: text('search_vector'),
   createdAt: timestamp('created_at').defaultNow().notNull(),
 }, (table) => ({

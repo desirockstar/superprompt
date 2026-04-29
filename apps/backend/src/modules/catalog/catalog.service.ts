@@ -36,17 +36,15 @@ export class CatalogService {
       tierMap,
     });
 
-    const promptsWithPreview = await Promise.all(
-      prompts.map(async (p) => ({
-        ...p,
-        preview: await this.contentRepo.getPreview(p.basePath, p.currentVersion, p.isMultiVersion),
-        tier: tierMap.get(p.id.toString())?.level || null,
-        primaryTag: p.primaryTag,
-        isViral: p.isViral,
-        isNano: p.isNano,
-        views: p.views,
-      })),
-    );
+    const promptsWithPreview = prompts.map((p) => ({
+      ...p,
+      preview: p.preview || '',
+      tier: tierMap.get(p.id.toString())?.level || null,
+      primaryTag: p.primaryTag,
+      isViral: p.isViral,
+      isNano: p.isNano,
+      views: p.views,
+    }));
 
     return { prompts: promptsWithPreview, total, page, limit };
   }
@@ -65,7 +63,7 @@ export class CatalogService {
 
     const response: Record<string, any> = {
       ...prompt,
-      preview: await this.contentRepo.getPreview(prompt.basePath, prompt.currentVersion, prompt.isMultiVersion),
+      preview: prompt.preview || await this.contentRepo.getPreview(prompt.basePath, prompt.currentVersion, prompt.isMultiVersion),
     };
 
     if (includeContent) {
