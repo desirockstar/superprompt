@@ -4,7 +4,8 @@ import { useState, useCallback, useEffect, useRef } from 'react';
 
 declare global {
   interface Window {
-    googletag: typeof googletag;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    googletag: any;
   }
 }
 
@@ -26,9 +27,10 @@ interface GAMDummyConfig {
 }
 
 const DUMMY_MODE = process.env.NEXT_PUBLIC_AD_DUMMY_MODE === 'true';
-const ADINPLAY_APP_ID = process.env.NEXT_PUBLIC_ADINPLAY_APP_ID || '';
+const ADINPLAY_PUBLISHER = process.env.NEXT_PUBLIC_ADINPLAY_PUBLISHER || '';
+const ADINPLAY_SITE = process.env.NEXT_PUBLIC_ADINPLAY_SITE || '';
 
-function loadGPT(): Promise<typeof googletag> {
+function loadGPT(): Promise<any> {
   return new Promise((resolve, reject) => {
     if (window.googletag) {
       resolve(window.googletag);
@@ -142,10 +144,11 @@ class AdinPlayProviderWrapper {
     this.AdLad = AdLadModule.AdLad;
 
     const adinplayPluginModule = await import('@adlad/plugin-adinplay');
-    const adinplayPlugin = adinplayPluginModule.adinplayPlugin;
+    const adinplayPlugin = adinplayPluginModule.adinPlayPlugin;
 
     this.plugin = adinplayPlugin({
-      appId: ADINPLAY_APP_ID,
+      publisher: ADINPLAY_PUBLISHER,
+      site: ADINPLAY_SITE,
     });
 
     const adLad = new this.AdLad({

@@ -3,7 +3,7 @@
 import * as React from "react"
 import { cn } from "@/lib/utils"
 
-interface ShineBorderProps extends React.HTMLAttributes<HTMLDivElement> {
+interface ShineBorderProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'color'> {
   borderWidth?: number
   duration?: number
   color?: string | string[]
@@ -34,7 +34,7 @@ export function ShineBorder({
         padding: borderWidth,
         borderRadius: "0.5rem",
         ...style,
-      }}
+      } as React.CSSProperties}
       className={cn(
         "relative rounded-lg border-2 border-violet-500 bg-origin-border animate-shine-border overflow-hidden",
         className

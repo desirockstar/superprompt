@@ -102,8 +102,9 @@ Create these files in `.devcontainer/`:
 | AI provider | Groq | See Section 9 |
 | Ad network (MVP) | Google AdMob | Rewarded ads only |
 | Search | PostgreSQL Full-Text Search (`tsvector`) | No Meilisearch, no Elasticsearch, no `ILIKE` |
-| File storage | Local filesystem | Path: `/prompts/{promptId}/v{n}/{level}.md` |
-| Cache | In-memory `Map` with TTL | No Redis |
+| File storage | Local filesystem | Single: `{id}/v{n}/prompt.md` · Multi: `{id}/v{n}/content/{tier}.md` |
+| Cache | In-memory `Map` with TTL | No Redis. `CacheService` in `modules/cache/` |
+| Analytics | PostHog Cloud | `posthog-js` on frontend. See Section 15.3 |
 | Logger | pino | Backend only |
 | Error monitoring | Sentry | Both frontend and backend |
 | CI/CD | GitHub Actions | See Section 13 |
@@ -166,7 +167,13 @@ prompts(
   base_path: text NOT NULL,
   current_version: integer DEFAULT 1,
   is_multi_version: boolean DEFAULT false,
-  search_vector: tsvector,           -- populated via trigger
+  preview: text,                         -- first ~220 chars of body, stored at ingest
+  primary_tag: text,
+  secondary_tags: text,
+  views: integer DEFAULT 0,
+  is_viral: boolean DEFAULT false,
+  is_nano: boolean DEFAULT false,
+  search_vector: tsvector,               -- populated via trigger
   created_at: timestamptz DEFAULT now()
 )
 -- indexes: idx_prompts_category, idx_prompts_status, idx_prompts_search (GIN on search_vector)
@@ -248,17 +255,19 @@ grading_history(
 ```
 apps/backend/src/
 ├── modules/
-│   ├── auth/           # BetterAuth integration
+│   ├── auth/           # Session auth (email/password + OAuth)
 │   ├── user/           # User profile management
-│   ├── prompt/         # Prompt CRUD + preview logic
-│   ├── version/        # Prompt version management
-│   ├── unlock/         # Entitlement + unlock events
+│   ├── catalog/        # Prompt CRUD, preview, search (DDD Catalog BC)
+│   ├── access/         # Entitlement checks (DDD Access BC)
+│   ├── evaluation/     # AI grading pipeline (DDD Evaluation BC)
+│   ├── moderation/     # Admin approve/reject (DDD Moderation BC)
+│   ├── unlock/         # Unlock events
 │   ├── billing/        # Stripe subscription
 │   ├── rating/         # User ratings
 │   ├── grading/        # AI grading scheduler + manual trigger
 │   ├── ad/             # Ad provider abstraction
 │   ├── admin/          # Admin-only endpoints
-│   └── cache/          # In-memory cache service
+│   └── cache/          # In-memory TTL cache service (CacheService)
 ├── common/
 │   ├── guards/         # AuthGuard, AdminGuard, EntitlementGuard
 │   ├── interceptors/
@@ -278,6 +287,7 @@ POST   /api/auth/register
 POST   /api/auth/login
 POST   /api/auth/logout
 GET    /api/auth/me
+GET    /api/auth/me/state          # Returns { subscription, unlocks[], ratings{} } — single hydration call
 ```
 
 ### Prompts
@@ -566,7 +576,7 @@ ORDER BY ts_rank(search_vector, plainto_tsquery('english', $1)) DESC;
 
 ### PR Workflow (`.github/workflows/pr.yml`)
 
-Triggered on: all pull requests to `main`
+Triggered on: all commits + pull requests to `main`
 
 ```yaml
 steps:
@@ -580,16 +590,27 @@ steps:
 
 ### Deploy Workflow (`.github/workflows/deploy.yml`)
 
-Triggered on: push to `main`
+Triggered on: **git tags only** (`v*` pattern, e.g. `v1.0.1`)
 
 ```yaml
 steps:
-  - build frontend (pnpm --filter frontend build)
   - build backend (pnpm --filter backend build)
   - build docker image
   - SSH into Oracle VM
   - docker-compose pull && docker-compose up -d
 ```
+
+**Frontend deploy:** Cloudflare Pages auto-deploys on push to `main` (connected via GitHub integration — no Actions step needed).
+
+### Deployment Architecture
+
+| Component | Host | Notes |
+|---|---|---|
+| Frontend (Next.js) | Cloudflare Pages | Auto-deploy on `main` push |
+| Backend (NestJS) | Oracle VM (ARM A1) | SSH deploy on git tag |
+| Database (PostgreSQL) | Oracle VM (same) | Co-located, zero-latency |
+| Prompt files | Oracle VM filesystem | Path: `apps/backend/src/prompts/` |
+| Analytics | PostHog Cloud | Free tier, 1M events/month |
 
 ---
 
@@ -648,6 +669,26 @@ steps:
 - Log all incoming requests at `info` level (method, path, status, duration)
 - Log all Groq API errors at `error` level with prompt version ID
 
+### 15.3 PostHog Analytics (frontend)
+- Library: `posthog-js` — initialized in `PostHogProvider` (`apps/frontend/src/components/posthog-provider.tsx`)
+- Config: `NEXT_PUBLIC_POSTHOG_KEY` + `NEXT_PUBLIC_POSTHOG_HOST` in `.env`
+- PostHog is **no-op when key is not set** — safe for local dev
+- All event calls go through `apps/frontend/src/lib/analytics.ts` — never call `posthog.capture()` directly
+- **Key events to track:**
+
+| Event | When |
+|---|---|
+| `prompt_viewed` | Prompt detail page opened |
+| `prompt_copied` | Copy button clicked |
+| `unlock_initiated` | Ad unlock flow started |
+| `unlock_completed` | Unlock confirmed |
+| `checkout_started` | Subscription checkout opened |
+| `subscription_activated` | Stripe webhook confirms activation |
+| `search_performed` | Search query submitted |
+
+- `analytics.identify(userId, email)` called on login, register, and `checkAuth`
+- `analytics.reset()` called on logout
+
 ---
 
 ## 16. Environment Variables
@@ -682,6 +723,10 @@ ADMOB_AD_UNIT_ID=
 # Sentry
 SENTRY_DSN_BACKEND=
 SENTRY_DSN_FRONTEND=
+
+# PostHog
+NEXT_PUBLIC_POSTHOG_KEY=
+NEXT_PUBLIC_POSTHOG_HOST=https://us.i.posthog.com
 ```
 
 **Rules:**
@@ -695,25 +740,35 @@ SENTRY_DSN_FRONTEND=
 
 Prompt content is stored as Markdown files on the local filesystem.
 
+**Single-version prompt:**
 ```
-/prompts/
+apps/backend/src/prompts/
   {promptId}/
     v1/
-      starter.md
-      builder.md
-      pro.md
-      super.md
+      prompt.md          ← full content
+```
+
+**Multi-version prompt (4 tiers):**
+```
+apps/backend/src/prompts/
+  {promptId}/
+    v1/
+      content/
+        starter.md
+        builder.md
+        pro.md
+        super.md
     v2/
-      starter.md
-      ...
+      content/
+        ...
 ```
 
 **Rules:**
 - DB stores `base_path` and `current_version` only. Backend composes the full file path.
 - Versioning is immutable. When a prompt is updated, a new version directory is created. Old versions are never modified.
-- File names map directly to `prompt_level` enum values.
-- A single-version prompt only has the relevant level file, not all four.
-- Single-version prompts can be upgraded to multi-version by adding new tier files via new version.
+- `isMultiVersion = false` → single `prompt.md`. `isMultiVersion = true` → `content/{tier}.md` files.
+- Files are pure content (Markdown). No metadata or manifest files — all structured data lives in DB.
+- `preview` text (first ~220 chars) is stored in the `prompts.preview` DB column at ingest time — never read from filesystem on listing pages.
 
 ---
 
@@ -750,6 +805,10 @@ Admin clicks Reject  → POST /api/admin/prompts/:id/reject  → status = 'rejec
 - Admin panel (pending queue, approve/reject, manual grading trigger)
 - CI/CD pipeline (GitHub Actions)
 - Error monitoring (Sentry) + structured logging (pino)
+- Product analytics (PostHog Cloud)
+- In-memory API caching (`CacheService`) with TTL + cache invalidation
+- View counter with 60-second batch-flush to DB (`ViewCounterService`)
+- User state hydration endpoint (`GET /api/auth/me/state`)
 
 ### Explicitly Out of Scope (Do Not Build)
 
@@ -818,4 +877,43 @@ A feature is complete when ALL of the following are true:
 
 ---
 
-*Last updated: April 2026 | Version: 1.0 | Status: Approved for implementation*
+## 22. Caching Architecture
+
+### Backend — CacheService (`modules/cache/cache.service.ts`)
+
+In-memory `Map<string, { value, expiresAt }>` with TTL. No Redis.
+
+**Cache key conventions:**
+
+| Key pattern | TTL | Busted by |
+|---|---|---|
+| `prompts:list:p{page}:l{limit}:c{cat}:s{search}:t{tier}:d{date}` | 5 min | Admin approve/reject, view flush |
+| `prompts:detail:{id}` | 10 min | Prompt update, new version |
+| `evaluations:tiers` | 5 min | Grading completion, admin approve |
+| `user:state:{userId}` | 5 min | Unlock, rating, Stripe webhook |
+
+**Invalidation methods on `CatalogService`:**
+- `invalidatePrompt(id)` — busts `prompts:detail:{id}` + all listing keys
+- `invalidateListings()` — busts all listing + evaluation keys
+
+### Backend — ViewCounterService (`modules/catalog/view-counter.service.ts`)
+
+- `increment(promptId)` — adds to in-memory buffer (zero DB writes)
+- `@Interval(60_000)` flush — single `UPDATE prompts SET views = views + N WHERE id IN (...)` for all buffered IDs, then clears buffer and busts listing cache
+- View counts are **eventually consistent** (up to 60s lag) — acceptable for a marketplace
+
+### Frontend — TanStack Query
+
+- Set `staleTime: 5 * 60_000` on prompt listing queries
+- Set `staleTime: 10 * 60_000` on single prompt queries
+- Call `queryClient.invalidateQueries({ queryKey: ['prompts'] })` after mutations
+
+### Frontend — Zustand User State
+
+- `hydrateUserState()` calls `GET /api/auth/me/state` once on login/register/page reload
+- Returns `{ subscription, unlocks: string[], ratings: Record<string, number> }`
+- Mutations (unlock, rate) update Zustand optimistically — no refetch needed
+
+---
+
+*Last updated: April 2026 | Version: 1.1 | Status: Approved for implementation*

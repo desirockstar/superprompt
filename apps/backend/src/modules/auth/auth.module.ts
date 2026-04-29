@@ -4,10 +4,11 @@ import { OAuthController } from './oauth.controller';
 import { AuthService } from './auth.service';
 import { DatabaseModule } from '../db/db.module';
 import { AuthGuard } from '../../common/guards/auth.guard';
+import { CacheModule } from '../cache/cache.module';
 
 @Global()
 @Module({
-  imports: [DatabaseModule],
+  imports: [DatabaseModule, CacheModule],
   controllers: [AuthController, OAuthController],
   providers: [AuthService, AuthGuard],
   exports: [AuthService, AuthGuard],

@@ -7,6 +7,11 @@ import { CONTENT_REPOSITORY, ContentRepository } from './ports/content-repositor
 import { SearchService } from './search.service';
 import { EntitlementService } from '../access/entitlement.service';
 import { EvaluationRepository } from '../evaluation/evaluation.repository';
+import { CacheService } from '../cache/cache.service';
+
+const TTL_LIST = 5 * 60_000;   // 5 min
+const TTL_DETAIL = 10 * 60_000; // 10 min
+const TTL_TIERS = 5 * 60_000;   // 5 min
 
 @Injectable()
 export class CatalogService {
@@ -18,6 +23,7 @@ export class CatalogService {
     private readonly searchService: SearchService,
     private readonly entitlementService: EntitlementService,
     private readonly evaluationRepo: EvaluationRepository,
+    private readonly cache: CacheService,
   ) {}
 
   async findAll(options?: {
@@ -29,6 +35,10 @@ export class CatalogService {
     date?: string;
     tier?: string;
   }) {
+    const cacheKey = `prompts:list:p${options?.page || 1}:l${options?.limit || 10}:c${options?.category || ''}:s${options?.search || ''}:t${options?.tier || ''}:d${options?.date || ''}`;
+    const cached = this.cache.get<{ prompts: any[]; total: number; page: number; limit: number }>(cacheKey);
+    if (cached) return cached;
+
     const tierMap = await this.getEvaluationsWithTiers();
 
     const { prompts, total, page, limit } = await this.searchService.search({
@@ -46,10 +56,16 @@ export class CatalogService {
       views: p.views,
     }));
 
-    return { prompts: promptsWithPreview, total, page, limit };
+    const result = { prompts: promptsWithPreview, total, page, limit };
+    this.cache.set(cacheKey, result, TTL_LIST);
+    return result;
   }
 
   async findOne(id: string, includeContent: boolean = false) {
+    const cacheKey = `prompts:detail:${id}`;
+    const cached = this.cache.get<Record<string, any>>(cacheKey);
+    if (cached && !includeContent) return cached;
+
     const result = await this.db.select()
       .from(promptsTable)
       .where(eq(promptsTable.id, id))
@@ -68,9 +84,21 @@ export class CatalogService {
 
     if (includeContent) {
       response.content = await this.contentRepo.getFullContent(prompt.basePath, prompt.currentVersion, prompt.isMultiVersion);
+    } else {
+      this.cache.set(cacheKey, response, TTL_DETAIL);
     }
 
     return response;
+  }
+
+  invalidatePrompt(id: string): void {
+    this.cache.delete(`prompts:detail:${id}`);
+    this.cache.deleteByPrefix('prompts:list');
+  }
+
+  invalidateListings(): void {
+    this.cache.deleteByPrefix('prompts:list');
+    this.cache.deleteByPrefix('evaluations:tiers');
   }
 
   async getFullContent(basePath: string, version: number, isMultiVersion: boolean): Promise<Record<string, string>> {
@@ -133,6 +161,10 @@ export class CatalogService {
   }
 
   private async getEvaluationsWithTiers() {
+    const cacheKey = 'evaluations:tiers';
+    const cached = this.cache.get<Map<string, { level: string; score: string }>>(cacheKey);
+    if (cached) return cached;
+
     const allEvaluations = await this.evaluationRepo.getCompletedEvaluations();
 
     const tierMap = new Map<string, { level: string; score: string }>();
@@ -146,6 +178,7 @@ export class CatalogService {
       }
     }
 
+    this.cache.set(cacheKey, tierMap, TTL_TIERS);
     return tierMap;
   }
 }

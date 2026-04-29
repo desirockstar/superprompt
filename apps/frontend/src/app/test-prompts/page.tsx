@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useCallback, useRef } from 'react';
+import React, { useEffect, useState, useCallback, useRef } from 'react';
 import Image from 'next/image';
 import { api } from '@/lib/api';
 import { PromptCard } from '@/components/prompt-card';
@@ -135,7 +135,7 @@ export default function Home() {
             <Input
               placeholder="Search prompts..."
               value={search}
-              onChange={(e) => setSearch(e.target.value)}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearch(e.target.value)}
               className="flex-1"
             />
             <Select value={date} onValueChange={setDate}>

@@ -150,7 +150,7 @@ export function BottomSearchBar({
                 type="search"
                 placeholder="Search prompts..."
                 value={search}
-                onChange={(e) => setSearch(e.target.value)}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearch(e.target.value)}
                 className={`h-10 w-full rounded-full border border-white/10 bg-black/16 pl-10 pr-4 placeholder:text-white/42 shadow-[inset_0_1px_0_rgba(255,255,255,0.04),0_10px_30px_rgba(0,0,0,0.12)] focus:outline-none ${isDark ? 'focus:border-[#8f9dff]' : 'focus:border-[#55d497]'}`}
               />
             </div>

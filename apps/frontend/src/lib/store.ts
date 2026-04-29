@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import { api } from './api';
+import { analytics } from './analytics';
 import type { User, Subscription, PromptLevel } from './types';
 
 interface Unlock {
@@ -14,6 +15,7 @@ interface AuthState {
   isAuthenticated: boolean;
   authChecked: boolean;
   unlockedPrompts: Set<string>;
+  ratings: Record<string, number>;
   hasSubscription: boolean;
   
   login: (email: string, password: string) => Promise<void>;
@@ -21,6 +23,7 @@ interface AuthState {
   logout: () => Promise<void>;
   checkAuth: () => Promise<void>;
   clearError: () => void;
+  hydrateUserState: () => Promise<void>;
   checkSubscription: () => Promise<void>;
   checkUnlock: (promptId: string) => Promise<boolean>;
   unlockWithAd: (promptId: string) => Promise<void>;
@@ -34,6 +37,7 @@ export const useAuthStore = create<AuthState>((set, get) => ({
   isAuthenticated: false,
   authChecked: false,
   unlockedPrompts: new Set<string>(),
+  ratings: {},
   hasSubscription: false,
   
   login: async (email, password) => {
@@ -42,8 +46,8 @@ export const useAuthStore = create<AuthState>((set, get) => ({
       const response = await api.post<{ id: string; email: string; isAdmin: boolean }>('/auth/login', { email, password });
       const user = { id: response.id, email: response.email, isAdmin: response.isAdmin };
       set({ user, isAuthenticated: true, isLoading: false, authChecked: true });
-      await get().checkSubscription();
-      await get().loadUnlocks();
+      analytics.identify(user.id, user.email);
+      await get().hydrateUserState();
     } catch (error) {
       set({ isLoading: false });
       throw error;
@@ -56,8 +60,8 @@ export const useAuthStore = create<AuthState>((set, get) => ({
       const response = await api.post<{ id: string; email: string }>('/auth/register', { email, password });
       const user = { id: response.id, email: response.email, isAdmin: false };
       set({ user, isAuthenticated: true, isLoading: false, authChecked: true });
-      await get().checkSubscription();
-      await get().loadUnlocks();
+      analytics.identify(user.id, user.email);
+      await get().hydrateUserState();
     } catch (error) {
       set({ isLoading: false });
       throw error;
@@ -70,7 +74,8 @@ export const useAuthStore = create<AuthState>((set, get) => ({
     } catch {
       // Ignore logout errors
     }
-    set({ user: null, subscription: null, isAuthenticated: false, isLoading: false, unlockedPrompts: new Set<string>(), hasSubscription: false });
+    analytics.reset();
+    set({ user: null, subscription: null, isAuthenticated: false, isLoading: false, unlockedPrompts: new Set<string>(), ratings: {}, hasSubscription: false });
   },
   
   checkAuth: async () => {
@@ -78,14 +83,32 @@ export const useAuthStore = create<AuthState>((set, get) => ({
     try {
       const user = await api.get<User>('/auth/me');
       set({ user, isAuthenticated: true, isLoading: false, authChecked: true });
-      await get().checkSubscription();
-      await get().loadUnlocks();
+      analytics.identify(user.id, user.email);
+      await get().hydrateUserState();
     } catch {
       set({ user: null, isAuthenticated: false, isLoading: false, authChecked: true });
     }
   },
 
   clearError: () => set({ isLoading: false }),
+
+  hydrateUserState: async () => {
+    try {
+      const state = await api.get<{
+        subscription: Subscription | null;
+        unlocks: string[];
+        ratings: Record<string, number>;
+      }>('/auth/me/state');
+      set({
+        subscription: state.subscription,
+        hasSubscription: state.subscription?.status === 'active',
+        unlockedPrompts: new Set(state.unlocks),
+        ratings: state.ratings,
+      });
+    } catch {
+      // Not logged in or server error — keep existing state
+    }
+  },
 
   checkSubscription: async () => {
     try {

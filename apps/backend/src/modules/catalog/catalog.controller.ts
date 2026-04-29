@@ -1,10 +1,14 @@
 import { Controller, Get, Post, Put, Param, Query, Body, Req, UseGuards } from '@nestjs/common';
 import { CatalogService } from './catalog.service';
+import { ViewCounterService } from './view-counter.service';
 import { AuthGuard, RequiredAuthGuard } from '../../common/guards/auth.guard';
 
 @Controller('prompts')
 export class CatalogController {
-  constructor(private readonly catalogService: CatalogService) {}
+  constructor(
+    private readonly catalogService: CatalogService,
+    private readonly viewCounter: ViewCounterService,
+  ) {}
 
   @Get()
   async findAll(
@@ -40,6 +44,8 @@ export class CatalogController {
   async findOne(@Param('id') id: string, @Req() req: any) {
     const userId = req.user?.id;
     const isLoggedIn = !!userId;
+
+    this.viewCounter.increment(id);
 
     const entitlement = isLoggedIn
       ? await this.catalogService.checkEntitlement(userId, id)

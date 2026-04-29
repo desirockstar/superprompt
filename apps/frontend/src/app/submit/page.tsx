@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useAuthStore } from '@/lib/store';
@@ -160,7 +160,7 @@ export default function SubmitPage() {
                   id="title"
                   placeholder="e.g., Professional Email Responder"
                   value={title}
-                  onChange={(e) => setTitle(e.target.value)}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => setTitle(e.target.value)}
                   required
                 />
               </div>
@@ -170,7 +170,7 @@ export default function SubmitPage() {
                 <select
                   id="category"
                   value={category}
-                  onChange={(e) => setCategory(e.target.value)}
+                  onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setCategory(e.target.value)}
                   className="w-full px-3 py-2 rounded-md border border-input bg-background text-sm"
                   required
                 >
@@ -186,7 +186,7 @@ export default function SubmitPage() {
                   type="checkbox"
                   id="multiVersion"
                   checked={multiVersion}
-                  onChange={(e) => setMultiVersion(e.target.checked)}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => setMultiVersion(e.target.checked)}
                   className="w-4 h-4"
                 />
                 <Label htmlFor="multiVersion" className="cursor-pointer">
@@ -204,7 +204,7 @@ export default function SubmitPage() {
                     className="w-full min-h-[200px] px-3 py-2 rounded-md border border-input bg-background text-sm font-mono"
                     placeholder="Write your prompt here..."
                     value={singleContent}
-                    onChange={(e) => setSingleContent(e.target.value)}
+                    onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setSingleContent(e.target.value)}
                   />
                   <p className="text-xs text-muted-foreground">
                     {singleContent.length}/50 characters {singleContent.length >= 50 ? '✓' : ''}
@@ -224,7 +224,7 @@ export default function SubmitPage() {
                         className="w-full min-h-[120px] px-3 py-2 rounded-md border border-input bg-background text-sm font-mono"
                         placeholder={`Write your ${tier} level prompt here...`}
                         value={multiContent[tier]}
-                        onChange={(e) => handleMultiContentChange(tier, e.target.value)}
+                        onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => handleMultiContentChange(tier, e.target.value)}
                       />
                       <p className="text-xs text-muted-foreground">
                         {multiContent[tier].length}/50 characters {multiContent[tier].length >= 50 ? '✓' : ''}

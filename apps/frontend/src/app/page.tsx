@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState, useCallback, useRef } from 'react';
+import React, { useEffect, useMemo, useState, useCallback, useRef } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { api } from '@/lib/api';
 import { Button } from '@/components/ui/button';
@@ -424,7 +424,7 @@ const [search, setSearch] = useState(urlSearch);
                                                 const paletteBrands = ['#D97757', '#10A37F', '#4285F4', '#B95FC2', '#000000', '#000000', '#3964fe'];
                                                 const paletteUrls = ['https://claude.ai', 'https://chatgpt.com', 'https://gemini.google.com', 'https://copilot.microsoft.com', 'https://grok.x.com', 'https://www.perplexity.ai', 'https://www.deepseek.com/en'];
                                                 const paletteKeys = ['C', 'G', 'M', 'O', 'K', 'P', 'D'];
-                                                const Icon = paletteIcons[toneIndex];
+                                                const Icon = paletteIcons[toneIndex] as React.ComponentType<{ size?: number; strokeWidth?: number; className?: string }> | null;
                                                 const isOpenAI = toneIndex === 1;
                                                 const modelName = paletteNames[toneIndex];
                                                 const brandColor = paletteBrands[toneIndex];

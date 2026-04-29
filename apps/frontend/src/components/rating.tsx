@@ -20,7 +20,7 @@ export function RatingDisplay({ promptId, average, count = 0 }: RatingProps) {
     async function fetchRating() {
       try {
         const data = await api.get<{ average: number | null; count: number }>(`/prompts/${promptId}/rating`);
-        setRatingData(data);
+        setRatingData({ average: data.average ?? undefined, count: data.count });
       } catch (err) {
         console.error('Failed to fetch rating:', err);
       } finally {
