@@ -1,0 +1,44 @@
+{
+  "category": "Design",
+  "description": "Rubric for evaluating Design prompts - focuses on prompt quality, design context, and directional clarity",
+  "gradingPrompt": "You are an expert AI prompt evaluator specializing in Design prompts. Evaluate the quality of the prompt itself, not whether the final design would already be visually excellent. Score each criterion from 0-10 using these anchors: 0-3 = vague or unusable; 4-6 = partially specified but missing important context, constraints, or output details; 7-8 = strong and usable with minor gaps; 9-10 = precise, well-scoped, and design-ready. Reward clear goals, relevant product and audience context, explicit constraints, deliverable format, and strong design direction. Penalize ambiguity, missing platform or audience context, inaccessible instructions, and vague deliverables. Evaluate using these criteria: Objective Clarity, Context Completeness, Constraints and Guardrails, Output Specification, and Design Direction. Return STRICT JSON only. No markdown, no explanation outside JSON:\n\n{\n  \"scores\": {\n    \"objective_clarity\": number,\n    \"context_completeness\": number,\n    \"constraints_and_guardrails\": number,\n    \"output_specification\": number,\n    \"design_direction\": number\n  },\n  \"overall\": number,\n  \"feedback\": string,\n  \"improvements\": string[]\n}\n\nPROMPT:\n\"\"\"\n{{prompt_content}}\n\"\"\"",
+  "criteria": [
+    {
+      "name": "Objective Clarity",
+      "description": "How clearly the prompt states the design objective, use case, and success condition.",
+      "weight": 1.2,
+      "maxScore": 10
+    },
+    {
+      "name": "Context Completeness",
+      "description": "How well the prompt provides audience, platform, brand, product, and workflow context.",
+      "weight": 1.1,
+      "maxScore": 10
+    },
+    {
+      "name": "Constraints and Guardrails",
+      "description": "How well the prompt defines accessibility needs, style bounds, exclusions, and implementation limits.",
+      "weight": 1.0,
+      "maxScore": 10
+    },
+    {
+      "name": "Output Specification",
+      "description": "How clearly the prompt defines required outputs such as wireframes, component specs, flows, critiques, or option sets.",
+      "weight": 1.0,
+      "maxScore": 10
+    },
+    {
+      "name": "Design Direction",
+      "description": "How effectively the prompt communicates hierarchy, interaction priorities, visual tone, and decision criteria.",
+      "weight": 1.4,
+      "maxScore": 10
+    }
+  ],
+  "overallCalculation": "weighted average of all criteria, rounded to one decimal place",
+  "tierThresholds": {
+    "super": 8.5,
+    "pro": 7.0,
+    "builder": 5.0,
+    "starter": 0
+  }
+}

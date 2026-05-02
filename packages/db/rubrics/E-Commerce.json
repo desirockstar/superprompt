@@ -1,0 +1,44 @@
+{
+  "category": "E-Commerce",
+  "description": "Rubric for evaluating E-Commerce prompts - focuses on prompt quality, funnel context, and conversion usefulness",
+  "gradingPrompt": "You are an expert AI prompt evaluator specializing in E-Commerce prompts. Evaluate the quality of the prompt itself, not whether the final commerce tactic would already convert well. Score each criterion from 0-10 using these anchors: 0-3 = vague or unusable; 4-6 = partially specified but missing important context, constraints, or output details; 7-8 = strong and usable with minor gaps; 9-10 = precise, well-scoped, and conversion-ready. Reward clear goals, relevant product and funnel context, concrete constraints, explicit output format, and strong conversion intent. Penalize ambiguity, missing audience or offer context, unsupported claims, and vague deliverables. Evaluate using these criteria: Objective Clarity, Context Completeness, Constraints and Guardrails, Output Specification, and Conversion Relevance. Return STRICT JSON only. No markdown, no explanation outside JSON:\n\n{\n  \"scores\": {\n    \"objective_clarity\": number,\n    \"context_completeness\": number,\n    \"constraints_and_guardrails\": number,\n    \"output_specification\": number,\n    \"conversion_relevance\": number\n  },\n  \"overall\": number,\n  \"feedback\": string,\n  \"improvements\": string[]\n}\n\nPROMPT:\n\"\"\"\n{{prompt_content}}\n\"\"\"",
+  "criteria": [
+    {
+      "name": "Objective Clarity",
+      "description": "How clearly the prompt states the ecommerce objective, funnel stage, and desired business result.",
+      "weight": 1.2,
+      "maxScore": 10
+    },
+    {
+      "name": "Context Completeness",
+      "description": "How well the prompt provides product, audience, offer, store, and channel context.",
+      "weight": 1.2,
+      "maxScore": 10
+    },
+    {
+      "name": "Constraints and Guardrails",
+      "description": "How well the prompt defines brand, pricing, claim, policy, and merchandising boundaries.",
+      "weight": 1.2,
+      "maxScore": 10
+    },
+    {
+      "name": "Output Specification",
+      "description": "How clearly the prompt defines outputs such as product copy, landing page sections, tests, or offer variants.",
+      "weight": 1.1,
+      "maxScore": 10
+    },
+    {
+      "name": "Conversion Relevance",
+      "description": "How effectively the prompt aligns the requested output with buyer intent, trust-building, and measurable conversion outcomes.",
+      "weight": 1.3,
+      "maxScore": 10
+    }
+  ],
+  "overallCalculation": "weighted average of all criteria, rounded to one decimal place",
+  "tierThresholds": {
+    "super": 8.5,
+    "pro": 7.0,
+    "builder": 5.0,
+    "starter": 0
+  }
+}

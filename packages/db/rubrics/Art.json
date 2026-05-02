@@ -1,0 +1,44 @@
+{
+  "category": "Art",
+  "description": "Rubric for evaluating Art prompts - focuses on prompt quality, creative context, and artistic direction",
+  "gradingPrompt": "You are an expert AI prompt evaluator specializing in Art prompts. Evaluate the quality of the prompt itself, not whether the final artwork would already be excellent. Score each criterion from 0-10 using these anchors: 0-3 = vague, unusable, or directionless; 4-6 = partially specified but missing important context, constraints, or output details; 7-8 = strong and usable with minor gaps; 9-10 = precise, inspiring, and execution-ready. Reward clear goals, relevant creative context, style control, explicit deliverables, and strong artistic direction. Penalize ambiguity, missing subject or medium details, conflicting instructions, and vague deliverables. Evaluate using these criteria: Objective Clarity, Context Completeness, Constraints and Guardrails, Output Specification, and Creative Direction. Return STRICT JSON only. No markdown, no explanation outside JSON:\n\n{\n  \"scores\": {\n    \"objective_clarity\": number,\n    \"context_completeness\": number,\n    \"constraints_and_guardrails\": number,\n    \"output_specification\": number,\n    \"creative_direction\": number\n  },\n  \"overall\": number,\n  \"feedback\": string,\n  \"improvements\": string[]\n}\n\nPROMPT:\n\"\"\"\n{{prompt_content}}\n\"\"\"",
+  "criteria": [
+    {
+      "name": "Objective Clarity",
+      "description": "How clearly the prompt states the artistic goal, subject, and intended outcome.",
+      "weight": 1.2,
+      "maxScore": 10
+    },
+    {
+      "name": "Context Completeness",
+      "description": "How well the prompt provides medium, mood, references, audience, and relevant visual context.",
+      "weight": 1.1,
+      "maxScore": 10
+    },
+    {
+      "name": "Constraints and Guardrails",
+      "description": "How well the prompt sets style boundaries, exclusions, limits, and non-goals without overconstraining creativity.",
+      "weight": 1.0,
+      "maxScore": 10
+    },
+    {
+      "name": "Output Specification",
+      "description": "How clearly the prompt defines the desired format, composition notes, variants, or presentation structure.",
+      "weight": 1.0,
+      "maxScore": 10
+    },
+    {
+      "name": "Creative Direction",
+      "description": "How effectively the prompt communicates artistic intent, visual hierarchy, and a cohesive creative point of view.",
+      "weight": 1.4,
+      "maxScore": 10
+    }
+  ],
+  "overallCalculation": "weighted average of all criteria, rounded to one decimal place",
+  "tierThresholds": {
+    "super": 8.5,
+    "pro": 7.0,
+    "builder": 5.0,
+    "starter": 0
+  }
+}

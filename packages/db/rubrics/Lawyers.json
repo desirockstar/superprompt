@@ -1,0 +1,44 @@
+{
+  "category": "Lawyers",
+  "description": "Rubric for evaluating Lawyers prompts - focuses on prompt quality, legal context control, and safe analysis framing",
+  "gradingPrompt": "You are an expert AI prompt evaluator specializing in Legal prompts. Evaluate the quality of the prompt itself, not whether the final legal answer would already be correct. Score each criterion from 0-10 using these anchors: 0-3 = vague, unsafe, or unusable; 4-6 = partially specified but missing important context, constraints, or output details; 7-8 = strong and usable with minor gaps; 9-10 = precise, well-scoped, and analysis-ready. Reward clear goals, relevant factual and jurisdiction context, concrete guardrails, explicit output format, and strong uncertainty control. Penalize ambiguity, missing jurisdiction or procedural posture, absent caveats, requests for unsupported certainty, and vague deliverables. Evaluate using these criteria: Objective Clarity, Context Completeness, Constraints and Guardrails, Output Specification, and Legal Context Control. Return STRICT JSON only. No markdown, no explanation outside JSON:\n\n{\n  \"scores\": {\n    \"objective_clarity\": number,\n    \"context_completeness\": number,\n    \"constraints_and_guardrails\": number,\n    \"output_specification\": number,\n    \"legal_context_control\": number\n  },\n  \"overall\": number,\n  \"feedback\": string,\n  \"improvements\": string[]\n}\n\nPROMPT:\n\"\"\"\n{{prompt_content}}\n\"\"\"",
+  "criteria": [
+    {
+      "name": "Objective Clarity",
+      "description": "How clearly the prompt states the legal task, matter type, and desired analytical outcome.",
+      "weight": 1.2,
+      "maxScore": 10
+    },
+    {
+      "name": "Context Completeness",
+      "description": "How well the prompt provides facts, jurisdiction, procedural posture, parties, and source expectations.",
+      "weight": 1.3,
+      "maxScore": 10
+    },
+    {
+      "name": "Constraints and Guardrails",
+      "description": "How well the prompt defines uncertainty handling, confidentiality, citation expectations, and limits on unsupported legal certainty.",
+      "weight": 1.4,
+      "maxScore": 10
+    },
+    {
+      "name": "Output Specification",
+      "description": "How clearly the prompt defines outputs such as issue lists, research plans, memo sections, arguments, or questions for counsel.",
+      "weight": 1.0,
+      "maxScore": 10
+    },
+    {
+      "name": "Legal Context Control",
+      "description": "How effectively the prompt requests assumptions, competing interpretations, authorities to verify, and clear statements of uncertainty.",
+      "weight": 1.1,
+      "maxScore": 10
+    }
+  ],
+  "overallCalculation": "weighted average of all criteria, rounded to one decimal place",
+  "tierThresholds": {
+    "super": 8.5,
+    "pro": 7.0,
+    "builder": 5.0,
+    "starter": 0
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "category": "Finance",
+  "description": "Rubric for evaluating Finance prompts - focuses on prompt quality, decision context, and risk-aware guidance",
+  "gradingPrompt": "You are an expert AI prompt evaluator specializing in Finance prompts. Evaluate the quality of the prompt itself, not whether the final financial answer would already be correct or compliant. Score each criterion from 0-10 using these anchors: 0-3 = vague, unsafe, or unusable; 4-6 = partially specified but missing important context, constraints, or output details; 7-8 = strong and usable with minor gaps; 9-10 = precise, well-scoped, and analysis-ready. Reward clear goals, relevant financial context, concrete assumptions, explicit output format, and strong uncertainty controls. Penalize ambiguity, missing time horizon or investor context, absent risk guardrails, and unsupported regulatory claims. Evaluate using these criteria: Objective Clarity, Context Completeness, Constraints and Guardrails, Output Specification, and Financial Reasoning Design. Return STRICT JSON only. No markdown, no explanation outside JSON:\n\n{\n  \"scores\": {\n    \"objective_clarity\": number,\n    \"context_completeness\": number,\n    \"constraints_and_guardrails\": number,\n    \"output_specification\": number,\n    \"financial_reasoning_design\": number\n  },\n  \"overall\": number,\n  \"feedback\": string,\n  \"improvements\": string[]\n}\n\nPROMPT:\n\"\"\"\n{{prompt_content}}\n\"\"\"",
+  "criteria": [
+    {
+      "name": "Objective Clarity",
+      "description": "How clearly the prompt states the financial question, decision to support, and success condition.",
+      "weight": 1.2,
+      "maxScore": 10
+    },
+    {
+      "name": "Context Completeness",
+      "description": "How well the prompt provides time horizon, cash flows, assumptions, investor profile, and relevant constraints.",
+      "weight": 1.3,
+      "maxScore": 10
+    },
+    {
+      "name": "Constraints and Guardrails",
+      "description": "How well the prompt defines uncertainty, risk tolerance, missing data handling, and compliance boundaries without pretending to verify regulations.",
+      "weight": 1.4,
+      "maxScore": 10
+    },
+    {
+      "name": "Output Specification",
+      "description": "How clearly the prompt defines outputs such as scenarios, sensitivity tables, assumptions, or recommendation summaries.",
+      "weight": 1.0,
+      "maxScore": 10
+    },
+    {
+      "name": "Financial Reasoning Design",
+      "description": "How effectively the prompt asks for transparent assumptions, scenario analysis, tradeoffs, and uncertainty disclosure.",
+      "weight": 1.1,
+      "maxScore": 10
+    }
+  ],
+  "overallCalculation": "weighted average of all criteria, rounded to one decimal place",
+  "tierThresholds": {
+    "super": 8.5,
+    "pro": 7.0,
+    "builder": 5.0,
+    "starter": 0
+  }
+}

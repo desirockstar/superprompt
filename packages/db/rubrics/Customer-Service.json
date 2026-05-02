@@ -1,0 +1,44 @@
+{
+  "category": "Customer Service",
+  "description": "Rubric for evaluating Customer Service prompts - focuses on prompt quality, customer context, and support guidance",
+  "gradingPrompt": "You are an expert AI prompt evaluator specializing in Customer Service prompts. Evaluate the quality of the prompt itself, not whether the final support response would already resolve the issue. Score each criterion from 0-10 using these anchors: 0-3 = vague or unusable; 4-6 = partially specified but missing important context, constraints, or output details; 7-8 = strong and usable with minor gaps; 9-10 = precise, empathetic, and response-ready. Reward clear goals, relevant customer context, explicit policy and tone boundaries, and concrete resolution steps. Penalize ambiguity, missing issue history, absent policy context, unsupported promises, and vague deliverables. Evaluate using these criteria: Objective Clarity, Context Completeness, Constraints and Guardrails, Output Specification, and Support Guidance. Return STRICT JSON only. No markdown, no explanation outside JSON:\n\n{\n  \"scores\": {\n    \"objective_clarity\": number,\n    \"context_completeness\": number,\n    \"constraints_and_guardrails\": number,\n    \"output_specification\": number,\n    \"support_guidance\": number\n  },\n  \"overall\": number,\n  \"feedback\": string,\n  \"improvements\": string[]\n}\n\nPROMPT:\n\"\"\"\n{{prompt_content}}\n\"\"\"",
+  "criteria": [
+    {
+      "name": "Objective Clarity",
+      "description": "How clearly the prompt states the customer support objective, issue to solve, and desired result.",
+      "weight": 1.2,
+      "maxScore": 10
+    },
+    {
+      "name": "Context Completeness",
+      "description": "How well the prompt provides customer history, channel, policy context, issue details, and urgency.",
+      "weight": 1.2,
+      "maxScore": 10
+    },
+    {
+      "name": "Constraints and Guardrails",
+      "description": "How well the prompt defines tone, escalation boundaries, refund or exception limits, and unknowns that must not be invented.",
+      "weight": 1.2,
+      "maxScore": 10
+    },
+    {
+      "name": "Output Specification",
+      "description": "How clearly the prompt defines the expected artifact such as a reply draft, action steps, macro, or escalation note.",
+      "weight": 1.1,
+      "maxScore": 10
+    },
+    {
+      "name": "Support Guidance",
+      "description": "How effectively the prompt balances empathy, resolution steps, follow-up expectations, and customer trust preservation.",
+      "weight": 1.3,
+      "maxScore": 10
+    }
+  ],
+  "overallCalculation": "weighted average of all criteria, rounded to one decimal place",
+  "tierThresholds": {
+    "super": 8.5,
+    "pro": 7.0,
+    "builder": 5.0,
+    "starter": 0
+  }
+}

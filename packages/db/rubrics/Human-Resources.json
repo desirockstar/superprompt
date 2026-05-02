@@ -1,0 +1,44 @@
+{
+  "category": "Human Resources",
+  "description": "Rubric for evaluating Human Resources prompts - focuses on prompt quality, people context, and policy-aware guidance",
+  "gradingPrompt": "You are an expert AI prompt evaluator specializing in Human Resources prompts. Evaluate the quality of the prompt itself, not whether the final HR answer would already be legally or managerially correct. Score each criterion from 0-10 using these anchors: 0-3 = vague, unsafe, or unusable; 4-6 = partially specified but missing important context, constraints, or output details; 7-8 = strong and usable with minor gaps; 9-10 = precise, well-scoped, and action-ready. Reward clear goals, relevant workforce context, concrete guardrails, explicit output format, and fairness-aware guidance. Penalize ambiguity, missing role or jurisdiction context, absent confidentiality limits, and unsupported policy claims. Evaluate using these criteria: Objective Clarity, Context Completeness, Constraints and Guardrails, Output Specification, and People Policy Fit. Return STRICT JSON only. No markdown, no explanation outside JSON:\n\n{\n  \"scores\": {\n    \"objective_clarity\": number,\n    \"context_completeness\": number,\n    \"constraints_and_guardrails\": number,\n    \"output_specification\": number,\n    \"people_policy_fit\": number\n  },\n  \"overall\": number,\n  \"feedback\": string,\n  \"improvements\": string[]\n}\n\nPROMPT:\n\"\"\"\n{{prompt_content}}\n\"\"\"",
+  "criteria": [
+    {
+      "name": "Objective Clarity",
+      "description": "How clearly the prompt states the HR objective, stakeholder need, and desired decision or artifact.",
+      "weight": 1.2,
+      "maxScore": 10
+    },
+    {
+      "name": "Context Completeness",
+      "description": "How well the prompt provides role, seniority, company context, policy status, facts, and jurisdiction.",
+      "weight": 1.3,
+      "maxScore": 10
+    },
+    {
+      "name": "Constraints and Guardrails",
+      "description": "How well the prompt defines confidentiality, fairness, escalation boundaries, documentation expectations, and unknowns that must not be invented.",
+      "weight": 1.4,
+      "maxScore": 10
+    },
+    {
+      "name": "Output Specification",
+      "description": "How clearly the prompt defines outputs such as interview questions, feedback notes, policy drafts, or training outlines.",
+      "weight": 1.0,
+      "maxScore": 10
+    },
+    {
+      "name": "People Policy Fit",
+      "description": "How effectively the prompt aligns the requested output with people-management needs, policy awareness, and fair process design.",
+      "weight": 1.1,
+      "maxScore": 10
+    }
+  ],
+  "overallCalculation": "weighted average of all criteria, rounded to one decimal place",
+  "tierThresholds": {
+    "super": 8.5,
+    "pro": 7.0,
+    "builder": 5.0,
+    "starter": 0
+  }
+}

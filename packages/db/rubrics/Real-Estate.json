@@ -1,0 +1,44 @@
+{
+  "category": "Real Estate",
+  "description": "Rubric for evaluating Real Estate prompts - focuses on prompt quality, transaction context, and risk-aware analysis framing",
+  "gradingPrompt": "You are an expert AI prompt evaluator specializing in Real Estate prompts. Evaluate the quality of the prompt itself, not whether the final real estate answer would already be correct. Score each criterion from 0-10 using these anchors: 0-3 = vague, unsafe, or unusable; 4-6 = partially specified but missing important context, constraints, or output details; 7-8 = strong and usable with minor gaps; 9-10 = precise, well-scoped, and diligence-ready. Reward clear goals, relevant market and property context, concrete assumptions, explicit output format, and strong risk controls. Penalize ambiguity, missing location or deal context, absent financing assumptions, unsupported legal or tax claims, and vague deliverables. Evaluate using these criteria: Objective Clarity, Context Completeness, Constraints and Guardrails, Output Specification, and Transaction Context. Return STRICT JSON only. No markdown, no explanation outside JSON:\n\n{\n  \"scores\": {\n    \"objective_clarity\": number,\n    \"context_completeness\": number,\n    \"constraints_and_guardrails\": number,\n    \"output_specification\": number,\n    \"transaction_context\": number\n  },\n  \"overall\": number,\n  \"feedback\": string,\n  \"improvements\": string[]\n}\n\nPROMPT:\n\"\"\"\n{{prompt_content}}\n\"\"\"",
+  "criteria": [
+    {
+      "name": "Objective Clarity",
+      "description": "How clearly the prompt states the real estate question, deal type, and desired decision or artifact.",
+      "weight": 1.2,
+      "maxScore": 10
+    },
+    {
+      "name": "Context Completeness",
+      "description": "How well the prompt provides property type, location, market, financing, investor profile, and time horizon context.",
+      "weight": 1.3,
+      "maxScore": 10
+    },
+    {
+      "name": "Constraints and Guardrails",
+      "description": "How well the prompt defines assumptions, due diligence limits, risk boundaries, and unknowns that must not be invented.",
+      "weight": 1.4,
+      "maxScore": 10
+    },
+    {
+      "name": "Output Specification",
+      "description": "How clearly the prompt defines outputs such as checklists, scenario tables, valuation frameworks, or action plans.",
+      "weight": 1.0,
+      "maxScore": 10
+    },
+    {
+      "name": "Transaction Context",
+      "description": "How effectively the prompt ties the requested output to transaction stage, decision criteria, and practical next steps.",
+      "weight": 1.1,
+      "maxScore": 10
+    }
+  ],
+  "overallCalculation": "weighted average of all criteria, rounded to one decimal place",
+  "tierThresholds": {
+    "super": 8.5,
+    "pro": 7.0,
+    "builder": 5.0,
+    "starter": 0
+  }
+}

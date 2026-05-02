@@ -1,0 +1,1317 @@
+[
+  {
+    "title": "🏛️ Create Architectural Design Concept Images",
+    "slug": "promptscreate-architectural-design-concepts-images",
+    "content": "[Building Type], in [Location] with [Key Features], in the style of [Architect Name] --ar [Aspect Ratio] OPTIONAL: --s [0-1000]",
+    "category": "Architecture, Residential Architecture",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "structural_integrity": 6,
+        "spatial_planning": 6,
+        "building_systems": 6,
+        "sustainability": 5,
+        "code_compliance": 5
+      },
+      "overall": 5.6,
+      "tier": "Builder",
+      "feedback": "Good architectural concept with location flexibility. Simple but effective.",
+      "improvements": [
+        "Add material specifications",
+        "Add environmental context"
+      ]
+    }
+  },
+  {
+    "title": "📐 Create Architectural Landmark Comparisons",
+    "slug": "promptscreate-architectural-landmark-comparisons",
+    "content": "{\n\n  \"objective\": \"Create a side-by-side visual comparison of [LANDMARK], featuring a technical architectural sketch and a real-life photograph\",\n\n  \"image_specifications\": {\n\n    \"style\": \"Mixed media (Architectural drawing + Real photography)\",\n\n    \"layout\": \"2-part horizontal split\",\n\n    \"aspect_ratio\": \"3:2 or 4:3\"\n\n  },\n\n  \"left_side\": {\n\n    \"content_type\": \"Technical sketch or blueprint of [LANDMARK]\",\n\n    \"features\": [\n\n      \"Accurate structural proportions\",\n\n      \"Labeled dimensions depth\",\n\n      \"Architectural elevation views or cutaways\",\n\n      \"Text annotations in native or English language\"\n\n    ],\n\n    \"text_annotations\": {\n\n      \"units\": \"Metric or imperial, based on region\",\n\n      \"details\": [\n\n        \"Construction phases\",\n\n        \"Material notes\",\n\n        \"Architectural labels\"\n\n      ],\n\n      \"font_style\": \"Engineering or blueprint-styled text\"\n\n    },\n\n    \"visual_style\": \"[SKETCH STYLE]\",\n\n    \"positioning\": \"Left half of the image\"\n\n  },\n\n  \"right_side\": {\n\n    \"content_type\": \"High-resolution real-world image of [LANDMARK]\",\n\n    \"features\": [\n\n      \"[PHOTO PERSPECTIVE]\",\n\n      \"Natural or ambient lighting\",\n\n      \"Color photo with environment context surroundings\"\n\n    ],\n\n    \"positioning\": \"Right half of the image\"\n\n  },\n\n  \"visual_elements\": {\n\n    \"border_division\": \"Clean vertical split or blended transition\",\n\n    \"comparison_focus\": \"Contrast between design concept and real-world result\"\n\n  },\n\n  \"output_format\": {\n\n    \"type\": \"Image\",\n\n    \"high_resolution\": true,\n\n    \"use_case\": [\n\n      \"Educational poster\",\n\n      \"Architectural showcase\",\n\n      \"Tourist guide\",\n\n      \"Infographic series\"\n\n    ]\n\n  },\n\n  \"landmark_options\": [\n\n    \"Eiffel Tower\",\n\n    \"Taj Mahal\",\n\n    \"Colosseum\",\n\n    \"Great Wall of China\",\n\n    \"Statue of Liberty\",\n\n    \"Petra\",\n\n    \"Chichen Itza\",\n\n    \"Christ the Redeemer\",\n\n    \"Anıtkabir\",\n\n    \"Hagia Sophia\",\n\n    \"Sydney Opera House\",\n\n    \"Sagrada Familia\"\n\n  ]\n\n}",
+    "category": "Architecture, Exterior Architecture",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "structural_integrity": 8,
+        "spatial_planning": 7,
+        "building_systems": 7,
+        "sustainability": 6,
+        "code_compliance": 7
+      },
+      "overall": 7.0,
+      "tier": "Pro",
+      "feedback": "Excellent landmark comparison with mixed media approach. Strong technical sketch elements.",
+      "improvements": [
+        "Add more landmark options",
+        "Add measurement specifics"
+      ]
+    }
+  },
+  {
+    "title": "🌅 Create Hyper-Realistic Outdoor Scenes",
+    "slug": "promptscreate-hyper-realistic-outdoor-scenes",
+    "content": "Hyper-realistic [OUTDOOR LIVING ROOM SCENE] on [GROUND COVER] with [PLANT TYPES] and floating [CLOUD ELEMENTS], [SEATING TYPE] in [CHAIR COLOR] beside a [SOFA/COUCH TYPE], arched [WINDOW/OPENING TYPE] revealing [LANDSCAPE VIEW: green fields + blue skies], surreal [FEATURES] blending natural + interior elements, [MIRROR DESCRIPTION] on the [SIDE], [TIME OF DAY], [LIGHTING STYLE], [COLOR PALETTE], [CAMERA ANGLE/FOV], [COMPOSITION], [DETAIL LEVEL] --ar [ASPECT RATIO]",
+    "category": "Architecture, Interior Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "structural_integrity": 7,
+        "spatial_planning": 6,
+        "building_systems": 6,
+        "sustainability": 6,
+        "code_compliance": 6
+      },
+      "overall": 6.2,
+      "tier": "Builder",
+      "feedback": "Good hyper-realistic outdoorLiving concept. Strong surreal element integration.",
+      "improvements": [
+        "Add lighting time specs",
+        "Add seasonal variations"
+      ]
+    }
+  },
+  {
+    "title": "🏡 Create Minimalist Architecture Designs",
+    "slug": "promptscreate-minimalist-architecture-designs",
+    "content": "Minimalist [ARCHITECTURE STYLE] [BUILDING TYPE] in [PRIMARY MATERIAL/COLOR]; [FACADE EXPRESSION e.g., long horizontal lines], [ROOF TYPE], set within a [SITE TYPE] garden with [FLOWER TYPE]. A [SCALE OF PERSON] person stands next to a [WATER FEATURE e.g., pool], [SUBJECT GAZE/POSE] toward the camera. Architectural rendering in the style of [REFERENCE PHOTOGRAPHER/ARTIST], [CAMERA ANGLE], [FOCAL LENGTH] --ar [ASPECT RATIO] --s [STYLIZE] --q [QUALITY] --c [CHAOS] --seed [SEED] --no [NEGATIVE ELEMENTS]",
+    "category": "Architecture, Exterior Architecture",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🖼️ Create Minimalist Interior Designs",
+    "slug": "promptscreate-minimalist-interior-designs-2",
+    "content": "Minimalist [INTERIOR COLOR SCHEME] interior with [FLOOR MATERIAL] floor; a [WALL FEATURE SHAPE] wall, [ART TYPE] on the wall, and a [SMALL FURNITURE ITEM] nearby. [CABINET COLOR] cabinets and [WALL COLOR] walls complemented by a [CEILING TYPE] ceiling inlaid with [INLAY MATERIAL], in the style of [REFERENCE PHOTOGRAPHER/ARTIST]; [PHOTOGRAPHY GENRE], [LIGHTING], [CAMERA ANGLE], [FOCAL LENGTH] --ar [ASPECT RATIO] --s [STYLIZE] --q [QUALITY] --c [CHAOS] --seed [SEED] --no [NEGATIVE ELEMENTS]",
+    "category": "Architecture, Interior Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🏡 Create Minimalist Room Designs",
+    "slug": "promptscreate-minimalist-room-designs",
+    "content": "Minimalist modern [ROOM TYPE] with [LIGHTING], [WALL COLOR] walls accented by [ACCENT COLOR/DETAIL], [FLOOR MATERIAL] floors, a [FEATURE WALL SHAPE] wall feature, and a [FIREPLACE TYPE]. Designed in the style of [REFERENCE ARCHITECT 1] and [REFERENCE ARCHITECT 2], as featured in [PUBLICATION CONTEXT]; [PHOTOGRAPHY GENRE], [CAMERA ANGLE], [FOCAL LENGTH] --ar [ASPECT RATIO] --s [STYLIZE] --q [QUALITY] --c [CHAOS] --seed [SEED] --no [NEGATIVE ELEMENTS]",
+    "category": "Architecture, Interior Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🪑 Create Minimalistic Furniture Displays",
+    "slug": "promptscreate-minimalistic-furniture-displays",
+    "content": "[WOOD SPECIES] [FURNITURE TYPE] with a [FRONT DETAIL] front, [DECOR ITEMS] on the shelf; minimalistic design with a [WALL COLOR] wall and [LIGHTING TEMPERATURE] lighting. Subject positioned in the [SUBJECT POSITION] with large negative space on the [NEGATIVE SPACE AREAS]; [COMPOSITION TRAIT], [AESTHETIC], plenty of breathing room; [PHOTOGRAPHY/RENDER TYPE], [CAMERA ANGLE], [FOCAL LENGTH] --ar [ASPECT RATIO] --s [STYLIZE] --q [QUALITY] --c [CHAOS] --seed [SEED] --no [NEGATIVE ELEMENTS]",
+    "category": "Architecture, Interior Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🏡 Create Modern Minimalist House Designs",
+    "slug": "promptscreate-modern-minimalist-house-designs",
+    "content": "Modern minimalist [HOUSE TYPE] with [STRUCTURAL ELEMENTS e.g., large concrete columns], a [TERRACE SIZE] terrace overlooking [VIEW e.g., garden], [OUTDOOR LOUNGE FURNITURE] and [TERRACE LIGHTING] on the terraces; [WALL COLOR] walls, [BACKGROUND VEGETATION]. [TIME OF DAY] light. [PHOTOGRAPHY GENRE e.g., architectural photography], [VISUALIZATION TYPE e.g., architectural rendering], [DETAIL LEVEL], [MOOD e.g., cinematic], [LIGHTING STYLE e.g., natural lighting]; [CAMERA ANGLE], [FOCAL LENGTH] --ar [ASPECT RATIO] --s [STYLIZE] --q [QUALITY] --c [CHAOS] --seed [SEED] --no [NEGATIVE ELEMENTS]",
+    "category": "Architecture, Exterior Architecture",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🏛️ Create Photorealistic Architectural Renderings",
+    "slug": "promptscreate-photorealistic-architectural-renderings",
+    "content": "Photorealistic architectural rendering of the [ENTRANCE TYPE] to a [VENUE TYPE] in [LOCATION]; [WALL MATERIAL] walls with an [SURFACE PATTERN], [STYLE] aesthetic. Flanked by a [WATER FEATURE LEFT] and [DESERT FLORA RIGHT], overlooking the [WATER BODY/VIEW]. [LUXURY LEVEL] design, editorial composition, clean lines, balanced symmetry — [TIME OF DAY] [LIGHTING], shot from a [CAMERA ANGLE] with a [LENS FOCAL LENGTH]mm lens, [DEPTH OF FIELD]. --ar [ASPECT RATIO] --s [STYLIZE] --q [QUALITY] --c [CHAOS]",
+    "category": "Architecture, Exterior Architecture",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🏛️ Create Photorealistic Building Exteriors",
+    "slug": "promptscreate-photorealistic-building-exteriors",
+    "content": "Photoreal exterior of the [BUILDING TYPE] entrance formed by [COUNT] curved [WALL MATERIAL] walls, flanked by [PLANTINGS] on both sides; ground in [FLOOR MATERIAL] with [SURFACE PATTERN]. Foreground [SEATING LAYOUT] open-air seating for [ACTIVITY]. Smooth, flowing forms using [PRIMARY MATERIALS/COLORS]. [TIME OF DAY] with [LIGHTING QUALITY] and a [WARM/COOL] interior glow. [STYLE TONE: SIMPLE, ELEGANT]. Editorial composition, [CAMERA ANGLE], [PERSPECTIVE], [LENS FOCAL LENGTH]mm, [DEPTH OF FIELD]. Optional: [PEOPLE PRESENCE], [ATMOSPHERIC EFFECTS], [COLOR PALETTE]. --ar [ASPECT RATIO] --s [STYLIZE] --q [QUALITY] --c [CHAOS]",
+    "category": "Architecture, Exterior Architecture",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🪑 Create Stunning Furniture Arrangements",
+    "slug": "promptscreate-stunning-furniture-arrangements",
+    "content": "[WOOD SPECIES] [FURNITURE TYPE e.g., sideboard] with a [SECONDARY SEATING e.g., rattan armchair]; [INTERIOR STYLE] setting against a [WALL/BACKDROP DESCRIPTION]. A [DECOR ITEM e.g., vase] on the [SURFACE], [CURTAIN COLOR] curtain, [FLOOR COLOR/MATERIAL] floor, [RUG COLOR] [RUG TYPE], [BACKGROUND COLOR/TONE]. [LIGHTING TYPE], [PHOTOGRAPHY GENRE], [DETAIL LEVEL], [COLOR TEMPERATURE], [AESTHETIC/MOOD], in the style of [REFERENCE STYLE e.g., wabi-sabi]; [CAMERA ANGLE], [FOCAL LENGTH] --ar [ASPECT RATIO] --s [STYLIZE] --q [QUALITY] --c [CHAOS] --seed [SEED] --no [NEGATIVE ELEMENTS]",
+    "category": "Architecture, Interior Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🌅 Create Stunning Pool Landscapes",
+    "slug": "promptscreate-stunning-pool-landscapes",
+    "content": "Ultra-wide cinematic shot of an [OPEN-AIR POOL TYPE] set within a [MINIMALIST OLIVE GROVE/LANDSCAPE], with a view of [MOUNTAIN TYPE] at [TIME OF DAY] with [LIGHT QUALITY]. [ARCHITECTURE STYLE] architecture, [SEATING TYPE] chairs, a [TABLE STYLE] table, and [FURNITURE NOTES]. In the style of [CINEMATOGRAPHER/ARTIST]. Editorial composition, [CAMERA ANGLE], [PERSPECTIVE], [LENS FOCAL LENGTH]mm, [DEPTH OF FIELD], ISO [ISO], [SHUTTER SPEED]. Optional: [COLOR PALETTE], [ATMOSPHERIC EFFECTS]. --ar [ASPECT RATIO] --s [STYLIZE] --q [QUALITY] --c [CHAOS]",
+    "category": "Architecture, Landscape Architecture",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.3
+      },
+      "overall": 6.3,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🏰 Create Surreal Interior Designs",
+    "slug": "promptscreate-surreal-interior-designs",
+    "content": "Surreal interior with multiple [ARCH COLORS] arches, a [STAIRCASE TYPE] staircase leading to the center of an [EMPTY SPACE TYPE], and [GEOMETRIC SHAPE TYPES] of varied [SIZES] arranged [PLACEMENT]; red-toned walls in a [RED PALETTE], soft [LIGHTING] for a [MOOD/ATMOSPHERE], [MATERIALS/TEXTURES], [COMPOSITION] --ar [ASPECT RATIO] --s [STYLIZE] --c [CHAOS] --q [QUALITY] --seed [SEED] --no [NEGATIVE]",
+    "category": "Architecture, Interior Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🐚 Design Axonometric Core Interiors",
+    "slug": "promptsdesign-axonometric-core-interiors",
+    "content": "{\n  \"project\": {\n    \"title\": \"Circular Core Interior — Axonometric Architecture\",\n    \"goal\": \"Create a precise 3D axonometric interior drawing of a circular spatial system organized around a central spiral core\",\n    \"language\": \"en\"\n  },\n  \"subject\": {\n    \"type\": \"axonometric_interior_architecture\",\n    \"description\": \"A circular interior space organized radially around a central spiral staircase core, shown in clean axonometric projection\",\n    \"projection\": \"true axonometric\",\n    \"consistency_rules\": [\n      \"no perspective distortion\",\n      \"uniform geometry alignment\",\n      \"clear radial spatial organization\",\n      \"structural logic visible\",\n      \"architectural precision\"\n    ]\n  },\n  \"spatial_organization\": {\n    \"core\": {\n      \"type\": \"central spiral staircase\",\n      \"function\": \"vertical circulation and structural stabilizer\",\n      \"geometry\": \"tight spiral with cylindrical enclosure\"\n    },\n    \"radial_zones\": [RADIAL ZONE PROGRAM]\n  },\n  \"architectural_features\": {\n    \"structure\": [\n      \"circular load-bearing outer wall\",\n      \"radial beams extending from core\",\n      \"ring beam at ceiling level\"\n    ],\n    \"ceiling\": {\n      \"feature\": \"central oculus skylight\",\n      \"light_behavior\": \"natural top light entering core\"\n    },\n    \"floor\": {\n      \"design\": \"continuous circular floor plate\",\n      \"detail\": \"subtle concentric pattern\"\n    }\n  },\n  \"materials_representation\": {\n    \"style\": \"line-based architectural drawing\",\n    \"wall_thickness\": \"clearly readable\",\n    \"glass\": \"light transparent line style only\"\n  },\n  \"drawing_style\": {\n    \"linework\": {\n      \"type\": \"clean CAD-style technical lines\",\n      \"hierarchy\": [\n        \"outer shell thicker\",\n        \"structural lines medium\",\n        \"furniture thin\"\n      ]\n    },\n    \"color_palette\": {\n      \"base\": \"white background\",\n      \"accent\": \"[ACCENT COLOR] linework\"\n    },\n    \"shading\": \"minimal flat fills for key zones only\"\n  },\n  \"composition\": {\n    \"view\": \"top corner axonometric with roof removed\",\n    \"focus\": \"clear reading of radial logic\",\n    \"clarity\": \"generous whitespace\",\n    \"diagrammatic_strength\": \"high\"\n  },\n  \"output\": {\n    \"aspect_ratio\": \"[ASPECT RATIO]\",\n    \"resolution\": \"very high\",\n    \"style\": \"technical architectural diagram\",\n    \"quality_level\": \"portfolio and exhibition ready\",\n    \"no_ai_artifacts\": true\n  },\n  \"negative_prompt\": [\n    \"perspective view\",\n    \"photoreal render\",\n    \"dramatic lighting\",\n    \"messy sketch\",\n    \"ornamental decoration\",\n    \"complex textures\",\n    \"random geometry\",\n    \"text blocks\",\n    \"logos\",\n    \"watermarks\"\n  ]\n}",
+    "category": "Architecture, 3D Axonometric Graphics",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🗿 Design Brutalist Landscape Architectures",
+    "slug": "promptsdesign-brutalist-landscape-architectures",
+    "content": "{\n  \"project_type\": \"landscape architecture\",\n  \"design_focus\": \"architectural landscape integrated with terrain\",\n  \"concept\": {\n    \"core_idea\": \"landscape as architecture\",\n    \"approach\": \"the ground itself becomes the building\",\n    \"inspiration\": [\n      \"landform architecture\",\n      \"brutalist landscape\",\n      \"topography-driven design\",\n      \"voids carved into terrain\"\n    ]\n  },\n  \"site_context\": {\n    \"location\": \"[SITE LANDSCAPE]\",\n    \"terrain\": \"gently sloping natural land with rock formations\",\n    \"integration\": \"structure embedded into the landscape, minimal visual dominance\",\n    \"environmental_response\": [\n      \"preserve existing trees\",\n      \"work around natural rocks\",\n      \"respect original land contours\"\n    ]\n  },\n  \"spatial_composition\": {\n    \"geometry\": \"[GROUND GEOMETRY]\",\n    \"organization\": \"interconnected courtyards, sunken plazas, and elevated platforms\",\n    \"levels\": [\n      \"sunken open-air courtyards\",\n      \"ground-level walking planes\",\n      \"subtle elevated ramps\"\n    ],\n    \"circulation\": {\n      \"movement\": \"slow, contemplative pedestrian flow\",\n      \"elements\": [\n        \"wide ramps\",\n        \"gentle staircases\",\n        \"continuous pathways carved into the ground\"\n      ]\n    }\n  },\n  \"materiality\": {\n    \"primary_materials\": [\n      \"exposed fair-faced concrete\",\n      \"stone aggregate surfaces\",\n      \"natural soil textures\"\n    ],\n    \"finishes\": {\n      \"concrete\": \"raw, matte, slightly weathered\",\n      \"floors\": \"integrated concrete and compacted earth\",\n      \"edges\": \"softened transitions between built and natural surfaces\"\n    }\n  },\n  \"landscape_elements\": {\n    \"vegetation\": {\n      \"type\": \"low-maintenance native trees and ground cover\",\n      \"distribution\": \"irregular, natural clustering\",\n      \"interaction\": \"trees penetrate and frame architectural voids\"\n    },\n    \"water\": {\n      \"presence\": \"minimal or absent\",\n      \"conceptual_use\": \"dry basins suggesting water flow\"\n    }\n  },\n  \"human_scale\": {\n    \"people\": {\n      \"scale_reference\": \"small human figures for spatial understanding\",\n      \"activity\": [\n        \"walking\",\n        \"standing\",\n        \"quiet observation\"\n      ]\n    },\n    \"emotion\": \"calm, introspective, monumental yet human-centered\"\n  },\n  \"lighting\": {\n    \"type\": \"natural daylight dominant\",\n    \"shadows\": \"strong architectural shadows emphasizing geometry\",\n    \"time_of_day\": \"[TIME OF DAY]\"\n  },\n  \"visual_style\": {\n    \"realism\": \"ultra realistic\",\n    \"render_quality\": \"architectural visualization, competition-level\",\n    \"camera\": {\n      \"angle\": \"aerial oblique view\",\n      \"lens\": \"wide-angle but distortion-free\"\n    }\n  },\n  \"mood_keywords\": [\n    \"monumental\",\n    \"silent\",\n    \"grounded\",\n    \"timeless\",\n    \"architectural landscape\"\n  ],\n  \"negative_prompt\": [\n    \"decorative park elements\",\n    \"colorful playground equipment\",\n    \"ornamental landscaping\",\n    \"urban street furniture\",\n    \"generic modern park design\"\n  ]\n}",
+    "category": "Architecture, Landscape Architecture",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🐚 Design Contemporary Spa Interiors",
+    "slug": "promptsdesign-contemporary-spa-interiors",
+    "content": "{\n  \"project_type\": \"wellness spa interior design\",\n  \"design_identity\": {\n    \"vibe\": \"cool, contemporary, artistic, immersive\",\n    \"target_feeling\": [\n      \"relaxed but inspired\",\n      \"calm yet visually exciting\",\n      \"luxury without stiffness\"\n    ],\n    \"concept\": \"spa as a modern sensory experience, not a traditional wellness center\"\n  },\n  \"style\": {\n    \"overall\": \"modern wellness with artistic and architectural expression\",\n    \"influences\": [\n      \"boutique hotel spa\",\n      \"art gallery interiors\",\n      \"high-end fashion retail\",\n      \"mediterranean modernism\"\n    ]\n  },\n  \"space_design\": {\n    \"layout\": \"open-flow spa with sculptural zones instead of closed rooms\",\n    \"circulation\": \"soft curved pathways\",\n    \"zones\": [\n      \"relax lounge\",\n      \"treatment pods\",\n      \"meditation corner\",\n      \"water & steam zone\"\n    ]\n  },\n  \"materials\": {\n    \"primary\": [\n      \"[MATERIAL PALETTE]\"\n    ],\n    \"secondary\": [\n      \"[MATERIAL PALETTE]\"\n    ],\n    \"finishes\": \"matte, tactile, natural to the touch\"\n  },\n  \"color_palette\": {\n    \"base_colors\": [\n      \"[COLOR WORLD]\"\n    ],\n    \"accent_colors\": [\n      \"[COLOR WORLD]\"\n    ],\n    \"approach\": \"color-blocked architectural surfaces, not decoration\"\n  },\n  \"furniture_and_forms\": {\n    \"seating\": [\n      \"low sculptural lounge sofas\",\n      \"organic curved benches\"\n    ],\n    \"tables\": \"custom stone or terrazzo side tables\",\n    \"design_language\": \"rounded edges, bold silhouettes, minimal detailing\"\n  },\n  \"lighting\": {\n    \"natural_light\": \"filtered daylight through textured or circular openings\",\n    \"artificial_light\": [\n      \"indirect LED strips hidden in curves\",\n      \"soft ambient wall washing\",\n      \"glowing sculptural light objects\"\n    ],\n    \"atmosphere\": \"warm, dreamy, shadow-rich but soft\"\n  },\n  \"decor_and_art\": {\n    \"elements\": [\n      \"abstract wall art integrated into architecture\",\n      \"large indoor plants as spatial dividers\",\n      \"ceramic and stone art objects\"\n    ],\n    \"rule\": \"decor feels architectural, not added later\"\n  },\n  \"spa_features\": {\n    \"water_elements\": [\n      \"[SENSORY ELEMENTS]\"\n    ],\n    \"treatment_areas\": \"semi-open pods with fabric or glass separation\"\n  },\n  \"camera_and_rendering\": {\n    \"camera_angle\": \"wide-angle interior perspective\",\n    \"lens\": \"24–35mm\",\n    \"composition\": \"editorial, asymmetrical but balanced\",\n    \"focus\": \"materials, curves, color relationships\"\n  },\n  \"render_quality\": {\n    \"style\": \"ultra realistic architectural visualization\",\n    \"lighting_accuracy\": \"soft global illumination\",\n    \"textures\": \"high-detail tactile surfaces\",\n    \"post_processing\": \"editorial color grading\"\n  },\n  \"usage\": {\n    \"ideal_for\": [\n      \"boutique wellness spa\",\n      \"luxury urban spa\",\n      \"hotel spa concept\",\n      \"editorial interior feature\",\n      \"branding visuals\"\n    ]\n  },\n  \"negative_prompt\": [\n    \"traditional spa clichés\",\n    \"bamboo decor\",\n    \"zen symbols\",\n    \"white sterile interiors\",\n    \"cheap candles\",\n    \"overly minimal empty spaces\"\n  ],\n  \"output\": {\n    \"aspect_ratio\": \"1:1\",\n    \"resolution\": \"high resolution\",\n    \"mood\": \"cool, modern, unforgettable\"\n  }\n}",
+    "category": "Architecture, Interior Design",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.7
+      },
+      "overall": 6.7,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "⚡ Design Dynamic Architecture Visualizations",
+    "slug": "promptsdesign-dynamic-architecture-visualizations",
+    "content": "{\n  \"project_type\": \"commercial architecture\",\n  \"building_type\": \"[BRAND TYPOLOGY]\",\n  \"brand_inspiration\": \"[BRAND TYPOLOGY]\",\n  \"architectural_concept\": \"movement, energy, and urban power\",\n  \"exterior_design\": {\n    \"facade\": \"[FACADE SYSTEM] with dynamic geometry\",\n    \"form\": \"bold sculptural volumes with sharp angles\",\n    \"entrance\": \"double-height entrance emphasizing vertical movement\"\n  },\n  \"materials\": [\n    \"[FACADE SYSTEM]\"\n  ],\n  \"lighting\": {\n    \"daytime\": \"high-contrast shadows emphasizing geometry\",\n    \"nighttime\": \"dramatic accent lighting highlighting facade rhythm\"\n  },\n  \"urban_context\": {\n    \"location\": \"[URBAN ENERGY]\",\n    \"interaction\": \"[URBAN ENERGY]\"\n  },\n  \"visual_style\": {\n    \"realism\": \"ultra-realistic architectural visualization\",\n    \"camera\": \"low-angle exterior perspective\",\n    \"details\": \"high texture fidelity, realistic wear, urban reflections\"\n  },\n  \"atmosphere\": \"energetic, bold, urban, performance-focused\",\n  \"avoid\": [\n    \"soft residential aesthetics\",\n    \"classic symmetry\",\n    \"decorative historic elements\"\n  ]\n}",
+    "category": "Architecture, Commercial Architecture",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🧬 Design Futuristic Urban Corridor Visuals",
+    "slug": "promptsdesign-futuristic-urban-corridor-visuals",
+    "content": "{\n  \"project_type\": \"smart_city_urban_design\",\n  \"concept_title\": \"Human-Centered Smart City Corridor\",\n  \"design_focus\": {\n    \"primary_goal\": \"technology-integrated, human-centric urban environment\",\n    \"secondary_goal\": \"sustainability, mobility, and social interaction\"\n  },\n  \"urban_elements\": {\n    \"circulation\": [\n      \"pedestrian-first streets\",\n      \"dedicated bicycle lanes\",\n      \"autonomous vehicle corridors\"\n    ],\n    \"public_spaces\": [\n      \"modular seating zones\",\n      \"interactive digital plazas\",\n      \"green pocket parks\"\n    ],\n    \"architecture\": [\n      \"parametric canopies\",\n      \"organic urban structures\",\n      \"adaptive mixed-use buildings\"\n    ]\n  },\n  \"smart_city_features\": {\n    \"technology\": [\n      \"[SMART TECHNOLOGY FOCUS]\"\n    ],\n    \"infrastructure\": [\n      \"[SMART TECHNOLOGY FOCUS]\"\n    ],\n    \"mobility\": [\n      \"[SMART TECHNOLOGY FOCUS]\"\n    ]\n  },\n  \"sustainability\": {\n    \"energy\": [\n      \"solar panels\",\n      \"energy-efficient LED systems\"\n    ],\n    \"environment\": [\n      \"urban greenery integration\",\n      \"rainwater collection surfaces\",\n      \"low-carbon materials\"\n    ]\n  },\n  \"visual_style\": {\n    \"aesthetic\": \"futuristic yet warm\",\n    \"form_language\": \"fluid, parametric, organic\",\n    \"color_palette\": [\n      \"[DISTRICT IDENTITY]\"\n    ],\n    \"materials\": [\n      \"[DISTRICT IDENTITY]\"\n    ]\n  },\n  \"people_and_activity\": {\n    \"users\": [\n      \"pedestrians\",\n      \"cyclists\",\n      \"remote workers\",\n      \"families\"\n    ],\n    \"interactions\": [\n      \"[SMART TECHNOLOGY FOCUS — visible human-tech interactions]\"\n    ]\n  },\n  \"lighting_and_atmosphere\": {\n    \"time_of_day\": \"golden hour transitioning to evening\",\n    \"lighting\": [\n      \"soft ambient lighting\",\n      \"integrated LED strips\",\n      \"responsive light patterns\"\n    ],\n    \"mood\": \"innovative, calm, forward-looking\"\n  },\n  \"camera_and_rendering\": {\n    \"viewpoint\": \"[URBAN DISTRICT CHARACTER]\",\n    \"scale\": \"human-scale architecture\",\n    \"render_quality\": \"ultra-detailed, architectural visualization, photorealistic\"\n  }\n}",
+    "category": "Architecture, Urban Design",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🦴 Design Industrial Minimalist Office Interiors",
+    "slug": "promptsdesign-industrial-minimalist-office-interiors-2",
+    "content": "{\n  \"project_type\": \"office interior architecture design\",\n  \"style\": \"industrial minimalist contemporary office\",\n  \"design_concept\": {\n    \"mood\": \"calm, creative, focused, intelligent\",\n    \"identity\": \"[STUDIO IDENTITY]\",\n    \"approach\": \"function-driven, uncluttered, spatial clarity\"\n  },\n  \"space\": {\n    \"office_type\": \"open-plan creative office\",\n    \"ceiling\": \"very high ceiling with exposed structure\",\n    \"layout\": \"open workspace with shared tables and quiet zones\",\n    \"spatial_feel\": \"airy, breathable, gallery-like\"\n  },\n  \"architecture\": {\n    \"structure\": [\n      \"exposed steel trusses\",\n      \"visible roof framing\",\n      \"industrial skylight system\"\n    ],\n    \"walls\": [\n      \"[SURFACE SYSTEM]\"\n    ],\n    \"floor\": [\n      \"[SURFACE SYSTEM]\"\n    ]\n  },\n  \"furniture\": {\n    \"tables\": [\n      \"large organic-shaped shared work tables\",\n      \"custom light wood tables on wheels\"\n    ],\n    \"chairs\": \"simple mid-century inspired office chairs\",\n    \"storage\": \"minimal open shelving and integrated storage\",\n    \"design_language\": \"functional, understated, timeless\"\n  },\n  \"lighting\": {\n    \"natural_light\": \"large roof skylights flooding the space\",\n    \"daylight_effect\": \"soft diffused daylight across surfaces\",\n    \"artificial_light\": [\n      \"minimal pendant lights\",\n      \"hidden linear lighting\"\n    ],\n    \"overall_feel\": \"bright but soft, no harsh contrast\"\n  },\n  \"color_palette\": {\n    \"primary_colors\": [\n      \"[SURFACE SYSTEM]\"\n    ],\n    \"accent_colors\": [\n      \"[DETAIL ACCENTS]\"\n    ],\n    \"saturation\": \"low, professional\"\n  },\n  \"decor_and_details\": {\n    \"elements\": [\n      \"[DETAIL ACCENTS]\"\n    ],\n    \"decor_style\": \"intentional, sparse, intellectual\"\n  },\n  \"camera\": {\n    \"angle\": \"wide-angle interior shot\",\n    \"lens\": \"24–35mm architectural lens\",\n    \"composition\": \"balanced, strong horizontal and vertical lines\",\n    \"focus\": \"sharp architectural clarity\"\n  },\n  \"render_quality\": {\n    \"realism\": \"ultra realistic\",\n    \"textures\": \"high-detail concrete, wood, metal\",\n    \"lighting_accuracy\": \"physically accurate light behavior\",\n    \"shadows\": \"soft natural shadows\"\n  },\n  \"usage\": {\n    \"ideal_for\": [\n      \"[STUDIO IDENTITY]\"\n    ]\n  },\n  \"negative_prompt\": [\n    \"corporate cubicles\",\n    \"cheap office furniture\",\n    \"overdecorated interiors\",\n    \"bright saturated colors\",\n    \"messy cables\",\n    \"generic coworking look\"\n  ],\n  \"output\": {\n    \"aspect_ratio\": \"3:4 or 16:9\",\n    \"resolution\": \"high resolution\",\n    \"style_consistency\": \"premium architectural visualization\"\n  }\n}",
+    "category": "Architecture, Interior Design",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.7
+      },
+      "overall": 6.7,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🛋️ Design Interior Spaces Concepts",
+    "slug": "promptsdesign-interior-spaces-concepts",
+    "content": "Interior design of a [Space], [Design Style], [Color Palette], [OPTIONAL: Furtniture Items], featuring [Material], [Lighting], [Artist/Interior Designer], --ar 16:9",
+    "category": "Architecture, Interior Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🎍 Design Isometric Residential Tower Diagrams",
+    "slug": "promptsdesign-isometric-residential-tower-diagrams",
+    "content": "{\n  \"project_title\": \"High-Density Residential Tower with Green Terraces\",\n  \"prompt_language\": \"English\",\n  \"architecture_type\": \"Residential Architecture\",\n  \"project_scale\": \"[PROJECT SCALE]\",\n  \"design_goal\": \"Create a realistic residential building plan and massing diagram combining architectural visualization and technical sustainability diagrams.\",\n  \"site_context\": {\n    \"urban_context\": \"[SITE CONTEXT]\",\n    \"plot_type\": \"[SITE CONTEXT]\",\n    \"surroundings\": [\n      \"[SITE CONTEXT]\"\n    ]\n  },\n  \"building_program\": {\n    \"primary_use\": \"residential apartments\",\n    \"secondary_use\": [\n      \"shared amenities\",\n      \"community spaces\",\n      \"green terraces\"\n    ],\n    \"residential_units\": {\n      \"types\": [\n        \"studio\",\n        \"1+1\",\n        \"2+1\",\n        \"3+1 duplex units\"\n      ]\n    },\n    \"shared_spaces\": [\n      \"sky gardens\",\n      \"co-working lounges\",\n      \"fitness area\",\n      \"children play zones\",\n      \"roof gardens\"\n    ]\n  },\n  \"architectural_form\": {\n    \"massing\": \"stacked and shifted residential volumes\",\n    \"composition\": \"stepped tower rising from a podium\",\n    \"spatial_strategy\": \"voids carved between volumes to allow light, air, and greenery\",\n    \"visual_character\": \"contemporary, rational, environmentally driven\"\n  },\n  \"facade_design\": {\n    \"system\": \"horizontal slab articulation with recessed balconies\",\n    \"materials\": [\n      \"[FACADE MATERIALS]\"\n    ],\n    \"balconies\": \"continuous residential balconies with vegetation\"\n  },\n  \"sustainability_diagrams\": {\n    \"included\": true,\n    \"diagram_types\": [\n      \"natural cross ventilation\",\n      \"solar orientation\",\n      \"thermal comfort\",\n      \"air quality improvement\",\n      \"noise absorption\",\n      \"biophilic integration\"\n    ],\n    \"representation_style\": \"clean architectural diagrams with icons and arrows\"\n  },\n  \"green_strategy\": {\n    \"vertical_gardens\": \"trees and shrubs integrated on every terrace\",\n    \"podium_landscape\": \"public green roof with seating and walking paths\",\n    \"biophilic_design\": \"visual and physical connection between residents and nature\"\n  },\n  \"technical_visualization\": {\n    \"view_type\": \"axonometric architectural diagram\",\n    \"detail_level\": \"highly detailed but clean and legible\",\n    \"annotations\": \"minimal technical callouts and dashed connection lines\",\n    \"style\": \"architectural competition board quality\"\n  },\n  \"lighting_and_rendering\": {\n    \"lighting\": \"neutral daylight\",\n    \"shadows\": \"soft realistic shadows\",\n    \"render_quality\": \"ultra realistic architectural visualization\",\n    \"color_palette\": \"neutral greys, soft greens, muted urban tones\"\n  },\n  \"camera_and_composition\": {\n    \"camera_angle\": \"isometric / axonometric\",\n    \"background\": \"white or very light neutral\",\n    \"focus\": \"clarity of residential massing and environmental strategy\"\n  },\n  \"negative_prompt\": [\n    \"fantasy architecture\",\n    \"futuristic sci-fi buildings\",\n    \"cartoon rendering\",\n    \"overly artistic abstraction\",\n    \"unbuildable structures\",\n    \"low-detail sketch style\"\n  ],\n  \"output_expectation\": {\n    \"realism\": \"architecturally feasible and buildable\",\n    \"use_case\": [\n      \"architectural presentation\",\n      \"competition board\",\n      \"urban residential concept design\"\n    ]\n  }\n}",
+    "category": "Architecture, Residential Architecture",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🍶 Design Minimal Cafe Interior Renders",
+    "slug": "promptsdesign-minimal-cafe-interior-renders",
+    "content": "{\n  \"project_type\": \"cafe interior design\",\n  \"style\": \"modern minimal contemporary cafe\",\n  \"concept\": \"calm, architectural coffee space with premium craftsmanship\",\n  \"atmosphere\": [\n    \"quiet luxury\",\n    \"clean and warm\",\n    \"urban yet inviting\",\n    \"timeless and refined\"\n  ],\n  \"space_layout\": {\n    \"plan\": \"open bar-centric layout\",\n    \"focus_point\": \"long minimalist coffee bar\",\n    \"seating\": [\n      \"simple wooden tables\",\n      \"lightweight chairs\",\n      \"no visual clutter\"\n    ],\n    \"circulation\": \"clear, fluid customer flow\"\n  },\n  \"materials\": {\n    \"bar_counter\": \"[MATERIAL SYSTEM]\",\n    \"walls\": [\n      \"[MATERIAL SYSTEM]\"\n    ],\n    \"flooring\": \"[MATERIAL SYSTEM]\",\n    \"wood_elements\": \"[MATERIAL SYSTEM]\"\n  },\n  \"color_palette\": {\n    \"primary\": [\n      \"[TONAL ATMOSPHERE]\"\n    ],\n    \"accent\": [\n      \"[TONAL ATMOSPHERE]\"\n    ],\n    \"overall_feel\": \"neutral, calming, sophisticated\"\n  },\n  \"lighting\": {\n    \"natural_light\": \"[DAYLIGHT ARCHITECTURE]\",\n    \"artificial_light\": [\n      \"warm linear shelf lighting\",\n      \"track lighting with focused spots\",\n      \"hidden indirect lighting\"\n    ],\n    \"temperature\": \"warm white (2700K–3000K)\"\n  },\n  \"bar_design\": {\n    \"equipment_visibility\": \"professional espresso machines displayed cleanly\",\n    \"shelving\": \"floating shelves with minimal glassware\",\n    \"organization\": \"precise, symmetrical, uncluttered\"\n  },\n  \"furniture_style\": {\n    \"tables\": \"simple rectangular wooden tables\",\n    \"chairs\": \"lightweight modern cafe chairs\",\n    \"design_rule\": \"function-first, visually quiet\"\n  },\n  \"ceiling\": {\n    \"style\": \"exposed ceiling\",\n    \"details\": [\n      \"black-painted structure\",\n      \"minimal track lighting\"\n    ]\n  },\n  \"branding_approach\": {\n    \"visibility\": \"very subtle\",\n    \"application\": [\n      \"small logo detail\",\n      \"menu typography only\"\n    ],\n    \"rule\": \"architecture over branding\"\n  },\n  \"rendering_style\": {\n    \"type\": \"ultra-realistic architectural visualization\",\n    \"camera_angle\": \"eye-level wide shot\",\n    \"lighting_quality\": \"soft global illumination\",\n    \"texture_detail\": \"high realism\"\n  },\n  \"negative_prompt\": [\n    \"rustic cafe\",\n    \"vintage decor\",\n    \"industrial clutter\",\n    \"bright colors\",\n    \"decorative overload\",\n    \"hipster cafe elements\"\n  ],\n  \"output\": {\n    \"aspect_ratio\": \"1:1\",\n    \"resolution\": \"high resolution\",\n    \"final_mood\": \"modern, premium, calm coffee experience\"\n  }\n}",
+    "category": "Architecture, Interior Design",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.7
+      },
+      "overall": 6.7,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🗿 Design Monolithic Residential Architecture Concepts",
+    "slug": "promptsdesign-monolithic-residential-architecture-concepts",
+    "content": "{\n  \"project\": \"Monolithic Residential Architecture Concept\",\n  \"prompt_language\": \"English\",\n  \"architecture_type\": \"Residential Architecture\",\n  \"design_intent\": \"Create a dramatic, contemplative residential building inspired by monolithic architecture, emphasizing voids, light, and material depth rather than decorative form.\",\n  \"site_context\": {\n    \"location_type\": \"[SITE CONTEXT]\",\n    \"topography\": \"[SITE CONTEXT]\",\n    \"surroundings\": \"[SITE CONTEXT]\"\n  },\n  \"building_program\": {\n    \"residence_type\": \"single-family luxury residence\",\n    \"levels\": \"2–3 levels\",\n    \"spaces\": [\n      \"entrance gallery\",\n      \"double-height living space\",\n      \"private bedrooms\",\n      \"inner courtyard or light void\",\n      \"meditation / reading space\",\n      \"terrace overlooking landscape\"\n    ]\n  },\n  \"architectural_language\": {\n    \"form\": \"monolithic, sculpted volumes carved by deep voids and passages\",\n    \"geometry\": \"sharp cuts, angled voids, narrow corridors opening to framed views\",\n    \"spatial_concept\": \"architecture as a sequence of compression and release\",\n    \"inspiration_keywords\": [\n      \"brutalist minimalism\",\n      \"sacred architecture\",\n      \"contemporary sculptural housing\"\n    ]\n  },\n  \"material_palette\": {\n    \"primary_materials\": [\n      \"[MATERIAL PALETTE]\"\n    ],\n    \"finishes\": \"[MATERIAL PALETTE]\",\n    \"color_tones\": \"[MATERIAL PALETTE]\"\n  },\n  \"light_and_atmosphere\": {\n    \"natural_light\": \"controlled daylight entering through tall vertical slits and carved openings\",\n    \"artificial_light\": \"warm recessed floor and wall lighting emphasizing texture\",\n    \"mood\": \"quiet, introspective, timeless\"\n  },\n  \"exterior_features\": {\n    \"circulation\": \"narrow exterior passage or bridge-like walkway leading to entrance\",\n    \"openings\": \"tall vertical void framing the horizon\",\n    \"landscape_integration\": \"building emerges from terrain, minimal intervention\"\n  },\n  \"render_settings\": {\n    \"style\": \"ultra-photorealistic architectural visualization\",\n    \"camera\": \"eye-level human perspective emphasizing scale\",\n    \"time_of_day\": \"early evening / dusk\",\n    \"lighting_quality\": \"cinematic, soft contrast, realistic shadows\",\n    \"detail_level\": \"high material realism, visible texture and construction logic\"\n  },\n  \"negative_prompt\": [\n    \"cartoon style\",\n    \"futuristic sci-fi architecture\",\n    \"ornamental facades\",\n    \"glass-heavy modern villas\",\n    \"overly decorative elements\",\n    \"unrealistic proportions\",\n    \"fantasy structures\"\n  ],\n  \"output_requirements\": {\n    \"realism\": \"buildable and architecturally plausible\",\n    \"emotion\": \"feels like a place for living, reflection, and solitude\",\n    \"originality\": \"inspired by monolithic architecture but not a replica\"\n  }\n}",
+    "category": "Architecture, Residential Architecture",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🥬 Design Organic Landscape Architecture Renders",
+    "slug": "promptsdesign-organic-landscape-architecture-renders",
+    "content": "{\n  \"project_type\": \"landscape integrated architecture\",\n  \"design_intent\": \"organic architecture emerging from cultivated terrain\",\n  \"concept\": {\n    \"core_idea\": \"architecture woven into productive landscape\",\n    \"design_language\": \"fluid, layered, terrain-responsive\",\n    \"originality_note\": \"inspired by agricultural patterns but redesigned with unique geometry and spatial logic\",\n    \"influences\": [\n      \"landform architecture\",\n      \"parametric landscape design\",\n      \"contemporary eco-architecture\",\n      \"topography-driven structures\"\n    ]\n  },\n  \"site_context\": {\n    \"setting\": \"[SITE SETTING]\",\n    \"terrain\": \"soft rolling slopes with rhythmic planting lines\",\n    \"contextual_elements\": [\n      \"agricultural fields\",\n      \"service paths\",\n      \"scattered trees\"\n    ],\n    \"integration_strategy\": \"building flows between planting bands instead of cutting through them\"\n  },\n  \"architectural_form\": {\n    \"geometry\": \"asymmetrical flowing roofscape with subtle folds\",\n    \"structure\": \"partially embedded, partially exposed volumes\",\n    \"roof\": {\n      \"type\": \"green roof with linear vegetation strips\",\n      \"pattern\": \"non-parallel, gently shifting contours to avoid repetition\"\n    },\n    \"spatial_identity\": \"low-profile landmark that reads as landscape from a distance\"\n  },\n  \"program\": {\n    \"functions\": [BUILDING PROGRAM],\n    \"interior_exterior_relation\": \"fully transparent facades opening toward the slope\",\n    \"seating\": \"integrated into terraces and interior edges\"\n  },\n  \"materials\": {\n    \"primary\": [\n      \"dark steel structural ribs\",\n      \"low-reflective glass\",\n      \"compressed earth concrete\"\n    ],\n    \"secondary\": [\n      \"wood-lined interiors\",\n      \"vegetated roof systems\"\n    ],\n    \"material_expression\": \"natural, restrained, contemporary\"\n  },\n  \"landscape_design\": {\n    \"planting_strategy\": {\n      \"type\": \"productive and native vegetation mix\",\n      \"layout\": \"curved agricultural bands responding to micro-topography\",\n      \"contrast\": \"soft vegetation against precise architectural lines\"\n    },\n    \"paths\": {\n      \"design\": \"minimal, narrow, gravel and stone\",\n      \"movement\": \"slow experiential circulation\"\n    }\n  },\n  \"visual_style\": {\n    \"realism\": \"ultra realistic architectural visualization\",\n    \"render_quality\": \"competition-level, cinematic\",\n    \"camera\": {\n      \"viewpoint\": \"aerial oblique perspective\",\n      \"lens\": \"telephoto-compressed depth for landscape emphasis\"\n    },\n    \"lighting\": {\n      \"time_of_day\": \"[TIME OF DAY]\",\n      \"effect\": \"warm highlights on vegetation, soft shadows on structure\"\n    }\n  },\n  \"atmosphere\": {\n    \"mood\": [\n      \"calm\",\n      \"innovative\",\n      \"grounded\",\n      \"timeless\"\n    ],\n    \"emotional_response\": \"architecture that feels grown, not built\"\n  },\n  \"human_presence\": {\n    \"scale\": \"small figures used only for scale\",\n    \"activity\": [\n      \"walking\",\n      \"sitting\",\n      \"observing landscape\"\n    ]\n  },\n  \"negative_prompt\": [\n    \"exact vineyard replication\",\n    \"symmetrical repetition\",\n    \"iconic roof copying\",\n    \"generic eco-resort design\",\n    \"overly futuristic shapes\",\n    \"cartoonish rendering\"\n  ]\n}",
+    "category": "Architecture, Landscape Architecture",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🕸️ Design Parametric Urban Canopy Structures",
+    "slug": "promptsdesign-parametric-urban-canopy-structures",
+    "content": "{\n  \"project_type\": \"urban_design_public_space\",\n  \"concept_name\": \"Parametric Urban Canopy Walk\",\n  \"design_theme\": \"future-forward pedestrian infrastructure\",\n  \"design_intent\": [\n    \"walkability\",\n    \"public comfort\",\n    \"urban art + architecture integration\",\n    \"parametric design\",\n    \"human-scale city experience\"\n  ],\n  \"site_context\": {\n    \"location_type\": \"[URBAN SETTING]\",\n    \"existing_elements\": [\n      \"[URBAN SETTING]\"\n    ],\n    \"integration_strategy\": \"structure weaves between trees without cutting them\"\n  },\n  \"architectural_language\": {\n    \"form\": \"continuous flowing canopy\",\n    \"geometry\": \"organic parametric cellular pattern\",\n    \"inspiration\": [\n      \"biological membranes\",\n      \"honeycomb structures\",\n      \"computational design\"\n    ]\n  },\n  \"structure_description\": \"A long, curving pedestrian canopy made of a perforated parametric lattice structure, forming a shaded urban corridor. The canopy flows like a wave along the sidewalk, bending and rising organically around existing trees. Integrated seating elements emerge naturally from the structure, creating places to sit, rest, and socialize.\",\n  \"materials\": [\n    \"[CANOPY IDENTITY]\",\n    \"[GROUND PLANE]\"\n  ],\n  \"color_palette\": {\n    \"structure\": \"[CANOPY IDENTITY]\",\n    \"paving\": \"[GROUND PLANE]\",\n    \"environment\": \"natural greens and warm tree bark tones\"\n  },\n  \"human_interaction\": {\n    \"activities\": [\n      \"walking\",\n      \"sitting\",\n      \"waiting\",\n      \"social interaction\",\n      \"urban pause moments\"\n    ],\n    \"scale\": \"human-scale proportions with people clearly visible for reference\"\n  },\n  \"lighting_design\": {\n    \"daytime\": \"filtered natural daylight through perforated canopy\",\n    \"nighttime\": \"soft integrated LED lighting embedded into structure ribs\",\n    \"mood\": \"safe, calm, contemporary urban atmosphere\"\n  },\n  \"sustainability_features\": [\n    \"passive shading\",\n    \"no tree removal\",\n    \"durable low-maintenance materials\",\n    \"encourages walking over car usage\"\n  ],\n  \"camera_and_rendering\": {\n    \"shot_type\": \"eye-level pedestrian perspective\",\n    \"lens\": \"35mm\",\n    \"depth_of_field\": \"deep focus\",\n    \"style\": \"photorealistic architectural visualization\",\n    \"quality\": \"ultra-detailed, realistic textures, crisp shadows\"\n  },\n  \"prompt\": \"A contemporary urban design project featuring a flowing parametric pedestrian canopy along a [URBAN SETTING]. The structure is organic and cellular, wrapping around existing trees and forming a continuous shaded walkway. The canopy is made of a [CANOPY IDENTITY] perforated lattice. Integrated benches are seamlessly carved into the structure. The ground is paved with [GROUND PLANE]. People walk, sit, and relax under the canopy. Trees pass through openings in the structure. Soft daylight filters through the pattern, creating beautiful shadow play. Ultra-realistic architectural photography style, human-scale, clean, modern, calm urban atmosphere.\",\n  \"negative_prompt\": [\n    \"futuristic sci-fi city\",\n    \"glass skyscrapers\",\n    \"cyberpunk neon lights\",\n    \"overcrowded scene\",\n    \"cartoon style\",\n    \"illustration\",\n    \"low detail\",\n    \"distorted proportions\"\n  ],\n  \"output_settings\": {\n    \"resolution\": \"1024x1024\",\n    \"detail_level\": \"high\",\n    \"realism\": \"photorealistic\"\n  }\n}",
+    "category": "Architecture, Urban Design",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🧱 Design Photorealistic Urban District Renders",
+    "slug": "promptsdesign-photorealistic-urban-district-renders",
+    "content": "{\n  \"project_type\": \"urban_design\",\n  \"theme\": \"culture_and_arts_focused_public_space\",\n  \"realism_level\": \"highly_photorealistic\",\n  \"design_intent\": {\n    \"core_idea\": \"A real, buildable cultural urban district integrated into everyday city life\",\n    \"focus\": \"architecture, public space, people scale, material realism\",\n    \"emotion\": \"lively, authentic, contemporary, human-centered\"\n  },\n  \"urban_context\": {\n    \"city_type\": \"[REGIONAL CONTEXT]\",\n    \"surroundings\": [\n      \"[REGIONAL CONTEXT]\"\n    ],\n    \"scale\": \"pedestrian-focused urban scale\"\n  },\n  \"architecture_and_space\": {\n    \"buildings\": [\n      \"[CULTURAL PROGRAM]\"\n    ],\n    \"public_spaces\": [\n      \"open urban plaza with seating\",\n      \"small amphitheater for performances\",\n      \"wide pedestrian promenades\",\n      \"shaded courtyards between buildings\"\n    ]\n  },\n  \"art_integration\": {\n    \"type\": \"subtle and realistic public art\",\n    \"examples\": [\n      \"[CULTURAL PROGRAM — art typology]\"\n    ],\n    \"placement\": \"naturally integrated into urban fabric, not decorative excess\"\n  },\n  \"people_and_activity\": {\n    \"density\": \"realistic everyday crowd level\",\n    \"people_types\": [\n      \"locals walking\",\n      \"artists working\",\n      \"street musicians\",\n      \"families sitting\",\n      \"tourists observing art\"\n    ],\n    \"behavior\": \"casual movement, natural poses, unstaged interactions\"\n  },\n  \"materials_and_construction\": {\n    \"materials\": [\n      \"[MATERIAL REALITY]\"\n    ],\n    \"construction_logic\": \"structurally believable, buildable details\"\n  },\n  \"color_palette\": {\n    \"dominant\": [\n      \"[MATERIAL REALITY — dominant tones]\"\n    ],\n    \"accents\": [\n      \"[MATERIAL REALITY — accent tones]\"\n    ],\n    \"saturation\": \"low to medium, realistic urban tones\"\n  },\n  \"lighting_and_atmosphere\": {\n    \"time_of_day\": \"late afternoon or early evening\",\n    \"lighting\": [\n      \"natural sunlight with soft shadows\",\n      \"warm artificial lighting from cafés and galleries\",\n      \"realistic reflections on stone and glass\"\n    ],\n    \"weather\": \"clear or lightly cloudy\"\n  },\n  \"landscape_design\": {\n    \"elements\": [\n      \"urban trees\",\n      \"planters integrated into seating\",\n      \"green roofs on cultural buildings\"\n    ],\n    \"approach\": \"functional greenery, not decorative excess\"\n  },\n  \"camera_and_rendering\": {\n    \"camera_angle\": \"human eye-level perspective\",\n    \"lens\": \"35mm architectural photography lens\",\n    \"depth_of_field\": \"natural, subtle\",\n    \"style\": \"architectural photography, competition visualization\"\n  },\n  \"output_constraints\": {\n    \"no_text\": true,\n    \"no_logos\": true,\n    \"no_fantasy_forms\": true,\n    \"no_surreal_elements\": true\n  }\n}",
+    "category": "Architecture, Urban Design",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🚲 Design Sustainable Urban Neighborhood Scenes",
+    "slug": "promptsdesign-sustainable-urban-neighborhood-scenes",
+    "content": "{\n  \"project_type\": \"urban_design_architecture\",\n  \"concept\": \"human-centered, sustainable city life\",\n  \"urban_scale\": {\n    \"scope\": \"neighborhood to city scale\",\n    \"focus\": [\n      \"public spaces\",\n      \"streets and plazas\",\n      \"green infrastructure\",\n      \"mixed-use environments\"\n    ]\n  },\n  \"design_principles\": {\n    \"human_centered\": true,\n    \"walkability\": true,\n    \"accessibility\": true,\n    \"social_interaction\": true,\n    \"sustainability\": true\n  },\n  \"architecture_elements\": {\n    \"building_types\": [\n      \"residential blocks\",\n      \"office buildings\",\n      \"cultural centers\",\n      \"cafes and retail\"\n    ],\n    \"scale\": \"mid-rise, human-scale buildings\",\n    \"material_language\": [\n      \"[URBAN MATERIAL PALETTE]\"\n    ]\n  },\n  \"public_space_design\": {\n    \"elements\": [\n      \"[PUBLIC SPACE CHARACTER]\"\n    ],\n    \"landscape\": [\n      \"[PUBLIC SPACE CHARACTER]\"\n    ]\n  },\n  \"urban_context\": {\n    \"climate_region\": \"[CLIMATE REGION]\",\n    \"cultural_reference\": \"[CLIMATE REGION]\"\n  },\n  \"people_and_activity\": {\n    \"users\": [\n      \"pedestrians\",\n      \"cyclists\",\n      \"families\",\n      \"outdoor cafe patrons\",\n      \"children playing\"\n    ],\n    \"density\": \"lively but not overcrowded\",\n    \"scale\": \"realistic human proportions\"\n  }\n}",
+    "category": "Architecture, Urban Design",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🏟️ Design Urban Landscape Architecture Renders",
+    "slug": "promptsdesign-urban-landscape-architecture-renders",
+    "content": "{\n  \"project_type\": \"landscape architecture\",\n  \"program\": \"[LANDSCAPE PROGRAM]\",\n  \"design_vision\": {\n    \"concept\": \"A contemporary urban landscape that behaves as spatial infrastructure rather than decorative greenery.\",\n    \"philosophy\": \"Landscape as architecture — shaped ground, controlled voids, and human-scale spatial sequences.\"\n  },\n  \"urban_context\": {\n    \"location\": \"[CITY CONTEXT]\",\n    \"surroundings\": [\n      \"mid-rise and high-rise buildings\",\n      \"asphalt roads\",\n      \"tram lines\",\n      \"pedestrian sidewalks\",\n      \"urban noise and movement\"\n    ],\n    \"role\": \"a breathing spatial interruption inside the city fabric\"\n  },\n  \"spatial_composition\": {\n    \"layout\": \"non-linear circulation with subtle elevation changes\",\n    \"ground_design\": [\n      \"carved terrain\",\n      \"sunken plazas\",\n      \"raised urban platforms\"\n    ],\n    \"movement\": \"slow, exploratory pedestrian flow rather than direct paths\"\n  },\n  \"landscape_elements\": {\n    \"hardscape\": [\n      \"cast-in-place architectural concrete\",\n      \"stone paving with irregular modules\",\n      \"textured terrazzo surfaces\"\n    ],\n    \"softscape\": [\n      \"controlled native planting\",\n      \"low-maintenance grasses\",\n      \"urban trees integrated into architectural voids\"\n    ],\n    \"water_elements\": [\n      \"shallow reflective water planes\",\n      \"linear water channels integrated into paving\"\n    ]\n  },\n  \"planting_strategy\": {\n    \"approach\": \"architectural planting rather than naturalistic park design\",\n    \"species_behavior\": \"precise placement, strong silhouettes, seasonal change\",\n    \"density\": \"intentional voids — greenery is curated, not everywhere\",\n    \"avoid\": [\n      \"lush tropical gardens\",\n      \"random greenery\",\n      \"decorative flower beds\"\n    ]\n  },\n  \"public_use\": {\n    \"activities\": [\n      \"sitting\",\n      \"walking\",\n      \"informal gatherings\",\n      \"urban rest\"\n    ],\n    \"furniture\": [\n      \"integrated concrete seating\",\n      \"monolithic stone benches\",\n      \"landscape elements doubling as seating\"\n    ],\n    \"human_presence\": \"people interacting naturally with the space\"\n  },\n  \"material_palette\": {\n    \"dominant\": [\n      \"mineral concrete tones\",\n      \"warm stone\",\n      \"oxidized metal accents\"\n    ],\n    \"finish_quality\": \"matte, tactile, weathered, realistic aging visible\"\n  },\n  \"lighting_design\": {\n    \"daytime\": \"[LIGHT CONDITION]\",\n    \"nighttime\": [\n      \"low-level indirect lighting\",\n      \"concealed linear LEDs\",\n      \"soft glow integrated into landscape edges\"\n    ],\n    \"mood\": \"calm, urban, grounded\"\n  },\n  \"environmental_strategy\": {\n    \"sustainability\": [\n      \"permeable surfaces\",\n      \"rainwater collection\",\n      \"urban heat reduction\"\n    ],\n    \"climate_response\": \"shade, airflow, and thermal comfort integrated into design\"\n  },\n  \"camera_and_realism\": {\n    \"viewpoint\": \"human eye-level\",\n    \"lens\": \"35mm architectural photography lens\",\n    \"composition\": \"foreground texture + mid-ground activity + city backdrop\",\n    \"avoid\": [\n      \"aerial drone shots\",\n      \"perfect symmetry\",\n      \"concept-art exaggeration\"\n    ]\n  },\n  \"rendering_style\": {\n    \"realism\": \"ultra photorealistic landscape visualization\",\n    \"detail_level\": \"visible surface imperfections, dirt, wear, and material joints\",\n    \"lighting_model\": \"physically accurate daylight and shadow simulation\",\n    \"post_processing\": \"minimal, documentary-style\"\n  },\n  \"negative_prompt\": [\n    \"classic park design\",\n    \"lush garden aesthetics\",\n    \"futuristic sci-fi landscapes\",\n    \"parametric patterns\",\n    \"over-designed greenery\",\n    \"fantasy environment\",\n    \"unrealistic colors\"\n  ],\n  \"output\": {\n    \"aspect_ratio\": \"3:4\",\n    \"resolution\": \"4K\",\n    \"style\": \"buildable contemporary urban landscape\"\n  }\n}",
+    "category": "Architecture, Landscape Architecture",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🍃 Design Wind-Cut Green Tower",
+    "slug": "promptsdesign-wind-cut-green-tower",
+    "content": "{\n  \"project\": {\n    \"title\": \"Wind-Cut Green Tower\",\n    \"goal\": \"High-rise designed to channel and optimize natural wind ventilation\",\n    \"language\": \"en\"\n  },\n  \"architecture\": {\n    \"form\": \"Curved void running vertically through tower\",\n    \"terraces\": \"Wind-oriented green platforms\",\n    \"ventilation\": \"Cross ventilation through central atrium\"\n  },\n  \"environment\": \"[WIND ENVIRONMENT]\",\n  \"output\": {\n    \"aspect_ratio\": \"[ASPECT RATIO]\",\n    \"resolution\": \"very high\"\n  }\n}",
+    "category": "Architecture, Green Architecture",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🏛️ Discover Curved-Wall Architectural Designs",
+    "slug": "promptsdiscover-curved-wall-architectural-designs",
+    "content": "Curved-walled [ARCHITECTURE TYPE] in [CITY/LOCATION], set on an open plaza with [LANDSCAPING]; [SHAPE/GEOMETRY] form, [EXTERIOR MATERIAL/FINISH] exterior, [FACADE DETAIL e.g., smooth wood-grain panels], [OPENINGS e.g., large windows] bringing [LIGHT QUALITY] into the interior. Designed for [PROGRAM/USE e.g., rest, art events], [STYLE ADJECTIVES e.g., minimalist, modern], [MOOD e.g., cinematic, exquisite], [OUTPUT TYPE e.g., architectural photography/rendering], [CAMERA ANGLE], [FOCAL LENGTH] --ar [ASPECT RATIO] --s [STYLIZE] --q [QUALITY] --c [CHAOS] --seed [SEED] --no [NEGATIVE ELEMENTS]",
+    "category": "Architecture, Exterior Architecture",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🐝 Generate Adaptive Workspace Renders",
+    "slug": "promptsgenerate-adaptive-workspace-renders",
+    "content": "{\n  \"project_type\": \"commercial architecture\",\n  \"building_type\": \"[WORKSPACE TYPOLOGY]\",\n  \"brand_inspiration\": \"[WORKSPACE TYPOLOGY]\",\n  \"architectural_concept\": \"flexibility, community, and adaptive reuse\",\n  \"exterior_design\": {\n    \"form\": \"adaptive modern volume within existing urban block\",\n    \"facade\": \"large [FACADE CHARACTER] windows with warm interior visibility\",\n    \"entrance\": \"welcoming ground-floor lobby connected to street life\"\n  },\n  \"materials\": [\n    \"[MATERIAL LANGUAGE]\"\n  ],\n  \"interior_visibility\": \"interior activity visible from outside\",\n  \"lighting\": {\n    \"daytime\": \"abundant daylight through large windows\",\n    \"nighttime\": \"warm interior lighting showcasing social activity\"\n  },\n  \"urban_context\": {\n    \"location\": \"[URBAN SETTING]\",\n    \"interaction\": \"[URBAN SETTING]\"\n  },\n  \"visual_style\": {\n    \"realism\": \"photo-realistic architectural render\",\n    \"camera\": \"street-level perspective\",\n    \"details\": \"urban wear, realistic glass reflections\"\n  },\n  \"atmosphere\": \"creative, social, energetic, modern\",\n  \"avoid\": [\n    \"formal corporate appearance\",\n    \"closed-off facades\"\n  ]\n}",
+    "category": "Architecture, Commercial Architecture",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🏙️ Generate Architectural Photography Concepts",
+    "slug": "promptsgenerate-architectural-photography-concepts",
+    "content": "Wide-angle photograph of a [ARCHITECTURE STYLE] building in the style of [\"ARTIST REFERENCE\"], with a [FACADE MATERIAL] facade reflecting on [WET SURFACE], shot from across an [FOREGROUND AREA] at [TIME OF DAY]; reflections of [REFLECTION SUBJECTS] visible in [PUDDLES/WATER]. Captured on a [CAMERA MODEL] mirrorless camera, ISO [ISO], [APERTURE], [LIGHTING], [FOCAL LENGTH]mm, [SHUTTER SPEED]; micro-texture of [GROUND DETAIL] and facade reflections emphasized. Editorial architectural composition, [CAMERA ANGLE], leading lines, negative space. --ar [ASPECT RATIO] --s [STYLIZE] --q [QUALITY] --c [CHAOS]",
+    "category": "Architecture, Exterior Architecture",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🏙️ Generate Architectural Photography Examples",
+    "slug": "promptsgenerate-architectural-photography-examples",
+    "content": "Detailed [SHOT TYPE] of the [FACADE GEOMETRY] facade with [BALCONY DESIGN]; a [STYLE/QUALITY] [BUILDING TYPE] in [CITY], in the style of [REFERENCE ARCHITECT]. [INTERIOR LIGHT QUALITY] visible through [WINDOW TYPE/FORM]. Photograph by [CREDIT/PUBLICATION]. [PHOTOGRAPHY GENRE], [CAMERA ANGLE], [FOCAL LENGTH] --ar [ASPECT RATIO] --s [STYLIZE] --q [QUALITY] --c [CHAOS] --seed [SEED] --no [NEGATIVE ELEMENTS]",
+    "category": "Architecture, Exterior Architecture",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "📐 Generate Architectural Visualization Composites",
+    "slug": "promptsgenerate-architectural-visualization-composites",
+    "content": "{\n\n  \"Objective\": \"Create a vertically split architectural visualization combining a photorealistic render of a [BUILDING TYPE] with a precise matching architectural floor plan drawing.\",\n\n  \"Layout_Composition\": {\n\n    \"Split_Type\": \"Horizontal division\",\n\n    \"Aspect_Ratio\": \"Vertical 3:4 or 4:5\",\n\n    \"Upper_Half\": {\n\n      \"Type\": \"Photorealistic render\",\n\n      \"Subject\": \"[BUILDING TYPE]\",\n\n      \"Architectural_Elements\": [\n\n        \"[MATERIAL LANGUAGE: primary facade material]\",\n\n        \"[MATERIAL LANGUAGE: defining geometric form]\",\n\n        \"Glass balustrades\",\n\n        \"[MATERIAL LANGUAGE: secondary cladding material]\",\n\n        \"Full-height glazing\"\n\n      ],\n\n      \"Lighting\": \"Natural daylight with soft shadows\",\n\n      \"Background\": \"Neutral sky with minimal landscaping\",\n\n      \"Style\": \"Photorealistic architectural photography\",\n\n      \"Material_Detailing\": \"Realistic materials and accurate scale\"\n\n    },\n\n    \"Lower_Half\": {\n\n      \"Type\": \"Architectural floor plan drawing\",\n\n      \"Relation_To_Render\": \"Exact match to upper half building's geometry and layout\",\n\n      \"Visual_Style\": \"Clean technical linework on warm off-white paper texture\",\n\n      \"Annotations\": {\n\n        \"Floor_Label\": \"[PLAN LEVEL]\",\n\n        \"Room_Labels\": \"Each room is labeled with its name\",\n\n        \"Area_Measurements\": \"Each room includes area in square meters (m²)\",\n\n        \"Spiral_Stair_Label\": \"Central vertical circulation element clearly identified\",\n\n        \"Reference_Lines\": \"Subtle dashed reference lines and scale indicators\",\n\n        \"Typography\": {\n\n          \"Style\": \"Minimalist, professional, architectural\",\n\n          \"Font\": \"Thin sans-serif\",\n\n          \"Alignment\": \"Neatly aligned\",\n\n          \"Visibility\": \"Legible but unobtrusive\"\n\n        }\n\n      },\n\n      \"Rendering_Style\": {\n\n        \"Shading\": \"Subtle, to maintain clarity\",\n\n        \"Precision\": \"High-detail, competition-board quality\"\n\n      }\n\n    }\n\n  },\n\n  \"Style_And_Quality\": {\n\n    \"Top_Half\": \"Ultra-sharp, realistic render\",\n\n    \"Bottom_Half\": \"Technical architectural drawing\",\n\n    \"Combined_Look\": \"Clean, synchronized, professional layout with high precision\"\n\n  },\n\n  \"Negative_Prompt\": [\n\n    \"Incorrect proportions\",\n\n    \"Mismatched plan and building\",\n\n    \"Sketchy lines\",\n\n    \"Cartoon style\",\n\n    \"Heavy textures\",\n\n    \"Handwritten text\",\n\n    \"Random labels\",\n\n    \"Inaccurate geometry\",\n\n    \"Low detail\",\n\n    \"Unrealistic materials\",\n\n    \"Excessive contrast\"\n\n  ],\n\n  \"Additional_Scene_Example\": {\n\n    \"Description\": \"A minimalist, modern architectural photograph of a white rectangular building with flat roof against a pale blue sky.\",\n\n    \"Features\": [\n\n      \"Long horizontal facade\",\n\n      \"Recessed niche on the left\",\n\n      \"Tall narrow doorway on the right\",\n\n      \"Person walking left to right in front of the niche, carrying an object\",\n\n      \"Ground covered in small gray gravel\"\n\n    ],\n\n    \"Overlay\": \"Superimposed ground floor plan showing room layouts and labels above the building\",\n\n    \"Mood\": \"Clean, simple, serene with geometric emphasis and interplay of light and shadow\"\n\n  },\n\n  \"Use_Case\": \"Architecture visualization, competition board presentation, portfolio image, or editorial feature\"\n\n}",
+    "category": "Architecture, Residential Architecture",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🩻 Generate Axonometric Architecture Diagrams",
+    "slug": "promptsgenerate-axonometric-architecture-diagrams",
+    "content": "{\n  \"project\": {\n    \"title\": \"Exploded Axonometric [BUILDING TYPE] — System Diagram\",\n    \"goal\": \"Create a high-precision exploded 3D axonometric architectural diagram of an original contemporary [BUILDING TYPE], showing structure, envelope, partitions, and roof layers clearly and cleanly\",\n    \"language\": \"en\"\n  },\n\n  \"subject\": {\n    \"type\": \"exploded_axonometric_architecture\",\n    \"building\": \"[BUILDING TYPE]\",\n    \"description\": \"A contemporary two-level [BUILDING TYPE] presented as an exploded axonometric drawing with separated layers and wall panels, similar to a technical assembly diagram\",\n    \"scale\": \"[BUILDING SCALE]\",\n    \"consistency_rules\": [\n      \"true axonometric projection (no perspective)\",\n      \"all elements aligned to a single vertical axis\",\n      \"consistent exploded spacing between layers\",\n      \"clean technical linework and legible hierarchy\",\n      \"no photoreal rendering, no textures, no shadows\"\n    ]\n  },\n\n  \"design_language\": {\n    \"aesthetic\": \"architectural assembly diagram\",\n    \"keywords\": [\n      \"exploded axonometric\",\n      \"[BUILDING TYPE] system diagram\",\n      \"technical line drawing\",\n      \"clean construction logic\",\n      \"publication-ready\"\n    ]\n  },\n\n  \"villa_concept\": {\n    \"layout_logic\": {\n      \"primary_space\": \"[PRIMARY SPACE DESCRIPTION]\",\n      \"secondary_spaces\": \"[SECONDARY SPACES DESCRIPTION]\",\n      \"outdoor_relation\": \"[OUTDOOR RELATIONSHIP DESCRIPTION]\"\n    },\n    \"circulation\": {\n      \"vertical\": \"[VERTICAL CIRCULATION DESCRIPTION]\",\n      \"horizontal\": \"[HORIZONTAL CIRCULATION DESCRIPTION]\"\n    }\n  },\n\n  \"exploded_layers\": [\n    {\n      \"index\": 1,\n      \"name\": \"Roof Assembly\",\n      \"elements\": [\n        \"simple pitched or mono-slope roof plane\",\n        \"roof deck panels\",\n        \"thin roof overhang edges\",\n        \"roof ridge/edge beams\"\n      ]\n    },\n    {\n      \"index\": 2,\n      \"name\": \"Upper Floor Plate\",\n      \"elements\": [\n        \"upper floor structural deck\",\n        \"primary beams and joists\",\n        \"opening cutout for double-height living space\"\n      ]\n    },\n    {\n      \"index\": 3,\n      \"name\": \"Upper Partitions (Panels)\",\n      \"elements\": [\n        \"bedroom partition panels\",\n        \"bathroom core panels\",\n        \"corridor / gallery guardrail panels\"\n      ],\n      \"panel_behavior\": \"panels float outward in exploded fashion to show assembly\"\n    },\n    {\n      \"index\": 4,\n      \"name\": \"Facade / Envelope Panels\",\n      \"elements\": [\n        \"large sliding glass wall panels\",\n        \"solid insulated wall panels\",\n        \"sun-shading screen panels (optional)\"\n      ],\n      \"arrangement\": \"panels explode outward on both sides, left and right, in symmetrical layout\"\n    },\n    {\n      \"index\": 5,\n      \"name\": \"Ground Floor Plate\",\n      \"elements\": [\n        \"ground floor structural deck\",\n        \"edge beams\",\n        \"terrace connection plate\"\n      ]\n    },\n    {\n      \"index\": 6,\n      \"name\": \"Interior Core + Stair\",\n      \"elements\": [\n        \"stair volume\",\n        \"service core (kitchen/back-of-house plumbing wall)\",\n        \"minimal interior built-ins for scale\"\n      ]\n    },\n    {\n      \"index\": 7,\n      \"name\": \"Structural Skeleton\",\n      \"elements\": [\n        \"primary columns\",\n        \"ring beams / perimeter beams\",\n        \"selected bracing frames\",\n        \"cantilever edge supports for terrace\"\n      ]\n    },\n    {\n      \"index\": 8,\n      \"name\": \"Foundation + Site Platform\",\n      \"elements\": [\n        \"pier footings or shallow foundation pads\",\n        \"raised platform plinth\",\n        \"steps to entry terrace\"\n      ]\n    }\n  ],\n\n  \"drawing_style\": {\n    \"projection\": \"axonometric\",\n    \"linework\": {\n      \"type\": \"precise CAD-like line drawing\",\n      \"hierarchy\": [\n        \"structure lines slightly heavier\",\n        \"envelope lines medium\",\n        \"interior partition lines light\",\n        \"dashed guide lines for exploded alignment\"\n      ]\n    },\n    \"color\": {\n      \"palette\": \"single ink color ([INK COLOR])\",\n      \"background\": \"pure white\"\n    },\n    \"transparency\": {\n      \"use\": \"subtle transparency for glazing panels only\",\n      \"avoid\": \"no heavy shading\"\n    }\n  },\n\n  \"composition\": {\n    \"layout\": \"vertical exploded stack with outward-fanned wall panels\",\n    \"alignment_guides\": [\n      \"thin dashed vertical guide lines connecting layers\",\n      \"small numeric labels near each layer (1–8)\"\n    ],\n    \"clarity_rules\": [\n      \"generous whitespace around the diagram\",\n      \"no cluttered annotations\",\n      \"clean separation distances\"\n    ]\n  },\n\n  \"output\": {\n    \"format\": \"publication-ready architectural diagram\",\n    \"aspect_ratio\": \"1:1\",\n    \"resolution\": \"very high\",\n    \"style\": \"exploded axonometric linework\",\n    \"no_ai_artifacts\": true\n  },\n\n  \"negative_prompt\": [\n    \"perspective view\",\n    \"photoreal rendering\",\n    \"material textures\",\n    \"heavy shadows\",\n    \"dramatic lighting\",\n    \"hand-drawn sketchiness\",\n    \"messy linework\",\n    \"random shapes\",\n    \"text paragraphs\",\n    \"logos\",\n    \"watermarks\"\n  ]\n}",
+    "category": "Architecture, 3D Axonometric Graphics",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "📐 Generate Axonometric Exhibition Space",
+    "slug": "promptsgenerate-axonometric-exhibition-space",
+    "content": "{\n  \"project\": {\n    \"title\": \"[INSTITUTION TYPE] Interior — Axonometric Exhibition Space\",\n    \"goal\": \"Create a clean 3D axonometric architectural drawing of a contemporary [INSTITUTION TYPE] interior showing spatial organization, structural system, and exhibition layout\",\n    \"language\": \"en\"\n  },\n  \"subject\": {\n    \"type\": \"axonometric_interior_architecture\",\n    \"description\": \"A contemporary [INSTITUTION TYPE] exhibition hall represented in precise axonometric projection with visible structure, lighting systems, and display panels\",\n    \"projection\": \"true axonometric\",\n    \"consistency_rules\": [\n      \"no perspective distortion\",\n      \"uniform projection angle\",\n      \"clear structural hierarchy\",\n      \"readable exhibition layout\",\n      \"architectural precision\"\n    ]\n  },\n  \"spatial_organization\": {\n    \"main_hall\": {\n      \"type\": \"open exhibition space\",\n      \"feature\": \"double-height volume\",\n      \"center\": \"[CENTER FEATURE]\"\n    },\n    \"perimeter\": {\n      \"elements\": [\n        \"movable exhibition wall panels\",\n        \"integrated storage niches\",\n        \"secondary gallery zones\"\n      ]\n    },\n    \"circulation\": {\n      \"path\": \"clear loop circulation\",\n      \"entry_axis\": \"defined entry alignment through the center\"\n    }\n  },\n  \"architectural_systems\": {\n    \"structure\": [\n      \"regular column grid\",\n      \"perimeter load-bearing walls\",\n      \"ceiling beam system\"\n    ],\n    \"ceiling\": {\n      \"type\": \"exposed structural grid\",\n      \"elements\": [\n        \"lighting tracks\",\n        \"acoustic panels\",\n        \"suspended mechanical lines\"\n      ]\n    },\n    \"floor\": {\n      \"design\": \"continuous smooth plate\",\n      \"feature\": \"slightly raised exhibition platform zones\"\n    }\n  },\n  \"interior_elements\": {\n    \"exhibition_objects\": [DISPLAY OBJECTS],\n    \"human_scale\": \"minimal simplified silhouettes for scale reference\"\n  },\n  \"drawing_style\": {\n    \"linework\": {\n      \"type\": \"clean CAD-like architectural line drawing\",\n      \"hierarchy\": [\n        \"structural lines slightly thicker\",\n        \"partition lines medium\",\n        \"furniture and objects thin\"\n      ]\n    },\n    \"color_palette\": {\n      \"background\": \"white\",\n      \"line_color\": \"monochrome [LINE COLOR]\",\n      \"accent_fill\": \"very subtle flat tonal highlight for exhibition panels\"\n    },\n    \"shading\": \"minimal flat fill only, no gradients\"\n  },\n  \"composition\": {\n    \"view\": \"top-corner axonometric with roof removed\",\n    \"focus\": \"spatial clarity and system visibility\",\n    \"white_space\": \"generous margins\",\n    \"diagrammatic_strength\": \"high\"\n  },\n  \"output\": {\n    \"aspect_ratio\": \"1:1\",\n    \"resolution\": \"very high\",\n    \"style\": \"technical architectural diagram\",\n    \"quality_level\": \"portfolio and publication ready\",\n    \"no_ai_artifacts\": true\n  },\n  \"negative_prompt\": [\n    \"perspective view\",\n    \"photorealistic render\",\n    \"dramatic shadows\",\n    \"texture-heavy surfaces\",\n    \"messy sketch lines\",\n    \"ornamental decoration\",\n    \"complex background\",\n    \"text paragraphs\",\n    \"logos\",\n    \"watermarks\"\n  ]\n}",
+    "category": "Architecture, 3D Axonometric Graphics",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "💠 Generate Axonometric Futuristic Atriums",
+    "slug": "promptsgenerate-axonometric-futuristic-atriums",
+    "content": "{\n  \"project\": {\n    \"title\": \"[INSTITUTION TYPE] Atrium\",\n    \"goal\": \"Create a high-precision 3D axonometric architectural diagram of a futuristic year-2300 [INSTITUTION TYPE] atrium organized as an intelligent spatial system rather than a traditional building\",\n    \"language\": \"en\"\n  },\n  \"subject\": {\n    \"type\": \"axonometric_futuristic_interior\",\n    \"description\": \"A multi-level post-human [INSTITUTION TYPE] atrium with suspended platforms, data-driven structure, and a large central void, shown in clean axonometric projection\",\n    \"projection\": \"true axonometric\",\n    \"consistency_rules\": [\n      \"no perspective distortion\",\n      \"clear vertical layering\",\n      \"visible structural and circulation logic\",\n      \"non-traditional floor geometry\",\n      \"architectural precision\"\n    ]\n  },\n  \"spatial_organization\": {\n    \"central_void\": {\n      \"type\": \"hyper-vertical atrium\",\n      \"role\": \"core energy and spatial field\",\n      \"feature\": \"floating [INSTITUTION TYPE] elements suspended within the void\"\n    },\n    \"levels\": [\n      {\n        \"level\": 1,\n        \"geometry\": \"circular ring platform\",\n        \"function\": \"[LEVEL 1 FUNCTION]\"\n      },\n      {\n        \"level\": 2,\n        \"geometry\": \"fragmented floating slabs\",\n        \"function\": \"[LEVEL 2 FUNCTION]\"\n      },\n      {\n        \"level\": 3,\n        \"geometry\": \"thin suspended perimeter band\",\n        \"function\": \"[LEVEL 3 FUNCTION]\"\n      }\n    ],\n    \"circulation\": {\n      \"vertical\": \"spiral ramp integrated into structural core\",\n      \"horizontal\": \"lightweight bridges and suspended connectors\"\n    }\n  },\n  \"architectural_systems\": {\n    \"structure\": [\n      \"radial tension members\",\n      \"ring compression beams\",\n      \"central structural data-core\"\n    ],\n    \"ceiling\": {\n      \"type\": \"parametric energy lattice\",\n      \"elements\": [\n        \"network-like structural web\",\n        \"integrated light nodes\",\n        \"hanging display modules\"\n      ]\n    },\n    \"floor_logic\": \"non-rectilinear, adaptive geometry\"\n  },\n  \"exhibition_elements\": {\n    \"types\": [DISPLAY OBJECTS],\n    \"distribution\": \"distributed vertically inside atrium\"\n  },\n  \"drawing_style\": {\n    \"linework\": {\n      \"type\": \"clean high-precision CAD-style lines\",\n      \"hierarchy\": [\n        \"primary structure thicker\",\n        \"secondary platforms medium\",\n        \"exhibition elements thin\",\n        \"dashed lines for hidden geometry\"\n      ]\n    },\n    \"color_palette\": {\n      \"background\": \"white\",\n      \"line_color\": \"[LINE COLOR]\",\n      \"accent\": \"subtle soft cyan highlights for energy systems\"\n    },\n    \"shading\": \"minimal flat fill only\"\n  },\n  \"composition\": {\n    \"view\": \"top-corner axonometric\",\n    \"cut\": \"roof removed\",\n    \"focus\": \"vertical spatial hierarchy and floating geometry\",\n    \"white_space\": \"clean technical presentation\"\n  },\n  \"output\": {\n    \"aspect_ratio\": \"1:1\",\n    \"resolution\": \"very high\",\n    \"style\": \"technical futuristic architectural diagram\",\n    \"quality_level\": \"portfolio, publication, exhibition ready\",\n    \"no_ai_artifacts\": true\n  },\n  \"negative_prompt\": [\n    \"traditional museum layout\",\n    \"rectangular grid floors\",\n    \"photorealistic rendering\",\n    \"dramatic shadows\",\n    \"ornamental decoration\",\n    \"messy sketch lines\",\n    \"text blocks\",\n    \"logos\",\n    \"watermarks\"\n  ]\n}",
+    "category": "Architecture, 3D Axonometric Graphics",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "📐 Generate Axonometric Interior Diagrams",
+    "slug": "promptsgenerate-axonometric-interior-diagrams",
+    "content": "{\n  \"project\": {\n    \"title\": \"Complete [DWELLING TYPE] Interior — Axonometric Diagram\",\n    \"goal\": \"Create a clean 3D axonometric interior drawing of a complete [DWELLING TYPE] showing all rooms and furniture layout in a technical architectural style\",\n    \"language\": \"en\"\n  },\n  \"subject\": {\n    \"type\": \"axonometric_interior_architecture\",\n    \"description\": \"A full [DWELLING TYPE] shown in axonometric projection with all rooms visible from above, walls intact, no perspective distortion\",\n    \"scale\": \"realistic residential proportions\",\n    \"consistency_rules\": [\n      \"true axonometric projection\",\n      \"no vanishing points\",\n      \"uniform wall thickness\",\n      \"clear spatial hierarchy\",\n      \"furniture scaled correctly\"\n    ]\n  },\n  \"layout\": {\n    \"rooms\": [ROOM PROGRAM],\n    \"organization\": {\n      \"public_zone\": \"[PUBLIC ZONE DESCRIPTION]\",\n      \"private_zone\": \"[PRIVATE ZONE DESCRIPTION]\",\n      \"service_zone\": \"[SERVICE ZONE DESCRIPTION]\"\n    }\n  },\n  \"interior_details\": {\n    \"furniture\": [FURNITURE LIST],\n    \"detail_level\": \"medium precision linework, readable but not cluttered\"\n  },\n  \"drawing_style\": {\n    \"projection\": \"axonometric\",\n    \"linework\": {\n      \"type\": \"clean CAD-style line drawing\",\n      \"hierarchy\": [\n        \"outer wall lines thicker\",\n        \"interior partitions medium weight\",\n        \"furniture lines thin\"\n      ]\n    },\n    \"color\": {\n      \"palette\": \"monochrome with one accent color ([ACCENT COLOR])\",\n      \"background\": \"white\"\n    },\n    \"shading\": \"minimal flat fill for selected elements only\"\n  },\n  \"composition\": {\n    \"view_type\": \"top corner axonometric\",\n    \"cut\": \"roof removed, walls remain full height\",\n    \"clarity\": \"clear room separations, no clutter\",\n    \"white_space\": \"generous margin around drawing\"\n  },\n  \"output\": {\n    \"aspect_ratio\": \"3:4\",\n    \"resolution\": \"very high\",\n    \"style\": \"technical architectural diagram\",\n    \"quality_level\": \"portfolio and publication ready\",\n    \"no_ai_artifacts\": true\n  },\n  \"negative_prompt\": [\n    \"perspective view\",\n    \"photorealistic render\",\n    \"heavy shading\",\n    \"textures\",\n    \"dramatic lighting\",\n    \"messy sketch\",\n    \"hand-drawn scribbles\",\n    \"cluttered layout\",\n    \"text blocks\",\n    \"logos\",\n    \"watermarks\"\n  ]\n}",
+    "category": "Architecture, 3D Axonometric Graphics",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🪺 Generate Curved Timber Pavilion Renders",
+    "slug": "promptsgenerate-curved-timber-pavilion-renders",
+    "content": "{\n  \"project_type\": \"exterior architecture\",\n  \"building_function\": \"[BUILDING FUNCTION]\",\n  \"architectural_style\": [ARCHITECTURAL STYLE],\n  \"concept\": {\n    \"design_idea\": \"a transparent, nature-integrated pavilion that blends indoor and outdoor life through warm materials and soft architectural curves\",\n    \"mood\": \"calm, welcoming, sophisticated, human-scaled\"\n  },\n  \"form_language\": {\n    \"geometry\": \"soft curved rooflines combined with rectilinear glass volumes\",\n    \"structure\": \"lightweight timber frame with expressive roof silhouette\",\n    \"spatial_quality\": \"open-plan interior visible from outside\"\n  },\n  \"facade_design\": {\n    \"primary_materials\": [\n      \"natural wood cladding\",\n      \"floor-to-ceiling glass panels\",\n      \"slim metal frames\"\n    ],\n    \"transparency\": \"high transparency with seamless indoor-outdoor visual connection\",\n    \"detailing\": \"fine wood joinery, minimal mullions, clean edges\"\n  },\n  \"roof\": {\n    \"type\": \"curved overhanging roof\",\n    \"material\": \"laminated timber with wood soffit\",\n    \"function\": \"solar shading and visual identity\"\n  },\n  \"site_context\": {\n    \"location_type\": \"[SITE CONTEXT]\",\n    \"landscape_elements\": [\n      \"existing mature trees integrated into design\",\n      \"low native plants\",\n      \"stone and gravel ground surfaces\"\n    ],\n    \"outdoor_use\": \"wooden terrace with communal seating\"\n  },\n  \"lighting\": {\n    \"daytime\": \"soft natural daylight filtered through trees\",\n    \"nighttime\": \"warm interior lighting glowing through glass facade\",\n    \"fixtures\": \"minimal pendant lights and concealed linear lighting\"\n  },\n  \"color_palette\": {\n    \"dominant_colors\": [\n      \"warm oak wood\",\n      \"soft amber lighting\",\n      \"neutral stone gray\",\n      \"natural green surroundings\"\n    ]\n  },\n  \"sustainability\": {\n    \"strategies\": [\n      \"passive solar design\",\n      \"natural cross ventilation\",\n      \"use of renewable timber materials\"\n    ]\n  },\n  \"people_and_scale\": {\n    \"human_presence\": \"a few people seated inside and outside to show scale\",\n    \"atmosphere\": \"relaxed, social, slow-living\"\n  },\n  \"render_style\": {\n    \"realism\": \"highly realistic architectural visualization\",\n    \"camera\": \"eye-level exterior perspective\",\n    \"lens\": \"",
+    "category": "Architecture, Exterior Architecture",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🏡 Generate Elegant Minimalist Living Room Photos",
+    "slug": "promptsgenerate-elegant-minimalist-living-room-photos",
+    "content": "Interior architectural photograph of an [ELEGANT MINIMALIST] living room with [WALL COLOR] walls and [CURTAIN COLOR/MATERIAL] curtains. A [WOOD TONE] wood [SIDE TABLE] sits between two [ARMCHAIR TYPE] in the center. The back wall is a [WINDOW SIZE] window draped with [SHEER MATERIAL] curtains. At one end, a [CABINET HEIGHT] [WOOD TYPE] cabinet with a [DECOR OBJECT] on top. A [RUG COLOR] [RUG MATERIAL/TEXTURE] rug anchors the scene. [LIGHTING TYPE] illuminates the space, creating a [MOOD]. Clean lines, negative space, balanced symmetry — shot as [PHOTOGRAPHY GENRE] from a [CAMERA ANGLE] with a [LENS FOCAL LENGTH]mm lens, [DEPTH OF FIELD]. --ar [ASPECT RATIO] --s [STYLIZE] --q [QUALITY] --c [CHAOS]",
+    "category": "Architecture, Interior Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.3
+      },
+      "overall": 6.3,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🧩 Generate Hyperrealistic Architecture Visualizations",
+    "slug": "promptsgenerate-hyperrealistic-architecture-visualizations",
+    "content": "{\n  \"project_type\": \"commercial architecture\",\n  \"building_type\": \"[WORKSPACE TYPOLOGY]\",\n  \"architectural_concept\": \"collaboration-driven hybrid workspace\",\n  \"exterior_design\": {\n    \"form\": \"modular volumes stacked and shifted for terraces\",\n    \"facade\": \"[FACADE EXPRESSION]\",\n    \"terraces\": \"shared outdoor working terraces\"\n  },\n  \"materials\": [\n    \"[FACADE EXPRESSION]\"\n  ],\n  \"lighting\": {\n    \"daytime\": \"bright and open with strong daylight\",\n    \"nighttime\": \"lively interior lighting visible from outside\"\n  },\n  \"urban_context\": {\n    \"location\": \"[DISTRICT CONTEXT]\",\n    \"interaction\": \"public ground floor with cafes and event spaces\"\n  },\n  \"visual_style\": {\n    \"realism\": \"hyper-realistic architectural visualization\",\n    \"camera\": \"three-quarter exterior perspective\",\n    \"details\": \"people interacting, realistic materials\"\n  },\n  \"atmosphere\": \"dynamic, inclusive, innovative\",\n  \"avoid\": [\n    \"corporate stiffness\",\n    \"isolated building layout\"\n  ]\n}",
+    "category": "Architecture, Commercial Architecture",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🏡 Generate Interior Design Photographs",
+    "slug": "promptsgenerate-interior-design-photographs-2",
+    "content": "Interior architectural photograph of a [DESIGN STYLE] apartment highlighting a [FEATURED SHAPE] wall; [WALL COLOR] walls and [FLOOR MATERIAL] floors. Soft [LIGHTING TYPE] with sunrays filtering through [WINDOW SIZE/TYPE], casting [SHADOW QUALITY] shadows for a [MOOD] atmosphere. A [SOFA COLOR/MATERIAL] sofa along [SOFA PLACEMENT]; [CABINET COLOR/FINISH] cabinets along [CABINET WALL]. Clean lines, negative space, functional layout — shot from a [CAMERA ANGLE] with a [LENS FOCAL LENGTH]mm lens, [DEPTH OF FIELD], [TIME OF DAY]. Optional: [COLOR PALETTE], [ATMOSPHERIC NOTES]. --ar [ASPECT RATIO] --s [STYLIZE] --q [QUALITY] --c [CHAOS]",
+    "category": "Architecture, Residential Architecture",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🏡 Generate Interior Photography Concepts",
+    "slug": "promptsgenerate-interior-photography-concepts",
+    "content": "Interior architectural photograph of a [INTERIOR STYLE] [ROOM TYPE] with [WALL COLOR] walls, a [TABLE SIZE] [TABLE MATERIAL] coffee table, and [CHAIR MATERIAL] dining chairs; [LIGHTING] and a [COLOR PALETTE], [DECOR STYLE] accents. [FLOOR MATERIAL] with a [RUG TEXTURE] rug; [WALL ART TYPE] on the walls; [SOFA PLACEMENT] sofa. Natural light from a [WINDOW SIZE] [WINDOW TYPE]. Evokes [ARCHITECTURE INFLUENCE] principles; editorial interior-magazine composition, clean lines, negative space, balanced symmetry — shot as [PHOTOGRAPHY GENRE] from a [CAMERA ANGLE] with a [LENS FOCAL LENGTH]mm lens, [DEPTH OF FIELD]. --ar [ASPECT RATIO], --s [STYLIZE], --q [QUALITY], --c [CHAOS]",
+    "category": "Architecture, Residential Architecture",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.3
+      },
+      "overall": 6.3,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🎑 Generate Japanese Minimalist Courtyard Residences",
+    "slug": "promptsgenerate-japanese-minimalist-courtyard-residences",
+    "content": "{\n  \"prompt\": \"Ultra-realistic Japanese contemporary residential architecture, inspired by traditional courtyard houses and modern minimalism. A private residence organized around a tranquil inner void, emphasizing harmony between architecture and nature. Clean timber structure with refined wooden frames, exposed beams, and precise craftsmanship. Large sliding glass walls open fully toward a central courtyard featuring [COURTYARD GARDEN]. Spatial composition prioritizes calm, balance, and negative space. Interior volumes feel warm yet restrained, with low seating, neutral textiles, and handcrafted details. Soft natural daylight filters through a glazed roof system, creating subtle shadows and depth. Architecture feels quiet, exclusive, and deeply intentional. High-end residential realism with physically accurate materials, global illumination, natural reflections, and cinematic architectural photography.\",\n  \"style\": \"Japanese-Inspired Contemporary Residential Architecture\",\n  \"mood\": \"serene, introspective, refined, timeless\",\n  \"lighting\": \"soft diffused daylight, skylight illumination, gentle interior ambient lighting\",\n  \"camera\": \"architectural interior courtyard shot, centered composition, wide-angle lens, eye-level\",\n  \"render_quality\": \"ultra photorealistic, architectural visualization, museum-grade realism\",\n  \"color_palette\": [\n    \"[MATERIAL PALETTE]\"\n  ],\n  \"materials\": [\n    \"[MATERIAL PALETTE]\"\n  ],\n  \"architectural_concepts\": [\n    \"engawa transition spaces\",\n    \"indoor-outdoor continuity\",\n    \"zen minimalism\",\n    \"human-scale proportions\",\n    \"void-centered residential planning\"\n  ],\n  \"negative_prompt\": [\n    \"temple or shrine architecture\",\n    \"traditional pagoda forms\",\n    \"touristic Japanese clichés\",\n    \"luxury hotel interior\",\n    \"futuristic sci-fi elements\",\n    \"ornate decoration\",\n    \"cartoon style\",\n    \"low detail\",\n    \"plastic materials\"\n  ]\n}",
+    "category": "Architecture, Interior Design",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🏞️ Generate Minimalist Architecture Designs",
+    "slug": "promptsgenerate-minimalist-architecture-designs",
+    "content": "Minimalist [ARCHITECTURE TYPE] with [WATER FEATURE], [FACADE MATERIAL] façade, set in the [SETTING/LOCATION]. [ARCHITECTURAL RENDERING], [RENDER STYLE/ENGINE], [LIGHTING], in the style of [REFERENCE ARCHITECT/ARTIST], shot on [FILM STOCK/LOOK], [CAMERA ANGLE], [FOCAL LENGTH] --ar [ASPECT RATIO] --s [STYLIZE] --q [QUALITY] --c [CHAOS] --seed [SEED] --no [NEGATIVE ELEMENTS]",
+    "category": "Architecture, Interior Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🛋️ Generate Minimalist Sofa Images",
+    "slug": "promptsgenerate-minimalist-sofa-images",
+    "content": "Back-angle photograph of a [MINIMALIST] sofa in [FABRIC COLOR] fabric with [UPHOLSTERY DETAIL] on the backrest and [LEG MATERIAL] legs, set against an [EMPTY/PLAIN] wall as sunlight from a [WINDOW TYPE] falls across it; soft shadows add depth and a [MOOD]. Captured from [ANGLE: REAR/THREE-QUARTER REAR] using a [CAMERA MODEL] at [APERTURE], [FOCAL LENGTH]mm, [OPTIONAL: ISO] [ISO] and [OPTIONAL: SHUTTER SPEED] [SHUTTER]; emphasis on [DETAIL EMPHASIS: BUTTONING/SEAMS/TEXTURE] and the interplay of shadow and light. Editorial composition, negative space, clean lines, [PERSPECTIVE], [TIME OF DAY] natural light. --ar [ASPECT RATIO] --s [STYLIZE] --q [QUALITY] --c [CHAOS]",
+    "category": "Architecture, Interior Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🪸 Generate Parametric Urban District Renderings",
+    "slug": "promptsgenerate-parametric-urban-district-renderings",
+    "content": "{\n  \"project_type\": \"urban_design_architecture\",\n  \"concept_title\": \"Cellular Urban Oasis (Topography-Integrated Community District)\",\n  \"design_intent\": {\n    \"keywords\": [\n      \"organic\",\n      \"cellular\",\n      \"parametric\",\n      \"topography-integrated\",\n      \"community-driven\",\n      \"future-forward\",\n      \"biophilic urbanism\"\n    ],\n    \"use_case\": \"urban design concept rendering for a mixed-use community hub district\"\n  },\n  \"inputs_editable\": {\n    \"site_context\": \"[TERRAIN CONTEXT]\",\n    \"program_mix\": [\n      \"[COMMUNITY PROGRAM]\"\n    ],\n    \"color_palette_interior\": \"[MATERIAL IDENTITY — INTERIOR]\",\n    \"material_language\": \"[MATERIAL IDENTITY — EXTERIOR]\",\n    \"sustainability_features\": [\n      \"rainwater collection channels\",\n      \"green roofs / planted voids\",\n      \"natural cross ventilation through courtyards\",\n      \"daylight wells\",\n      \"low-energy warm LED night lighting\"\n    ]\n  },\n  \"prompt\": \"A highly detailed visionary urban design project embedded into a natural landscape, showing a large-scale organic cellular architectural district carved into a [TERRAIN CONTEXT]. The district is composed of interconnected circular and oval modules like a honeycomb / biological cell network. Each module forms a semi-open courtyard or indoor-outdoor room, linked by curving pedestrian paths and ramps. The overall massing is partially sunken into the land and precisely follows the topography, with [MATERIAL IDENTITY — EXTERIOR] shells, rounded edges, and large circular openings acting as patios, light wells, and gathering amphitheaters. Inside each circular room, floors are colorful and playful [MATERIAL IDENTITY — INTERIOR] while the exterior remains neutral [MATERIAL IDENTITY — EXTERIOR]. Insert abundant greenery between modules: planted voids, small trees, vines, and pocket gardens. Populate the scene with people at realistic scale: walking along curved bridges, sitting at round tables, reading, working on laptops, families and friends interacting in communal zones. The mood is calm, sustainable, and utopian—an architectural landmark urban oasis. Ultra-realistic aerial perspective, crisp detail, realistic shadows, natural daylight, high dynamic range, contemporary editorial architecture photography style.\",\n  \"negative_prompt\": \"boxy rectangular buildings, sharp corners, glass skyscrapers, futuristic neon city, cyberpunk, low detail, blurry, cartoon, illustration, unrealistic scale, overcrowded, messy clutter, text, logos, watermarks\",\n  \"camera\": {\n    \"shot_type\": \"aerial drone shot\",\n    \"angle\": \"high-angle top-down 35-45 degrees\",\n    \"lens\": \"24mm\",\n    \"focus\": \"deep focus, everything tack sharp\",\n    \"framing\": \"district centered, landscape context visible around edges\"\n  },\n  \"lighting\": {\n    \"time_of_day\": \"late afternoon\",\n    \"quality\": \"soft warm sunlight\",\n    \"shadows\": \"soft but defined, realistic\",\n    \"atmosphere\": \"clean air, slight haze in far background\"\n  },\n  \"composition_rules\": [\n    \"cell modules must be clearly circular/oval and interconnected\",\n    \"topography integration must be visible (sunken areas + carved edges)\",\n    \"colorful interior floors visible through openings\",\n    \"people scale must look realistic compared to openings\",\n    \"greenery must appear naturally growing through gaps\"\n  ],\n  \"output\": {\n    \"style\": \"photorealistic\",\n    \"resolution\": \"1024x1024\",\n    \"detail_level\": \"ultra-detailed\"\n  }\n}",
+    "category": "Architecture, Urban Design",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.7
+      },
+      "overall": 6.7,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🩻 Generate Photoreal House Plan Sheets",
+    "slug": "promptsgenerate-photoreal-house-plan-sheets",
+    "content": "{\n  \"project\": \"Photoreal House + Matching Floor Plan Sheet Same Design\",\n  \"prompt_language\": \"English\",\n  \"use_case\": \"Generate a single presentation image that contains (A) a photorealistic exterior render of the house on top and (B) a clean architectural floor plan drawing panel on the bottom, both representing the SAME building.\",\n  \"inputs\": {\n    \"house_style\": \"[HOUSE STYLE]\",\n    \"site_context\": \"[SITE CONTEXT]\",\n    \"levels\": \"[BUILDING SPEC]\",\n    \"total_area\": \"[BUILDING SPEC]\",\n    \"bed_bath\": \"[BUILDING SPEC]\",\n    \"material_palette\": \"[MATERIAL PALETTE]\",\n    \"key_features\": [\n      \"[KEY FEATURE 1]\",\n      \"[KEY FEATURE 2]\",\n      \"[KEY FEATURE 3]\"\n    ],\n    \"floor_plan_requirements\": {\n      \"plan_style\": \"clean black linework on white background\",\n      \"labels_language\": \"English\",\n      \"include_room_labels\": true,\n      \"include_room_sizes\": true,\n      \"units\": \"sq ft\",\n      \"include_doors_swings\": true,\n      \"include_windows\": true,\n      \"include_stairs_if_needed\": true\n    },\n    \"layout_sheet\": {\n      \"composition\": \"top: exterior render, bottom: two floor plans side-by-side if two levels; if one level then one plan centered\",\n      \"margins\": \"generous white margins like an architecture presentation board\",\n      \"caption_style\": \"minimal, no big logos, no watermark\",\n      \"aspect_ratio\": \"4:5\"\n    },\n    \"render_settings\": {\n      \"time_of_day\": \"golden hour / dusk\",\n      \"lighting\": \"realistic soft sky + warm interior lights visible through glass\",\n      \"camera\": \"slightly elevated 3/4 view, 28-35mm lens, straight verticals\",\n      \"quality\": \"ultra photoreal, PBR materials, ray-traced reflections, high dynamic range\"\n    }\n  },\n  \"main_prompt\": \"Create a single architectural presentation board image. TOP HALF: an ultra-photorealistic exterior visualization of a [HOUSE STYLE] with [BUILDING SPEC] levels, approx. [BUILDING SPEC], [BUILDING SPEC], in a [SITE CONTEXT]. Design language: rectilinear volumes with strong horizontal rooflines, deep window reveals, premium [MATERIAL PALETTE]. Include key features: [KEY FEATURE 1], [KEY FEATURE 2], [KEY FEATURE 3]. Add a calm landscaped yard and a refined courtyard/pool composition if specified. Realistic dusk/golden-hour lighting with warm interior glow through large black-framed glazing; crisp shadows; correct scale; no distortion; buildable structure; detailed facade joints.\\n\\nBOTTOM HALF: a clean architectural floor plan drawing panel that matches the SAME building exactly. If [BUILDING SPEC] is two levels, show TWO floor plans side-by-side Upper Floor right. If one level, show one plan centered. Use black linework on white background with consistent stroke weights, doors with swing arcs, windows, walls thickness, stairs where needed. Label every room in English and show room sizes in {units}. Keep the plan minimal and professional (like an architecture brochure). Ensure room arrangement is logically consistent with the exterior: double-height glazing corresponds to living room, courtyard/pool aligns with outdoor terrace, core placement matches.\\n\\nThe whole output must look like a real architecture presentation sheet: clean white margins, subtle small captions only. Do NOT add random text, fake logos, or unreadable typography. Everything must be sharp and readable.\",\n  \"negative_prompt\": [\n    \"two unrelated designs\",\n    \"floor plan not matching the exterior\",\n    \"warped lines, melted geometry\",\n    \"unreadable room labels, gibberish text\",\n    \"overly decorative plan style\",\n    \"watermarks, big logos, mockup frames\",\n    \"fisheye distortion, bent verticals\",\n    \"cartoon or illustration style\"\n  ],\n  \"consistency_rules\": {\n    \"must_match\": [\n      \"exterior massing and interior plan layout correspond\",\n      \"window locations roughly align with major rooms\",\n      \"pool/courtyard position matches terrace edges in plan\",\n      \"stairs/core placement consistent across plans and exterior\"\n    ],\n    \"sheet_readability\": [\n      \"floor plan lines crisp and high contrast\",\n      \"labels readable, not overlapping walls\",\n      \"clean spacing, aligned grid\"\n    ]\n  }\n}",
+    "category": "Architecture, Residential Architecture",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🪸 Generate Sculptural Spa Bathroom Interiors",
+    "slug": "promptsgenerate-sculptural-spa-bathroom-interiors",
+    "content": "{\n  \"project_type\": \"bathroom interior design\",\n  \"design_theme\": \"bold wellness spa bathroom\",\n  \"style\": [\n    \"editorial interior\",\n    \"art-driven spa\",\n    \"contemporary boutique hotel\",\n    \"playful luxury\"\n  ],\n  \"concept_description\": \"a vibrant and sculptural bathroom designed as a sensory wellness space, combining bold color, organic arches and tactile materials\",\n  \"architecture\": {\n    \"primary_forms\": [\n      \"large rounded arch framing the bathtub\",\n      \"soft curved walls\",\n      \"integrated architectural niches\"\n    ],\n    \"geometry\": \"organic, fluid, sculptural\",\n    \"symmetry\": \"soft asymmetry for artistic feel\"\n  },\n  \"color_palette\": {\n    \"dominant\": [\n      \"[COLOR WORLD]\"\n    ],\n    \"accent\": [\n      \"[COLOR WORLD]\"\n    ],\n    \"mood\": \"warm, sensual, immersive\"\n  },\n  \"materials\": {\n    \"walls\": \"[SURFACE CRAFT]\",\n    \"floor\": \"[SURFACE CRAFT]\",\n    \"bathtub\": \"[SURFACE CRAFT]\",\n    \"sink\": \"[SURFACE CRAFT]\",\n    \"metal_fixtures\": \"[SURFACE CRAFT]\"\n  },\n  \"lighting_design\": {\n    \"main_light\": \"woven or perforated pendant lamp\",\n    \"secondary_light\": [\n      \"hidden LED behind bathtub\",\n      \"soft indirect wall lighting\"\n    ],\n    \"lighting_temperature\": \"warm (2700K–3000K)\",\n    \"effect\": \"spa glow, soft shadows, editorial ambiance\"\n  },\n  \"decor_and_styling\": {\n    \"plants\": [\n      \"[STYLING LAYER]\"\n    ],\n    \"accessories\": [\n      \"[STYLING LAYER]\"\n    ],\n    \"mirror\": \"[STYLING LAYER]\"\n  },\n  \"sensory_experience\": {\n    \"visual\": \"bold yet calming\",\n    \"tactile\": \"textured tiles, stone, soft fabrics\",\n    \"emotional\": \"relaxing but confident and modern\"\n  },\n  \"rendering_style\": {\n    \"camera_angle\": \"frontal or slight perspective\",\n    \"composition\": \"centered on bathtub and arch\",\n    \"render_quality\": \"ultra realistic\",\n    \"post_processing\": \"editorial color grading, soft contrast\"\n  },\n  \"negative_prompt\": [\n    \"minimal white bathroom\",\n    \"cold hospital lighting\",\n    \"sharp angles\",\n    \"generic hotel style\",\n    \"overly sterile design\"\n  ],\n  \"output_preferences\": {\n    \"aspect_ratio\": \"4:5\",\n    \"resolution\": \"high\",\n    \"use_case\": [\n      \"design inspiration\",\n      \"editorial feature\",\n      \"boutique hotel spa concept\",\n      \"luxury wellness branding\"\n    ]\n  }\n}",
+    "category": "Architecture, Interior Design",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🎍 Generate Terraced Green Tower Renders",
+    "slug": "promptsgenerate-terraced-green-tower-renders",
+    "content": "{\n  \"project\": {\n    \"title\": \"Radical Diagonal Terraced Green Tower\",\n    \"goal\": \"Ultra-realistic diagonal terraced green skyscraper with structural honesty\",\n    \"language\": \"en\"\n  },\n  \"architecture\": {\n    \"form\": \"Diagonal cascading terraces wrapping the tower\",\n    \"structure\": \"Visible mega-frame supporting heavy soil platforms\",\n    \"terraces\": \"Deep garden slabs with real soil depth\",\n    \"drainage\": \"Exposed water management channels\"\n  },\n  \"vegetation\": [VEGETATION PALETTE],\n  \"output\": {\n    \"aspect_ratio\": \"[ASPECT RATIO]\",\n    \"resolution\": \"very high\"\n  }\n}",
+    "category": "Architecture, Green Architecture",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🎋 Render Climate Responsive Green Tower",
+    "slug": "promptsrender-climate-responsive-green-tower",
+    "content": "{\n  \"project\": {\n    \"title\": \"Climate Responsive Green Slab Tower\",\n    \"goal\": \"Photorealistic sustainable high-rise responding to solar orientation and climate\",\n    \"language\": \"en\"\n  },\n  \"architecture\": {\n    \"form\": \"Offset horizontal slabs with strategic overhangs\",\n    \"orientation_logic\": \"[CLIMATE FACADE STRATEGY]\",\n    \"features\": [\n      \"deep green balconies\",\n      \"passive cooling voids\",\n      \"solar shading fins\"\n    ]\n  },\n  \"environmental_systems\": [ENVIRONMENTAL SYSTEMS],\n  \"style\": \"clean contemporary sustainable [DESIGN LANGUAGE]\",\n  \"output\": {\n    \"aspect_ratio\": \"4:5\",\n    \"resolution\": \"very high\"\n  }\n}",
+    "category": "Architecture, Green Architecture",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🌑 Render Contemporary Japanese Lounge Interiors",
+    "slug": "promptsrender-contemporary-japanese-lounge-interiors",
+    "content": "{\n  \"project_type\": \"interior architecture\",\n  \"design_style\": \"contemporary Japanese architecture\",\n  \"concept\": \"modern Japanese lounge inspired by ryokan calmness and urban minimalism\",\n  \"atmosphere\": [\n    \"quiet luxury\",\n    \"zen calm\",\n    \"refined and contemplative\",\n    \"timeless and grounded\"\n  ],\n  \"architectural_language\": {\n    \"philosophy\": [\n      \"ma (negative space)\",\n      \"wabi-sabi\",\n      \"simplicity with depth\",\n      \"nature-integrated architecture\"\n    ],\n    \"forms\": \"clean lines, low horizontal emphasis, subtle curves\",\n    \"scale\": \"human-centered proportions\"\n  },\n  \"space_design\": {\n    \"layout\": \"open-plan lounge with clearly defined calm zones\",\n    \"zoning\": [\n      \"[LOUNGE PROGRAM]\"\n    ],\n    \"circulation\": \"slow, intuitive flow encouraging pause and stillness\"\n  },\n  \"materials\": {\n    \"primary\": [\n      \"[MATERIAL PALETTE]\"\n    ],\n    \"secondary\": [\n      \"[MATERIAL PALETTE]\"\n    ],\n    \"finish_quality\": \"matte, natural, imperfect but refined\"\n  },\n  \"color_palette\": {\n    \"dominant\": [\n      \"[COLOR PALETTE]\"\n    ],\n    \"supporting\": [\n      \"[COLOR PALETTE]\"\n    ],\n    \"approach\": \"low contrast, calming, nature-derived\"\n  },\n  \"lighting\": {\n    \"natural_light\": \"filtered and diffused, inspired by shoji screens\",\n    \"artificial_light\": [\n      \"warm indirect lighting\",\n      \"paper or fabric lantern-style fixtures\",\n      \"hidden linear lights emphasizing architecture\"\n    ],\n    \"mood\": \"soft shadows, intimate, tranquil\"\n  },\n  \"furniture\": {\n    \"seating\": [\n      \"low-profile sofas\",\n      \"floor-level lounge seating\",\n      \"simple wooden stools\"\n    ],\n    \"tables\": \"solid wood or stone, minimal detailing\",\n    \"design_principle\": \"function-first, visually quiet\"\n  },\n  \"decor_and_nature\": {\n    \"elements\": [\n      \"bonsai or sculptural indoor trees\",\n      \"stone arrangements\",\n      \"minimal ikebana floral compositions\"\n    ],\n    \"rule\": \"very few objects, each with purpose\"\n  },\n  \"bar_design\": {\n    \"counter\": \"[LOUNGE PROGRAM]\",\n    \"front_panel\": \"[LOUNGE PROGRAM]\",\n    \"inspiration\": \"Japanese tea house meets modern lounge\"\n  },\n  \"rendering_style\": {\n    \"visual_style\": \"ultra realistic architectural visualization\",\n    \"camera_angle\": \"wide interior perspective at eye level\",\n    \"lighting_quality\": \"soft global illumination\",\n    \"texture_detail\": \"high, tactile, realistic\"\n  },\n  \"negative_prompt\": [\n    \"luxury hotel clichés\",\n    \"over-decorated interiors\",\n    \"bright artificial colors\",\n    \"ornamental excess\",\n    \"western bar aesthetics\"\n  ],\n  \"output\": {\n    \"aspect_ratio\": \"1:1\",\n    \"resolution\": \"high resolution\",\n    \"final_feel\": \"serene, modern Japanese architectural calm\"\n  }\n}",
+    "category": "Architecture, Interior Design",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.7
+      },
+      "overall": 6.7,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🫧 Render Corporate Workspace Interiors",
+    "slug": "promptsrender-corporate-workspace-interiors",
+    "content": "{\n  \"project_type\": \"corporate interior architecture\",\n  \"space_function\": \"collaborative workspace + focus pods\",\n  \"design_style\": [\n    \"[CORPORATE IDENTITY]\"\n  ],\n  \"concept\": {\n    \"main_idea\": \"A vibrant corporate workspace that balances professionalism with creativity through color, soft geometry, and transparency.\",\n    \"design_goal\": \"Encourage focus, collaboration, and visual energy without losing a premium corporate identity.\"\n  },\n  \"spatial_layout\": {\n    \"workspace_type\": \"semi-enclosed work pods\",\n    \"geometry\": \"rounded rectangular capsules\",\n    \"circulation\": \"open-plan circulation with visual continuity\",\n    \"privacy_level\": \"acoustic separation with full visual transparency\"\n  },\n  \"architectural_elements\": {\n    \"pods\": {\n      \"form\": \"soft curved edges with rounded corners\",\n      \"structure\": \"integrated architectural shells\",\n      \"enclosure\": \"floor-to-ceiling glass panels\"\n    },\n    \"ceiling\": {\n      \"design\": \"layered curved ceiling panels\",\n      \"detail\": \"acoustic wood slats following pod geometry\"\n    }\n  },\n  \"color_palette\": {\n    \"primary_colors\": [\n      \"warm beige\",\n      \"soft wood tones\"\n    ],\n    \"accent_colors\": [\n      \"[ACCENT PALETTE]\"\n    ],\n    \"corporate_balance\": \"colors used in controlled zones, never overwhelming\"\n  },\n  \"materials\": {\n    \"walls\": [\n      \"[SURFACE MATERIAL]\"\n    ],\n    \"floors\": [\n      \"[SURFACE MATERIAL]\"\n    ],\n    \"furniture\": [\n      \"upholstered task chairs\",\n      \"custom-built desks with rounded edges\"\n    ],\n    \"glass\": \"low-iron ultra-clear glass with minimal framing\"\n  },\n  \"lighting_design\": {\n    \"general_lighting\": \"soft ambient lighting integrated into ceiling\",\n    \"pod_lighting\": \"circular suspended lights aligned with pod geometry\",\n    \"accent_lighting\": \"hidden LED strips emphasizing curves\",\n    \"color_temperature\": \"warm neutral white (3000K–3500K)\"\n  },\n  \"technology_integration\": {\n    \"workstations\": [\n      \"dual-monitor setups\",\n      \"hidden cable management\",\n      \"integrated power and data ports\"\n    ],\n    \"acoustics\": \"sound-absorbing ceilings and wall panels\",\n    \"smart_features\": [\n      \"adaptive lighting\",\n      \"occupancy sensors\"\n    ]\n  },\n  \"atmosphere\": {\n    \"mood\": \"energetic yet calm\",\n    \"corporate_feel\": \"premium, innovative, forward-thinking\",\n    \"user_experience\": \"comfortable for long working hours\"\n  },\n  \"human_presence\": {\n    \"people\": \"professionals working quietly\",\n    \"activity\": \"focused work, light collaboration\",\n    \"scale\": \"realistic proportions and ergonomics\"\n  },\n  \"camera_and_composition\": {\n    \"camera_angle\": \"eye-level interior perspective\",\n    \"lens\": \"35mm architectural photography lens\",\n    \"focus\": \"one pod in foreground, others fading into depth\",\n    \"depth_of_field\": \"natural, subtle depth\"\n  },\n  \"rendering_style\": {\n    \"realism_level\": \"ultra photorealistic\",\n    \"lighting_model\": \"physically based global illumination\",\n    \"texture_detail\": \"high-resolution, realistic wear and material depth\",\n    \"post_processing\": \"minimal, cinematic realism\"\n  },\n  \"negative_prompt\": [\n    \"cartoon interior\",\n    \"toy-like furniture\",\n    \"over-saturated colors\",\n    \"sci-fi office\",\n    \"unrealistic reflections\",\n    \"low-detail textures\",\n    \"generic open office\"\n  ],\n  \"output_settings\": {\n    \"aspect_ratio\": \"2:3\",\n    \"resolution\": \"4K\",\n    \"image_type\": \"ultra realistic corporate interior render\"\n  }\n}",
+    "category": "Architecture, Interior Design",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.7
+      },
+      "overall": 6.7,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🪸 Render Futuristic Hybrid Mega-Structure",
+    "slug": "promptsrender-futuristic-hybrid-mega-structure",
+    "content": "{\n  \"project\": {\n    \"title\": \"Futuristic Hybrid Mega-Structure City Node\",\n    \"goal\": \"Ultra-realistic architectural visualization of a large-scale futuristic hybrid mega-structure combining civic space, housing, agriculture, and energy systems into one adaptive organism\",\n    \"language\": \"en\"\n  },\n  \"architecture\": {\n    \"concept\": \"A multi-layered urban organism integrating public, residential, agricultural, and technological systems\",\n    \"form_logic\": \"Fluid parametric geometry shaped by wind flow, solar exposure, and pedestrian circulation data\",\n    \"massing\": \"Interconnected volumes with elevated platforms, voids, and cascading terraces\",\n    \"scale\": \"Iconic large-scale urban landmark\",\n    \"structure\": {\n      \"system\": \"Exposed mega-frame with diagonal exoskeleton\",\n      \"logic\": \"Structural ribs visible through glass skin\",\n      \"voids\": \"Large vertical atrium carving through the mass\"\n    }\n  },\n  \"program_layers\": {\n    \"ground_level\": [GROUND LEVEL PROGRAM],\n    \"mid_levels\": [MID LEVELS PROGRAM],\n    \"upper_levels\": [UPPER LEVELS PROGRAM],\n    \"core\": [\n      \"data center spine\",\n      \"climate regulation system\",\n      \"vertical circulation shafts\"\n    ]\n  },\n  \"green_integration\": {\n    \"strategy\": \"Vegetation integrated structurally, not decorative\",\n    \"features\": [\n      \"deep soil terraces with mature trees\",\n      \"diagonal green bands wrapping the building\",\n      \"rainwater cascade between levels\",\n      \"carbon-absorbing facade panels\"\n    ]\n  },\n  \"environmental_systems\": {\n    \"ventilation\": \"Central vertical wind channel enabling natural airflow\",\n    \"solar\": \"Photovoltaic glass panels integrated into facade\",\n    \"water\": \"Closed-loop rainwater harvesting and redistribution\",\n    \"energy\": \"Micro wind turbines embedded within structural voids\"\n  },\n  \"materials\": {\n    \"primary\": [\n      \"high-performance structural glass\",\n      \"lightweight composite panels\",\n      \"bio-mineral facade surfaces\",\n      \"exposed steel exoskeleton\"\n    ],\n    \"finish\": \"Sleek but realistic, no fantasy textures\"\n  },\n  \"scene\": {\n    \"location\": \"[URBAN CONTEXT]\",\n    \"context\": [\n      \"surrounding urban skyline\",\n      \"pedestrian movement at ground level\",\n      \"public plaza activity\"\n    ],\n    \"time_of_day\": \"[TIME AND LIGHT]\",\n    \"lighting\": \"warm interior glow contrasting cool exterior atmosphere\"\n  },\n  \"camera\": {\n    \"angle\": \"low wide-angle hero shot\",\n    \"lens\": \"24mm architectural lens\",\n    \"perspective\": \"dynamic but realistic\"\n  },\n  \"visual_style\": {\n    \"realism\": \"ultra photoreal\",\n    \"detail_level\": \"extremely high\",\n    \"atmosphere\": \"optimistic future, breathable, advanced but grounded\"\n  },\n  \"output\": {\n    \"aspect_ratio\": \"4:5\",\n    \"resolution\": \"very high\",\n    \"quality_level\": \"competition-winning architectural visualization\",\n    \"no_ai_artifacts\": true\n  },\n  \"negative_prompt\": [\n    \"fantasy spaceship look\",\n    \"cyberpunk neon overload\",\n    \"cartoonish shapes\",\n    \"low detail\",\n    \"blurred geometry\",\n    \"oversaturated colors\",\n    \"random sci-fi props\",\n    \"ornamental clutter\",\n    \"text overlays\",\n    \"logos\",\n    \"watermarks\"\n  ]\n}",
+    "category": "Architecture, Green Architecture",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🏺 Render Gallery-Style Interior Visualizations",
+    "slug": "promptsrender-gallery-style-interior-visualizations",
+    "content": "{\n  \"prompt\": \"Ultra-realistic contemporary residential interior architecture with a cool, niche, gallery-like atmosphere. Spacious open-plan living and sleeping area designed as an architectural art space. [MATERIAL PALETTE] walls combined with [MATERIAL PALETTE] ceiling treatment, [MATERIAL PALETTE] flooring, and floor-to-ceiling glass windows allowing abundant natural daylight. [ART DIRECTION] displayed like a private art gallery, minimal but bold composition. Sculptural [ART DIRECTION] integrated into the space. Low-profile modular furniture with soft organic forms in [COLOR TONE] tones. Calm, confident, understated luxury mood. Architectural lighting with recessed spotlights and subtle track lighting creating soft shadows and depth. Clean lines, strong geometry, intentional negative space, no clutter. Photorealistic materials, physically accurate lighting, global illumination, ultra-detailed textures, editorial architectural visualization style, cinematic realism.\",\n  \"style\": \"Residential Interior Architecture\",\n  \"mood\": \"cool, niche, artistic, calm luxury\",\n  \"lighting\": \"natural daylight + soft architectural artificial lighting\",\n  \"camera\": \"wide-angle architectural interior shot, eye-level, deep focus\",\n  \"render_quality\": \"ultra realistic, high-end architectural visualization\",\n  \"color_palette\": [\n    \"[COLOR TONE]\"\n  ],\n  \"materials\": [\n    \"[MATERIAL PALETTE]\"\n  ],\n  \"negative_prompt\": [\n    \"generic luxury interior\",\n    \"overdecorated design\",\n    \"classic furniture\",\n    \"cold futuristic style\",\n    \"cartoon look\",\n    \"low realism\",\n    \"plastic materials\",\n    \"overly glossy surfaces\"\n  ]\n}",
+    "category": "Architecture, Interior Design",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🧊 Render Minimalist Architecture Pavilions",
+    "slug": "promptsrender-minimalist-architecture-pavilions",
+    "content": "{\n  \"project_type\": \"exterior architecture\",\n  \"building_function\": \"[BUILDING FUNCTION]\",\n  \"design_style\": [\n    \"contemporary architecture\",\n    \"minimalist luxury\",\n    \"nature-integrated design\"\n  ],\n  \"design_concept\": {\n    \"idea\": \"A highly realistic, standalone fitness pavilion designed as an architectural object in nature, blurring the boundary between interior training space and exterior landscape.\",\n    \"keywords\": [\n      \"transparency\",\n      \"calm strength\",\n      \"precision\",\n      \"wellness-driven architecture\"\n    ]\n  },\n  \"architectural_form\": {\n    \"massing\": \"single-story elongated rectangular volume\",\n    \"roof\": \"flat roof with sharp edges and subtle overhang\",\n    \"geometry\": \"clean orthogonal lines with softened corners\"\n  },\n  \"facade_design\": {\n    \"primary_facade\": \"full-height floor-to-ceiling glass walls\",\n    \"secondary_facade\": \"vertical natural wood cladding\",\n    \"framing\": \"dark matte aluminum structural frames\",\n    \"transparency\": \"clear glass with realistic reflections and interior visibility\"\n  },\n  \"materials\": {\n    \"exterior\": [\n      \"thermally treated wood panels\",\n      \"low-iron architectural glass\",\n      \"brushed black aluminum\",\n      \"concrete base platform\"\n    ],\n    \"flooring\": \"exterior timber deck extending beyond facade\",\n    \"material_detailing\": \"visible wood grain, subtle imperfections, realistic joints\"\n  },\n  \"interior_visibility\": {\n    \"visible_elements\": [\n      \"treadmills\",\n      \"free weights zone\",\n      \"functional training equipment\",\n      \"minimal storage walls\"\n    ],\n    \"interior_style\": \"warm wood interior with soft ambient lighting\"\n  },\n  \"landscape_context\": {\n    \"setting\": \"[LANDSCAPE SETTING]\",\n    \"elements\": [\n      \"mature trees surrounding the pavilion\",\n      \"low-maintenance greenery\",\n      \"natural grass ground plane\"\n    ],\n    \"relationship_to_nature\": \"building sits lightly on the landscape\"\n  },\n  \"lighting_conditions\": {\n    \"time_of_day\": \"[TIME OF DAY]\",\n    \"lighting_style\": \"realistic architectural lighting\",\n    \"lighting_elements\": [\n      \"warm interior glow visible through glass\",\n      \"subtle recessed exterior downlights\",\n      \"soft reflections on glass surfaces\"\n    ]\n  },\n  \"atmosphere_and_mood\": {\n    \"mood\": \"calm, focused, premium\",\n    \"feeling\": \"quiet power and exclusivity\",\n    \"avoid\": [\n      \"aggressive gym aesthetics\",\n      \"neon lights\",\n      \"crowded interiors\"\n    ]\n  },\n  \"camera_and_composition\": {\n    \"camera_position\": \"eye-level exterior perspective\",\n    \"lens\": \"35mm architectural lens\",\n    \"composition\": \"gym centered in frame with landscape framing the scene\",\n    \"depth_of_field\": \"sharp focus throughout\"\n  },\n  \"rendering_quality\": {\n    \"style\": \"ultra photorealistic architectural visualization\",\n    \"render_engine\": \"physically based rendering (PBR)\",\n    \"lighting_accuracy\": \"physically accurate global illumination\",\n    \"texture_quality\": \"8K textures, high realism\"\n  },\n  \"negative_prompt\": [\n    \"cartoon\",\n    \"illustration\",\n    \"low poly\",\n    \"unrealistic proportions\",\n    \"oversaturated colors\",\n    \"plastic materials\",\n    \"floating building\",\n    \"distorted perspective\",\n    \"text\",\n    \"logos\",\n    \"watermarks\",\n    \"people in exaggerated poses\"\n  ],\n  \"output_settings\": {\n    \"aspect_ratio\": \"16:9\",\n    \"resolution\": \"3840x2160\",\n    \"image_type\": \"photorealistic still image\"\n  }\n}",
+    "category": "Architecture, Exterior Architecture",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🍱 Render Mixed-Use Architecture Visualizations",
+    "slug": "promptsrender-mixed-use-architecture-visualizations",
+    "content": "{\n  \"project_type\": \"mixed-use architecture\",\n  \"program\": [\n    \"shopping mall\",\n    \"office tower\",\n    \"residential tower\"\n  ],\n  \"design_intent\": {\n    \"concept\": \"A vertically layered mixed-use building that clearly separates public, semi-public, and private functions while maintaining a cohesive architectural identity.\",\n    \"core_idea\": \"Urban intensity at the base, professional clarity in the middle, calm residential privacy at the top.\"\n  },\n\n  \"urban_context\": {\n    \"location\": \"[URBAN CONTEXT]\",\n    \"site_conditions\": [\n      \"[URBAN CONTEXT]\"\n    ],\n    \"urban_role\": \"acts as a city landmark and an active urban node\"\n  },\n\n  \"program_distribution\": {\n    \"podium\": {\n      \"function\": \"shopping mall\",\n      \"height\": \"3–4 levels\",\n      \"character\": \"open, transparent, highly active\",\n      \"features\": [\n        \"double-height retail spaces\",\n        \"interior atrium with skylight\",\n        \"public terraces\",\n        \"direct street access from multiple sides\"\n      ]\n    },\n    \"middle_tower\": {\n      \"function\": \"office\",\n      \"height\": \"10–15 levels\",\n      \"character\": \"rational, efficient, professional\",\n      \"features\": [\n        \"flexible office floor plates\",\n        \"sky lobby\",\n        \"shared meeting terraces\",\n        \"green buffer floors between functions\"\n      ]\n    },\n    \"upper_tower\": {\n      \"function\": \"residential\",\n      \"height\": \"15–20 levels\",\n      \"character\": \"quiet, private, refined\",\n      \"features\": [\n        \"deep balconies\",\n        \"corner living rooms\",\n        \"private sky gardens\",\n        \"separate residential lobby\"\n      ]\n    }\n  },\n\n  \"architectural_form\": {\n    \"massing\": \"stepped vertical composition\",\n    \"transition_strategy\": \"horizontal setbacks and landscaped terraces separating each function\",\n    \"silhouette\": \"strong base with lighter vertical towers rising above\"\n  },\n\n  \"facade_design\": {\n    \"mall_facade\": \"[FACADE LANGUAGE — PODIUM]\",\n    \"office_facade\": \"[FACADE LANGUAGE — OFFICE]\",\n    \"residential_facade\": \"[FACADE LANGUAGE — RESIDENTIAL]\",\n    \"facade_logic\": \"each function reads differently while sharing proportions and alignment\"\n  },\n\n  \"materials\": {\n    \"base\": [\n      \"[MATERIAL SYSTEM — PODIUM]\"\n    ],\n    \"office\": [\n      \"[MATERIAL SYSTEM — OFFICE]\"\n    ],\n    \"residential\": [\n      \"[MATERIAL SYSTEM — RESIDENTIAL]\"\n    ]\n  },\n\n  \"public_space_design\": {\n    \"ground_plaza\": {\n      \"type\": \"urban public plaza\",\n      \"features\": [\n        \"integrated seating\",\n        \"water feature\",\n        \"trees in architectural planters\",\n        \"outdoor cafes\"\n      ]\n    },\n    \"circulation\": \"clear separation of mall, office, and residential entrances\"\n  },\n\n  \"sustainability_strategy\": {\n    \"passive_design\": [\n      \"shading devices\",\n      \"natural ventilation zones\",\n      \"daylight-optimized floor plates\"\n    ],\n    \"green_elements\": [\n      \"terrace gardens\",\n      \"green roofs\",\n      \"sky gardens\"\n    ]\n  },\n\n  \"lighting_design\": {\n    \"time_of_day\": \"early evening / blue hour\",\n    \"mall_lighting\": \"bright and inviting interior glow\",\n    \"office_lighting\": \"controlled professional lighting\",\n    \"residential_lighting\": \"warm, calm window lights\",\n    \"exterior_lighting\": \"subtle facade accents emphasizing vertical hierarchy\"\n  },\n\n  \"people_and_activity\": {\n    \"mall\": \"crowds shopping and walking\",\n    \"office\": \"professionals visible behind glass\",\n    \"residential\": \"few silhouettes on balconies\",\n    \"scale\": \"realistic human proportions\"\n  },\n\n  \"camera_and_rendering\": {\n    \"camera_angle\": \"street-level three-quarter view\",\n    \"lens\": \"28–35mm architectural photography lens\",\n    \"composition\": \"foreground plaza, mid-ground podium, vertical towers above\",\n    \"depth\": \"strong depth and scale perception\"\n  },\n\n  \"render_quality\": {\n    \"style\": \"ultra photorealistic architectural visualization\",\n    \"lighting_model\": \"physically based rendering\",\n    \"texture_quality\": \"high-resolution materials with realistic wear\",\n    \"post_processing\": \"minimal, cinematic realism\"\n  },\n\n  \"negative_prompt\": [\n    \"sci-fi architecture\",\n    \"floating structures\",\n    \"fantasy towers\",\n    \"cartoon style\",\n    \"low poly\",\n    \"overly glossy materials\",\n    \"random greenery\",\n    \"unrealistic proportions\",\n    \"copy of existing landmark buildings\"\n  ],\n\n  \"output_settings\": {\n    \"aspect_ratio\": \"3:4\",\n    \"resolution\": \"4K\",\n    \"image_type\": \"ultra realistic mixed-use exterior render\"\n  }\n}",
+    "category": "Architecture, Commercial Architecture",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🐚 Render Organic Modern Interior Visualizations",
+    "slug": "promptsrender-organic-modern-interior-visualizations",
+    "content": "{\n  \"project_type\": \"interior design visualization\",\n  \"style\": \"cool contemporary organic modernism\",\n  \"design_language\": {\n    \"aesthetic\": [\n      \"architectural minimalism\",\n      \"organic modern\",\n      \"soft brutalism\",\n      \"mid-century influence\",\n      \"gallery-like interior\"\n    ],\n    \"mood\": \"calm, refined, innovative, artistic\",\n    \"visual_identity\": \"editorial interior design\"\n  },\n  \"space\": {\n    \"room_type\": \"living room / lounge space\",\n    \"ceiling_height\": \"high ceiling\",\n    \"layout\": \"open, breathable, sculptural composition\",\n    \"negative_space\": \"intentionally preserved\"\n  },\n  \"materials\": {\n    \"flooring\": [\n      \"[MATERIAL PALETTE]\"\n    ],\n    \"walls\": [\n      \"[MATERIAL PALETTE]\"\n    ],\n    \"furniture_materials\": [\n      \"[MATERIAL PALETTE]\"\n    ]\n  },\n  \"furniture_style\": {\n    \"sofa\": \"low-profile modern sofa with soft edges\",\n    \"chairs\": \"sculptural wooden lounge chairs\",\n    \"tables\": \"raw stone or carved organic coffee table\",\n    \"design\": \"custom, gallery-grade furniture pieces\"\n  },\n  \"lighting\": {\n    \"type\": \"natural daylight dominant\",\n    \"light_source\": [\n      \"large circular or geometric windows\",\n      \"filtered sunlight\"\n    ],\n    \"effect\": \"dramatic light and shadow patterns on walls and floor\",\n    \"artificial_light\": \"minimal, hidden, warm tone\"\n  },\n  \"decor_elements\": {\n    \"plants\": \"[SCULPTURAL DECOR]\",\n    \"wall_art\": \"[SCULPTURAL DECOR]\",\n    \"accessories\": \"[SCULPTURAL DECOR]\"\n  },\n  \"color_palette\": {\n    \"primary\": [\n      \"[COLOR ATMOSPHERE]\"\n    ],\n    \"accent\": [\n      \"[COLOR ATMOSPHERE]\"\n    ],\n    \"contrast_level\": \"soft, balanced\"\n  },\n  \"camera\": {\n    \"angle\": \"eye-level wide shot\",\n    \"lens\": \"35mm architectural lens\",\n    \"composition\": \"rule of thirds, strong verticals\",\n    \"focus\": \"sharp foreground and background\"\n  },\n  \"render_quality\": {\n    \"realism\": \"high-end photorealistic\",\n    \"textures\": \"high detail, tactile surfaces\",\n    \"shadows\": \"soft but defined\",\n    \"reflections\": \"subtle, realistic\"\n  },\n  \"usage\": {\n    \"suitable_for\": [\n      \"interior design portfolio\",\n      \"architecture magazine\",\n      \"luxury brand campaign\",\n      \"concept showroom\",\n      \"editorial feature\"\n    ]\n  },\n  \"negative_prompt\": [\n    \"cluttered space\",\n    \"over-decorated interior\",\n    \"cheap materials\",\n    \"harsh artificial lighting\",\n    \"cold corporate office look\",\n    \"generic furniture\",\n    \"cartoonish render\"\n  ],\n  \"output\": {\n    \"aspect_ratio\": \"2:3 or 4:5\",\n    \"resolution\": \"ultra high resolution\",\n    \"style_consistency\": \"cohesive architectural visual\"\n  }\n}",
+    "category": "Architecture, Interior Design",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.7
+      },
+      "overall": 6.7,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🐚 Render Parametric Architecture Facades",
+    "slug": "promptsrender-parametric-architecture-facades",
+    "content": "{\n  \"project_type\": \"exterior architecture\",\n  \"building_program\": \"[BUILDING PROGRAM]\",\n  \"design_intent\": {\n    \"concept\": \"A contemporary urban building featuring fluid, sculptural balcony geometries that reinterpret organic forms in a bold, modern way without imitation.\",\n    \"core_values\": [\n      \"architectural identity\",\n      \"urban elegance\",\n      \"organic abstraction\",\n      \"non-repetitive facade rhythm\"\n    ]\n  },\n  \"architectural_style\": [\n    \"contemporary parametric architecture\",\n    \"organic modernism\",\n    \"high-end urban residential design\"\n  ],\n  \"urban_context\": {\n    \"setting\": \"[URBAN SETTING]\",\n    \"surroundings\": [\n      \"modern city skyline\",\n      \"adjacent mid-rise buildings\",\n      \"urban streets and pedestrian flow\"\n    ],\n    \"relationship_to_city\": \"iconic facade acting as a visual landmark within the urban fabric\"\n  },\n  \"building_form\": {\n    \"massing\": \"vertical volume with sculpted protrusions\",\n    \"geometry\": \"soft curved balcony frames integrated into a rigid structural grid\",\n    \"variation\": \"each floor features subtle geometric differentiation to avoid repetition\",\n    \"balance\": \"organic forms balanced with structural clarity\"\n  },\n  \"facade_design\": {\n    \"primary_feature\": \"custom-designed curved balcony frames\",\n    \"design_logic\": \"parametric variation driven by sunlight, privacy, and urban views\",\n    \"depth\": \"deep balconies creating strong shadow play\",\n    \"facade_identity\": \"flowing pattern that reads differently from distance and close-up\"\n  },\n  \"materials\": {\n    \"main_structure\": [\n      \"architectural concrete\",\n      \"fiber-reinforced concrete panels\"\n    ],\n    \"secondary_elements\": [\n      \"matte metal railings\",\n      \"clear and frosted glass\",\n      \"integrated greenery\"\n    ],\n    \"material_expression\": \"smooth, refined, and tactile surfaces with realistic imperfections\"\n  },\n  \"green_integration\": {\n    \"strategy\": \"controlled urban greenery integrated into balconies\",\n    \"purpose\": [\n      \"microclimate improvement\",\n      \"visual softness\",\n      \"human-scale connection\"\n    ],\n    \"avoid\": \"excessive vegetation or nature-dominant appearance\"\n  },\n  \"lighting_design\": {\n    \"time_of_day\": \"[TIME OF DAY]\",\n    \"natural_light\": \"soft directional sunlight emphasizing curved forms\",\n    \"artificial_light\": [\n      \"warm recessed balcony lighting\",\n      \"subtle facade wash lights\"\n    ],\n    \"lighting_effect\": \"strong highlights and shadows accentuating depth\"\n  },\n  \"human_scale\": {\n    \"presence\": \"realistic people visible on balconies\",\n    \"activity\": \"everyday urban life — sitting, walking, relaxing\",\n    \"scale_reference\": \"humans used to reinforce architectural proportions\"\n  },\n  \"camera_and_view\": {\n    \"camera_angle\": \"slightly low-angle urban perspective\",\n    \"lens\": \"50mm architectural photography lens\",\n    \"framing\": \"facade-focused composition with city context visible\",\n    \"distortion\": \"minimal, realistic\"\n  },\n  \"rendering_style\": {\n    \"realism_level\": \"ultra photorealistic\",\n    \"quality\": \"competition-grade architectural visualization\",\n    \"lighting_model\": \"physically accurate global illumination\",\n    \"textures\": \"high-resolution, natural material aging and detail\"\n  },\n  \"mood_and_identity\": {\n    \"mood\": \"confident, contemporary, refined\",\n    \"personality\": \"cool, bold, architectural statement\",\n    \"avoid\": [\n      \"generic residential look\",\n      \"copying iconic buildings\",\n      \"overly decorative forms\"\n    ]\n  },\n  \"negative_prompt\": [\n    \"exact replication of known buildings\",\n    \"cartoon style\",\n    \"low poly\",\n    \"fantasy architecture\",\n    \"overgrown jungle greenery\",\n    \"floating structures\",\n    \"unrealistic proportions\",\n    \"text\",\n    \"logos\",\n    \"watermarks\"\n  ],\n  \"output_settings\": {\n    \"aspect_ratio\": \"3:4\",\n    \"resolution\": \"4K\",\n    \"image_type\": \"ultra realistic exterior architectural render\"\n  }\n}",
+    "category": "Architecture, Exterior Architecture",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🕸️ Render Parametric Bridge-Park Visualizations",
+    "slug": "promptsrender-parametric-bridge-park-visualizations",
+    "content": "{\n  \"project_type\": \"urban_design_architecture\",\n  \"title\": \"Canal Weave Bridge-Park (Urban Lace Network)\",\n  \"prompt\": \"A hyper-realistic urban design concept in a [WATERFRONT CONTEXT] featuring a futuristic multi-branch pedestrian bridge-park spanning a wide canal. The structure is a flowing, biomorphic network of intersecting elevated walkways and plazas, like a soft, continuous woven fabric. The deck surface and balustrades are made from intricate [LATTICE IDENTITY] lattice/perforated panels (parametric lace) with smooth curved edges and seamless joints. Multiple pathways merge and split, creating circular nodes and gentle ramps, with one large arched underpass tunnel for pedestrians below. The bridge reads as one continuous urban carpet draped across the water, with subtle translucent skylight openings and warm recessed lighting glowing from within the lattice. Surrounding context: [WATERFRONT CONTEXT]; the new intervention contrasts yet respects scale and sightlines. Evening golden hour into blue hour, soft atmospheric haze, realistic reflections in the canal, lively but elegant pedestrian flow small groups. No cars. Clean contemporary civic landmark, museum-quality architectural visualization, ultra-detailed materials, photorealistic, cinematic wide-angle aerial/oblique view from above showing the full network across the canal.\",\n  \"negative_prompt\": \"low poly, cartoon, illustration, noisy image, blurry, over-sharpened, distorted perspective, messy geometry, broken lattice, unsafe railings, chaotic crowd, cars, heavy signage, text, logos, watermarks, oversaturated colors, cheap plastic look, unrealistic scale, floating artifacts, extra bridges, duplicated people\",\n  \"style\": \"photorealistic architectural visualization\",\n  \"design_language\": {\n    \"keywords\": [\n      \"parametric lattice\",\n      \"biomorphic geometry\",\n      \"bridge-park\",\n      \"urban carpet\",\n      \"[LATTICE IDENTITY]\",\n      \"soft curvature\",\n      \"civic landmark\"\n    ],\n    \"materiality\": {\n      \"primary\": \"[LATTICE IDENTITY]\",\n      \"secondary\": \"subtle translucent panels and warm LED linear lights\",\n      \"floor_finish\": \"light stone-like terrazzo or microcement, anti-slip\"\n    }\n  },\n  \"urban_program\": {\n    \"functions\": [\n      \"multi-route pedestrian crossing\",\n      \"viewing terraces and plazas\",\n      \"rest pockets with integrated benches\",\n      \"shaded lattice canopies at nodes\",\n      \"under-bridge sheltered passage\"\n    ],\n    \"accessibility\": [\n      \"gentle ramps\",\n      \"step-free paths\",\n      \"wide circulation for strollers and wheelchairs\"\n    ]\n  },\n  \"environment\": {\n    \"setting\": \"[WATERFRONT CONTEXT]\",\n    \"time_of_day\": \"golden hour to blue hour\",\n    \"weather\": \"clear, light haze\",\n    \"water\": \"calm canal with realistic reflections\"\n  },\n  \"people\": {\n    \"density\": \"moderate\",\n    \"wardrobe\": \"modern urban casual\",\n    \"scale_reference\": \"accurate human scale for architectural realism\"\n  },\n  \"camera\": {\n    \"shot_type\": \"wide oblique aerial\",\n    \"lens\": \"28mm\",\n    \"angle\": \"high three-quarter view showing bridge network and canal\",\n    \"focus\": \"tack sharp on bridge lattice and pedestrians\"\n  },\n  \"lighting\": {\n    \"natural\": \"soft sunset sky light\",\n    \"artificial\": \"warm integrated LED glow inside lattice edges\"\n  },\n  \"composition\": {\n    \"framing\": \"bridge occupies foreground and midground, canal leads to vanishing point\",\n    \"leading_lines\": \"walkway curves guide the eye across the city\",\n    \"contrast\": \"[LATTICE IDENTITY] bridge against dark water and warm historic facades\"\n  },\n  \"output\": {\n    \"aspect_ratio\": \"4:5\",\n    \"resolution\": \"2048x2560\",\n    \"quality\": \"ultra\",\n    \"render_detail\": \"micro-detail, realistic shadows, GI, physically-based materials\"\n  }\n}",
+    "category": "Architecture, Urban Design",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🏮 Render Photorealistic Architecture Exteriors",
+    "slug": "promptsrender-photorealistic-architecture-exteriors-2",
+    "content": "{\n  \"project_type\": \"exterior architecture\",\n  \"category\": \"[BUILDING PROGRAM]\",\n  \"project_name\": \"Urban Civic Market Pavilion\",\n\n  \"design_concept\": {\n    \"intent\": \"A highly realistic contemporary hybrid building that seamlessly blends commercial activity with public civic life. The architecture encourages openness, accessibility, and social interaction while maintaining a premium and refined identity.\",\n    \"core_values\": [\n      \"urban activation\",\n      \"public accessibility\",\n      \"commercial visibility\",\n      \"civic generosity\",\n      \"human-scale architecture\"\n    ]\n  },\n\n  \"architectural_form\": {\n    \"massing\": \"low-to-mid-rise pavilion with fluid geometry and carved voids\",\n    \"signature_element\": \"a sculptural floating roof canopy extending into the public plaza\",\n    \"spatial_strategy\": \"porous ground floor with multiple entry points and visual permeability\"\n  },\n\n  \"program_distribution\": {\n    \"commercial_functions\": [\n      \"specialty café\",\n      \"concept retail store\",\n      \"food and beverage counter\"\n    ],\n    \"public_functions\": [\n      \"open civic lounge\",\n      \"exhibition/gallery corridor\",\n      \"community meeting space\",\n      \"public seating zones\"\n    ]\n  },\n\n  \"public_space_design\": {\n    \"plaza\": {\n      \"type\": \"open urban forecourt\",\n      \"features\": [\n        \"integrated seating steps\",\n        \"shaded gathering zones\",\n        \"native landscape planters\",\n        \"subtle water feature or reflective strip\"\n      ],\n      \"connectivity\": \"direct seamless connection to sidewalks and pedestrian flows\"\n    },\n    \"circulation\": {\n      \"public_passage\": \"a visible public route cutting through the building\",\n      \"accessibility\": \"fully accessible ramps and barrier-free paths\"\n    }\n  },\n\n  \"facade_and_materials\": {\n    \"primary_materials\": [\n      \"floor-to-ceiling low-iron glass\",\n      \"natural timber slats\",\n      \"architectural concrete\",\n      \"brushed aluminum accents\"\n    ],\n    \"material_expression\": \"highly detailed textures with realistic surface imperfections\",\n    \"transparency\": \"maximum transparency at ground level, filtered upper zones with timber screening\"\n  },\n\n  \"structural_system\": {\n    \"structure\": \"exposed timber or steel frame with long-span beams\",\n    \"roof\": {\n      \"type\": \"floating canopy roof\",\n      \"underside\": \"warm timber soffit with concealed linear lighting\",\n      \"daylighting\": \"integrated skylights for soft natural illumination\"\n    }\n  },\n\n  \"urban_context\": {\n    \"setting\": \"[URBAN SETTING]\",\n    \"surroundings\": [\n      \"street trees\",\n      \"bike lanes and racks\",\n      \"public transit nearby\",\n      \"active pedestrian sidewalks\"\n    ],\n    \"urban_relationship\": \"building opens toward the corner to form a civic gateway\"\n  },\n\n  \"landscape_design\": {\n    \"planting\": [\n      \"native grasses\",\n      \"low shrubs\",\n      \"integrated mature trees\"\n    ],\n    \"ground_materials\": [\n      \"light stone paving\",\n      \"textured concrete\",\n      \"timber decking areas\"\n    ],\n    \"street_furniture\": [\n      \"integrated benches\",\n      \"minimal bollards\",\n      \"low-level architectural lighting\"\n    ]\n  },\n\n  \"lighting_and_mood\": {\n    \"time_of_day\": \"[TIME OF DAY]\",\n    \"lighting_style\": \"cinematic yet physically accurate architectural lighting\",\n    \"lighting_elements\": [\n      \"warm interior glow visible from outside\",\n      \"soft facade wall washing\",\n      \"integrated plaza floor lighting\"\n    ]\n  },\n\n  \"people_and_activity\": {\n    \"population_density\": \"moderate (10–25 people)\",\n    \"activities\": [\n      \"people sitting on plaza steps\",\n      \"visitors entering café and retail\",\n      \"pedestrians walking through public passage\",\n      \"small groups socializing\"\n    ],\n    \"appearance\": \"natural candid poses, contemporary urban clothing\",\n    \"avoid\": \"posed models, duplicated people, exaggerated gestures\"\n  },\n\n  \"camera_and_rendering\": {\n    \"camera_angle\": \"eye-level exterior view\",\n    \"lens\": \"28mm architectural lens\",\n    \"composition\": \"foreground plaza, midground building, contextual background\",\n    \"depth_of_field\": \"sharp focus on architecture with subtle background softness\"\n  },\n\n  \"render_quality\": {\n    \"style\": \"ultra photorealistic architectural visualization\",\n    \"detail_level\": \"extreme material and lighting accuracy\",\n    \"render_engine_look\": \"physically based rendering (PBR)\",\n    \"post_processing\": \"minimal, realistic color grading\"\n  },\n\n  \"negative_prompt\": [\n    \"cartoon style\",\n    \"illustration\",\n    \"low poly\",\n    \"unrealistic scale\",\n    \"fisheye distortion\",\n    \"oversaturated colors\",\n    \"blurry textures\",\n    \"foggy haze\",\n    \"billboards\",\n    \"logos\",\n    \"text overlays\",\n    \"watermarks\",\n    \"floating structures\",\n    \"warped geometry\",\n    \"repeated characters\",\n    \"uncanny faces\"\n  ],\n\n  \"output_settings\": {\n    \"aspect_ratio\": \"4:5\",\n    \"resolution\": \"2048x2560\",\n    \"format\": \"high-resolution still image\"\n  }\n}",
+    "category": "Architecture, Exterior Architecture",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🧊 Render Photorealistic Museum Exteriors",
+    "slug": "promptsrender-photorealistic-museum-exteriors",
+    "content": "{\n  \"project_type\": \"exterior_architecture\",\n  \"building_type\": \"contemporary art and history museum\",\n  \"realism_level\": \"highly_photorealistic\",\n  \"design_reference\": {\n    \"inspiration\": \"[HERITAGE DIALOGUE] historic building wrapped with contemporary glass volume\",\n    \"architectural_theme\": \"dialogue between past and present\"\n  },\n  \"design_concept\": {\n    \"concept_name\": \"Transparent Heritage\",\n    \"description\": \"a museum that preserves historical architecture while framing it with a modern glass envelope\",\n    \"core_ideas\": [\n      \"contrast and harmony\",\n      \"architectural layering\",\n      \"respect for heritage\",\n      \"clarity and transparency\"\n    ]\n  },\n  \"site_context\": {\n    \"location_type\": \"[HERITAGE CONTEXT]\",\n    \"surroundings\": [\n      \"[HERITAGE CONTEXT]\"\n    ],\n    \"urban_role\": \"cultural landmark and public gathering space\"\n  },\n  \"massing_and_form\": {\n    \"overall_form\": \"rectangular, orthogonal massing\",\n    \"composition\": [\n      \"existing historic structure retained\",\n      \"new glass volume enclosing and extending the original form\"\n    ],\n    \"height\": \"aligned with surrounding historic buildings\",\n    \"expression\": \"solid historic core contrasted by light transparent shell\"\n  },\n  \"facade_design\": {\n    \"historic_layer\": {\n      \"material\": \"[HERITAGE DIALOGUE — historic material]\",\n      \"features\": [\n        \"[HERITAGE DIALOGUE — historic features]\"\n      ]\n    },\n    \"contemporary_layer\": {\n      \"material\": \"structural glass facade\",\n      \"glass_type\": \"[HERITAGE DIALOGUE — glass character]\",\n      \"function\": \"protective and interpretive envelope\"\n    },\n    \"facade_strategy\": \"glass aligns with rhythm of historic facade\"\n  },\n  \"color_palette\": {\n    \"primary\": [\n      \"[HERITAGE DIALOGUE — dominant stone/material tones]\"\n    ],\n    \"accent\": [\n      \"[HERITAGE DIALOGUE — glass tint and lighting accent]\"\n    ],\n    \"overall_feel\": \"elegant, restrained, architectural\"\n  },\n  \"lighting_design\": {\n    \"daytime\": \"glass reflects sky while revealing historic texture\",\n    \"nighttime\": [\n      \"warm interior lighting highlighting historic features\",\n      \"soft glow behind glass facade\"\n    ],\n    \"atmosphere\": \"museum appears as a luminous cultural object after sunset\"\n  },\n  \"entrance_design\": {\n    \"entrance_type\": \"[HERITAGE DIALOGUE — entrance form]\",\n    \"treatment\": \"transparent glass entry allowing views into lobby\",\n    \"experience\": \"clear visual connection between exterior plaza and interior space\"\n  },\n  \"public_space\": {\n    \"foreground\": \"open stone-paved plaza\",\n    \"usage\": [\n      \"visitor gathering\",\n      \"outdoor exhibitions\",\n      \"urban resting space\"\n    ],\n    \"relationship\": \"museum facade directly engages public square\"\n  },\n  \"camera_and_rendering\": {\n    \"viewpoint\": \"frontal symmetrical perspective\",\n    \"camera_height\": \"eye-level\",\n    \"lens\": \"35mm architectural lens\",\n    \"composition\": \"building centered with plaza foreground\",\n    \"style\": \"professional architectural photography\"\n  },\n  \"constraints\": {\n    \"no_futuristic_shapes\": true,\n    \"no_parametric_overdesign\": true,\n    \"no_exaggerated_forms\": true,\n    \"no_text_or_signage\": true\n  },\n  \"negative_prompt\": [\n    \"sci-fi architecture\",\n    \"organic blob forms\",\n    \"cartoon rendering\",\n    \"unrealistic proportions\",\n    \"excessive reflections\",\n    \"neon lighting\"\n  ],\n  \"output\": {\n    \"aspect_ratio\": \"4:5 or 16:9\",\n    \"resolution\": \"ultra high resolution\",\n    \"use_case\": [\n      \"museum competition\",\n      \"heritage adaptive reuse proposal\",\n      \"architecture portfolio\",\n      \"urban cultural project presentation\"\n    ]\n  }\n}",
+    "category": "Architecture, Exterior Architecture",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🗿 Render Sculptural Architecture Facades",
+    "slug": "promptsrender-sculptural-architecture-facades",
+    "content": "{\n  \"project_type\": \"exterior architecture\",\n  \"building_program\": \"[BUILDING PROGRAM]\",\n  \"design_intent\": {\n    \"concept\": \"A radically different urban facade that breaks repetition through shifting architectural layers, unexpected voids, and sculptural negative space, while remaining structurally plausible and realistic.\",\n    \"narrative\": \"Architecture that feels grown, carved, and negotiated with the city rather than stacked or repeated.\"\n  },\n  \"architectural_language\": [\n    \"experimental contemporary architecture\",\n    \"urban sculptural minimalism\",\n    \"non-parametric organic geometry\",\n    \"post-digital realism\"\n  ],\n  \"urban_context\": {\n    \"setting\": \"[URBAN SETTING]\",\n    \"environment\": [\n      \"asphalt streets\",\n      \"traffic\",\n      \"sidewalk life\",\n      \"adjacent concrete and glass buildings\"\n    ],\n    \"contrast_strategy\": \"the building stands out through form and voids, not color or decoration\"\n  },\n  \"building_form\": {\n    \"overall_shape\": \"monolithic volume with carved-out spatial voids\",\n    \"design_logic\": \"subtractive design — spaces are removed rather than added\",\n    \"voids\": [\n      \"deep sky cavities\",\n      \"urban balconies carved into mass\",\n      \"unexpected double-height exterior rooms\"\n    ],\n    \"silhouette\": \"irregular but controlled, asymmetrical yet balanced\"\n  },\n  \"facade_concept\": {\n    \"idea\": \"a facade that behaves like a porous urban cliff\",\n    \"elements\": [\n      \"thick edges\",\n      \"rounded structural openings\",\n      \"soft transitions between interior and exterior\"\n    ],\n    \"repetition\": \"none — each opening slightly different in size and depth\",\n    \"depth\": \"extreme facade depth creating strong shadow gradients\"\n  },\n  \"materials\": {\n    \"primary\": [\n      \"pigmented architectural concrete\",\n      \"cast-in-place concrete with visible formwork texture\"\n    ],\n    \"secondary\": [\n      \"dark anodized aluminum frames\",\n      \"deep-set glazing\",\n      \"raw stone or terrazzo inserts\"\n    ],\n    \"material_behavior\": \"heavy, tactile, matte, realistic imperfections visible\"\n  },\n  \"color_strategy\": {\n    \"palette\": [\n      \"warm mineral grey\",\n      \"soft urban beige\",\n      \"muted charcoal\"\n    ],\n    \"accent_usage\": \"very limited, only inside recessed voids\",\n    \"avoid\": [\n      \"bright colors\",\n      \"luxury gloss finishes\"\n    ]\n  },\n  \"public_interaction\": {\n    \"ground_level\": \"porous and inviting with carved entrances and semi-public spaces\",\n    \"human_scale\": \"people walking, sitting, leaning — architecture feels inhabitable\",\n    \"urban_role\": \"acts as a spatial event in the city, not just a building\"\n  },\n  \"lighting_design\": {\n    \"natural_light\": \"[LIGHTING MOOD]\",\n    \"shadow_quality\": \"sharp-edged shadows with soft falloff\",\n    \"night_lighting\": \"very minimal concealed lighting inside voids\",\n    \"mood\": \"dramatic but realistic\"\n  },\n  \"camera_and_photography\": {\n    \"camera_position\": \"street-level human perspective\",\n    \"lens\": \"35mm architectural photography lens\",\n    \"composition\": \"foreground city life + dominant facade mass\",\n    \"avoid\": [\n      \"aerial drone shots\",\n      \"perfect symmetry\"\n    ]\n  },\n  \"rendering_style\": {\n    \"realism\": \"hyper-realistic architectural photography\",\n    \"detail_level\": \"visible construction joints, weathering, material aging\",\n    \"lighting_model\": \"physically accurate daylight simulation\",\n    \"post_processing\": \"very subtle, documentary-style\"\n  },\n  \"mood\": {\n    \"feeling\": \"bold, raw, intelligent, non-commercial\",\n    \"identity\": \"architecture for thinking cities, not marketing brochures\"\n  },\n  \"negative_prompt\": [\n    \"parametric wave patterns\",\n    \"repetitive balconies\",\n    \"glass curtain wall towers\",\n    \"luxury branding aesthetics\",\n    \"futuristic sci-fi shapes\",\n    \"floating forms\",\n    \"overuse of greenery\",\n    \"concept-art look\",\n    \"AI surrealism\"\n  ],\n  \"output\": {\n    \"aspect_ratio\": \"3:4\",\n    \"resolution\": \"4K\",\n    \"style\": \"real-world buildable architecture visualization\"\n  }\n}",
+    "category": "Architecture, Exterior Architecture",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.7
+      },
+      "overall": 6.7,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🧊 Render Transparent Architecture Visualizations",
+    "slug": "promptsrender-transparent-architecture-visualizations",
+    "content": "{\n  \"project_type\": \"commercial architecture\",\n  \"building_type\": \"[COMMERCIAL TYPOLOGY]\",\n  \"brand_inspiration\": \"[COMMERCIAL TYPOLOGY]\",\n  \"architectural_concept\": \"radical transparency and minimalism\",\n  \"exterior_design\": {\n    \"facade\": \"full-height ultra-clear glass facade with seamless joints\",\n    \"structure\": \"minimal steel structure hidden within glass\",\n    \"form\": \"pure rectangular geometry with floating roof effect\",\n    \"entrance\": \"frameless glass entrance with invisible doors\"\n  },\n  \"materials\": [\n    \"ultra-clear structural glass\",\n    \"[MATERIAL ACCENT]\",\n    \"[MATERIAL ACCENT]\"\n  ],\n  \"lighting\": {\n    \"daytime\": \"maximum daylight penetration with soft reflections\",\n    \"nighttime\": \"warm interior glow illuminating the glass facade\"\n  },\n  \"urban_context\": {\n    \"location\": \"[URBAN SETTING]\",\n    \"interaction\": \"[URBAN SETTING]\"\n  },\n  \"visual_style\": {\n    \"realism\": \"hyper-realistic architectural visualization\",\n    \"camera\": \"wide-angle eye-level exterior shot\",\n    \"details\": \"physically accurate reflections, shadows, and glass refractions\"\n  },\n  \"atmosphere\": \"calm, premium, futuristic, timeless\",\n  \"avoid\": [\n    \"ornamentation\",\n    \"complex textures\",\n    \"decorative facade elements\"\n  ]\n}",
+    "category": "Architecture, Commercial Architecture",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🧬 Render Vertical Ecosystem Tower",
+    "slug": "promptsrender-vertical-ecosystem-tower",
+    "content": "{\n  \"project\": {\n    \"title\": \"Vertical Ecosystem Tower\",\n    \"goal\": \"Ultra-realistic architectural visualization of a high-rise building functioning as a layered vertical ecosystem\",\n    \"language\": \"en\"\n  },\n  \"architecture\": {\n    \"concept\": \"Each level operates as a different microclimate zone\",\n    \"form\": \"Stepped and slightly spiraled massing with deep ecological terraces\",\n    \"structure\": \"Exposed structural frame supporting heavy soil loads and mature trees\",\n    \"vegetation\": [VEGETATION PALETTE],\n    \"water_system\": \"Rainwater cascade system flowing between terraces\"\n  },\n  \"materials\": {\n    \"primary\": [\"light concrete\", \"glass\", \"natural stone\"],\n    \"behavior\": \"realistic structural thickness and soil depth\"\n  },\n  \"scene\": {\n    \"location\": \"[URBAN CONTEXT]\",\n    \"time\": \"[LIGHTING CONDITION]\",\n    \"atmosphere\": \"clean, breathable urban future\"\n  },\n  \"output\": {\n    \"aspect_ratio\": \"4:5\",\n    \"resolution\": \"very high\",\n    \"style\": \"ultra photoreal architectural render\"\n  }\n}",
+    "category": "Architecture, Green Architecture",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  }
+]

@@ -1,0 +1,44 @@
+{
+  "category": "Writing",
+  "description": "Rubric for evaluating Writing prompts - focuses on prompt quality, audience context, and editorial direction",
+  "gradingPrompt": "You are an expert AI prompt evaluator specializing in Writing prompts. Evaluate the quality of the prompt itself, not whether the final draft would already be excellent. Score each criterion from 0-10 using these anchors: 0-3 = vague or unusable; 4-6 = partially specified but missing important context, constraints, or output details; 7-8 = strong and usable with minor gaps; 9-10 = precise, well-scoped, and draft-ready. Reward clear goals, relevant audience and source context, useful constraints, explicit output format, and strong voice direction. Penalize ambiguity, missing audience or purpose context, conflicting style instructions, and vague deliverables. Evaluate using these criteria: Objective Clarity, Context Completeness, Constraints and Guardrails, Output Specification, and Voice and Audience Direction. Return STRICT JSON only. No markdown, no explanation outside JSON:\n\n{\n  \"scores\": {\n    \"objective_clarity\": number,\n    \"context_completeness\": number,\n    \"constraints_and_guardrails\": number,\n    \"output_specification\": number,\n    \"voice_and_audience_direction\": number\n  },\n  \"overall\": number,\n  \"feedback\": string,\n  \"improvements\": string[]\n}\n\nPROMPT:\n\"\"\"\n{{prompt_content}}\n\"\"\"",
+  "criteria": [
+    {
+      "name": "Objective Clarity",
+      "description": "How clearly the prompt states the writing objective, medium, and desired outcome.",
+      "weight": 1.2,
+      "maxScore": 10
+    },
+    {
+      "name": "Context Completeness",
+      "description": "How well the prompt provides audience, purpose, source material, topic context, and tone requirements.",
+      "weight": 1.1,
+      "maxScore": 10
+    },
+    {
+      "name": "Constraints and Guardrails",
+      "description": "How well the prompt defines length, style bounds, prohibited claims, and editorial constraints without contradiction.",
+      "weight": 1.0,
+      "maxScore": 10
+    },
+    {
+      "name": "Output Specification",
+      "description": "How clearly the prompt defines the expected structure, sections, formatting, or variants for the final writing output.",
+      "weight": 1.0,
+      "maxScore": 10
+    },
+    {
+      "name": "Voice and Audience Direction",
+      "description": "How effectively the prompt communicates voice, perspective, rhetorical stance, and audience fit.",
+      "weight": 1.4,
+      "maxScore": 10
+    }
+  ],
+  "overallCalculation": "weighted average of all criteria, rounded to one decimal place",
+  "tierThresholds": {
+    "super": 8.5,
+    "pro": 7.0,
+    "builder": 5.0,
+    "starter": 0
+  }
+}

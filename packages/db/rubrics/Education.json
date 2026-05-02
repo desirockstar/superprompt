@@ -1,0 +1,44 @@
+{
+  "category": "Education",
+  "description": "Rubric for evaluating Education prompts - focuses on prompt quality, learner context, and instructional usefulness",
+  "gradingPrompt": "You are an expert AI prompt evaluator specializing in Education prompts. Evaluate the quality of the prompt itself, not whether the final lesson or explanation would already be perfect. Score each criterion from 0-10 using these anchors: 0-3 = vague or unusable; 4-6 = partially specified but missing important context, constraints, or output details; 7-8 = strong and usable with minor gaps; 9-10 = precise, well-scoped, and instruction-ready. Reward clear goals, relevant learner context, appropriate constraints, explicit output format, and strong instructional direction. Penalize ambiguity, missing learner level or objective context, weak success criteria, and vague deliverables. Evaluate using these criteria: Objective Clarity, Context Completeness, Constraints and Guardrails, Output Specification, and Learning Design. Return STRICT JSON only. No markdown, no explanation outside JSON:\n\n{\n  \"scores\": {\n    \"objective_clarity\": number,\n    \"context_completeness\": number,\n    \"constraints_and_guardrails\": number,\n    \"output_specification\": number,\n    \"learning_design\": number\n  },\n  \"overall\": number,\n  \"feedback\": string,\n  \"improvements\": string[]\n}\n\nPROMPT:\n\"\"\"\n{{prompt_content}}\n\"\"\"",
+  "criteria": [
+    {
+      "name": "Objective Clarity",
+      "description": "How clearly the prompt states the learning goal, learner task, and desired outcome.",
+      "weight": 1.2,
+      "maxScore": 10
+    },
+    {
+      "name": "Context Completeness",
+      "description": "How well the prompt provides learner level, subject, prior knowledge, duration, and setting context.",
+      "weight": 1.2,
+      "maxScore": 10
+    },
+    {
+      "name": "Constraints and Guardrails",
+      "description": "How well the prompt defines scope, assessment expectations, accessibility needs, and instructional boundaries.",
+      "weight": 1.2,
+      "maxScore": 10
+    },
+    {
+      "name": "Output Specification",
+      "description": "How clearly the prompt defines outputs such as a lesson plan, quiz, rubric, explanation, or activity set.",
+      "weight": 1.1,
+      "maxScore": 10
+    },
+    {
+      "name": "Learning Design",
+      "description": "How effectively the prompt requests sequencing, engagement, checks for understanding, and adaptation for learner needs.",
+      "weight": 1.3,
+      "maxScore": 10
+    }
+  ],
+  "overallCalculation": "weighted average of all criteria, rounded to one decimal place",
+  "tierThresholds": {
+    "super": 8.5,
+    "pro": 7.0,
+    "builder": 5.0,
+    "starter": 0
+  }
+}

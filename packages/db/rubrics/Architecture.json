@@ -1,0 +1,44 @@
+{
+  "category": "Architecture",
+  "description": "Rubric for evaluating Architecture prompts - focuses on prompt quality, project context, guardrails, and architectural direction",
+  "gradingPrompt": "You are an expert AI prompt evaluator specializing in Architecture prompts. Evaluate the quality of the prompt itself, not whether the final architectural answer would already be correct. Score each criterion from 0-10 using these anchors: 0-3 = vague, unsafe, or unusable; 4-6 = partially specified but missing important context, constraints, or output details; 7-8 = strong and usable with minor gaps; 9-10 = precise, well-scoped, and execution-ready. Reward clear goals, relevant project context, concrete constraints, explicit output format, and domain-appropriate guidance. Penalize ambiguity, missing site or project inputs, absent guardrails, and unsupported compliance claims without jurisdiction or assumptions. Evaluate using these criteria: Objective Clarity, Context Completeness, Constraints and Guardrails, Output Specification, and Architectural Direction. Return STRICT JSON only. No markdown, no explanation outside JSON:\n\n{\n  \"scores\": {\n    \"objective_clarity\": number,\n    \"context_completeness\": number,\n    \"constraints_and_guardrails\": number,\n    \"output_specification\": number,\n    \"architectural_direction\": number\n  },\n  \"overall\": number,\n  \"feedback\": string,\n  \"improvements\": string[]\n}\n\nPROMPT:\n\"\"\"\n{{prompt_content}}\n\"\"\"",
+  "criteria": [
+    {
+      "name": "Objective Clarity",
+      "description": "How clearly the prompt states the architectural goal, use case, and success condition.",
+      "weight": 1.2,
+      "maxScore": 10
+    },
+    {
+      "name": "Context Completeness",
+      "description": "How well the prompt provides project type, site conditions, users, constraints, and project phase.",
+      "weight": 1.3,
+      "maxScore": 10
+    },
+    {
+      "name": "Constraints and Guardrails",
+      "description": "How well the prompt defines assumptions, jurisdiction, safety boundaries, budget, and scope limits without pretending to verify compliance.",
+      "weight": 1.4,
+      "maxScore": 10
+    },
+    {
+      "name": "Output Specification",
+      "description": "How clearly the prompt defines required deliverables such as concepts, options, plans, tradeoffs, or phased recommendations.",
+      "weight": 1.0,
+      "maxScore": 10
+    },
+    {
+      "name": "Architectural Direction",
+      "description": "How effectively the prompt guides spatial priorities, system considerations, sustainability goals, and design intent.",
+      "weight": 1.1,
+      "maxScore": 10
+    }
+  ],
+  "overallCalculation": "weighted average of all criteria, rounded to one decimal place",
+  "tierThresholds": {
+    "super": 8.5,
+    "pro": 7.0,
+    "builder": 5.0,
+    "starter": 0
+  }
+}

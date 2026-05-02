@@ -1,0 +1,2202 @@
+[
+  {
+    "title": "🌌 Create 3D Abstract Background Designs",
+    "slug": "promptscreate-3d-abstract-background-designs",
+    "content": "3D abstract background with [GLOW TYPE] light and [PARTICLE COLOR] particles flowing along a [WAVE LINE COLOR] wave line on a [BACKGROUND COLOR], [MATERIAL/SHADER], [MOTION/NOISE BEHAVIOR], [LIGHTING], [MOOD], [COMPOSITION] --ar [ASPECT RATIO] --s [STYLIZE] --c [CHAOS] --q [QUALITY] --seed [SEED] --no [NEGATIVE]",
+    "category": "Design, UI/UX Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "visual_hierarchy": 7,
+        "usability": 6,
+        "color_theory": 6,
+        "typography": 6,
+        "aesthetic_balance": 7
+      },
+      "overall": 6.4,
+      "tier": "Builder",
+      "feedback": "Good abstract 3D background with flowing wave elements. Clear parameter structure.",
+      "improvements": [
+        "Add resolution settings",
+        "Add compositing guidance"
+      ]
+    }
+  },
+  {
+    "title": "🖼️ Create 3D Kawaii Scene Designs",
+    "slug": "promptscreate-3d-kawaii-scene-designs",
+    "content": "3D kawaii scene of a [SUBJECT], smooth surfaces, iconic silhouette, isometric view, white background, [LIGHTING STYLE], ray tracing, [MATERIAL/FINISH], [COLOR PALETTE], [SHADOW STYLE], [DETAIL LEVEL] --ar [ASPECT RATIO]",
+    "category": "Design, 3D Art & Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "visual_hierarchy": 7,
+        "usability": 7,
+        "color_theory": 7,
+        "typography": 6,
+        "aesthetic_balance": 7
+      },
+      "overall": 6.8,
+      "tier": "Builder",
+      "feedback": "Strong kawaii scene with isometric view. Good lighting and material guidance.",
+      "improvements": [
+        "Add animation specs",
+        "Add export settings"
+      ]
+    }
+  },
+  {
+    "title": "🎨 Create 3D Logo Icon Designs",
+    "slug": "promptscreate-3d-logo-icon-designs",
+    "content": "3D C4D-style iconography of the [LOGO NAME] logo — use image prompt: [LOGO IMAGE URL] — [EXTRUSION DEPTH] extruded with [EDGE TREATMENT] bevels; [MATERIAL] [FINISH] surface, [COLOR SCHEME]; brand-faithful glyphs (no redesign). Studio lighting: [LIGHTING SETUP] with soft specular highlights; background: pure white seamless, [SHADOW STYLE] contact shadow; centered, clean composition, crisp edges. --ar [ASPECT RATIO] --q [QUALITY] --s [STYLIZE] --c [CHAOS] --seed [SEED] --iw [IMAGE WEIGHT] --no watermark, extra text, misspellings, distortion, low-poly, noise",
+    "category": "Design, 3D Art & Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "visual_hierarchy": 8,
+        "usability": 7,
+        "color_theory": 7,
+        "typography": 7,
+        "aesthetic_balance": 7
+      },
+      "overall": 7.0,
+      "tier": "Pro",
+      "feedback": "Comprehensive logo icon with brandfaithful extrusion. Good studio lighting setup.",
+      "improvements": [
+        "Add animation option",
+        "Add variants guidance"
+      ]
+    }
+  },
+  {
+    "title": "🔮 Create 3D Metallic Pins",
+    "slug": "promptscreate-3d-metallic-pins",
+    "content": "highly detailed 3D render of a single metallic [ICON NAME] pin attached to a vertical product card, ultra-glossy chrome finish, smooth rounded 3D icon, stylized futuristic design, soft reflections, clean shadows, paper card has a die-cut euro hole at the top center, bold title [“TITLE”] above the pin, fun tagline [“TAGLINE”] below, soft gray background, soft studio lighting, minimal aesthetic",
+    "category": "Design, 3D Art & Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "visual_hierarchy": 7,
+        "usability": 6,
+        "color_theory": 6,
+        "typography": 6,
+        "aesthetic_balance": 6
+      },
+      "overall": 6.2,
+      "tier": "Builder",
+      "feedback": "Simple metallic pin structure. Good card design elements with die-cut specifics.",
+      "improvements": [
+        "Add material specs",
+        "Add export formats"
+      ]
+    }
+  },
+  {
+    "title": "🖼️ Create 3D Rendered Objects",
+    "slug": "promptscreate-3d-rendered-objects",
+    "content": "3D [Object/Subject], By [Artist Style], [Color Scheme], high detail, [Lighting Type], [Background Type], [Resolution], [Software], [Type of Render] rendering",
+    "category": "Design, 3D Art & Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🌌 Create 3D Wave Renderings",
+    "slug": "promptscreate-3d-wave-renderings",
+    "content": "3D render of [WAVE COLOR] [WAVE TYPE] waves with [GLOWING PARTICLE TYPE], set against a [COSMIC BACKDROP] of [ASTRAL ELEMENTS]; [LIGHTING], [MOOD], [MATERIAL/SHADER], [CAMERA/COMPOSITION] --ar [ASPECT RATIO] --s [STYLIZE] --c [CHAOS] --q [QUALITY] --seed [SEED] --no [NEGATIVE]",
+    "category": "Design, 3D Art & Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🌊 Create Abstract Gradient Wallpapers",
+    "slug": "promptscreate-abstract-gradient-wallpapers",
+    "content": "Abstract gradient wallpaper with [WAVE TYPE] waves and soft [SHAPE TYPE], elegant saturated [GRADIENT PALETTE]; modern 3D rendering of flowing [MATERIAL] cloth in [COLOR LIST], [LIGHTING] (e.g., soft glow + subtle bloom), [SURFACE/SHADER] (e.g., satin/silk, subsurface hints), [DEPTH EFFECT] (e.g., shallow DOF, parallax layers), [COMPOSITION] (clean focal curve, ample negative space) --ar [ASPECT RATIO] --s [STYLIZE] --c [CHAOS] --q [QUALITY] --seed [SEED] --no [NEGATIVE]",
+    "category": "Design, 3D Art & Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🌌 Create Abstract Light Sphere Designs",
+    "slug": "promptscreate-abstract-light-sphere-designs",
+    "content": "Two [GLOW INTENSITY], [TRANSPARENCY LEVEL] spheres centered—one above and one below—on a [BACKGROUND TONE] background; [LIGHT DIRECTION] light from above creating [LIGHT EFFECTS: rim glow, soft bloom, caustics]; abstract scene, [RESOLUTION/DETAIL LEVEL]; cinematic lighting with [COLOR PALETTE] (dark blue + orange accents); [CAMERA ANGLE] low angle, looking up at floating objects; [FUTURISTIC STYLE TAGS], [MATERIAL/SHADER], [ATMOSPHERE], [COMPOSITION] --ar [ASPECT RATIO] --s [STYLIZE] --c [CHAOS] --q [QUALITY] --seed [SEED] --no [NEGATIVE]",
+    "category": "Design, 3D Art & Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🏞️ Create Adventure Game Concepts",
+    "slug": "promptscreate-adventure-game-concepts",
+    "content": "player climbing a ruined temple wall in jungle setting, HUD overlay with stamina bar, compass, and item wheel, cinematic third-person adventure vibe. --ar 16:9 --raw",
+    "category": "Design, Game Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "💊 Create Branded Capsule Designs",
+    "slug": "promptscreate-branded-capsule-designs",
+    "content": "A tall, realistic cheerful capsule floats horizontally. The left side is soft [COLOR], labeled “[BRAND LABEL]” with the classic [COLOR] [BRAND NAME] logo. The right half is transparent, filled with floating [BRAND RELATED OBJECTS]",
+    "category": "Design, 3D Art & Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🎨 Create Clean UI Design Concepts",
+    "slug": "promptscreate-clean-ui-design-concepts",
+    "content": "UI Design of a [Type of Website/app], Website / Mobile App, Flat UI, Clean UI/UX Design, [Colors] Color Palette, [Style], High Resolution,  white background --no device, --ar [aspect ratio] --style raw",
+    "category": "Design, UI/UX Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "☕ Create Coffee Ecommerce Hero Sections",
+    "slug": "promptscreate-coffee-ecommerce-hero-sections",
+    "content": "Hero Section for Coffee E-Commerce Landing Page fullscreen hero with a steaming cup of coffee on a marble table, cinematic soft morning light, muted beige and dark brown palette, bold sans-serif typography overlay, clean rectangular \"Shop Beans\" CTA, elegant minimalist layout with subtle texture in the background. --ar 16:9 --raw",
+    "category": "Design, Web Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.3
+      },
+      "overall": 6.3,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "☕ Create Coffee Ordering App Mockups",
+    "slug": "promptscreate-coffee-ordering-app-mockups",
+    "content": "Front View Coffee Ordering App UI Mockup direct flat front view, warm beige and brown palette, hero section with latte art image, product cards with coffee types and prices, large rounded \"Add to Cart\" button, clean navigation icons, modern minimal layout. --ar 3:4 --raw",
+    "category": "Design, App Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🎮 Create Colorful Game UI Designs",
+    "slug": "promptscreate-colorful-game-ui-designs",
+    "content": "Screenshot of game UI design, colorful 2D side-scrolling level, floating platforms, collectible coins, cute character jumping mid-air. Interface shows score, timer, and remaining lives, playful cartoon retro-game aesthetic. --ar 16:9 --raw",
+    "category": "Design, Game Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🎨 Create Custom Icons",
+    "slug": "promptscreate-custom-icons",
+    "content": "[topic/location/object] icon design, [style], [color #1] and [color #2], [color] background, --ar [aspect ratio]",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🦊 Create Cyberpunk Fox Characters",
+    "slug": "promptscreate-cyberpunk-fox-characters",
+    "content": "Create NFT Collection Character cyberpunk fox wearing neon visor glasses, glowing tattoos, futuristic leather jacket, bold vibrant background, crisp vector-style art, collectible character design, sharp clean lines, profile picture format. --ar 3:4 --raw",
+    "category": "Design, NFTs",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "💖 Create Dating App UI Mockups",
+    "slug": "promptscreate-dating-app-ui-mockups",
+    "content": "Create Front View Dating App UI Mockup flat centered mobile screen, warm pink and purple gradient background, hero profile card with large portrait photo, swipe left/right buttons at bottom, clean bold typography, minimal top bar with icons, modern and playful UX. --ar 3:4 --raw",
+    "category": "Design, App Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🚴‍♂️ Create Dynamic Sports Gear Pages",
+    "slug": "promptscreate-dynamic-sports-gear-pages",
+    "content": "Dynamic Sports Gear Landing Page UI fullscreen hero with high-energy cyclist shot, products showcased in a clean diagonal grid, bold block typography, interactive product zoom, CTA button styled like a race banner, vibrant red and black color scheme, adrenaline-driven vibe. --ar 16:9 --raw",
+    "category": "Design, Web Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🌿 Create Eco-Friendly Website Designs",
+    "slug": "promptscreate-eco-friendly-website-designs",
+    "content": "Create Eco-Friendly Startup Website UI/UX, earthy green and beige palette, fullscreen hero with looping video of forests and oceans, bold typography with sustainability message, clean infographic cards showing carbon footprint data, rounded CTA buttons with soft shadows, minimal iconography inspired by nature, fresh and modern UX aesthetic.",
+    "category": "Design, UI/UX Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🏥 Create Eerie Hospital Corridor Scenes",
+    "slug": "promptscreate-eerie-hospital-corridor-scenes",
+    "content": "abandoned hospital corridor with flickering lights, eerie shadows, HUD overlay with flashlight battery indicator, health status, and inventory icons, cinematic tension-filled atmosphere. --ar 16:9 --raw",
+    "category": "Design, Game Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🗡️ Create Enchanted Forest Scenes",
+    "slug": "promptscreate-enchanted-forest-scenes",
+    "content": "player character with sword drawn in enchanted forest, glowing mushrooms illuminating path, HUD overlay with health bar, mana bar, mini-map, and quest tracker, immersive cinematic fantasy atmosphere. --ar 16:9 --raw",
+    "category": "Design, Game Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🏰 Create Fantasy Game UI Designs",
+    "slug": "promptscreate-fantasy-game-ui-designs",
+    "content": "Screenshot of game UI design third-person fantasy RPG, warrior character with sword facing a glowing castle in the distance, lush green valley, dramatic sunset sky. Interface shows health bar, mana bar, inventory icons, and quest tracker, cinematic immersive fantasy atmosphere. --ar 16:9 --raw",
+    "category": "Design, Game Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🍔 Create Food E-Commerce Hero Sections",
+    "slug": "promptscreate-food-e-commerce-hero-sections",
+    "content": "Hero Section for Food E-Commerce Landing Page fullscreen hero with a glowing close-up of a juicy gourmet burger, dramatic dark background, vibrant red + yellow accents, oversized typography headline, cinematic food photography, bold CTA button \"Order Now.\" --ar 16:9 --raw",
+    "category": "Design, Web Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🧸 Create Funko Pop Figures",
+    "slug": "promptscreate-funko-pop-figures",
+    "content": "A boxed vinyl collectible figure in Funko Pop! style, featuring [NAME OF THE FIGURE] wearing a [CLOTHES], holding a miniature [OBJECT] in one hand and a small [OBJECT] in the other, stylized with a large head, black eyes, simplified facial features, and a confident smile. The packaging is white with sleek, futuristic tech-inspired design accents in [COLOR], [COLOR], and [COLOR]. Box details include “POP! Icons” logo in the top left corner, and figure number [NUMBER] in bold on the upper right. The side of the box shows a close-up art illustration of [NAME OF THE FIGURE] with [OBJECT] and a [OBJECT] in the background. Clear window reveals the figure fully, lit with clean studio lighting. Realistic vinyl texture, highly detailed, collector-style product photography.",
+    "category": "Design, Character Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🌌 Create Futuristic Digital Backgrounds",
+    "slug": "promptscreate-futuristic-digital-backgrounds-2",
+    "content": "Futuristic digital data background featuring [DATA VISUAL TYPE] with glowing [CODE STYLE] and [PIXEL ELEMENTS], abstract [HOLOGRAM TYPE] with [NEON COLOR PALETTE] neon light effect; [LIGHTING STYLE], [MOOD/ATMOSPHERE], [DEPTH EFFECT: parallax/bokeh], [COMPOSITION FLOW] — ultra-realistic close-up captured with a [CAMERA BODY] and [LENS SPECS], [FOCUS/DOF SETTINGS] --ar [ASPECT RATIO] --s [STYLIZE] --c [CHAOS] --q [QUALITY] --seed [SEED] --no [NEGATIVE]",
+    "category": "Design, UI/UX Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🌌 Create Game UI Design Concepts",
+    "slug": "promptscreate-game-ui-design-concepts",
+    "content": "Screenshot of game UI design, first-person cyberpunk shooter, neon-lit city street at night, rain-slick pavement reflecting holograms, futuristic weapon visible in foreground. HUD overlay includes ammo counter, shield bar, radar map, and objective marker, moody neon sci-fi vibe. --ar 16:9 --raw",
+    "category": "Design, Game Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🏞️ Create Game UI Design Screenshot",
+    "slug": "promptscreate-game-ui-design-screenshot",
+    "content": "Screenshot of game UI design, jungle ruins exploration scene, player climbing mossy temple walls, waterfalls in the background. HUD overlay shows stamina bar, compass, and item wheel, cinematic third-person adventure mood. --ar 16:9 --raw",
+    "category": "Design, Game Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🎮 Create Game UI Design Screenshots",
+    "slug": "promptscreate-game-ui-design-screenshots",
+    "content": "Screenshot of game UI design for [Type of Game], featuring [Key Elements], simple ui, [Effects], [Type of Layout] layout --ar [Aspect Ratio]",
+    "category": "Design, Game Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "⚔️ Create Game UI Designs",
+    "slug": "promptscreate-game-ui-designs",
+    "content": "Screenshot of game UI design, top-down strategy game, battlefield with armies of orcs and knights clashing, spells illuminating the terrain. Interface includes mini-map, resource counters, skill buttons, and unit icons, epic fantasy strategy atmosphere. --ar 16:9 --raw",
+    "category": "Design, Game Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🥐 Create Hero Sections for Cafes",
+    "slug": "promptscreate-hero-sections-for-cafes",
+    "content": "Hero Section for Artisanal Café Website fullscreen hero photo of croissants and pastries stacked on a wooden counter, warm golden tones, elegant serif typography with overlay, subtle parallax scrolling steam effect, minimal CTA button \"Visit Café\" or \"Order Online.\" --ar 16:9 --raw",
+    "category": "Design, Web Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🏨 Create Hotel Booking App Mockups",
+    "slug": "promptscreate-hotel-booking-app-mockups",
+    "content": "Hotel Booking App Mockup flat centered mobile display, white + blue palette, hero banner with luxury hotel photo, card layout with room details and prices, bold sans-serif headings, minimal filter bar, sleek and professional UX.",
+    "category": "Design, App Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🧬 Create Hyper-Realistic DNA Renders",
+    "slug": "promptscreate-hyper-realistic-dna-renders",
+    "content": "Hyper-realistic 3D render of a [DNA TYPE] double helix with [GLOW COLOR] emissive accents on a [BACKGROUND TONE] background; [VIEW TYPE] close-up with [BOKEH STYLE] bokeh and [BLUR ELEMENTS]; [MATERIAL/SHADER] (e.g., translucent polymer, micro-specular), [LIGHTING] (rim + soft fill), [MOOD], [COMPOSITION] (diagonal sweep, central focal coil), [CAMERA/LENS/DOF] --ar [ASPECT RATIO] --s [STYLIZE] --c [CHAOS] --q [QUALITY] --seed [SEED] --no [NEGATIVE]",
+    "category": "Design, 3D Art & Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🎨 Create Icon Design Concepts",
+    "slug": "promptscreate-icon-design-concepts",
+    "content": "[topic/location/object] icon design, [style], [color #1] and [color #2], [color] background, --ar [aspect ratio]",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "💎 Create Luxurious Jewelry Website Designs",
+    "slug": "promptscreate-luxurious-jewelry-website-designs",
+    "content": "Luxurious Jewelry E-Commerce Website UI black velvet background with central spotlight on a diamond ring, golden serif typography, elegant product grid with hover sparkle animation, minimalist navigation bar, \"Shop Collection\" CTA, cinematic premium feel. --ar 16:9 --raw",
+    "category": "Design, Web Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🧘‍♀️ Create Meditation App UI Mockups",
+    "slug": "promptscreate-meditation-app-ui-mockups",
+    "content": "Create Front View Meditation App UI Mockup direct flat mobile display, soft gradient pastel background, fullscreen hero with calm illustration of nature, clean typography with daily quote, rounded buttons, progress tracker rings, minimal serene layout. --ar 3:4 --raw",
+    "category": "Design, App Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🛍️ Create Minimal E-Commerce Designs",
+    "slug": "promptscreate-minimal-e-commerce-designs",
+    "content": "Create Minimal E-Commerce UI clean, modern landing page design with a hero product photo, white background, oversized sans-serif typography, simple grid layout for products, subtle shadows, interactive hover states, and a bold \"Shop Now\" CTA. Focus on minimalism and responsive design. --ar 16:9",
+    "category": "Design, Web Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🎨 Create Minimal Portfolio Layouts",
+    "slug": "promptscreate-minimal-portfolio-layouts",
+    "content": "Create Minimal Creative Portfolio Web UI fullscreen layout of high-resolution editorial portraits, asymmetrical split sections, bold white sans-serif typography, interactive scroll transitions, clean navigation bar, immersive and cinematic UI. --ar 16:9 --raw",
+    "category": "Design, Web Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🖤 Create Minimalist Ecommerce Landing Pages",
+    "slug": "promptscreate-minimalist-ecommerce-landing-pages",
+    "content": "Award-winning minimalist e-commerce landing page for a streetwear fashion brand, oversized typography, moody editorial photos of models, black & white palette with neon accent, asymmetrical grid layout, bold \"Shop Now\" button, hover animations, immersive and cinematic UX mockup. --ar 16:9 --raw",
+    "category": "Design, Web Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🌌 Create Modern Finance App Designs",
+    "slug": "promptscreate-modern-finance-app-designs",
+    "content": "Create Modern Finance App UI/UX dark mode dashboard with glowing neon highlights, clean typography, balance charts, transaction cards, intuitive tab navigation, futuristic and professional UX. --ar 3:4 --raw",
+    "category": "Design, UI/UX Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🐉 Create NFT Creature Designs",
+    "slug": "promptscreate-nft-creature-designs",
+    "content": "Create NFT Creature glowing dragon with crystalline wings, floating in neon storm clouds, futuristic fantasy fusion, bold color palette, cinematic dramatic artwork, collectible NFT creature format. --ar 3:4 --raw",
+    "category": "Design, NFTs",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "✂️ Create Paper Craft Icons",
+    "slug": "promptscreate-paper-craft-icons",
+    "content": "A paper craft-style \"[ICON LOGO]\" floating on a pure white background. The emoji is handcrafted from colorful cut paper with visible textures, creases, and layered shapes. It casts a soft drop shadow beneath, giving a sense of lightness and depth. The design is minimal, playful, and clean — centered in the frame with lots of negative space. Use soft studio lighting to highlight the paper texture and edges.",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🔥 Create Phoenix NFTs",
+    "slug": "promptscreate-phoenix-nfts",
+    "content": "Create NFT Creature neon phoenix rising from glowing flames, crystalline wings, bold gradient background, cinematic fantasy NFT artwork. --ar 3:4 --raw --sref 3612924431",
+    "category": "Design, NFTs",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🌌 Create Photogram Aesthetic Designs",
+    "slug": "promptscreate-photogram-aesthetic-designs",
+    "content": "Photogram aesthetic, [EMOJI/ICON SUBJECT], [COLOR PALETTE], [MATERIAL/FINISH], edge-lit glow, [BACKGROUND], [SURFACE/PROP], centered minimal composition, [DETAIL LEVEL] --ar [ASPECT RATIO] --s [STYLIZE] --q [QUALITY] --c [CHAOS] --no [NEGATIVE]",
+    "category": "Design, UI/UX Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "📐 Create Realistic Device Mockups",
+    "slug": "promptscreate-realistic-device-mockups",
+    "content": "{\n  \"objective\": \"Create a detailed visual showcase of the [DEVICE], integrating a [SCREEN CONTENT] into the device's display area\",\n  \"image_specifications\": {\n    \"style\": \"Realistic product showcase\",\n    \"layout\": \"Split layout: Perspectives on the left, Material breakdown on the right\",\n    \"aspect_ratio\": \"3:2\",\n    \"background\": \"Minimal white or neutral background\"\n  },\n  \"left_side\": {\n    \"section_title\": \"[DEVICE] Perspectives\",\n    \"views\": [\n      {\n        \"view\": \"Top-down\",\n        \"description\": \"Top view of the [DEVICE] showing the full interface and screen; [SCREEN CONTENT] is displayed inside the screen area\"\n      },\n      {\n        \"view\": \"Front view\",\n        \"description\": \"Frontal view with screen area showing the [SCREEN CONTENT] in the device's native display style\"\n      },\n      {\n        \"view\": \"Side view\",\n        \"description\": \"Profile showing ports, controls, and side thickness; no screen content required\"\n      }\n    ],\n    \"screen_integration\": {\n      \"source\": \"[SCREEN CONTENT] (era-appropriate version for the [DEVICE])\",\n      \"placement\": \"Insert image within the device's screen area maintaining correct aspect ratio and perspective\"\n    },\n    \"visual_style\": \"Consistent lighting and rendering to match realistic hardware and authentic screen display\"\n  },\n  \"right_side\": {\n    \"section_title\": \"Material & Surface Breakdown\",\n    \"content\": [\n      {\n        \"material\": \"Casing\",\n        \"material_type\": \"[MATERIAL PALETTE: primary body material and color]\",\n        \"swatch_image\": \"Close-up of casing grain and texture\",\n        \"label_style\": \"Thin annotation line pointing to body shell\"\n      },\n      {\n        \"material\": \"Buttons/Controls\",\n        \"material_type\": \"[MATERIAL PALETTE: control surface material and color]\",\n        \"swatch_image\": \"Button/control texture and color samples\",\n        \"label_style\": \"Color-coded with control callouts\"\n      },\n      {\n        \"material\": \"Screen cover\",\n        \"material_type\": \"[MATERIAL PALETTE: screen cover material and finish]\",\n        \"swatch_image\": \"Screen cover material sample with appropriate tint\",\n        \"label_style\": \"Pointer to screen area\"\n      }\n    ]\n  },\n  \"visual_elements\": {\n    \"separation\": \"Vertical divider between left and right sections\",\n    \"consistency\": \"Matching shadows, fonts, and labeling across views\",\n    \"gameplay_overlay\": \"Display style matching original [DEVICE] screen characteristics\"\n  },\n  \"output_format\": {\n    \"type\": \"Image\",\n    \"high_resolution\": true,\n    \"use_case\": [\"Retro tech showcase\", \"Product design portfolio\", \"Hardware history infographic\"]\n  }\n}",
+    "category": "Design, 3D Art & Design",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🌅 Create Stunning 3D Landscape Renders",
+    "slug": "promptscreate-stunning-3d-landscape-renders",
+    "content": "3D rendering of [LANDSCAPE – e.g., snowy mountains], [TIME OF DAY – e.g., sunrise], [SKY COLOR – e.g., pink sky], [SHOT FRAMING – e.g., close-up], [CAMERA ANGLE – e.g., high-angle], [LIGHTING – e.g., soft lighting], [COLOR PALETTE – e.g., white and orange], created with [SOFTWARE – e.g., Unreal Engine] and [RENDERER – e.g., Octane], [DETAIL LEVEL – e.g., highly detailed] --ar [ASPECT RATIO]",
+    "category": "Design, 3D Art & Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🏖️ Create Stunning 3D Renderings",
+    "slug": "promptscreate-stunning-3d-renderings",
+    "content": "3D render of a [ARCH TYPE/SHAPE] framing a [PALM TREE TYPE] on [BEACH TYPE], viewed from inside a [POOL TYPE] with [WATER SURFACE DETAIL/CAUSTICS], pastel [COLOR PALETTE], minimalistic [STYLE], [LIGHTING DIRECTION] lighting, [MATERIAL/SHADER TREATMENT] surfaces, [CAMERA ANGLE/FOV], [COMPOSITION] framing, [DETAIL LEVEL] --ar [ASPECT RATIO]",
+    "category": "Design, 3D Art & Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "📱 Create UI Design Screenshots",
+    "slug": "promptscreate-ui-design-screenshots",
+    "content": "Screenshot of UI design for a [Type of App] app, featuring a/an [Subject/Icons], flat UI/UX design, simple ui, [Design Elements], white background --ar [Aspect Ratio] --style raw",
+    "category": "Design, App Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🍬 Create Ultra-Realistic Candy Renders",
+    "slug": "promptscreate-ultra-realistic-candy-renders-2",
+    "content": "A smooth, ultra-realistic 3D render of the word ‘[TEXT]’ shaped like [CANDY TYPE], surrounded by a [ENVIRONMENT STYLE] candy world, [LIGHTING TYPE], [RENDERING STYLE], [SHADOW STYLE], [SURFACE FINISH], [TEXTURE DETAIL] --ar 1:1",
+    "category": "Design, 3D Art & Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🎨 Create Ultra-Realistic Character Portraits",
+    "slug": "promptscreate-ultra-realistic-character-portraits",
+    "content": "ultra-realistic [FRAMING] portrait of [CHARACTER NAME] from [FRANCHISE/GENRE] in [POSE], wearing a [TOP COLOR] [TOP TYPE] and [BOTTOM PATTERN] [BOTTOM TYPE], [STYLE] (cinematic movie poster); dynamic [ACTION] with [SIGNATURE EFFECT] particles forming [EFFECT SHAPE]; [DETAIL LEVEL] detail on [DETAIL TARGETS]; [LIGHTING] with a [BACKGROUND MOOD] [BACKGROUND TYPE]; [POST FX] VFX flares and sparks --ar [ASPECT RATIO] --chaos [CHAOS] [RAW] [OPTIONAL: --exp [EXPERIMENT]]",
+    "category": "Design, Character Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🖥️ Create Website Design Screenshots",
+    "slug": "promptscreate-website-design-screenshots",
+    "content": "Screenshot of a [Type of Website] website for a [Business Description], screenshot, flat ux/ui design, website design, [Color Palette], [Style #1], [OPTINAL: Style #2] \n--no device --style raw",
+    "category": "Design, Web Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "📱 Design Banking App Mockups",
+    "slug": "promptsdesign-banking-app-mockups",
+    "content": "Design Front View Banking App Mockup straight-on mobile screen, dark background with neon blue highlights, dashboard with balance + charts, clean typography, rounded transaction cards, minimal tab bar at the bottom, futuristic yet professional UX. --ar 3:4 --raw",
+    "category": "Design, App Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "📱 Design Crypto Wallet App Mockups",
+    "slug": "promptsdesign-crypto-wallet-app-mockups",
+    "content": "Crypto Wallet App Mockup straight-on centered phone screen, dark mode with glowing teal highlights, hero dashboard with live coin prices, card layout for wallet balances, bold futuristic typography, clean bottom navigation bar, sleek fintech feel.",
+    "category": "Design, App Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "📱 Design E-Commerce App Mockups",
+    "slug": "promptsdesign-e-commerce-app-mockups",
+    "content": "E-Commerce Mobile App Design Mockup straight-on flat iPhone screen, clean white background, minimal product grid with images + prices, bold sans-serif typography, centered hero banner at the top, floating bottom navigation bar, elegant and modern UI/UX aesthetic.",
+    "category": "Design, App Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🌌 Design Futuristic UI/UX Dashboards",
+    "slug": "promptsdesign-futuristic-uiux-dashboards",
+    "content": "Design Futuristic UI/UX Dashboard holographic interface with glowing widgets, neon gradient backgrounds, immersive 3D charts, cyberpunk-inspired UX with smooth interactive panels. --ar 3:4 --raw",
+    "category": "Design, UI/UX Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🎮 Design Gaming App UI Mockups",
+    "slug": "promptsdesign-gaming-app-ui-mockups",
+    "content": "Design Front View Gaming App UI Mockup flat centered phone mockup, dark neon background, hero banner with game key art, glowing futuristic typography, interactive product cards for skins/gear, bold \"Play Now\" button, edgy immersive UX aesthetic. --ar 3:4 --raw",
+    "category": "Design, App Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🪑 Design Minimal Scandinavian Furniture Pages",
+    "slug": "promptsdesign-minimal-scandinavian-furniture-pages",
+    "content": "Minimal Scandinavian Furniture Landing Page UI soft beige background, hero section with a clean 3D render of a chair on a pedestal, grid layout below with product variations, muted typography, airy white space, elegant \"Add to Cart\" CTA, modern lifestyle editorial shots integrated. --ar 16:9 --raw",
+    "category": "Design, Web Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🎨 Design Modular Dashboard Layouts",
+    "slug": "promptsdesign-modular-dashboard-layouts",
+    "content": "Design Design Tool Dashboard UI/UX modular panel layout with drag-and-drop interface, minimal iconography, smooth gradient accents, intuitive and creative workspace UX. --ar 3:4 --raw",
+    "category": "Design, UI/UX Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "⌚ Design Premium Watch Landing Pages",
+    "slug": "promptsdesign-premium-watch-landing-pages",
+    "content": "Design Premium Watch E-Commerce Landing Page fullscreen hero product shot on black background, golden typography, minimal product grid below with different watch angles, interactive hover states, clean pricing cards, \"Buy Now\" CTA button, cinematic and exclusive aesthetic. --ar 16:9 --raw",
+    "category": "Design, Web Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🦍 Design Vaporwave Gorilla Avatars",
+    "slug": "promptsdesign-vaporwave-gorilla-avatars",
+    "content": "Design NFT Avatar vaporwave gorilla with retro 80s sunglasses, neon palm trees, Miami Vice color scheme, glowing synthwave background, sharp stylized lines. --ar 3:4 --raw --sref 80929324",
+    "category": "Design, NFTs",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🏂 Discover Extreme Snowboarding Experiences",
+    "slug": "promptsdiscover-extreme-snowboarding-experiences",
+    "content": "extreme snowboarding level on a massive mountain, snowy pine forests below, dynamic POV from snowboarder perspective. --ar 16:9 --raw",
+    "category": "Design, Game Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🎨 Generate Character Design Concepts",
+    "slug": "promptsgenerate-character-design-concepts",
+    "content": "[Type of character], [Type of Shot], character design, multiple concept designs, concept design sheet, white background, style of [Artist], --ar [Aspect Ratio]",
+    "category": "Design, Character Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🍕 Generate Food Delivery App Mockups",
+    "slug": "promptsgenerate-food-delivery-app-mockups",
+    "content": "Generate Front View Food Delivery App UI Mockup straight-on phone screen, fresh green and orange palette, hero section with pizza photo, product grid of dishes with prices, bold \"Order Now\" CTA button, clean tab navigation at bottom, friendly and appetizing design. --ar 3:4 --raw",
+    "category": "Design, App Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "👗 Generate High-Quality 3D Renders",
+    "slug": "promptsgenerate-high-quality-3d-renders",
+    "content": "High-detail 3D product render of a [GARMENT TYPE] with [FABRIC TYPE] in [BASE COLOR], adorned with intricate, vibrant [PATTERN STYLE] floral patterns ([PATTERN COVERAGE]); [NECKLINE] neckline, [SLEEVE LENGTH], [HEM STYLE], [TRIM COLOR] trims. [DISPLAY METHOD] (e.g., ghost mannequin/flat lay/on hanger), [VIEW/ANGLE] framing; studio [LIGHTING STYLE] with soft reflections; [BACKGROUND COLOR/STYLE]. Realistic cloth simulation, stitch/detail fidelity, clean seams; premium, aesthetic, visually appealing design. --ar [ASPECT RATIO] --q [QUALITY] --s [STYLIZE] --c [CHAOS] --seed [SEED] --no body/face, watermark, low-poly, texture stretching, color banding, heavy wrinkles",
+    "category": "Design, 3D Art & Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🎨 Generate Icon Designs",
+    "slug": "promptsgenerate-icon-designs",
+    "content": "[topic/location/object] icon design, [style], [color #1] and [color #2], [color] background, --ar [aspect ratio]",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "💄 Generate Luxurious Cosmetics Website UIs",
+    "slug": "promptsgenerate-luxurious-cosmetics-website-uis",
+    "content": "Generate Luxurious Cosmetics E-Commerce Website UI dark moody background with glowing spotlight on premium lipstick collection, elegant serif typography, product cards with clear labels and pricing, sliding carousel for product variations, sleek CTA button, high-end editorial photography. --ar 16:9 --raw",
+    "category": "Design, Web Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "👜 Generate Minimal E-Commerce UIs",
+    "slug": "promptsgenerate-minimal-e-commerce-uis",
+    "content": "Generate Minimal E-Commerce Web UI for Bags hero shot of a designer handbag in the center, muted beige background, large bold typography on the side, clean grid of other products with hover animations, price + description under each card, elegant \"Shop Collection\" button. --ar 16:9 --raw",
+    "category": "Design, Web Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🎶 Generate Music App Mockups",
+    "slug": "promptsgenerate-music-app-mockups",
+    "content": "Generate Front View Music Streaming App Mockup flat front mobile screen, black background with glowing purple accents, fullscreen album art hero at the top, floating play button, clean tab bar navigation, immersive yet minimal UI aesthetic. --ar 3:4 --raw",
+    "category": "Design, App Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🌀 Generate NFT Artwork Collections",
+    "slug": "promptsgenerate-nft-artwork-collections",
+    "content": "Generate NFT Artwork swirling neon fractal vortex, geometric tessellations with glowing edges, bold psychedelic palette, abstract digital art aesthetic, seamless collectible NFT canvas. --ar 3:4 --raw",
+    "category": "Design, NFTs",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🧙‍♂️ Generate NFT Artwork Designs",
+    "slug": "promptsgenerate-nft-artwork-designs",
+    "content": "Generate NFT Artwork mystical sorcerer with crystal staff, surrounded by glowing runes, dark enchanted forest background, vibrant magical aura, collectible card-like NFT design, dramatic cinematic fantasy aesthetic. --ar 3:4 --raw",
+    "category": "Design, NFTs",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🗡️ Generate NFT Character Designs",
+    "slug": "promptsgenerate-nft-character-designs",
+    "content": "Create NFT Character cyber samurai with glowing katana, futuristic armor, neon Tokyo city background, bold cinematic lighting, vibrant purple + blue palette, collectible PFP style, high-detail vector artwork. --ar 3:4 --raw --sref 970460098",
+    "category": "Design, NFTs",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🧊 Generate Photorealistic Packaging Mockups",
+    "slug": "promptsgenerate-photorealistic-packaging-mockups",
+    "content": "{\n\n  \"scene_description\": \"A photorealistic, high-end 3D product visualization of a perfectly assembled packaging box derived from a dieline, set in a pristine minimal studio.\",\n\n  \"subject\": {\n\n    \"type\": \"[BOX TYPE]\",\n\n    \"material\": \"[MATERIAL FINISH]\",\n\n    \"features\": {\n\n      \"structure\": \"Perfectly folded, accurate panel placement, sharp clean edges\",\n\n      \"surface\": \"Smooth texture with high-fidelity print rendering\"\n\n    },\n\n    \"position\": \"Upright, angled at a refined ¾ perspective view to show front and side panels\",\n\n    \"artwork_state\": \"Undistorted typography, preserving original design exactly\"\n\n  },\n\n  \"action\": {\n\n    \"primary\": \"Standing static on a surface\",\n\n    \"secondary\": \"Casting a gentle shadow\",\n\n    \"effect\": \"Demonstrates structural integrity and design elegance\"\n\n  },\n\n  \"environment\": {\n\n    \"setting\": \"Minimalist High-End Studio Void\",\n\n    \"foreground_elements\": [\n\n      \"Clean, smooth surface\",\n\n      \"Soft contact shadows\"\n\n    ],\n\n    \"background_elements\": [\n\n      \"Soft neutral seamless backdrop (light grey/cream)\",\n\n      \"Zero distractions\",\n\n      \"No extra props\"\n\n    ]\n\n  },\n\n  \"lighting\": {\n\n    \"style\": \"Soft Commercial Product Lighting (Global Illumination)\",\n\n    \"key_light\": {\n\n      \"type\": \"Large Diffused Softbox\",\n\n      \"color\": \"Neutral White (5500K)\",\n\n      \"illuminates\": [\n\n        \"The face of the box evenly\",\n\n        \"The texture of the [MATERIAL FINISH]\"\n\n      ]\n\n    },\n\n    \"fill_light\": {\n\n      \"type\": \"White Reflector\",\n\n      \"effect\": \"Softens shadows to ensure artwork visibility\"\n\n    },\n\n    \"shadows\": \"Subtle, soft gradient shadows anchoring the object\"\n\n  },\n\n  \"style\": {\n\n    \"medium\": \"3D Rendering / Product Photography\",\n\n    \"aesthetic\": \"Premium Editorial, Mockup Style, Minimalist Luxury\",\n\n    \"quality\": \"8k resolution, ray-traced optics, physically based rendering (PBR)\",\n\n    \"details\": \"Crisp folds, zero distortion, [MATERIAL FINISH] grain visibility\"\n\n  },\n\n  \"scene_composition\": {\n\n    \"subject_action\": \"Static presentation\",\n\n    \"camera_behavior\": \"Locked-off tripod shot\",\n\n    \"depth_layering\": \"Sharp Subject -> Infinite Soft Background\"\n\n  },\n\n  \"visual_description\": {\n\n    \"core_subject\": \"A flawless 3D [BOX TYPE] assembled from a flat dieline.\",\n\n    \"attire_physics\": \"N/A - Rigid Body physics.\",\n\n    \"surface_rendering\": \"Non-reflective finish that absorbs light softly, ensuring text is readable and colors are true.\"\n\n  },\n\n  \"lighting_and_atmosphere\": {\n\n    \"type\": \"Clean Studio\",\n\n    \"specifics\": \"Even light distribution, ambient occlusion in the creases.\",\n\n    \"color_grade\": \"Natural, color-calibrated, neutral tones.\"\n\n  },\n\n  \"attire_customization\": {\n\n    \"current_clothing\": \"N/A\",\n\n    \"customizable_clothing\": \"N/A\"\n\n  },\n\n  \"brand_product_customization\": {\n\n    \"current_brand_product\": \"Packaging Design\",\n\n    \"customizable_brand\": \"User: Insert Brand Name/Logo for the box\",\n\n    \"customizable_product\": \"User: Describe the [BOX TYPE] (e.g., cosmetic box, tuck-end box)\",\n\n    \"product_placement_area\": \"All visible panels (Front, Side, Top)\"\n\n  },\n\n  \"objec",
+    "category": "Design, 3D Art & Design",
+    "recommendedTools": [
+      "Nano Banana"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "👾 Generate Pixel Art Characters",
+    "slug": "promptsgenerate-pixel-art-characters",
+    "content": "Generate Pixel Art NFT 16-bit retro alien character with glowing eyes, holding a plasma sword, bold neon background, clean square canvas, collectible pixelated aesthetic, nostalgic gaming vibe. --ar 3:4 --raw",
+    "category": "Design, NFTs",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🔧 Get Acrylic Resin Icons",
+    "slug": "promptsget-acrylic-resin-icons",
+    "content": "Retexture the image attached based on the JSON below\n{\n  \"materials\": {\n    \"exterior\": \"clear acrylic resin\",\n    \"interior\": [\n      \"layered green circuit boards\",\n      \"intertwined copper wires\",\n      \"microchips\",\n      \"coils\",\n      \"transistors\",\n      \"mini LED modules\"\n    ]\n  },\n  \"lighting\": {\n    \"type\": \"studio spotlight\",\n    \"direction\": \"frontal and side\",\n    \"color\": \"neutral white\",\n    \"mood\": \"clean, high contrast\"\n  },\n  \"background\": {\n    \"type\": \"solid\",\n    \"color\": \"pure black\"\n  },\n  \"camera\": {\n    \"angle\": \"frontal centered\",\n    \"focus\": \"sharp\",\n    \"depth_of_field\": \"shallow to medium\"\n  },\n  \"color_palette\": {\n    \"dominant\": [\"green\", \"copper\", \"black\"],\n    \"accents\": [\"silver\", \"transparent\", \"electric amber\"]\n  },\n  \"vibe\": \"futuristic techno-art, minimalist, detailed internal structure\"\n}",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🎨 Get Blue Matte Icons",
+    "slug": "promptsget-blue-matte-icons",
+    "content": "Retexture the image attached based on the JSON below \n{\n  \"style\": \"stylized 3D iconography\",\n  \"material\": \"soft-touch matte rubber\",\n  \"color_scheme\": {\n    \"primary\": \"pastel cyan\",\n    \"accents\": \"off-white text and logos\"\n  },\n  \"surface_texture\": \"smooth and clean with slightly rounded edges\",\n  \"lighting\": {\n    \"type\": \"soft studio lighting\",\n    \"intensity\": \"medium\",\n    \"direction\": \"even top and front light\",\n    \"accent_colors\": [\"pastel cyan\", \"light gray\"],\n    \"reflections\": false,\n    \"refractions\": false,\n    \"dispersion_effects\": false,\n    \"bloom\": false\n  },\n  \"background\": {\n    \"color\": \"light gray to white gradient\",\n    \"vignette\": false,\n    \"texture\": \"none\"\n  },\n  \"post_processing\": {\n    \"chromatic_aberration\": false,\n    \"glow\": false,\n    \"high_contrast\": false,\n    \"color_emphasis\": [\"cyan\", \"white\"],\n    \"sharpness\": \"medium\",\n    \"clarity\": \"clean\"\n  },\n  \"camera\": {\n    \"angle\": \"isometric or front-centered\",\n    \"focus\": \"entire object\",\n    \"depth_of_field\": \"none\"\n  },\n  \"text_style\": {\n    \"type\": \"engraved or extruded into the surface\",\n    \"font\": \"bold sans-serif\",\n    \"color\": \"slightly darker or lighter tone than base\",\n    \"alignment\": \"centered or top-aligned\"\n  },\n  \"shadows\": {\n    \"type\": \"soft\",\n    \"intensity\": \"low\",\n    \"direction\": \"downward\",\n    \"blur\": \"medium\"\n  }\n}",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🌌 Get Celestial Marble Icons",
+    "slug": "promptsget-celestial-marble-icons",
+    "content": "Retexture the image attached based on the JSON below \n{\n  \"style_name\": \"Divine 3D Celestial Marble\",\n  \"retexture_mode\": \"stylized_3d_overlay\",\n  \"object_analysis\": {\n    \"preserve_silhouette\": true,\n    \"geometry_sensitive_mapping\": true,\n    \"detail_retention\": \"high, emphasize sculptural folds, textures and depth\"\n  },\n  \"material_properties\": {\n    \"base_material\": [\"polished celestial marble\", \"glimmering cosmic stone\"],\n    \"surface_details\": [\n      \"embedded star-like sparkles\",\n      \"subtle iridescent glints on edges\",\n      \"finely chiseled grooves and contours\"\n    ]\n  },\n  \"lighting\": {\n    \"type\": \"studio spotlight\",\n    \"intensity\": \"high\",\n    \"shadows\": \"soft and minimal\",\n    \"highlights\": \"glowing reflective edges with divine shimmer\"\n  },\n  \"color_palette\": {\n    \"dominant_colors\": [\"#ffffff\", \"#f2f2f2\", \"#e6e6e6\"],\n    \"accents\": [\"#d4af37\", \"#c9c9ff\", \"#f5f5dc\"]\n  },\n  \"background\": {\n    \"color\": \"#ffffff\",\n    \"style\": \"solid\",\n    \"elements\": \"none\"\n  },\n  \"post_processing\": {\n    \"glow\": true,\n    \"specular_bloom\": true,\n    \"depth_boost\": true,\n    \"contrast_boost\": false\n  }\n}",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🌀 Get Felt Textured Icons",
+    "slug": "promptsget-felt-textured-icons",
+    "content": "Retexture the image attached based on the JSON below\n{\n  \"style_name\": \"Minimal Surreal Hybrid Object\",\n  \"retexture_mode\": \"shape_lock\",\n  \"object_analysis\": {\n    \"preserve_silhouette\": true,\n    \"geometry_sensitive_mapping\": true,\n    \"detail_retention\": \"keep contours, folds, and depth variations\"\n  },\n  \"material_properties\": {\n    \"outer_surface\": {\n      \"base_material\": \"natural matte skin or peel-like surface\",\n      \"color_treatment\": \"desaturated white or pale neutral\",\n      \"surface_detail\": \"soft fiber textures, slight irregularities\"\n  },\n  \"lighting\": {\n    \"type\": \"diffused softbox\",\n    \"intensity\": \"medium-bright with gentle shadows\",\n    \"shadow_behavior\": \"soft directional falloff on neutral background\",\n    \"highlight_behavior\": \"subtle edge gloss, soft bounce\"\n  },\n  \"background\": {\n    \"style\": \"studio clean\",\n    \"color\": \"beige to light gray gradient\",\n    \"depth\": \"shallow, soft fade into backdrop\"\n  },\n  \"rendering\": {\n    \"type\": \"photorealistic surrealism\",\n    \"camera\": \"static with mild top-down perspective\",\n    \"resolution\": \"ultra-high\",\n    \"focus\": \"object-centered, shallow depth of field\"\n  },\n}",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "💎 Get Floating Glassy Neon Icons",
+    "slug": "promptsget-floating-glassy-neon-icons",
+    "content": "Retexture the image attached based on the JSON below \n{\n  \"style_name\": \"Floating Glassy Neon 3D\",\n  \"retexture_mode\": \"shape_lock\",\n  \"object_analysis\": {\n    \"preserve_silhouette\": true,\n    \"geometry_sensitive_mapping\": true,\n    \"detail_retention\": \"maintain contours, volumes, and layering\"\n  },\n  \"material_properties\": {\n    \"base_material\": \"translucent neon glass-gel\",\n    \"surface_finish\": \"semi-gloss with soft glow edges\",\n    \"transparency\": \"high, with soft light refraction\",\n    \"refraction\": \"gentle bend with subtle halo on curves\",\n    \"embedded_effects\": \"internal light scatter and edge neon glow\",\n    \"color_blend\": {\n      \"primary\": [\"aqua\", \"electric blue\", \"neon violet\"],\n      \"gradient_direction\": \"top-left to bottom-right\",\n      \"transition_smoothness\": \"very smooth\"\n    }\n  },\n  \"lighting\": {\n    \"type\": \"softbox HDRI\",\n    \"intensity\": \"soft and bright\",\n    \"source_direction\": \"overhead and slightly front\",\n    \"highlight_behavior\": \"gentle bloom with glass sparkle\"\n  },\n  \"shadow_behavior\": {\n    \"type\": \"floating contact shadow\",\n    \"appearance\": \"extremely soft, blurred ellipse\",\n    \"opacity\": 0.07,\n    \"distance_below_object\": \"moderate\",\n    \"color\": \"neutral gray\"\n  },\n  \"background\": {\n    \"type\": \"solid color\",\n    \"color\": \"#ffffff\",\n    \"glow_effect\": \"none\",\n    \"gradient\": \"none\"\n  },\n  \"rendering\": {\n    \"depth_of_field\": \"subtle with slight vignette\",\n    \"focus_point\": \"center of floating object\",\n    \"ambient_occlusion\": \"minimal to preserve light feel\",\n    \"render_engine\": \"3D stylized with light diffusion and high specular detail\",\n    \"camera_angle\": \"slightly above object, frontal\",\n    \"resolution\": \"very high for product branding\"\n  },\n  \"special_effects\": {\n    \"floating_behavior\": true,\n    \"visual_weightlessness\": true,\n    \"shadow_softness\": \"maximum\"\n  }\n}",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "💎 Get Frosted Crystal Icons",
+    "slug": "promptsget-frosted-crystal-icons",
+    "content": "Retexture the image attached based on the JSON below \n{\n  \"style\": \"Hyper-realistic 3D Render\",\n  \"material\": \"frosted transparent crystal\",\n  \"color_palette\": [\"soft white\", \"rainbow light spectrum\", \"holographic highlights\"],\n  \"background\": \"pure black\",\n  \"object_properties\": {\n    \"finish\": \"smooth matte with glossy edges\",\n    \"lighting\": \"strong directional spotlight from multiple angles to create prism effects\",\n    \"transparency\": \"70%\",\n    \"surface_details\": \"sharp cuts and beveled edges with internal light scattering\"\n  },\n  \"shapes\": [\"mechanical nut\", \"technical forms\", \"geometric objects\"],\n  \"camera_angle\": \"macro close-up, slightly tilted for dramatic depth\",\n  \"resolution\": \"ultra-high, 8K preferred\",\n  \"shadows\": \"soft and colorful diffusion\",\n  \"details\": {\n    \"reflections\": true,\n    \"refraction\": true,\n    \"prismatic dispersion\": true,\n    \"subsurface scattering\": true\n  }\n}",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🧊 Get Frosted Resin Icons",
+    "slug": "promptsget-frosted-resin-icons",
+    "content": "Retexture the image attached based on the JSON below \n{\n  \"style_name\": \"Transparent Object on White\",\n  \"retexture_mode\": \"shape_lock\",\n  \"object_analysis\": {\n    \"preserve_silhouette\": true,\n    \"geometry_sensitive_mapping\": true,\n    \"detail_retention\": \"maintain surface texture, contours, and embossed details\"\n  },\n  \"material_properties\": {\n    \"base_material\": \"frosted resin\",\n    \"transparency\": \"high\",\n    \"surface_finish\": \"matte-satin with soft internal diffusion\",\n    \"refraction\": \"mild distortion to subtly reveal internal geometry\",\n    \"embedded_details\": \"slightly visible inner features and depth shadows\",\n    \"color_tone\": \"translucent grey to ice-clear\"\n  },\n  \"lighting\": {\n    \"type\": \"high-key studio lighting\",\n    \"intensity\": \"very bright and even\",\n    \"source_direction\": \"from behind and top\",\n    \"shadow_behavior\": \"minimal and feathered\"\n  },\n  \"background\": {\n    \"type\": \"solid\",\n    \"color\": \"pure white\",\n    \"gradient\": \"none\"\n  },\n  \"camera\": {\n    \"perspective\": \"frontal\",\n    \"focus\": \"sharp on object\",\n    \"depth_of_field\": \"low\"\n  },\n  \"vibe\": \"futuristic scan, artifact archival, minimal design showcase\"\n}",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🎨 Get Green Toy Style Icons",
+    "slug": "promptsget-green-toy-style-icons",
+    "content": "Retexture the image attached based on the JSON below \n{\n  \"style_name\": \"Retsy 3D Icon Aesthetic\",\n  \"retexture_mode\": \"stylized_3d_overlay\",\n  \"object_analysis\": {\n    \"preserve_silhouette\": true,\n    \"geometry_sensitive_mapping\": true,\n    \"detail_retention\": \"moderate — emphasize smooth shapes and clear outlines\"\n  },\n  \"material_properties\": {\n    \"base_material\": [\"smooth matte plastic\", \"glossy enamel plastic\"],\n    \"surface_details\": [\n      \"rounded corners and edges\",\n      \"soft, toy-like finish\",\n      \"minimal seam lines\",\n      \"subtle specular reflections\"\n    ]\n  },\n  \"lighting\": {\n    \"type\": \"studio soft light\",\n    \"intensity\": \"medium\",\n    \"shadows\": \"soft contact shadows\",\n    \"highlight_behavior\": \"small glossy highlights on curved surfaces\"\n  },\n  \"color_palette\": {\n    \"dominant_colors\": [\"#2F7056\", \"#EAE5E0\", \"#2A2D2E\"],\n    \"accent_colors\": [\"#B5832F\", \"#F5E9C8\"]\n  },\n  \"background\": {\n    \"color\": \"#F3F1EE\",\n    \"type\": \"solid\",\n    \"texture\": \"none\"\n  },\n}",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🌈 Get High Gloss Icons",
+    "slug": "promptsget-high-gloss-icons",
+    "content": "Retexture the image attached based on the JSON below\n{\n  \"style\": \"hyperrealistic 3D render\",\n  \"material\": \"high-gloss translucent rubber with iridescent coating\",\n  \"surface_texture\": \"fine-grain pebbling with micro-specular highlights\",\n  \"lighting\": {\n    \"type\": \"studio HDRI\",\n    \"intensity\": \"high\",\n    \"direction\": \"multi-point with rim and backlight\",\n    \"colors\": [\"electric blue\", \"magenta\", \"neon purple\", \"sunset orange\"],\n    \"glow_effect\": true,\n    \"chromatic_aberration\": true,\n    \"bloom\": true\n  },\n  \"color_scheme\": {\n    \"primary\": \"iridescent gradient\",\n    \"highlights\": \"white light core reflections\",\n    \"accent_edges\": \"black outlines with subtle glow\"\n  },\n  \"background\": {\n    \"color\": \"solid black\",\n    \"texture\": \"none\",\n    \"contrast\": \"extreme to enhance subject glow\"\n  },\n  \"camera\": {\n    \"angle\": \"straight-on center view\",\n    \"focus\": \"sharp foreground, no depth blur\",\n    \"lens\": \"macro with light distortion\"\n  },\n  \"post_processing\": {\n    \"glow\": true,\n    \"contrast_boost\": true,\n    \"color_grading\": \"vibrant spectrum\",\n    \"noise\": \"minimal\"\n  }\n}",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🌈 Get Holographic Iridescent Icons",
+    "slug": "promptsget-holographic-iridescent-icons",
+    "content": "Retexture the image attached based on the JSON below \n{\n  \"style_name\": \"Holographic Iridescent Render\",\n  \"visual_rules\": {\n    \"form\": {\n      \"shape\": \"smooth, organic curvature with aerodynamic flow\",\n      \"structure\": \"continuous surface with no hard edges or segmentations\"\n    },\n    \"material\": {\n      \"type\": \"transparent holographic polymer\",\n      \"finish\": \"high-gloss, mirror-slick sheen\",\n      \"depth_effect\": \"light passes through surface and reflects multicolored gradients\"\n    },\n    \"lighting\": {\n      \"strategy\": \"single-source soft glow with internal bloom\",\n      \"interaction\": \"light refracts and scatters through surface layers, creating rainbow shimmer\"\n    },\n    \"color_palette\": {\n      \"primary\": \"transparent base\",\n      \"accents\": [\"cyan\", \"lavender\", \"pink\", \"gold\", \"electric blue\"],\n      \"behavior\": \"colors shift dynamically based on angle of view and light\"\n    },\n    \"texture\": {\n      \"surface_detail\": \"subtle micro-grooves or brushed flow lines for energy motion effect\",\n      \"feel\": \"visually smooth with light-tracking texture\"\n    },\n    \"background\": {\n      \"type\": \"solid black or deep void\",\n      \"purpose\": \"maximize contrast and highlight iridescence\"\n    },\n    \"render_style\": {\n      \"dimension\": \"3D stylized realism\",\n      \"highlight\": \"hyper-clean reflections\",\n      \"shadows\": \"minimal or softly feathered\"\n    }\n  }\n}",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🖼️ Get Icons With Transparent Backgrounds",
+    "slug": "promptsget-icons-with-transparent-backgrounds",
+    "content": "Retexture the image attached based on the JSON below \n{\n  \"style_name\": \"Transparent Studio Render\",\n  \"visual_rules\": {\n    \"form\": {\n      \"shape\": \"preserve original object shape\",\n      \"outline\": \"no outlines, use smooth geometry transitions and bevels\"\n    },\n    \"lighting\": {\n      \"style\": \"studio-style 3-point lighting or soft HDRI setup\",\n      \"highlight\": \"subtle specular highlights for semi-matte plastic or coated surfaces\",\n      \"shadow\": \"soft drop shadow directly beneath the object, cast on a translucent floor plane\"\n    },\n    \"texture\": {\n      \"surface\": \"smooth or lightly textured based on object, clean shader setup with minimal noise\",\n      \"branding\": \"bold and high-contrast, treated as printed decals or sticker-style labels\"\n    },\n    \"material\": {\n      \"finish\": \"semi-matte or satin shader, mimicking printed plastic or coated materials\"\n    },\n    \"color_handling\": {\n      \"strategy\": \"make the object's primary color the focal point\",\n      \"enhancement\": \"slightly boosted saturation and contrast for clean product visualization\"\n    },\n    \"background\": {\n      \"type\": \"fully transparent (alpha channel)\",\n      \"shadow\": \"optional soft drop shadow directly beneath the object to ground it visually\"\n    }\n  },\n  \"rendering\": {\n    \"camera_angle\": \"centered front view or slightly elevated for dimensional clarity\",\n    \"depth_of_field\": \"neutral or slightly shallow to keep object fully sharp\",\n    \"background_blur\": \"none, background remains transparent\"\n  }\n}",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "💎 Get Iridescent Effects Icon",
+    "slug": "promptsget-iridescent-effects-icon",
+    "content": "Retexture the image attached based on the JSON below\n{\n  \"style\": \"photorealistic 3D render\",\n  \"material\": \"glass with transparent and iridescent effects\",\n  \"surface_texture\": \"smooth, polished with subtle reflections and refractive effects\",\n  \"lighting\": {\n    \"type\": \"studio HDRI\",\n    \"intensity\": \"high\",\n    \"direction\": \"angled top-left key light and ambient fill\",\n    \"accent_colors\": [\"blue\", \"green\", \"purple\"],\n    \"reflections\": true,\n    \"refractions\": true,\n    \"dispersion_effects\": true,\n    \"bloom\": true\n  },\n  \"color_scheme\": {\n    \"primary\": \"transparent with iridescent blue, green, and purple hues\",\n    \"secondary\": \"crystal-clear with subtle chromatic shifts\",\n    \"highlights\": \"soft, glowing accents reflecting rainbow-like effects\",\n    \"rim_light\": \"soft reflective light around edges\"\n  },\n  \"background\": {\n    \"color\": \"black\",\n    \"vignette\": true,\n    \"texture\": \"none\"\n  },\n  \"post_processing\": {\n    \"chromatic_aberration\": true,\n    \"glow\": true,\n    \"high_contrast\": true,\n    \"sharp_details\": true\n  }\n}",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🌈 Get Iridescent Sky Gradient Icons",
+    "slug": "promptsget-iridescent-sky-gradient-icons",
+    "content": "Retexture the image attached based on the JSON below \n{\n  \"style_name\": \"Iridescent Sky Gradient\",\n  \"color_palette\": {\n    \"base\": \"translucent white\",\n    \"gradient\": [\n      {\"color\": \"sky blue\", \"position\": \"bottom\"},\n      {\"color\": \"lavender\", \"position\": \"middle\"},\n      {\"color\": \"pale pink\", \"position\": \"upper\"},\n      {\"color\": \"soft white\", \"position\": \"edges\"}\n    ],\n    \"blend_mode\": \"smooth radial and linear gradient mix\",\n    \"saturation\": \"soft-medium\",\n    \"vibrance\": \"ethereal and airy\"\n  },\n  \"material_finish\": {\n    \"type\": \"polished transparent acrylic\",\n    \"gloss\": \"high\",\n    \"reflectivity\": \"medium\",\n    \"depth_effect\": \"subsurface glow with subtle internal refraction\"\n  },\n  \"lighting\": {\n    \"type\": \"soft ambient light\",\n    \"source\": \"multiple diffused angles\",\n    \"effects\": [\"gentle bloom\", \"inner radiance\"],\n    \"shadow\": \"minimal, feathered\"\n  }\n}",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🎨 Get Matte Studio Icons",
+    "slug": "promptsget-matte-studio-icons",
+    "content": "Retexture the image attached based on the JSON below \n{\n  \"style_name\": \"Matte Studio Hybrid Retexture\",\n  \"retexture_mode\": \"shape_lock\",\n  \"object_analysis\": {\n    \"preserve_silhouette\": true,\n    \"geometry_sensitive_mapping\": true,\n    \"detail_retention\": \"highlight seams, contours, curves, surface transitions\"\n  },\n  \"material_properties\": {\n    \"base_material\": [\n      \"soft-touch matte plastic\",\n      \"brushed metal\",\n      \"smooth composite shell\",\n      \"perforated mesh\",\n      \"rubberized surface zones\"\n    ],\n    \"surface_finish\": \"semi-matte to satin finish with occasional gloss accents\",\n    \"texture_behavior\": \"subtle paneling, clean edges, balanced contrast between materials\",\n    \"branding_elements\": \"minimal or embossed detailing, optional logo placement\",\n    \"color_palette\": {\n      \"primary\": [\"graphite\", \"off-white\", \"matte beige\", \"cool gray\"],\n      \"accents\": [\"soft taupe\", \"muted bronze\", \"pastel blue\", \"dusty red\"]\n    }\n  },\n  \"lighting\": {\n    \"type\": \"diffused softbox\",\n    \"intensity\": \"medium-bright\",\n    \"highlight_behavior\": \"soft highlights along curves and angles\",\n    \"shadow_behavior\": \"light drop shadows with smooth edges under and behind object\"\n  },\n  \"background\": {\n    \"style\": \"clean studio gradient\",\n    \"color\": \"beige to light gray or fog white\",\n    \"depth\": \"shallow with smooth fade into background\"\n  },\n  \"rendering\": {\n    \"type\": \"product-style realism\",\n    \"camera_angle\": \"front-facing or slightly top-down\",\n    \"focus_mode\": \"sharp object clarity, soft backdrop\",\n    \"resolution_style\": \"high-fidelity catalog render with clean separation\"\n  }\n}",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🎨 Get Monochrome 3D Icons",
+    "slug": "promptsget-monochrome-3d-icons",
+    "content": "Retexture the image attached based on the JSON below\n{\n  \"style\": \"monochrome 3D minimalism\",\n  \"material\": {\n    \"base\": \"matte plastic\",\n    \"texture\": \"ultra-smooth\",\n    \"finish\": \"low gloss\"\n  },\n  \"lighting\": {\n    \"type\": \"studio soft directional\",\n    \"intensity\": \"medium-low\",\n    \"shadows\": \"long and soft\",\n    \"highlights\": \"muted\"\n  },\n  \"color_scheme\": {\n    \"primary\": [\"#d8d8d8\", \"#aaaaaa\", \"#f0f0f0\"],\n    \"accents\": [\"#000000\", \"#ffffff\"],\n    \"contrast\": \"low\"\n  },\n  \"shapes\": \"rounded, minimal detail, clean edges\",\n  \"composition\": {\n    \"background\": \"flat mid-gray (#b0b0b0)\",\n    \"object_count\": \"single subject per frame\",\n    \"layout\": \"centered, isolated\"\n  },\n  \"rendering\": {\n    \"engine\": \"Octane-style smooth 3D\",\n    \"resolution\": \"high\",\n    \"detail_level\": \"minimal with realistic depth\"\n  }\n}",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🌌 Get Neon Glass Glow Icons",
+    "slug": "promptsget-neon-glass-glow-icons",
+    "content": "Retexture the image attached based on the JSON below \n{\n  \"style_name\": \"Neon Glass Glow Icons\",\n  \"retexture_mode\": \"volumetric_3d\",\n  \"object_analysis\": {\n    \"preserve_silhouette\": true,\n    \"geometry_sensitive_mapping\": true,\n    \"detail_retention\": \"sharp edges, sleek surfaces, stylized outlines\"\n  },\n  \"material_properties\": {\n    \"base_material\": [\n      \"transparent neon glass\",\n      \"tinted acrylic\",\n      \"crystalized resin\"\n    ],\n    \"surface_finish\": \"high-gloss, smooth, refractive\",\n    \"texture_behavior\": \"light-bending translucent with glowing edge scatter\",\n    \"branding_elements\": \"none\"\n  },\n  \"color_palette\": {\n    \"primary\": [\"#00FFC3\", \"#33FF00\", \"#00E0FF\"],\n    \"accents\": [\"#FFFF00\", \"#1AFF66\", \"#00FFAA\"],\n    \"contrast\": \"very high\"\n  },\n  \"lighting\": {\n    \"type\": \"high-intensity neon backlight\",\n    \"intensity\": \"very high\",\n    \"shadows\": \"glow-cast with soft edges\",\n    \"highlights\": \"inner and outer rim glow with bloom effect\"\n  },\n  \"rendering\": {\n    \"style\": \"futuristic holographic 3D\",\n    \"background\": \"pure black\",\n    \"camera_angle\": \"centered, object isolated\",\n    \"depth_of_field\": \"none, sharp focus with glow halo\"\n  }\n}",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🧸 Get Orange 3D Icons",
+    "slug": "promptsget-orange-3d-icons",
+    "content": "Retexture the image attached based on the JSON below\n{\n  \"style\": \"cartoon 3D render\",\n  \"material\": {\n    \"base\": \"smooth plastic\",\n    \"texture\": \"uniform and polished\",\n    \"finish\": \"semi-glossy toy-like\"\n  },\n  \"lighting\": {\n    \"type\": \"studio diffuse with soft bounce\",\n    \"intensity\": \"medium-bright\",\n    \"shadows\": \"soft and rounded\",\n    \"highlights\": \"gentle specular reflections on curves\"\n  },\n  \"color_scheme\": {\n    \"primary\": [\"#ff7043\", \"#ffccbc\"],\n    \"accents\": [\"#ffffff\", \"#f8bbd0\"],\n    \"contrast\": \"medium\"\n  },\n  \"shapes\": \"bulbous, rounded, exaggerated proportions\",\n  \"composition\": {\n    \"background\": \"plain white\",\n    \"object_count\": \"single\",\n    \"layout\": \"centered, isolated with subtle drop shadow\",\n    \"orientation\": \"slight angle, playful tilt\"\n  },\n  \"rendering\": {\n    \"engine\": \"Pixar-style stylized 3D\",\n    \"resolution\": \"high\",\n    \"detail_level\": \"clean and minimal\",\n    \"outlines\": \"none\"\n  }\n}",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🌈 Get Pastel Dream Icons",
+    "slug": "promptsget-pastel-dream-icons",
+    "content": "Retexture the image attached based on the JSON below\n{\n  \"structure\": {\n    \"form\": \"rounded and soft silhouette\",\n    \"symmetry\": \"organic\",\n    \"edge_definition\": \"slightly blurred\"\n  },\n  \"materials\": {\n    \"surface\": {\n      \"type\": \"iridescent gel membrane\",\n      \"transparency\": \"70%\",\n      \"texture\": \"smooth and fluid\",\n      \"finish\": \"gentle matte sheen\",\n      \"gloss\": \"low\",\n      \"internal_glow\": \"very subtle core tint\"\n    }\n  },\n  \"colors\": {\n    \"gradient\": {\n      \"style\": \"dreamy pastel blend\",\n      \"direction\": \"multi-directional diffusion\",\n      \"hues\": [\"mint green\", \"baby blue\", \"soft rose pink\", \"butter yellow\", \"lavender\"],\n      \"transition\": \"seamless and soft\"\n    },\n    \"glow_intensity\": \"low\",\n    \"highlight_color\": \"muted white with pastel fade edges\"\n  },\n  \"lighting\": {\n    \"type\": \"soft ambient\",\n    \"mood\": \"calm and dreamy\",\n    \"glow_behavior\": \"barely-there bloom\"\n  },\n  \"background\": {\n    \"type\": \"solid\",\n    \"color\": \"pure black\"\n  },\n  \"vibe\": \"soft digital surrealism, reduced glow aesthetic\"\n}",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🧸 Get Pinky Fluffy Icons",
+    "slug": "promptsget-pinky-fluffy-icons",
+    "content": "Retexture the image attached based on the JSON below\n{\n  \"style\": \"3D render, playful design\",\n  \"material\": {\n    \"base\": \"synthetic faux fur\",\n    \"texture\": \"long, fluffy strands with directional combing\",\n    \"finish\": \"matte with soft lighting diffusion\"\n  },\n  \"lighting\": {\n    \"type\": \"studio softbox with top-down fill\",\n    \"intensity\": \"medium\",\n    \"shadows\": \"subtle and diffuse\",\n    \"highlights\": \"minimal, smooth falloff\"\n  },\n  \"color_scheme\": {\n    \"primary\": [\"#ff69b4\", \"#ffc0cb\"],\n    \"contrast\": \"low\"\n  },\n  \"shapes\": \"abstract, soft-edged, organic flow\",\n  \"composition\": {\n    \"background\": \"white\",\n    \"object_count\": \"single\",\n    \"layout\": \"centered, isolated\",\n    \"orientation\": \"slightly tilted for depth\"\n  },\n  \"rendering\": {\n    \"engine\": \"cinematic 3D stylized\",\n    \"resolution\": \"high\",\n    \"focus\": \"sharp on fur texture, soft background fade\"\n  }\n}",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🎨 Get Playful 3D Icons",
+    "slug": "promptsget-playful-3d-icons",
+    "content": "Retexture the image attached based on the JSON below\n{\n  \"style_name\": \"Playful 3D Render\",\n  \"visual_rules\": {\n    \"form\": {\n      \"shape\": \"rounded and clean, slightly exaggerated to look playful and appealing\",\n      \"outline\": \"no dark outlines, softly blended edges\"\n    },\n    \"lighting\": {\n      \"gloss\": \"gentle highlights to create a plastic or waxy effect\",\n      \"shadow\": \"soft drop shadow below the object to suggest depth on white surface\"\n    },\n    \"texture\": {\n      \"surface\": \"smooth, minimal fine texture, use soft gradients for realism\",\n      \"detail\": \"essential forms like veins, grooves, or stem textures included but simplified\"\n    },\n    \"background\": {\n      \"type\": \"solid white\",\n      \"shadow\": \"subtle base shadow to ground the object\"\n    },\n    \"color_handling\": {\n      \"strategy\": \"preserve and enhance the subject’s natural color\",\n      \"enhancement\": \"slightly saturated for a vibrant, digital look\"\n    }\n  },\n  \"color_palette\": \"adaptive – determined by the input object\"\n}",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🎨 Get Playful 3D Matte Icons",
+    "slug": "promptsget-playful-3d-matte-icons",
+    "content": "Retexture the image attached based on the JSON below \n{\n  \"style_name\": \"Playful 3D Matte Icons\",\n  \"retexture_mode\": \"volumetric_3d\",\n  \"object_analysis\": {\n    \"preserve_silhouette\": true,\n    \"geometry_sensitive_mapping\": true,\n    \"detail_retention\": \"smooth contours, soft shadows, rounded edges\"\n  },\n  \"material_properties\": {\n    \"base_material\": [\n      \"matte plastic\",\n      \"soft polymer\",\n      \"rubberized coating\"\n    ],\n    \"surface_finish\": \"semi-matte, soft-touch\",\n    \"texture_behavior\": \"minimal reflection, soft ambient shading\",\n    \"branding_elements\": \"none\"\n  },\n  \"color_palette\": {\n    \"primary\": [\"#FF3B3B\", \"#FFFFFF\"],\n    \"accents\": [\"#F55A5A\", \"#FFEDED\", \"#CCCCCC\"],\n    \"contrast\": \"moderate\"\n  },\n  \"lighting\": {\n    \"type\": \"soft shadow casting with ambient occlusion\",\n    \"intensity\": \"medium\",\n    \"shadows\": \"soft, consistent with object grounding\"\n  },\n  \"contextual_style\": {\n    \"background\": \"flat light gray or soft pastel\",\n    \"composition\": \"centered object with floating effect and faint drop shadow\",\n    \"scale\": \"slightly exaggerated for clarity\"\n  }\n}",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🧸 Get Playful Chunky 3D Icons",
+    "slug": "promptsget-playful-chunky-3d-icons",
+    "content": "Retexture the image attached based on the JSON below \n{\n  \"style_name\": \"Playful Chunky 3D Aesthetic\",\n  \"retexture_mode\": \"stylized_3d_overlay\",\n  \"object_analysis\": {\n    \"preserve_silhouette\": true,\n    \"geometry_sensitive_mapping\": true,\n    \"detail_retention\": \"moderate — focus on key forms and proportions\"\n  },\n  \"material_properties\": {\n    \"base_material\": [\"soft matte plastic\", \"rubbery polymer\"],\n    \"surface_details\": [\n      \"rounded edges and inflated volumes\",\n      \"smooth, toy-like finish\",\n      \"minimal seam lines\"\n    ]\n  },\n  \"lighting\": {\n    \"type\": \"studio diffused light\",\n    \"intensity\": \"medium\",\n    \"shadows\": \"soft base shadows\",\n    \"highlight_behavior\": \"gentle gloss on curves and raised surfaces\"\n  },\n  \"color_palette\": {\n    \"dominant_colors\": [\"#f6f6f6\", \"#3a3a3a\", \"#f05423\"],\n    \"accent_colors\": [\"#ff875d\", \"#b0b0b0\", \"#f3f3f3\"]\n  },\n  \"background\": {\n    \"color\": \"#f9f9f9\",\n    \"type\": \"solid\",\n    \"texture\": \"none\"\n  },\n  \"style_tags\": [\n    \"3D cartoon realism\",\n    \"UI icon pack aesthetic\",\n    \"inflated minimalism\",\n    \"soft tech look\",\n    \"playful volume modeling\"\n  ]\n}",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🌈 Get Pop Art Flair Icons",
+    "slug": "promptsget-pop-art-flair-icons",
+    "content": "Retexture the image attached based on the JSON below \n{\n  \"style\": \"hyper-realistic surreal glam with pop-art flair\",\n  \"geometry\": {\n    \"shape\": \"natural curves with exaggerated proportions\",\n    \"edges\": \"smooth and rounded\",\n    \"scale\": \"slightly oversized for dramatic effect\",\n    \"detailing\": \"clean, highly defined surface transitions\"\n  },\n  \"material\": {\n    \"base\": \"mirror-tile mosaic\",\n    \"texture\": \"highly reflective, tiled disco ball surface\",\n    \"finish\": \"glossy, with sharp light reflections and metallic highlights\"\n  },\n  \"design_elements\": {\n    \"surface_effects\": \"mirror reflections, vibrant color transitions, mosaic tiling\",\n    \"accent_elements\": \"optional glowing highlights or subtle sparkles\",\n    \"aesthetic_inserts\": \"pop-art color palettes with bold gradients\"\n  },\n  \"color_scheme\": {\n    \"primary\": [\"#ff0033\", \"#e60073\", \"#ff66cc\"],\n    \"accents\": [\"#9900ff\", \"#ffffff\", \"#cc0000\"],\n    \"background\": \"#ffffff\",\n    \"contrast\": \"high, with bold pops of color against clean backdrops\"\n  },\n  \"lighting\": {\n    \"type\": \"studio lighting with soft shadows\",\n    \"direction\": \"top-left\",\n    \"intensity\": \"medium-high\",\n    \"reflections\": \"mirror highlights from glossy surfaces\"\n  },\n  \"composition\": {\n    \"layout\": \"centered object with isolated background\",\n    \"orientation\": \"angled to highlight curves and gloss\",\n    \"environment\": \"minimalist studio setup\"\n  },\n  \"rendering\": {\n    \"engine\": \"C4D-style hyper-real render\",\n    \"resolution\": \"high\",\n    \"focus\": \"sharp detail on object, smooth background blur\"\n  }\n}",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🎨 Get Purple Pastel Icons",
+    "slug": "promptsget-purple-pastel-icons",
+    "content": "Retexture the image attached based on the JSON below \n{\n  \"style_name\": \"Purple Pastel Icon\",\n  \"retexture_mode\": \"stylized_3d_overlay\",\n  \"object_analysis\": {\n    \"preserve_silhouette\": true,\n    \"geometry_sensitive_mapping\": true,\n    \"detail_retention\": \"high — emphasize smooth forms, rounded edges, and bold shapes\"\n  },\n  \"material_properties\": {\n    \"base_material\": [\"smooth matte plastic\"],\n    \"surface_details\": [\n      \"rounded edges\",\n      \"soft surface texture\",\n      \"no seams or textures\",\n      \"subtle reflections on curves\"\n    ]\n  },\n  \"lighting\": {\n    \"type\": \"studio soft light\",\n    \"intensity\": \"medium\",\n    \"shadows\": \"soft contact shadows\",\n    \"highlight_behavior\": \"gentle glossy highlights around edges\"\n  },\n  \"color_palette\": {\n    \"dominant_colors\": [\"#A78BFA\", \"#ECECEC\"],\n    \"accent_colors\": [\"#B794F4\", \"#6D28D9\"],\n    \"background\": {\n      \"color\": \"#1C1C1C\",\n      \"type\": \"solid\",\n      \"texture\": \"none\"\n    }\n  },\n  \"embedded_effects\": {\n    \"glow\": false,\n    \"rim_light\": false,\n    \"outline\": false\n  },\n  }\n}",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "💎 Get Red Glass Gel Icons",
+    "slug": "promptsget-red-glass-gel-icons",
+    "content": "Retexture the image attached based on the JSON below \n{\n  \"style\": \"photorealistic 3D render\",\n  \"material\": \"translucent glass-gel hybrid\",\n  \"surface_texture\": \"smooth, glossy with soft bevels\",\n  \"lighting\": {\n    \"type\": \"studio HDRI\",\n    \"intensity\": \"high\",\n    \"direction\": \"angled top-left key light and ambient fill\",\n    \"accent_colors\": [\"deep red\", \"bright orange\", \"white\"],\n    \"reflections\": true,\n    \"refractions\": true,\n    \"dispersion_effects\": true,\n    \"bloom\": true\n  },\n  \"color_scheme\": {\n    \"primary\": \"deep red glass\",\n    \"secondary\": \"orange inner glow\",\n    \"highlights\": \"white light accents\",\n    \"rim_light\": \"soft orange edge lighting\"\n  },\n  \"background\": {\n    \"color\": \"pure black\",\n    \"vignette\": true,\n    \"texture\": \"none\"\n  },\n  \"post_processing\": {\n    \"chromatic_aberration\": true,\n    \"glow\": true,\n    \"high_contrast\": true,\n    \"color_emphasis\": [\"red\", \"orange\"],\n    \"sharpness\": \"high\",\n    \"clarity\": \"crisp and reflective\",\n    \"floating_effect\": \"soft glow below each object with subtle shadow blur\"\n  },\n  \"camera\": {\n    \"angle\": \"isometric or straight-on top view\",\n    \"focus\": \"centered composition\",\n    \"depth_of_field\": \"shallow for soft background fade\"\n  },\n  \"composition\": {\n    \"layout\": \"symmetrical, grid-like\",\n    \"spacing\": \"even with air gaps between objects\",\n    \"reflection\": \"none\",\n    \"ground_contact\": false,\n    \"floating\": true,\n    \"shadow\": \"soft drop shadow directly below each object with blur to indicate lift\"\n  }\n}",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🕹️ Get Retro Pixel Icons",
+    "slug": "promptsget-retro-pixel-icons",
+    "content": "Retexture the image attached based on the JSON below\n{\n  \"style\": \"Retro Pixel UI Icons\",\n  \"resolution\": \"low (32x32 or 48x48)\",\n  \"color_palette\": [\n    \"#F2F2F2\",  \n    \"#C0C0C0\",  \n    \"#000000\", \n    \"#FFFFFF\",  \n    \"#0000FF\",  \n    \"#00FF00\",  \n    \"#FFFF99\",  \n    \"#008080\" \n  ],\n  \"outline\": {\n    \"enabled\": true,\n    \"color\": \"#000000\",\n    \"thickness\": \"1px\"\n  },\n  \"shading\": {\n    \"method\": \"dithering\",\n    \"colors_used\": [\"base color\", \"highlight\", \"shadow\"],\n    \"pattern\": \"checkerboard or diagonal lines\"\n  },\n  \"lighting\": {\n    \"type\": \"flat\",\n    \"source\": \"top-left\",\n    \"highlight_color\": \"#FFFFFF\",\n    \"shadow_color\": \"#808080\"\n  },\n  \"background\": {\n    \"color\": \"#F2F2F2\",\n    \"type\": \"plain\",\n    \"transparency\": false\n  },\n  \"object_properties\": {\n    \"style\": \"pixel art\",\n    \"perspective\": \"isometric or front-facing\",\n    \"animation\": {\n      \"enabled\": false,\n      \"frame_style\": \"static pixel art\"\n    }\n  }\n}",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🧵 Get Satin Embroidery Patch Icons",
+    "slug": "promptsget-satin-embroidery-patch-icons",
+    "content": "Retexture the image attached based on the JSON below\n{\n  \"style_name\": \"High-Fidelity Satin Embroidery Patch\",\n  \"retexture_mode\": \"shape_lock\",\n  \"object_analysis\": {\n    \"preserve_silhouette\": true,\n    \"geometry_sensitive_mapping\": true,\n    \"detail_retention\": \"rebuild object edges with dense satin stitch patterns and outline threadwork\"\n  },\n  \"material_properties\": {\n    \"base_material\": [\n      \"high-gloss satin thread\",\n      \"dense embroidery floss\",\n      \"tight needlepoint yarn\"\n    ],\n    \"surface_finish\": \"satin finish with visible thread direction and relief texture\",\n    \"texture_behavior\": \"horizontal and curved thread flow that follows object contours with stitch segmentation\",\n    \"branding_elements\": \"threaded logos and small fabric tags if applicable\",\n    \"color_palette\": {\n      \"primary\": [\"vibrant cherry red\", \"deep crimson\", \"canary yellow\", \"pure white\", \"charcoal black\"],\n      \"accent\": [\"mustard gold\", \"tomato red\", \"cocoa brown\", \"lettuce green\"],\n      \"background\": [\"solid matte black textile\"]\n    }\n  },\n  \"lighting\": {\n    \"type\": \"flat studio lighting\",\n    \"angle\": \"frontal softbox mimic\",\n    \"highlight_behavior\": \"mild thread glisten depending on stitch direction\",\n    \"shadow\": \"tight, barely visible inner thread shadows\"\n  },\n  \"rendering\": {\n    \"style_emphasis\": \"ultra-clean embroidery realism, cartoon proportions with uniform density\",\n    \"border_treatment\": \"bold stitched outlines in dark thread, no drop shadow\",\n    \"depth_emulation\": \"relief depth from thread buildup and stitch angles\"\n  },\n  \"post_processing\": {\n    \"background_treatment\": \"pure black cloth-like texture or seamless void\",\n    \"contrast_adjustment\": \"medium contrast to emphasize thread shading and texture\",\n    \"saturation\": \"boosted for maximum thread color pop\",\n    \"edge_cleanup\": \"stitch-only edges, no smooth graphic outlines\"\n  }\n}",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🎨 Get Soft Minimal Plastic Icons",
+    "slug": "promptsget-soft-minimal-plastic-icons",
+    "content": "Retexture the image attached based on the JSON below\n{\n  \"style_name\": \"Soft Minimal 3D Plastic\",\n  \"retexture_mode\": \"shape_lock\",\n  \"object_analysis\": {\n    \"preserve_silhouette\": true,\n    \"geometry_sensitive_mapping\": true,\n    \"detail_retention\": \"flatten complex details into simplified geometry blocks\"\n  },\n  \"material_properties\": {\n    \"base_material\": [\n      \"smooth matte plastic\",\n      \"metallic edge trim with satin finish\",\n      \"semi-reflective black screen surface\"\n    ],\n    \"surface_details\": [\n      \"subtle color gradient\",\n      \"rounded bevels and corners\",\n      \"soft transition between surfaces\"\n    ]\n  },\n  \"lighting\": {\n    \"type\": \"soft gradient ambient light\",\n    \"shadows\": \"minimal, soft-edged shadows\",\n    \"highlights\": \"diffused, low-intensity reflections\"\n  },\n  \"background\": {\n    \"color\": \"pastel gradient (blue to cream)\",\n    \"texture\": \"smooth and untextured\",\n    \"elements\": \"clean background with no added geometry\"\n  },\n  \"rendering\": {\n    \"style\": \"isometric 3D render\",\n    \"resolution\": \"high, with slight bloom\",\n    \"focus\": \"central object, no depth blur\"\n  },\n  \"color_palette\": {\n    \"primary\": [\"cool grey\", \"steel blue\", \"soft charcoal\"],\n    \"accents\": [\"light lavender\", \"pastel yellow\"]\n  }\n}",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "⚙️ Get Space Tech Icons",
+    "slug": "promptsget-space-tech-icons",
+    "content": "Retexture the image attached based on the JSON below\n{\n  \"style\": \"C4D hyper-realistic 3D render\",\n  \"object_form\": \"detailed mechanical design\",\n  \"geometry\": {\n    \"shape\": \"sharp edges with smooth curves\",\n    \"scale\": \"real-world proportion\",\n    \"detailing\": \"high-poly mesh with intricate mechanical features\"\n  },\n  \"material\": {\n    \"base\": \"polished plastic and carbon fiber\",\n    \"texture\": \"fine surface variation with specular maps\",\n    \"finish\": \"high gloss with realistic reflections\"\n  },\n  \"design_elements\": {\n    \"decals\": \"subtle branding and panel lines\",\n    \"surface_effects\": \"anodized gradients, emissive lighting elements\",\n    \"aero_parts\": \"spoilers, splitters, and aggressive styling cues\"\n  },\n  \"color_scheme\": {\n    \"primary\": \"#0ae2c0\",\n    \"secondary\": \"#111111\",\n    \"accents\": [\"#ffffff\", \"#e00000\"],\n    \"reflections\": \"real-world HDRI light environment\",\n    \"background\": \"#ffffff\"\n  },\n  \"lighting\": {\n    \"type\": \"studio 3-point with HDRI\",\n    \"intensity\": \"balanced with key fill and rim lights\",\n    \"shadows\": \"soft, subtle contact shadow under object\",\n    \"highlights\": \"strong specular reflections on curves\"\n  },\n  \"rendering\": {\n    \"engine\": \"Cinema 4D Redshift or Octane\",\n    \"resolution\": \"ultra high-definition (4K+)\",\n    \"focus\": \"object-centered with floating illusion\",\n    \"background_blur\": \"none\"\n  },\n  \"composition\": {\n    \"layout\": \"centered in frame\",\n    \"object_count\": 1,\n    \"orientation\": \"three-quarter front view\",\n    \"camera\": \"35mm lens, slightly elevated\",\n    \"grounding\": \"floating mid-air with realistic soft shadow cast on white background\"\n  }\n}",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🎨 Get Studio Softbox Icons",
+    "slug": "promptsget-studio-softbox-icons",
+    "content": "Retexture the image attached based on the JSON below\n{\n  \"style\": \"Soft Body\",\n  \"lighting\": {\n    \"type\": \"studio softbox\",\n    \"intensity\": \"medium\",\n    \"shadows\": \"soft\",\n    \"highlights\": \"subtle specular\"\n  },\n  \"material\": {\n    \"base\": \"matte plastic\",\n    \"texture\": \"smooth\",\n    \"finish\": \"semi-gloss\"\n  },\n  \"color_scheme\": {\n    \"primary\": [\"#1c1c1c\", \"#f6f1e9\", \"#e22323\"],\n    \"accents\": [\"#ffffff\", \"#bfbfbf\"],\n    \"contrast\": \"high\"\n  },\n  \"shapes\": \"rounded, chunky, minimalist\",\n  \"composition\": {\n    \"background\": \"neutral light gray\",\n    \"object_count\": \"single subject per frame\",\n    \"layout\": \"centered, isolated\"\n  },\n  \"rendering\": {\n    \"engine\": \"Octane-style photoreal\",\n    \"resolution\": \"high\",\n    \"detail_level\": \"moderate, stylized edges\"\n  },\n  \"typography\": {\n    \"style\": \"bold sans-serif\",\n    \"text_color\": \"#ffffff\",\n    \"placement\": \"integrated into the object\"\n  }\n}",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "💎 Get Translucent Hyperglass Icons",
+    "slug": "promptsget-translucent-hyperglass-icons",
+    "content": "Retexture the image attached based on the JSON below\n{\n  \"style_name\": \"Translucent Hyperglass\",\n  \"retexture_mode\": \"shape_lock\",\n  \"object_analysis\": {\n    \"preserve_silhouette\": true,\n    \"geometry_sensitive_mapping\": true,\n    \"detail_retention\": \"emphasize internal reflections and curved distortions\"\n  },\n  \"material_properties\": {\n    \"base_material\": [\n      \"crystal-clear transparent glass\",\n      \"high-gloss outer shell\",\n      \"slightly refractive interior\"\n    ],\n    \"surface_details\": [\n      \"subsurface light scattering\",\n      \"internal bubble particles\",\n      \"subtle iridescence or spectral glints\"\n    ]\n  },\n  \"lighting\": {\n    \"type\": \"studio hard light with internal glow\",\n    \"shadows\": \"crisp with high contrast\",\n    \"highlights\": \"sharp, mirror-like specular reflections\"\n  },\n  \"background\": {\n    \"color\": \"pure black\",\n    \"texture\": \"smooth and void-like\",\n    \"elements\": \"no visible geometry, minimal ambient light\"\n  },\n  \"rendering\": {\n    \"style\": \"hyperrealistic close-up\",\n    \"depth_of_field\": \"shallow, focus on core of object\",\n    \"camera_angle\": \"macro perspective with smooth curvature emphasis\"\n  }\n}",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🌸 Get Translucent Pink Glass Icons",
+    "slug": "promptsget-translucent-pink-glass-icons",
+    "content": "Retexture the image attached based on the JSON below \n{\n  \"style_name\": \"Translucent Pink Glass\",\n  \"retexture_mode\": \"volumetric_3d\",\n  \"object_analysis\": {\n    \"preserve_silhouette\": true,\n    \"geometry_sensitive_mapping\": true,\n    \"detail_retention\": \"smooth spherical form with internal reflections and soft edges\"\n  },\n  \"material_properties\": {\n    \"base_material\": [\n      \"tinted transparent glass\",\n      \"high-gloss outer shell\",\n      \"slightly refractive and color-infused interior\"\n    ],\n    \"surface_details\": [\n      \"subtle gradient transitions\",\n      \"internal glow and light bleeding\",\n      \"no visible seams or imperfections\"\n    ]\n  },\n  \"lighting\": {\n    \"type\": \"studio soft light\",\n    \"intensity\": \"high key\",\n    \"shadows\": \"soft, diffused, lightly tinted with object color\",\n    \"highlight_behavior\": \"strong, specular highlights from above\"\n  },\n  \"color_palette\": {\n    \"primary\": [\"#E594B5\", \"#F5B8D1\"],\n    \"accents\": [\"#FFFFFF\", \"#D37AAE\"],\n    \"transparency_level\": \"80%\",\n    \"glow_tint\": \"#FADAE6\"\n  },\n  \"background\": {\n    \"type\": \"solid white\",\n    \"texture\": \"smooth and clean\",\n    \"shadow\": \"subtle pink-tinted drop shadow directly beneath object\"\n  },\n  \"rendering\": {\n    \"style\": \"hyperrealistic 3D render\",\n    \"camera_angle\": \"eye-level, centered\",\n    \"depth_of_field\": \"none (sharp throughout)\",\n    \"focus\": \"object only\"\n  }\n}",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "💎 Get Translucent Playglass Icons",
+    "slug": "promptsget-translucent-playglass-icons",
+    "content": "Retexture the image attached based on the JSON below\n{\n  \"style_name\": \"Translucent Playglass\",\n  \"retexture_mode\": \"shape_lock\",\n  \"object_analysis\": {\n    \"preserve_silhouette\": true,\n    \"geometry_sensitive_mapping\": true,\n    \"detail_retention\": \"replicate bump textures with glassy bubble clusters, retain curved surface ridges\"\n  },\n  \"material_properties\": {\n    \"base_material\": [\n      \"aqua-tinted translucent glass\",\n      \"high-gloss crystal with micro-air bubbles\",\n      \"frosted green tip and stem\"\n    ],\n    \"surface_details\": [\n      \"light-refracting bubbles across the surface\",\n      \"smooth but bumpy textures with subtle glints\"\n    ]\n  },\n  \"lighting\": {\n    \"type\": \"high-angle natural daylight\",\n    \"shadows\": \"soft diffused with sharp glass reflections\",\n    \"highlights\": \"strong specular highlights on curves\"\n  },\n  \"background\": {\n    \"color\": \"pure white\",\n    \"texture\": \"matte surface\",\n    \"elements\": \"single shadow cast by main object, no other elements\"\n  },\n  \"composition\": {\n    \"object_position\": \"centered\",\n    \"camera_angle\": \"top-down flat lay\",\n    \"focus\": \"sharp on full object with shallow background\"\n  },\n  \"rendering\": {\n    \"style\": \"hyper-realistic\",\n    \"depth\": \"shallow with subtle shadows and glows\",\n    \"contrast\": \"high between object and white background\"\n  }\n}",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.5
+      },
+      "overall": 6.5,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🪞 Get Transparent Glass Icons",
+    "slug": "promptsget-transparent-glass-icons",
+    "content": "Retexture the image attached based on the JSON below \n{\n  \"style\": \"photorealistic\",\n  \"material\": \"glass\",\n  \"background\": \"plain white\",\n  \"object_position\": \"centered\",\n  \"lighting\": \"soft, diffused studio lighting\",\n  \"camera_angle\": \"eye-level, straight-on\",\n  \"resolution\": \"high\",\n  \"aspect_ratio\": \"2:3\",\n  \"details\": {\n    \"reflections\": true,\n    \"shadows\": false,\n    \"transparency\": true\n  }\n}",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🧊 Get Voxel 3D Icons",
+    "slug": "promptsget-voxel-3d-icons",
+    "content": "Retexture the image attached based on the JSON below\n{\n  \"style\": \"voxel 3D\",\n  \"material\": {\n    \"base\": \"hard plastic\",\n    \"texture\": \"smooth with subtle gridlines\",\n    \"finish\": \"semi-matte\"\n  },\n  \"lighting\": {\n    \"type\": \"studio lightbox\",\n    \"intensity\": \"medium\",\n    \"shadows\": \"sharp and short\",\n    \"highlights\": \"mild, block edge reflections\"\n  },\n  \"color_scheme\": {\n    \"primary\": [\"#ffcc00\", \"#ff3c3c\", \"#000000\", \"#ffffff\"],\n    \"accents\": [\"#00cfff\", \"#00cc00\", \"#ff00cc\", \"#666666\"],\n    \"contrast\": \"high\"\n  },\n  \"shapes\": \"voxel blocks, chunky, pixelated geometry\",\n  \"composition\": {\n    \"background\": \"plain light gray\",\n    \"object_count\": \"single item per frame\",\n    \"layout\": \"centered, angled slightly for 3D view\"\n  },\n  \"rendering\": {\n    \"engine\": \"3D voxel renderer\",\n    \"resolution\": \"high\",\n    \"detail_level\": \"low-poly, simplified structure\"\n  }\n}",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🎮 Immersive Gaming Merch Landing Page",
+    "slug": "promptsimmersive-gaming-merch-landing-page",
+    "content": "Immersive Gaming Merch Landing Page dark neon-lit background, hero with hoodie and glowing headset product, bold cyber typography, grid with interactive hover effects, floating countdown timer for limited drops, edgy cinematic e-commerce vibe. --ar 16:9 --raw",
+    "category": "Design, Web Design",
+    "recommendedTools": [
+      "Midjourney"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  },
+  {
+    "title": "🧸 Playful Plastic Icons",
+    "slug": "promptsplayful-plastic-icons",
+    "content": "Retexture the image attached based on the JSON below:\n{\n  \"style_name\": \"Playful 3D Emoji Plastic\",\n  \"retexture_mode\": \"shape_lock\",\n  \"object_analysis\": {\n    \"preserve_silhouette\": true,\n    \"geometry_sensitive_mapping\": true,\n    \"detail_retention\": \"emphasize rounded edges and simple form contrast\"\n  },\n  \"material_properties\": {\n    \"base_material\": [\n      \"smooth matte plastic\",\n      \"semi-gloss vinyl\",\n      \"lightly rubberized eraser\"\n    ],\n    \"surface_details\": [\n      \"minimal surface texture\",\n      \"clean color blocks\",\n      \"slight plastic sheen\"\n    ]\n  },\n  \"lighting\": {\n    \"type\": \"soft ambient with single frontal source\",\n    \"shadows\": \"light and diffused\",\n    \"highlights\": \"gentle specular on curves\"\n  },\n  \"background\": {\n    \"color\": \"pastel blue\",\n    \"texture\": \"flat and solid\",\n    \"elements\": \"no added geometry or props\"\n  },\n  \"rendering\": {\n    \"style\": \"emoji-like 3D render\",\n    \"depth_of_field\": \"none\",\n    \"focus\": \"sharp across the object\"\n  }\n}",
+    "category": "Design, Icon Design",
+    "recommendedTools": [
+      "ChatGPT"
+    ],
+    "rating": {
+      "scores": {
+        "overall_score": 6.1
+      },
+      "overall": 6.1,
+      "tier": "Builder",
+      "feedback": "Auto-graded based on content length and structure",
+      "improvements": [
+        "Review for completeness"
+      ]
+    }
+  }
+]

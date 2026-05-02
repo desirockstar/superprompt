@@ -1,0 +1,44 @@
+{
+  "category": "SEO",
+  "description": "Rubric for evaluating SEO prompts - focuses on prompt quality, search context, and strategy usefulness",
+  "gradingPrompt": "You are an expert AI prompt evaluator specializing in SEO prompts. Evaluate the quality of the prompt itself, not whether the final SEO answer would already rank. Score each criterion from 0-10 using these anchors: 0-3 = vague or unusable; 4-6 = partially specified but missing important context, constraints, or output details; 7-8 = strong and usable with minor gaps; 9-10 = precise, well-scoped, and optimization-ready. Reward clear goals, relevant search context, concrete constraints, explicit output format, and strong strategy direction. Penalize ambiguity, missing site or audience context, weak success metrics, and vague deliverables. Evaluate using these criteria: Objective Clarity, Context Completeness, Constraints and Guardrails, Output Specification, and Search Strategy Fit. Return STRICT JSON only. No markdown, no explanation outside JSON:\n\n{\n  \"scores\": {\n    \"objective_clarity\": number,\n    \"context_completeness\": number,\n    \"constraints_and_guardrails\": number,\n    \"output_specification\": number,\n    \"search_strategy_fit\": number\n  },\n  \"overall\": number,\n  \"feedback\": string,\n  \"improvements\": string[]\n}\n\nPROMPT:\n\"\"\"\n{{prompt_content}}\n\"\"\"",
+  "criteria": [
+    {
+      "name": "Objective Clarity",
+      "description": "How clearly the prompt states the SEO objective, page type, and desired outcome.",
+      "weight": 1.2,
+      "maxScore": 10
+    },
+    {
+      "name": "Context Completeness",
+      "description": "How well the prompt provides site context, target audience, query intent, content type, and current constraints.",
+      "weight": 1.2,
+      "maxScore": 10
+    },
+    {
+      "name": "Constraints and Guardrails",
+      "description": "How well the prompt defines brand, technical, claim, and scope boundaries, including what should not be assumed.",
+      "weight": 1.2,
+      "maxScore": 10
+    },
+    {
+      "name": "Output Specification",
+      "description": "How clearly the prompt defines outputs such as briefs, outlines, audit steps, hypotheses, or measurement plans.",
+      "weight": 1.1,
+      "maxScore": 10
+    },
+    {
+      "name": "Search Strategy Fit",
+      "description": "How effectively the prompt aligns the requested output with intent, content quality, discoverability, and measurable search outcomes.",
+      "weight": 1.3,
+      "maxScore": 10
+    }
+  ],
+  "overallCalculation": "weighted average of all criteria, rounded to one decimal place",
+  "tierThresholds": {
+    "super": 8.5,
+    "pro": 7.0,
+    "builder": 5.0,
+    "starter": 0
+  }
+}
