@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
   backend:
     build:
@@ -32,6 +30,7 @@ services:
       - CHOKIDAR_USEPOLLING=true
       - CHOKIDAR_INTERVAL=1000
       - HOST=0.0.0.0
+      - NEXT_PUBLIC_API_URL=http://localhost:4000/api
       # - PORT=3000
     ports:
       - target: 3000

@@ -3,13 +3,44 @@
 import * as React from 'react';
 
 interface CircularScoreProps {
-  score: number; // 0-10
+  score: number | null | undefined; // 0-10, or null if pending
   isLight?: boolean;
+  status?: 'pending' | 'completed' | 'failed';
 }
 
-export function CircularScore({ score, isLight = true }: CircularScoreProps) {
+export function CircularScore({ score, isLight = true, status }: CircularScoreProps) {
   const [displayScore, setDisplayScore] = React.useState(0);
   const circumference = 2 * Math.PI * 45;
+
+  // Handle pending/missing evaluations
+  if (!score || status === 'pending') {
+    return (
+      <div className="flex flex-col items-center justify-center">
+        <div className="relative h-[60px] w-[60px] flex items-center justify-center">
+          <svg
+            width="60"
+            height="60"
+            viewBox="0 0 100 100"
+            className="absolute inset-0"
+          >
+            <circle
+              cx="50"
+              cy="50"
+              r="45"
+              fill="none"
+              stroke={isLight ? '#e5e5e5' : '#3a3b40'}
+              strokeWidth="4"
+            />
+          </svg>
+          <span className="text-[16px] font-bold text-gray-400">—</span>
+        </div>
+
+        <div className="mt-2 text-center text-[10px] font-bold uppercase tracking-wider text-gray-400">
+          Pending
+        </div>
+      </div>
+    );
+  }
 
   React.useEffect(() => {
     const duration = 800;

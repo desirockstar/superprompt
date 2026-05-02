@@ -9,18 +9,19 @@ interface RatingProps {
   promptId: string;
   average?: number;
   count?: number;
+  status?: 'pending' | 'completed' | 'failed';
   onRatingChange?: (rating: number) => void;
 }
 
-export function RatingDisplay({ promptId, average, count = 0 }: RatingProps) {
+export function RatingDisplay({ promptId, average, count = 0, status }: RatingProps) {
   const [loading, setLoading] = useState(true);
-  const [ratingData, setRatingData] = useState({ average, count });
+  const [ratingData, setRatingData] = useState({ average, count, status });
 
   useEffect(() => {
     async function fetchRating() {
       try {
-        const data = await api.get<{ average: number | null; count: number }>(`/prompts/${promptId}/rating`);
-        setRatingData({ average: data.average ?? undefined, count: data.count });
+        const data = await api.get<{ average: number | null; count: number; status?: 'pending' | 'completed' | 'failed' }>(`/prompts/${promptId}/rating`);
+        setRatingData({ average: data.average ?? undefined, count: data.count, status: data.status });
       } catch (err) {
         console.error('Failed to fetch rating:', err);
       } finally {
@@ -32,6 +33,11 @@ export function RatingDisplay({ promptId, average, count = 0 }: RatingProps) {
 
   if (loading) {
     return <span className="text-sm text-muted-foreground">Loading...</span>;
+  }
+
+  // Show pending state
+  if (ratingData.status === 'pending' || !ratingData.average) {
+    return <span className="text-sm text-gray-400">Not yet rated</span>;
   }
 
   if (ratingData.count === 0) {

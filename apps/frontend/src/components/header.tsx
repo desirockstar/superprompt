@@ -22,7 +22,7 @@ export function Header() {
     <header className="fixed left-1/2 top-4 z-50 -translate-x-1/2">
       <nav className="flex items-center gap-2 rounded-full border border-white/20 bg-black px-4 py-2 shadow-lg">
         <Link href="/" className="flex items-center shrink-0">
-          <Image src="/logo.png" alt="SuperPrompt" width={120} height={100} priority className="hidden md:block" />
+          <Image src="/logo.png" alt="SuperPrompt" width={120} height={100} style={{ height: 'auto' }} priority className="hidden md:block" />
           <Image src="/logo_small.png" alt="SuperPrompt" width={40} height={40} priority className="block md:hidden" />
         </Link>
 

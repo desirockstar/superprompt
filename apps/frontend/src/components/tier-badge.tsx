@@ -6,6 +6,7 @@ type TierLevel = 'starter' | 'builder' | 'pro' | 'super';
 interface TierBadgeProps {
   level: TierLevel | null | undefined;
   showLabel?: boolean;
+  showPending?: boolean;
 }
 
 const TIER_LABELS: Record<TierLevel, string> = {
@@ -22,8 +23,15 @@ const TIER_ICONS: Record<TierLevel, string> = {
   super: '👑',
 };
 
-export function TierBadge({ level, showLabel = true }: TierBadgeProps) {
+export function TierBadge({ level, showLabel = true, showPending = true }: TierBadgeProps) {
   if (!level) {
+    if (showPending) {
+      return (
+        <Badge variant="outline" className="text-xs text-gray-500 bg-gray-50">
+          ⏳ Pending
+        </Badge>
+      );
+    }
     return null;
   }
 

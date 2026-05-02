@@ -65,12 +65,26 @@ export default function PromptPage() {
 
   async function loadEvaluation() {
     try {
-      const evalData = await api.get<{ level: string | null }>(`/prompts/${promptId}/evaluation`);
+      const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000';
+      const response = await fetch(`${baseUrl}/api/prompts/${promptId}/evaluation`, {
+        cache: 'no-store',
+      });
+      if (!response.ok || response.status === 204) {
+        setEvaluationTier(null);
+        return;
+      }
+      const text = await response.text();
+      if (!text) {
+        setEvaluationTier(null);
+        return;
+      }
+      const evalData = JSON.parse(text);
       if (evalData.level) {
         setEvaluationTier(evalData.level as 'starter' | 'builder' | 'pro' | 'super');
       }
     } catch (error) {
       console.error('Failed to load evaluation:', error);
+      setEvaluationTier(null);
     }
   }
 
@@ -203,7 +217,7 @@ export default function PromptPage() {
   };
 
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background pt-6">
       <div className="container mx-auto py-8 px-4">
         <div className="mb-6">
           <div className="flex items-center gap-2 mb-2">

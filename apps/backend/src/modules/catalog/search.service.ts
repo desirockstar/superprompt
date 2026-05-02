@@ -71,7 +71,7 @@ export class SearchService {
     if (options.tier && options.tier !== 'All' && options.tierMap) {
       allPrompts = allPrompts.filter(p => {
         const evalTier = options.tierMap!.get(p.id.toString())?.level;
-        return evalTier === options.tier;
+        return evalTier?.toLowerCase() === options.tier.toLowerCase();
       });
     }
 
