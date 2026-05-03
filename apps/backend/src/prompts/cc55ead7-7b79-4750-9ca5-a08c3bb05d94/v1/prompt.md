@@ -1,6 +1,5 @@
 ---
 title: "🎉 Build Customer Anniversary Campaign"
-source: godofprompt.ai
 slug: "promptsbuild-customer-anniversary-campaign"
 ---
 

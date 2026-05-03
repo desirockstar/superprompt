@@ -1,6 +1,5 @@
 ---
 title: "📝 Create Compelling Website Copy"
-source: godofprompt.ai
 slug: "promptscreate-compelling-website-copy"
 ---
 

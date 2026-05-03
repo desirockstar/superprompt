@@ -1,6 +1,5 @@
 ---
 title: "🛠️ Design Bug Report Templates"
-source: godofprompt.ai
 slug: "promptsdesign-bug-report-templates"
 ---
 

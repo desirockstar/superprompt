@@ -1,6 +1,5 @@
 ---
 title: "🔍 Analyze Competitor Keyword Gaps"
-source: godofprompt.ai
 slug: "promptsanalyze-competitor-keyword-gaps"
 ---
 

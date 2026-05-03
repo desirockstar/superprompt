@@ -1,6 +1,5 @@
 ---
 title: "📋 Delegate Team Tasks"
-source: godofprompt.ai
 slug: "promptsdelegate-team-tasks"
 ---
 

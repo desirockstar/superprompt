@@ -1,6 +1,5 @@
 ---
 title: "🔍 Develop Neural Network"
-source: godofprompt.ai
 slug: "promptsdevelop-neural-network"
 ---
 

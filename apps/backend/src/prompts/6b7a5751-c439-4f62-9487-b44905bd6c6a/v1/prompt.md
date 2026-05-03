@@ -1,6 +1,5 @@
 ---
 title: "🦋 Generate Before After Food Infographics"
-source: godofprompt.ai
 slug: "promptsgenerate-before-after-food-infographics"
 ---
 

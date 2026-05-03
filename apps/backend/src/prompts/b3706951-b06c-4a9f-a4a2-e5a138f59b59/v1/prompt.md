@@ -1,6 +1,5 @@
 ---
 title: "🛡️ Create Personalized Security Reminders"
-source: godofprompt.ai
 slug: "promptscreate-personalized-security-reminders"
 ---
 

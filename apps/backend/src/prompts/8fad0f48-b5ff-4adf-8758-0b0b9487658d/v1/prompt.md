@@ -1,6 +1,5 @@
 ---
 title: "🎯 Define Business Goals"
-source: godofprompt.ai
 slug: "promptsdefine-business-goals"
 ---
 

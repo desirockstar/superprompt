@@ -1,6 +1,5 @@
 ---
 title: "🔍 Generate Customer Feedback Analysis"
-source: godofprompt.ai
 slug: "promptsgenerate-customer-feedback-analysis"
 ---
 

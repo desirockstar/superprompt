@@ -1,6 +1,5 @@
 ---
 title: "💎 Get Red Glass Gel Icons"
-source: godofprompt.ai
 slug: "promptsget-red-glass-gel-icons"
 ---
 

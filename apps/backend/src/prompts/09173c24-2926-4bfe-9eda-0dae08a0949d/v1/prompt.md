@@ -1,6 +1,5 @@
 ---
 title: "📦 Strategize Branding and Packaging"
-source: godofprompt.ai
 slug: "promptsstrategize-branding-and-packaging"
 ---
 

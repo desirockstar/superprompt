@@ -1,6 +1,5 @@
 ---
 title: "📊 Develop Operational Plan"
-source: godofprompt.ai
 slug: "promptsdevelop-operational-plan"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "📈 Optimize Category Descriptions"
-source: godofprompt.ai
 slug: "promptsoptimize-category-descriptions"
 ---
 

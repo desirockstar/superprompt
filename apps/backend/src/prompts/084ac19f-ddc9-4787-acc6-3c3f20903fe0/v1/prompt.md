@@ -1,6 +1,5 @@
 ---
 title: "🌂 Build Outreach Automation Playbooks"
-source: godofprompt.ai
 slug: "promptsbuild-outreach-automation-playbooks"
 ---
 

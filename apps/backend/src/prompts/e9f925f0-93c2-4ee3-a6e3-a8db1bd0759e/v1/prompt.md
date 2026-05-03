@@ -1,6 +1,5 @@
 ---
 title: "📰 Create Employee Engagement Newsletter"
-source: godofprompt.ai
 slug: "promptscreate-employee-engagement-newsletter"
 ---
 

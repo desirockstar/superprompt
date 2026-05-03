@@ -1,6 +1,5 @@
 ---
 title: "🖥️ Create Website Design Screenshots"
-source: godofprompt.ai
 slug: "promptscreate-website-design-screenshots"
 ---
 

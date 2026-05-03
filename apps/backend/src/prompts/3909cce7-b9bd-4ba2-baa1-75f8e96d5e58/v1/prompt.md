@@ -1,6 +1,5 @@
 ---
 title: "🧊 Get Frosted Resin Icons"
-source: godofprompt.ai
 slug: "promptsget-frosted-resin-icons"
 ---
 

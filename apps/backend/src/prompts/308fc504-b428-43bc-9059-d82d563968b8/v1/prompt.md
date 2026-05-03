@@ -1,6 +1,5 @@
 ---
 title: "⚖️ Build Currency Converter Apps"
-source: godofprompt.ai
 slug: "promptsbuild-currency-converter-apps"
 ---
 

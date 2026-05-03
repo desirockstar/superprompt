@@ -1,6 +1,5 @@
 ---
 title: "🛠️ Develop Docker Containerizations"
-source: godofprompt.ai
 slug: "promptsdevelop-docker-containerizations"
 ---
 

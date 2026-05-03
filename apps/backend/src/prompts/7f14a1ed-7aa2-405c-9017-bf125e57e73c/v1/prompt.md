@@ -1,6 +1,5 @@
 ---
 title: "🚚 Solve Shipping Challenges"
-source: godofprompt.ai
 slug: "promptssolve-shipping-challenges"
 ---
 

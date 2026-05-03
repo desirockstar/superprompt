@@ -1,6 +1,5 @@
 ---
 title: "🤝 Generate Strategic Business Partnerships"
-source: godofprompt.ai
 slug: "promptsgenerate-strategic-business-partnerships"
 ---
 

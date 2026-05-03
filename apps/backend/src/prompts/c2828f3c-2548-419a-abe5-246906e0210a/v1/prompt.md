@@ -1,6 +1,5 @@
 ---
 title: "🛎️ Build Minimalist Ordering Applications"
-source: godofprompt.ai
 slug: "promptsbuild-minimalist-ordering-applications"
 ---
 

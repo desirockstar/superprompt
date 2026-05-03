@@ -1,6 +1,5 @@
 ---
 title: "🛠️ Generate Shell Scripts"
-source: godofprompt.ai
 slug: "promptsgenerate-shell-scripts"
 ---
 

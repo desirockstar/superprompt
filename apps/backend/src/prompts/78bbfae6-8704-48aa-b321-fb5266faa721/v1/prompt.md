@@ -1,6 +1,5 @@
 ---
 title: "🛠️ Develop SEO Implementation Checklists"
-source: godofprompt.ai
 slug: "promptsdevelop-seo-implementation-checklists"
 ---
 

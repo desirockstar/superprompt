@@ -1,6 +1,5 @@
 ---
 title: "🎉 Build Habit-Tracking Apps"
-source: godofprompt.ai
 slug: "promptsbuild-habit-tracking-apps"
 ---
 

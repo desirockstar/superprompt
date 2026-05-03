@@ -1,6 +1,5 @@
 ---
 title: "🪸 Generate Sculptural Spa Bathroom Interiors"
-source: godofprompt.ai
 slug: "promptsgenerate-sculptural-spa-bathroom-interiors"
 ---
 

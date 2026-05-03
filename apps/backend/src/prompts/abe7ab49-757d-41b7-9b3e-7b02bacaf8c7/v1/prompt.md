@@ -1,6 +1,5 @@
 ---
 title: "📈 Craft App Store Descriptions"
-source: godofprompt.ai
 slug: "promptscraft-app-store-descriptions"
 ---
 

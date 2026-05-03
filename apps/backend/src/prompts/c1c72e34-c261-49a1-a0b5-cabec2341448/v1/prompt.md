@@ -1,6 +1,5 @@
 ---
 title: "🍱 Render Mixed-Use Architecture Visualizations"
-source: godofprompt.ai
 slug: "promptsrender-mixed-use-architecture-visualizations"
 ---
 

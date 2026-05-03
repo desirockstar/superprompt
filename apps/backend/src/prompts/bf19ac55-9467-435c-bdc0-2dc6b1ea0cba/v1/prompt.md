@@ -1,6 +1,5 @@
 ---
 title: "📘 Generate Blue Ocean Strategy"
-source: godofprompt.ai
 slug: "promptsgenerate-blue-ocean-strategy"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "♟️ Audit API Architecture"
-source: godofprompt.ai
 slug: "promptsaudit-api-architecture"
 ---
 

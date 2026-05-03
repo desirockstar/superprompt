@@ -1,6 +1,5 @@
 ---
 title: "📢 Enhance Team Communication Skills"
-source: godofprompt.ai
 slug: "promptsenhance-team-communication-skills"
 ---
 

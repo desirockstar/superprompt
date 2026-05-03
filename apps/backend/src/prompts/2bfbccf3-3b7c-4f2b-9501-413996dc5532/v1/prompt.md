@@ -1,6 +1,5 @@
 ---
 title: "🖼️ Write Image Resizing Script"
-source: godofprompt.ai
 slug: "promptswrite-image-resizing-script"
 ---
 

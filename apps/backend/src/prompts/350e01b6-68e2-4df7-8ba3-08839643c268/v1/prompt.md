@@ -1,6 +1,5 @@
 ---
 title: "🦋 Tell Customer Stories"
-source: godofprompt.ai
 slug: "promptstell-customer-stories"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "📜 Ensure Regulatory Compliance"
-source: godofprompt.ai
 slug: "promptsensure-regulatory-compliance"
 ---
 

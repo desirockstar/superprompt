@@ -1,6 +1,5 @@
 ---
 title: "🚀 Build Marketing Outreach Trackers"
-source: godofprompt.ai
 slug: "promptsbuild-marketing-outreach-trackers-2"
 ---
 

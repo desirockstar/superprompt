@@ -1,6 +1,5 @@
 ---
 title: "🎮 Explain Version Control Basics"
-source: godofprompt.ai
 slug: "promptsexplain-version-control-basics"
 ---
 

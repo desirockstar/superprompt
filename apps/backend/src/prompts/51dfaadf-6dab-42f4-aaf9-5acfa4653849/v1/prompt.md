@@ -1,6 +1,5 @@
 ---
 title: "🧶 Resolve Technical Support Issues"
-source: godofprompt.ai
 slug: "promptsresolve-technical-support-issues"
 ---
 

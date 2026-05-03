@@ -1,6 +1,5 @@
 ---
 title: "🎨 Build Marketing Meme Designers"
-source: godofprompt.ai
 slug: "promptsbuild-marketing-meme-designers"
 ---
 

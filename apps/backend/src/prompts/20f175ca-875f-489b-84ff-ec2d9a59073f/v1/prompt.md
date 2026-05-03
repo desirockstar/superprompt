@@ -1,6 +1,5 @@
 ---
 title: "🔍 Generate Production-Ready n8n Workflows"
-source: godofprompt.ai
 slug: "promptsgenerate-production-ready-n8n-workflows"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "♟️ Design Database Schemas"
-source: godofprompt.ai
 slug: "promptsdesign-database-schemas"
 ---
 

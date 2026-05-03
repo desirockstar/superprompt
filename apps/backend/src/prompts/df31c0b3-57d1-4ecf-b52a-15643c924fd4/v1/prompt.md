@@ -1,6 +1,5 @@
 ---
 title: "🏺 Craft Service Recovery Apology Messages"
-source: godofprompt.ai
 slug: "promptscraft-service-recovery-apology-messages"
 ---
 

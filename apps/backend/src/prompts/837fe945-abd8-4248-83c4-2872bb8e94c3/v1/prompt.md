@@ -1,6 +1,5 @@
 ---
 title: "🚀 Draft Order Tracking Copy"
-source: godofprompt.ai
 slug: "promptsdraft-order-tracking-copy"
 ---
 

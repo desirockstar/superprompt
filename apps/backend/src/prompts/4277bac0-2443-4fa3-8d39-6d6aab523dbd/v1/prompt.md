@@ -1,6 +1,5 @@
 ---
 title: "🌱 Create Blog SEO Calendars"
-source: godofprompt.ai
 slug: "promptscreate-blog-seo-calendars"
 ---
 

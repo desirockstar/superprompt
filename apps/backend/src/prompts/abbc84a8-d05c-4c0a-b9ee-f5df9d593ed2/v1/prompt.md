@@ -1,6 +1,5 @@
 ---
 title: "🦾 Create Personalized AI Integration Plans"
-source: godofprompt.ai
 slug: "promptscreate-personalized-ai-integration-plans"
 ---
 

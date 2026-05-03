@@ -1,6 +1,5 @@
 ---
 title: "♟️ Analyze Real Estate Refinance Decisions"
-source: godofprompt.ai
 slug: "promptsanalyze-real-estate-refinance-decisions"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "📊 Monitor Project Progress Metrics"
-source: godofprompt.ai
 slug: "promptsmonitor-project-progress-metrics"
 ---
 

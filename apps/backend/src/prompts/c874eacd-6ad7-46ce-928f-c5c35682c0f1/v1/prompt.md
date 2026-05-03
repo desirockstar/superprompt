@@ -1,6 +1,5 @@
 ---
 title: "📝 Design Contact Forms"
-source: godofprompt.ai
 slug: "promptsdesign-contact-forms"
 ---
 

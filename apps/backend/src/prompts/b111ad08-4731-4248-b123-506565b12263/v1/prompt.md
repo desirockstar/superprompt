@@ -1,6 +1,5 @@
 ---
 title: "🔄 Request Customer Feedback"
-source: godofprompt.ai
 slug: "promptsrequest-customer-feedback"
 ---
 

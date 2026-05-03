@@ -1,6 +1,5 @@
 ---
 title: "🔍 Generate Dynamic Customer Segments"
-source: godofprompt.ai
 slug: "promptsgenerate-dynamic-customer-segments"
 ---
 

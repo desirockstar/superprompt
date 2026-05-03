@@ -1,6 +1,5 @@
 ---
 title: "🧩 Optimize Database Query"
-source: godofprompt.ai
 slug: "promptsoptimize-database-query"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🔄 Create Customer Re-Engagement Campaigns"
-source: godofprompt.ai
 slug: "promptscreate-customer-re-engagement-campaigns"
 ---
 

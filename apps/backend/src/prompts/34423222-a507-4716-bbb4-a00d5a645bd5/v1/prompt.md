@@ -1,6 +1,5 @@
 ---
 title: "📅 Create Project Timeline"
-source: godofprompt.ai
 slug: "promptscreate-project-timeline"
 ---
 

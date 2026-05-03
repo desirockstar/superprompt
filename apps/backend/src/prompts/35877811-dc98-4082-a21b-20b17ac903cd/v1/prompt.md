@@ -1,6 +1,5 @@
 ---
 title: "📈 Create Trade Journal Entries"
-source: godofprompt.ai
 slug: "promptscreate-trade-journal-entries"
 ---
 

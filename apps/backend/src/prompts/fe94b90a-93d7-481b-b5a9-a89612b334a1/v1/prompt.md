@@ -1,6 +1,5 @@
 ---
 title: "⏳ Create Automated Price Alert Systems"
-source: godofprompt.ai
 slug: "promptscreate-automated-price-alert-systems"
 ---
 

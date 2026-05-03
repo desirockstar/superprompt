@@ -1,6 +1,5 @@
 ---
 title: "🎮 Design Gaming App UI Mockups"
-source: godofprompt.ai
 slug: "promptsdesign-gaming-app-ui-mockups"
 ---
 

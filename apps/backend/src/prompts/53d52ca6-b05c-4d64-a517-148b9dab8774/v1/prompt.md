@@ -1,6 +1,5 @@
 ---
 title: "🔄 Convert Mobile Apps to Web-Based Apps"
-source: godofprompt.ai
 slug: "promptsconvert-mobile-apps-to-web-based-apps"
 ---
 

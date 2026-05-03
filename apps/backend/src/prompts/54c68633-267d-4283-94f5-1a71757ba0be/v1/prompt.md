@@ -1,6 +1,5 @@
 ---
 title: "🎰 Develop Pricing Strategy"
-source: godofprompt.ai
 slug: "promptsdevelop-pricing-strategy"
 ---
 

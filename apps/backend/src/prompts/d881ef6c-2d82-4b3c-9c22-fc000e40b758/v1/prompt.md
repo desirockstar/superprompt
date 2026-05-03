@@ -1,6 +1,5 @@
 ---
 title: "🔍 Solve Case Sensitivity Bugs"
-source: godofprompt.ai
 slug: "promptssolve-case-sensitivity-bugs"
 ---
 

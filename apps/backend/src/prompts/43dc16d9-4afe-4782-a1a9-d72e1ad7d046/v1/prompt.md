@@ -1,6 +1,5 @@
 ---
 title: "🔍 Eliminate Unused Import"
-source: godofprompt.ai
 slug: "promptseliminate-unused-import"
 ---
 

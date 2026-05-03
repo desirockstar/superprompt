@@ -1,6 +1,5 @@
 ---
 title: "🔗 Optimize Website URL Structure"
-source: godofprompt.ai
 slug: "promptsoptimize-website-url-structure"
 ---
 

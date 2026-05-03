@@ -1,6 +1,5 @@
 ---
 title: "🔍 Clean Up Vibe Code"
-source: godofprompt.ai
 slug: "promptsclean-up-vibe-code"
 ---
 

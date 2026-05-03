@@ -1,6 +1,5 @@
 ---
 title: "🚀 Develop Product Launch Plans"
-source: godofprompt.ai
 slug: "promptsdevelop-product-launch-plans"
 ---
 

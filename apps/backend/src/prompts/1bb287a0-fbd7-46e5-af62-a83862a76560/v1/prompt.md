@@ -1,6 +1,5 @@
 ---
 title: "🖥️ Compare Programming Languages"
-source: godofprompt.ai
 slug: "promptscompare-programming-languages"
 ---
 

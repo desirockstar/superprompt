@@ -1,6 +1,5 @@
 ---
 title: "💎 Get Iridescent Effects Icon"
-source: godofprompt.ai
 slug: "promptsget-iridescent-effects-icon"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🛒 Optimize Cart Page for Conversions"
-source: godofprompt.ai
 slug: "promptsoptimize-cart-page-for-conversions"
 ---
 

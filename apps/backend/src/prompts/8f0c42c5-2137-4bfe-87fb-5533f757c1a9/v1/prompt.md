@@ -1,6 +1,5 @@
 ---
 title: "📜 Craft Return Policies"
-source: godofprompt.ai
 slug: "promptscraft-return-policies"
 ---
 

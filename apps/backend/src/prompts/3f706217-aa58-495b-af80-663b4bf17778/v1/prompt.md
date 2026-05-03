@@ -1,6 +1,5 @@
 ---
 title: "🎮 Design Onboarding Flow"
-source: godofprompt.ai
 slug: "promptsdesign-onboarding-flow"
 ---
 

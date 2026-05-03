@@ -1,6 +1,5 @@
 ---
 title: "🎲 Develop Dice Rolling Simulators"
-source: godofprompt.ai
 slug: "promptsdevelop-dice-rolling-simulators"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🛠️ Draft Supplier Follow-Ups"
-source: godofprompt.ai
 slug: "promptsdraft-supplier-follow-ups"
 ---
 

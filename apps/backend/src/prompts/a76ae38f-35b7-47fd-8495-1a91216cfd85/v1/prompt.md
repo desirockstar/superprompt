@@ -1,6 +1,5 @@
 ---
 title: "🛠️ Perform API Integrations"
-source: godofprompt.ai
 slug: "promptsperform-api-integrations"
 ---
 

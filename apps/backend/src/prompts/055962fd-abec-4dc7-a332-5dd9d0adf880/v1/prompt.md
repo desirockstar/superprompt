@@ -1,6 +1,5 @@
 ---
 title: "📚 Develop Glossary Builder Apps"
-source: godofprompt.ai
 slug: "promptsdevelop-glossary-builder-apps"
 ---
 

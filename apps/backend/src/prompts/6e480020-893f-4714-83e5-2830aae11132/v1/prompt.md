@@ -1,6 +1,5 @@
 ---
 title: "🎨 Create Ultra-Realistic Character Portraits"
-source: godofprompt.ai
 slug: "promptscreate-ultra-realistic-character-portraits"
 ---
 

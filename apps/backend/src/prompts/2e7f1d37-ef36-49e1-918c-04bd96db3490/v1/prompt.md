@@ -1,6 +1,5 @@
 ---
 title: "📊 Develop CRM Dashboard Frameworks"
-source: godofprompt.ai
 slug: "promptsdevelop-crm-dashboard-frameworks"
 ---
 

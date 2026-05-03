@@ -1,6 +1,5 @@
 ---
 title: "🌪️ Build File Sorting System"
-source: godofprompt.ai
 slug: "promptsbuild-file-sorting-system"
 ---
 

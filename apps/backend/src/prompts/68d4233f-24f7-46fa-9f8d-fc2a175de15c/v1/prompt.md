@@ -1,6 +1,5 @@
 ---
 title: "🌱 Draft Product Care Instructions"
-source: godofprompt.ai
 slug: "promptsdraft-product-care-instructions"
 ---
 

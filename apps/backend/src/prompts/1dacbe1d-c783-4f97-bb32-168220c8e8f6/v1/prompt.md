@@ -1,6 +1,5 @@
 ---
 title: "🩺 Optimize File I/O Operations"
-source: godofprompt.ai
 slug: "promptsoptimize-file-io-operations"
 ---
 

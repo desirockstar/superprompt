@@ -1,6 +1,5 @@
 ---
 title: "🔑 Recommend Payment Gateway Solutions"
-source: godofprompt.ai
 slug: "promptsrecommend-payment-gateway-solutions"
 ---
 

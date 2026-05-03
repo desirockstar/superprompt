@@ -1,6 +1,5 @@
 ---
 title: "🎮 Create Stunning Visual Concepts Images"
-source: godofprompt.ai
 slug: "promptscreate-stunning-visual-concepts-images"
 ---
 

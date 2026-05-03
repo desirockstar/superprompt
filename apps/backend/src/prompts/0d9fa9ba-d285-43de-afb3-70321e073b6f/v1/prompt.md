@@ -1,6 +1,5 @@
 ---
 title: "🤖 Create Sentiment Analysis Model"
-source: godofprompt.ai
 slug: "promptscreate-sentiment-analysis-model"
 ---
 

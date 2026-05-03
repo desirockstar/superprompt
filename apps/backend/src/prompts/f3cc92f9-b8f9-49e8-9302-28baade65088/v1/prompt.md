@@ -1,6 +1,5 @@
 ---
 title: "🌅 Create Stunning Pool Landscapes"
-source: godofprompt.ai
 slug: "promptscreate-stunning-pool-landscapes"
 ---
 

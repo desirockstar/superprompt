@@ -1,6 +1,5 @@
 ---
 title: "🕸️ Build Social Media Strategies"
-source: godofprompt.ai
 slug: "promptsbuild-social-media-strategies"
 ---
 

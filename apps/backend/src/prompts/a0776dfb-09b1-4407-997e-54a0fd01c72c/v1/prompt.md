@@ -1,6 +1,5 @@
 ---
 title: "✨ Generate UI Text And Labels"
-source: godofprompt.ai
 slug: "promptsgenerate-ui-text-and-labels"
 ---
 

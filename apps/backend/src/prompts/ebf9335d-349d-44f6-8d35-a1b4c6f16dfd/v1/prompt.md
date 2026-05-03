@@ -1,6 +1,5 @@
 ---
 title: "🚀 Optimize Website Speed"
-source: godofprompt.ai
 slug: "promptsoptimize-website-speed"
 ---
 

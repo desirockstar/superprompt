@@ -1,6 +1,5 @@
 ---
 title: "🛠️ Generate Dispute Message Templates"
-source: godofprompt.ai
 slug: "promptsgenerate-dispute-message-templates"
 ---
 

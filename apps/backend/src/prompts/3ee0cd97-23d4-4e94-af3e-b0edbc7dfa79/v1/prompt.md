@@ -1,6 +1,5 @@
 ---
 title: "🔍 Solve Workflow Bottlenecks"
-source: godofprompt.ai
 slug: "promptssolve-workflow-bottlenecks"
 ---
 

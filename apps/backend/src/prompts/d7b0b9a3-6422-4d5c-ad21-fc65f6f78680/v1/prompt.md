@@ -1,6 +1,5 @@
 ---
 title: "🛠️ Generate App Tutorials"
-source: godofprompt.ai
 slug: "promptsgenerate-app-tutorials"
 ---
 

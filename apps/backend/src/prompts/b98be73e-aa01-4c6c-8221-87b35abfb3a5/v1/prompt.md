@@ -1,6 +1,5 @@
 ---
 title: "🎨 Get Playful 3D Matte Icons"
-source: godofprompt.ai
 slug: "promptsget-playful-3d-matte-icons"
 ---
 

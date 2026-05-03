@@ -1,6 +1,5 @@
 ---
 title: "🔄 Design AI Feedback System"
-source: godofprompt.ai
 slug: "promptsdesign-ai-feedback-system"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "📊 Improve Operational Efficiency"
-source: godofprompt.ai
 slug: "promptsimprove-operational-efficiency"
 ---
 

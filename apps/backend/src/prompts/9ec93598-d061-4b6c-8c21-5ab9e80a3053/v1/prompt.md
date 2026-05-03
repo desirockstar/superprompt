@@ -1,6 +1,5 @@
 ---
 title: "📝 Define Grant Objectives"
-source: godofprompt.ai
 slug: "promptsdefine-grant-objectives"
 ---
 

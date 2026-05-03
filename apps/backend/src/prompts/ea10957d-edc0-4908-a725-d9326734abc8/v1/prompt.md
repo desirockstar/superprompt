@@ -1,6 +1,5 @@
 ---
 title: "📦 Optimize Inventory Management System"
-source: godofprompt.ai
 slug: "promptsoptimize-inventory-management-system"
 ---
 

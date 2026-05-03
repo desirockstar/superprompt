@@ -1,6 +1,5 @@
 ---
 title: "📊 Conduct Gap Analysis"
-source: godofprompt.ai
 slug: "promptsconduct-gap-analysis"
 ---
 

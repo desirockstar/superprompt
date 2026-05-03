@@ -1,6 +1,5 @@
 ---
 title: "📊 Explore [Job Role] Career Insights"
-source: godofprompt.ai
 slug: "promptsexplore-job-role-career-insights"
 ---
 

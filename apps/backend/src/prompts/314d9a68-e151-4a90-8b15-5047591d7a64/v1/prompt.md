@@ -1,6 +1,5 @@
 ---
 title: "🩻 Analyze Vibe Code Quality"
-source: godofprompt.ai
 slug: "promptsanalyze-vibe-code-quality"
 ---
 

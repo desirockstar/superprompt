@@ -1,6 +1,5 @@
 ---
 title: "🚀 Create a Go-to-Market Strategy"
-source: godofprompt.ai
 slug: "promptscreate-a-go-to-market-strategy"
 ---
 

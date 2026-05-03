@@ -1,6 +1,5 @@
 ---
 title: "🌱 Design Community Engagement Strategies"
-source: godofprompt.ai
 slug: "promptsdesign-community-engagement-strategies"
 ---
 

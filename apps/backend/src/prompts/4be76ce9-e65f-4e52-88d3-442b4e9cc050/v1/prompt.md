@@ -1,6 +1,5 @@
 ---
 title: "🕸️ Develop Internal Linking Framework"
-source: godofprompt.ai
 slug: "promptsdevelop-internal-linking-framework"
 ---
 

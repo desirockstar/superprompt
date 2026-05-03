@@ -1,6 +1,5 @@
 ---
 title: "🦓 Create Isometric Zoo Models"
-source: godofprompt.ai
 slug: "promptscreate-isometric-zoo-models"
 ---
 

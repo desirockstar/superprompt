@@ -1,6 +1,5 @@
 ---
 title: "🛠️ Generate SQL Queries"
-source: godofprompt.ai
 slug: "promptsgenerate-sql-queries"
 ---
 

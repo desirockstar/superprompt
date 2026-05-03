@@ -1,6 +1,5 @@
 ---
 title: "🚀 Build Project Management Dashboards"
-source: godofprompt.ai
 slug: "promptsbuild-project-management-dashboards"
 ---
 

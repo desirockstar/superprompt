@@ -1,6 +1,5 @@
 ---
 title: "🛡️ Draft Deployment Plan"
-source: godofprompt.ai
 slug: "promptsdraft-deployment-plan"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🎞️ Generate Candid Street Portraits"
-source: godofprompt.ai
 slug: "promptsgenerate-candid-street-portraits"
 ---
 

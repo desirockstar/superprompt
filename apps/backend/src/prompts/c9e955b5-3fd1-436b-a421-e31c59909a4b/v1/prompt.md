@@ -1,6 +1,5 @@
 ---
 title: "🗝️ Draft Documentation From Vibe Code"
-source: godofprompt.ai
 slug: "promptsdraft-documentation-from-vibe-code"
 ---
 

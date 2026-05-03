@@ -1,6 +1,5 @@
 ---
 title: "🎨 Create Custom Icons"
-source: godofprompt.ai
 slug: "promptscreate-custom-icons"
 ---
 

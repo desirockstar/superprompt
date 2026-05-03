@@ -1,6 +1,5 @@
 ---
 title: "🔧 Develop Error Handling System"
-source: godofprompt.ai
 slug: "promptsdevelop-error-handling-system"
 ---
 

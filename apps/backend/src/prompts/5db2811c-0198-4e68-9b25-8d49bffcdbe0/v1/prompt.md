@@ -1,6 +1,5 @@
 ---
 title: "🚀 Create $10K MRR Startups"
-source: godofprompt.ai
 slug: "promptscreate-10-k-mrr-startups"
 ---
 

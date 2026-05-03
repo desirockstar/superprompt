@@ -1,6 +1,5 @@
 ---
 title: "🗿 Design Classical Character Stickers"
-source: godofprompt.ai
 slug: "promptsdesign-classical-character-stickers"
 ---
 

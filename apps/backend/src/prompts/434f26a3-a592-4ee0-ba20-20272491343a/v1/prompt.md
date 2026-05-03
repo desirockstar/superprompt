@@ -1,6 +1,5 @@
 ---
 title: "🛡️ Build Multipart Upload System"
-source: godofprompt.ai
 slug: "promptsbuild-multipart-upload-system"
 ---
 

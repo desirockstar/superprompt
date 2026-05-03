@@ -1,6 +1,5 @@
 ---
 title: "💎 Get Translucent Playglass Icons"
-source: godofprompt.ai
 slug: "promptsget-translucent-playglass-icons"
 ---
 

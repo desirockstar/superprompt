@@ -1,6 +1,5 @@
 ---
 title: "📘 Develop Content Guidelines"
-source: godofprompt.ai
 slug: "promptsdevelop-content-guidelines"
 ---
 

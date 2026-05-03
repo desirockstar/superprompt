@@ -1,6 +1,5 @@
 ---
 title: "🔍 Fix Problematic Code"
-source: godofprompt.ai
 slug: "promptsfix-problematic-code"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🧬 Merge Two Dataframes"
-source: godofprompt.ai
 slug: "promptsmerge-two-dataframes"
 ---
 

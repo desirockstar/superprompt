@@ -1,6 +1,5 @@
 ---
 title: "🌸 Get Translucent Pink Glass Icons"
-source: godofprompt.ai
 slug: "promptsget-translucent-pink-glass-icons"
 ---
 

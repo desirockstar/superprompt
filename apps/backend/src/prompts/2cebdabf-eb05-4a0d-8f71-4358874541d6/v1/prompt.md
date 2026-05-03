@@ -1,6 +1,5 @@
 ---
 title: "🕵️‍♂️ Analyze Market Dynamics"
-source: godofprompt.ai
 slug: "promptsanalyze-market-dynamics"
 ---
 

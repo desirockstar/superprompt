@@ -1,6 +1,5 @@
 ---
 title: "📝 Generate Business Plans"
-source: godofprompt.ai
 slug: "promptsgenerate-business-plans"
 ---
 

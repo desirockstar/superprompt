@@ -1,6 +1,5 @@
 ---
 title: "🧠 Improve Trading Mindset"
-source: godofprompt.ai
 slug: "promptsimprove-trading-mindset"
 ---
 

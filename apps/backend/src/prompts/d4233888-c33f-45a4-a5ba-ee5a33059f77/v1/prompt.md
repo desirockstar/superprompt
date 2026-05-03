@@ -1,6 +1,5 @@
 ---
 title: "📊 Discover Investment Opportunities"
-source: godofprompt.ai
 slug: "promptsdiscover-investment-opportunities"
 ---
 

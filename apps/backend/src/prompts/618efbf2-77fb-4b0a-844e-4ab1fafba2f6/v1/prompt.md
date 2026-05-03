@@ -1,6 +1,5 @@
 ---
 title: "📈 Develop Growth Strategies"
-source: godofprompt.ai
 slug: "promptsdevelop-growth-strategies"
 ---
 

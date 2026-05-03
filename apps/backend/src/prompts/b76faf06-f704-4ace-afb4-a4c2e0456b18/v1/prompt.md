@@ -1,6 +1,5 @@
 ---
 title: "🔒 Develop Deployment Security Strategy"
-source: godofprompt.ai
 slug: "promptsdevelop-deployment-security-strategy"
 ---
 

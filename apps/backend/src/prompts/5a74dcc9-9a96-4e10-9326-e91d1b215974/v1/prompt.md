@@ -1,6 +1,5 @@
 ---
 title: "🧩 Recommend Bonus Materials"
-source: godofprompt.ai
 slug: "promptsrecommend-bonus-materials"
 ---
 

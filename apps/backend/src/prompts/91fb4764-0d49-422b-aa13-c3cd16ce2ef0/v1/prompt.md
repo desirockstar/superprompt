@@ -1,6 +1,5 @@
 ---
 title: "🚧 Identify Off-By-One Errors"
-source: godofprompt.ai
 slug: "promptsidentify-off-by-one-errors"
 ---
 

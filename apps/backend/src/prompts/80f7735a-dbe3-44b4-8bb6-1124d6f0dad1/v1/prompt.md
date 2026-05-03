@@ -1,6 +1,5 @@
 ---
 title: "🤝 Enhance Cross-Functional Collaboration"
-source: godofprompt.ai
 slug: "promptsenhance-cross-functional-collaboration"
 ---
 

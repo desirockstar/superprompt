@@ -1,6 +1,5 @@
 ---
 title: "📊 Develop Backtesting Strategies"
-source: godofprompt.ai
 slug: "promptsdevelop-backtesting-strategies"
 ---
 

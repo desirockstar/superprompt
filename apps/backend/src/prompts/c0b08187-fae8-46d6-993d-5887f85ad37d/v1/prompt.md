@@ -1,6 +1,5 @@
 ---
 title: "🛠️ Develop Browser Extensions"
-source: godofprompt.ai
 slug: "promptsdevelop-browser-extensions"
 ---
 

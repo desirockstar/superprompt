@@ -1,6 +1,5 @@
 ---
 title: "🌍 Draft Sustainability/CSR Page Copy"
-source: godofprompt.ai
 slug: "promptsdraft-sustainability-csr-page-copy"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🧭 Generate Help Center Article Templates"
-source: godofprompt.ai
 slug: "promptsgenerate-help-center-article-templates"
 ---
 

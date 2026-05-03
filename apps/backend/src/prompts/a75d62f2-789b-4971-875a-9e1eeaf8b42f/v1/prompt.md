@@ -1,6 +1,5 @@
 ---
 title: "🔍 Conduct Business Viability"
-source: godofprompt.ai
 slug: "promptsconduct-business-viability"
 ---
 

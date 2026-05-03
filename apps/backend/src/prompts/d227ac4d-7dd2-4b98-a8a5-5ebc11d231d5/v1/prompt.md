@@ -1,6 +1,5 @@
 ---
 title: "🔄 Develop Knowledge Maintenance Strategies"
-source: godofprompt.ai
 slug: "promptsdevelop-knowledge-maintenance-strategies"
 ---
 

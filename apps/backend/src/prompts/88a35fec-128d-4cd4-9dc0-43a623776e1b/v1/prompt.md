@@ -1,6 +1,5 @@
 ---
 title: "💹 Generate Financial Forecasts"
-source: godofprompt.ai
 slug: "promptsgenerate-financial-forecasts"
 ---
 

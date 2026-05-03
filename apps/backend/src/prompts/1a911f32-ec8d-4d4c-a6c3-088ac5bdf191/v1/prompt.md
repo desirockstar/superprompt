@@ -1,6 +1,5 @@
 ---
 title: "🧠 Optimize Title Tags"
-source: godofprompt.ai
 slug: "promptsoptimize-title-tags"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🚀 Build Real-Time Monitoring Dashboards"
-source: godofprompt.ai
 slug: "promptsbuild-real-time-monitoring-dashboards"
 ---
 

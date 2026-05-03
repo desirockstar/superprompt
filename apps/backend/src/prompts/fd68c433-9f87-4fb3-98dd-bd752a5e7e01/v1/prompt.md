@@ -1,6 +1,5 @@
 ---
 title: "🏡 Create Minimalist Room Designs"
-source: godofprompt.ai
 slug: "promptscreate-minimalist-room-designs"
 ---
 

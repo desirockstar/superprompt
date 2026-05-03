@@ -1,6 +1,5 @@
 ---
 title: "🛒 Generate CTA Phrases"
-source: godofprompt.ai
 slug: "promptsgenerate-cta-phrases"
 ---
 

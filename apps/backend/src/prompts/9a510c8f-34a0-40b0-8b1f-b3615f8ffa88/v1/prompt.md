@@ -1,6 +1,5 @@
 ---
 title: "📬 Draft Newsletter Signup Text"
-source: godofprompt.ai
 slug: "promptsdraft-newsletter-signup-text"
 ---
 

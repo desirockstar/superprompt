@@ -1,6 +1,5 @@
 ---
 title: "🛡️ Build Webhook Handler"
-source: godofprompt.ai
 slug: "promptsbuild-webhook-handler"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🔍 Analyze Comparison Operators"
-source: godofprompt.ai
 slug: "promptsanalyze-comparison-operators"
 ---
 

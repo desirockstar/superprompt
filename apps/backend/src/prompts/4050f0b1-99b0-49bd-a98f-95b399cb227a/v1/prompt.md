@@ -1,6 +1,5 @@
 ---
 title: "💎 Get Floating Glassy Neon Icons"
-source: godofprompt.ai
 slug: "promptsget-floating-glassy-neon-icons"
 ---
 

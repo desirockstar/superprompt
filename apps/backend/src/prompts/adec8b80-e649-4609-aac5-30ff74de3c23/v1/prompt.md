@@ -1,6 +1,5 @@
 ---
 title: "📧 Develop Automated Email Trigger Strategies"
-source: godofprompt.ai
 slug: "promptsdevelop-automated-email-trigger-strategies"
 ---
 

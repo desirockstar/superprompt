@@ -1,6 +1,5 @@
 ---
 title: "🌉 Structure Second Mortgage Solutions"
-source: godofprompt.ai
 slug: "promptsstructure-second-mortgage-solutions"
 ---
 

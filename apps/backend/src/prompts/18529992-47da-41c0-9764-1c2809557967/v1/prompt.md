@@ -1,6 +1,5 @@
 ---
 title: "🧩 Optimize Knowledge Base Article Findability"
-source: godofprompt.ai
 slug: "promptsoptimize-knowledge-base-article-findability"
 ---
 

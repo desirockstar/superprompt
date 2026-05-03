@@ -1,6 +1,5 @@
 ---
 title: "🌈 Get High Gloss Icons"
-source: godofprompt.ai
 slug: "promptsget-high-gloss-icons"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🤖 Get AI Chatbot Solutions"
-source: godofprompt.ai
 slug: "promptsget-ai-chatbot-solutions"
 ---
 

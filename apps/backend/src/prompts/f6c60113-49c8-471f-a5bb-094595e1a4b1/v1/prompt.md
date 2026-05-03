@@ -1,6 +1,5 @@
 ---
 title: "🔒 Create Anonymous Meeting Notes"
-source: godofprompt.ai
 slug: "promptscreate-anonymous-meeting-notes"
 ---
 

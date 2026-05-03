@@ -1,6 +1,5 @@
 ---
 title: "📊 Develop Automation Strategy"
-source: godofprompt.ai
 slug: "promptsdevelop-automation-strategy"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🛡️ Create Risk Assessment Templates"
-source: godofprompt.ai
 slug: "promptscreate-risk-assessment-templates"
 ---
 

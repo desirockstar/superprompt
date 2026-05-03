@@ -1,6 +1,5 @@
 ---
 title: "🧩 Identify Knowledge Base Content Gaps"
-source: godofprompt.ai
 slug: "promptsidentify-knowledge-base-content-gaps"
 ---
 

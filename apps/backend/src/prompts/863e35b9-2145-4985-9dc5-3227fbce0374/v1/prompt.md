@@ -1,6 +1,5 @@
 ---
 title: "🧩 Build Notion Widgets"
-source: godofprompt.ai
 slug: "promptsbuild-notion-widgets"
 ---
 

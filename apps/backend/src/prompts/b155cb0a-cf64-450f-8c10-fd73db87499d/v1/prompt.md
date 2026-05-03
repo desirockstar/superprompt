@@ -1,6 +1,5 @@
 ---
 title: "📝 Create Corporate Identity Statements"
-source: godofprompt.ai
 slug: "promptscreate-corporate-identity-statements"
 ---
 

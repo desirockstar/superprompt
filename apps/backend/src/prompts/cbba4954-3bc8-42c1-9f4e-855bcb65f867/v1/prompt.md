@@ -1,6 +1,5 @@
 ---
 title: "📊 Evaluate Competitive Landscape"
-source: godofprompt.ai
 slug: "promptsevaluate-competitive-landscape"
 ---
 

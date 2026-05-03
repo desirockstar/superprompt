@@ -1,6 +1,5 @@
 ---
 title: "📈 Outline Sales Strategy"
-source: godofprompt.ai
 slug: "promptsoutline-sales-strategy"
 ---
 

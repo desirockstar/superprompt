@@ -1,6 +1,5 @@
 ---
 title: "📈 Set Up Virtual Assistant Business"
-source: godofprompt.ai
 slug: "promptsset-up-virtual-assistant-business"
 ---
 

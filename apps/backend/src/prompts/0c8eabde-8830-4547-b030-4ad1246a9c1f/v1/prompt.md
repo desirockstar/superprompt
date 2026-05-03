@@ -1,6 +1,5 @@
 ---
 title: "📜 Create RESTful API Documentations"
-source: godofprompt.ai
 slug: "promptscreate-restful-api-documentations"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🎰 Design Loyalty Program"
-source: godofprompt.ai
 slug: "promptsdesign-loyalty-program"
 ---
 

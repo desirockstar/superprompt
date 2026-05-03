@@ -1,6 +1,5 @@
 ---
 title: "📊 Analyze Business Cost Structure"
-source: godofprompt.ai
 slug: "promptsanalyze-business-cost-structure"
 ---
 

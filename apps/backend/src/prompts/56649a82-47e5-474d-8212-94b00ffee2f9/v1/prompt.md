@@ -1,6 +1,5 @@
 ---
 title: "🧘‍♂️ Generate Upsell and Cross-Sell Ideas"
-source: godofprompt.ai
 slug: "promptsgenerate-upsell-and-cross-sell-ideas"
 ---
 

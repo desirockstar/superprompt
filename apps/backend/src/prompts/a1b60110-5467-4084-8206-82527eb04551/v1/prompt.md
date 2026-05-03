@@ -1,6 +1,5 @@
 ---
 title: "💡 Think Cost-Saving Ideas"
-source: godofprompt.ai
 slug: "promptsthink-cost-saving-ideas"
 ---
 

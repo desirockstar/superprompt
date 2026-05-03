@@ -1,6 +1,5 @@
 ---
 title: "💬 Develop Chat Widgets"
-source: godofprompt.ai
 slug: "promptsdevelop-chat-widgets"
 ---
 

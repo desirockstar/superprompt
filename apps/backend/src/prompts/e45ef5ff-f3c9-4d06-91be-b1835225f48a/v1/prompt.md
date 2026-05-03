@@ -1,6 +1,5 @@
 ---
 title: "🔍 Generate FAQs for SEO"
-source: godofprompt.ai
 slug: "promptsgenerate-faqs-for-seo"
 ---
 

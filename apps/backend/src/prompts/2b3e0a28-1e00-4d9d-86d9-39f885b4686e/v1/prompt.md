@@ -1,6 +1,5 @@
 ---
 title: "🪡 Build Customer Feedback Response Templates"
-source: godofprompt.ai
 slug: "promptsbuild-customer-feedback-response-templates"
 ---
 

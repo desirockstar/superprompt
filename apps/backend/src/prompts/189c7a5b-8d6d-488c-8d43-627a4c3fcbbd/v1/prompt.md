@@ -1,6 +1,5 @@
 ---
 title: "📊 Execute Project Closure Procedures"
-source: godofprompt.ai
 slug: "promptsexecute-project-closure-procedures"
 ---
 

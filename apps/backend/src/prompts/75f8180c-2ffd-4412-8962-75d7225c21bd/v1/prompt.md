@@ -1,6 +1,5 @@
 ---
 title: "🔗 Develop WebSocket Clients"
-source: godofprompt.ai
 slug: "promptsdevelop-websocket-clients"
 ---
 

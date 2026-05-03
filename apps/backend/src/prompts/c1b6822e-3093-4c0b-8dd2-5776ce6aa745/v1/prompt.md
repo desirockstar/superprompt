@@ -1,6 +1,5 @@
 ---
 title: "⚖️ Craft Product Comparisons"
-source: godofprompt.ai
 slug: "promptscraft-product-comparisons"
 ---
 

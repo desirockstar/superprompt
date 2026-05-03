@@ -1,6 +1,5 @@
 ---
 title: "🌱 Craft Store Welcome Message"
-source: godofprompt.ai
 slug: "promptscraft-store-welcome-message"
 ---
 

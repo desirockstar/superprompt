@@ -1,6 +1,5 @@
 ---
 title: "🎚️ Optimize Social Media Performance"
-source: godofprompt.ai
 slug: "promptsoptimize-social-media-performance"
 ---
 

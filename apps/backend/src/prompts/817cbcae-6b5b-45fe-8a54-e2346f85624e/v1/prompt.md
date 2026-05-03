@@ -1,6 +1,5 @@
 ---
 title: "🧩 Fix Code Errors"
-source: godofprompt.ai
 slug: "promptsfix-code-errors"
 ---
 

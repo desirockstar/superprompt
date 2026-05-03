@@ -1,6 +1,5 @@
 ---
 title: "🧭 Craft Customer Onboarding Scripts"
-source: godofprompt.ai
 slug: "promptscraft-customer-onboarding-scripts"
 ---
 

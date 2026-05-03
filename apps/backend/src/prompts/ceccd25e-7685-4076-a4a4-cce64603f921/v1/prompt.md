@@ -1,6 +1,5 @@
 ---
 title: "💅 Generate Streetwear Salon Portrait Mockups"
-source: godofprompt.ai
 slug: "promptsgenerate-streetwear-salon-portrait-mockups"
 ---
 

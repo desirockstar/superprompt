@@ -1,6 +1,5 @@
 ---
 title: "🐚 Design Contemporary Spa Interiors"
-source: godofprompt.ai
 slug: "promptsdesign-contemporary-spa-interiors"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "👟 Generate Athletic Portrait Photography Mockups"
-source: godofprompt.ai
 slug: "promptsgenerate-athletic-portrait-photography-mockups"
 ---
 

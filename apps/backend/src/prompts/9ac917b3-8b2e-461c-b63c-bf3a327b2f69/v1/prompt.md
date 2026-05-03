@@ -1,6 +1,5 @@
 ---
 title: "🎨 Generate Colorful Subject Images"
-source: godofprompt.ai
 slug: "promptsgenerate-colorful-subject-images"
 ---
 

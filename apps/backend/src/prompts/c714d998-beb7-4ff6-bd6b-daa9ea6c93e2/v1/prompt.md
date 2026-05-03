@@ -1,6 +1,5 @@
 ---
 title: "🧩 Optimize Header And Footer Designs"
-source: godofprompt.ai
 slug: "promptsoptimize-header-and-footer-designs"
 ---
 

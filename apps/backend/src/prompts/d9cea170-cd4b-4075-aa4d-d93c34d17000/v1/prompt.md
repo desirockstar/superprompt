@@ -1,6 +1,5 @@
 ---
 title: "📈 Draft E-Commerce SEO Checklists"
-source: godofprompt.ai
 slug: "promptsdraft-e-commerce-seo-checklists"
 ---
 

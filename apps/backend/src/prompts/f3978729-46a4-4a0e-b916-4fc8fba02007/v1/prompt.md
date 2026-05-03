@@ -1,6 +1,5 @@
 ---
 title: "🏗️ Build Mortgage Calculators"
-source: godofprompt.ai
 slug: "promptsbuild-mortgage-calculators"
 ---
 

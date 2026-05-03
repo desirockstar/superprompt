@@ -1,6 +1,5 @@
 ---
 title: "📈 Build Referral Network"
-source: godofprompt.ai
 slug: "promptsbuild-referral-network"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "📄 Digitizing Document Workflow"
-source: godofprompt.ai
 slug: "promptsdigitizing-document-workflow"
 ---
 

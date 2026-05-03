@@ -1,6 +1,5 @@
 ---
 title: "🛡️ Develop Chargeback Prevention Strategies"
-source: godofprompt.ai
 slug: "promptsdevelop-chargeback-prevention-strategies"
 ---
 

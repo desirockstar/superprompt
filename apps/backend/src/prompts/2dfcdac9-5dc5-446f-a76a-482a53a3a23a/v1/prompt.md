@@ -1,6 +1,5 @@
 ---
 title: "⚖️ Design Support Quality Scorecards"
-source: godofprompt.ai
 slug: "promptsdesign-support-quality-scorecards"
 ---
 

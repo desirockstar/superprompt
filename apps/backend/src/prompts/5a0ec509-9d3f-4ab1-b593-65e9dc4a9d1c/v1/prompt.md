@@ -1,6 +1,5 @@
 ---
 title: "📊 Write Annual Reports"
-source: godofprompt.ai
 slug: "promptswrite-annual-reports"
 ---
 

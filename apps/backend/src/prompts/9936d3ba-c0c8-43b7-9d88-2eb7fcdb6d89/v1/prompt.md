@@ -1,6 +1,5 @@
 ---
 title: "📊 Develop Compliance Reports"
-source: godofprompt.ai
 slug: "promptsdevelop-compliance-reports"
 ---
 

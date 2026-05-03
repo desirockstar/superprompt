@@ -1,6 +1,5 @@
 ---
 title: "🔄 Modernize Legacy SQL Queries"
-source: godofprompt.ai
 slug: "promptsmodernize-legacy-sql-queries"
 ---
 

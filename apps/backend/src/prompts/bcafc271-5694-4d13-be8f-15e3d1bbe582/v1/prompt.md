@@ -1,6 +1,5 @@
 ---
 title: "📈 Generate Business Expansion Strategy"
-source: godofprompt.ai
 slug: "promptsgenerate-business-expansion-strategy"
 ---
 

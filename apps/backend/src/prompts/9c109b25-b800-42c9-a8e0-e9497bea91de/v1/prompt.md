@@ -1,6 +1,5 @@
 ---
 title: "🎬 Create Video Scripts"
-source: godofprompt.ai
 slug: "promptscreate-video-scripts"
 ---
 

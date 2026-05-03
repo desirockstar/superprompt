@@ -1,6 +1,5 @@
 ---
 title: "🧩 Implement Sticky Header"
-source: godofprompt.ai
 slug: "promptsimplement-sticky-header"
 ---
 

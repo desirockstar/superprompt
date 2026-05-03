@@ -1,6 +1,5 @@
 ---
 title: "🧠 Reply Customer Queries"
-source: godofprompt.ai
 slug: "promptsreply-customer-queries"
 ---
 

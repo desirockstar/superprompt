@@ -1,6 +1,5 @@
 ---
 title: "🛠️ Refine UX Copy"
-source: godofprompt.ai
 slug: "promptsrefine-ux-copy"
 ---
 

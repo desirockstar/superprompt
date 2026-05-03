@@ -1,6 +1,5 @@
 ---
 title: "♟️ Analyze Sale Leaseback Deals"
-source: godofprompt.ai
 slug: "promptsanalyze-sale-leaseback-deals"
 ---
 

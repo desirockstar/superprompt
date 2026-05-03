@@ -1,6 +1,5 @@
 ---
 title: "✍️ Prepare Letters of Support"
-source: godofprompt.ai
 slug: "promptsprepare-letters-of-support"
 ---
 

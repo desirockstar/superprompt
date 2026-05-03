@@ -1,6 +1,5 @@
 ---
 title: "📊 Manage Operational Risks"
-source: godofprompt.ai
 slug: "promptsmanage-operational-risks"
 ---
 

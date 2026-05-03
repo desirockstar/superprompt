@@ -1,6 +1,5 @@
 ---
 title: "🔍 Optimize Etsy Product Keywords"
-source: godofprompt.ai
 slug: "promptsoptimize-etsy-product-keywords"
 ---
 

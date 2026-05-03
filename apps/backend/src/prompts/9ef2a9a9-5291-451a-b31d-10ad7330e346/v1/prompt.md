@@ -1,6 +1,5 @@
 ---
 title: "🔭 Track Onboarding Progress"
-source: godofprompt.ai
 slug: "promptstrack-onboarding-progress"
 ---
 

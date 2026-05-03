@@ -1,6 +1,5 @@
 ---
 title: "🖼️ Recommend Product Image Concepts"
-source: godofprompt.ai
 slug: "promptsrecommend-product-image-concepts"
 ---
 

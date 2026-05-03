@@ -1,6 +1,5 @@
 ---
 title: "🧩 Generate Prompt Variations"
-source: godofprompt.ai
 slug: "promptsgenerate-prompt-variations"
 ---
 

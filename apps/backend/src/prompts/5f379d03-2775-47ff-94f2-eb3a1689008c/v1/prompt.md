@@ -1,6 +1,5 @@
 ---
 title: "🛠️ Develop Enterprise Software"
-source: godofprompt.ai
 slug: "promptsdevelop-enterprise-software"
 ---
 

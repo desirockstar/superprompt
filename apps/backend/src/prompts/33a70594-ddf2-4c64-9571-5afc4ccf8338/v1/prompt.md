@@ -1,6 +1,5 @@
 ---
 title: "🎯 Develop Customer Loyalty Programs"
-source: godofprompt.ai
 slug: "promptsdevelop-customer-loyalty-programs"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🪨 Compare Two Code Versions"
-source: godofprompt.ai
 slug: "promptscompare-two-code-versions"
 ---
 

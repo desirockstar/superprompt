@@ -1,6 +1,5 @@
 ---
 title: "📈 Optimize Customer Retention Strategies"
-source: godofprompt.ai
 slug: "promptsoptimize-customer-retention-strategies"
 ---
 

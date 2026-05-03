@@ -1,6 +1,5 @@
 ---
 title: "⚙️ Optimize Build Configurations"
-source: godofprompt.ai
 slug: "promptsoptimize-build-configurations"
 ---
 

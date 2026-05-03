@@ -1,6 +1,5 @@
 ---
 title: "🧩 Generate Viral Content Hooks"
-source: godofprompt.ai
 slug: "promptsgenerate-viral-content-hooks"
 ---
 

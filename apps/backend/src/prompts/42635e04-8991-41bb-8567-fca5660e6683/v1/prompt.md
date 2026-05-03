@@ -1,6 +1,5 @@
 ---
 title: "🌊 Create Fashion Photoshoot Concepts"
-source: godofprompt.ai
 slug: "promptscreate-fashion-photoshoot-concepts"
 ---
 

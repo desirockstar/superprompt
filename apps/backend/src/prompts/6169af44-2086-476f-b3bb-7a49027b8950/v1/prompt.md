@@ -1,6 +1,5 @@
 ---
 title: "💹 Build Investment Portfolio Trackers"
-source: godofprompt.ai
 slug: "promptsbuild-investment-portfolio-trackers"
 ---
 

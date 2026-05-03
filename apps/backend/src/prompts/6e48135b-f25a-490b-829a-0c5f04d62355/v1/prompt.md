@@ -1,6 +1,5 @@
 ---
 title: "📜 Develop Supplier Contract Templates"
-source: godofprompt.ai
 slug: "promptsdevelop-supplier-contract-templates"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🎨 Create Branding Ideas"
-source: godofprompt.ai
 slug: "promptscreate-branding-ideas"
 ---
 

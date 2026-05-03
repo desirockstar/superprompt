@@ -1,27 +1,26 @@
 /**
- * Seed 200 random prompts from the PLAYWRIGHT scrape output into the database.
+ * Seed all prompts from the source directory into the database.
+ * Uses descriptive filenames as basePath (no UUIDs, no "playwright").
  *
  * Usage (inside devcontainer):
- *   PROMPTS_DIR=/path/to/playwright/out/prompts pnpm seed:playwright
+ *   PROMPTS_DIR=/path/to/source/prompts pnpm seed:playwright
  *
- * Or on Windows host, mount the folder first:
- *   docker cp C:\X\ARSENAL\_DEV_SPACE\@PROJECTS\PLAYWRIGHT\out\prompts devcontainer-backend-1:/tmp/playwright-prompts
- *   then run: PROMPTS_DIR=/tmp/playwright-prompts pnpm --filter @superprompt/db seed:playwright
+ * Example source: C:\X\ARSENAL\_DEV_SPACE\@PROJECTS\PLAYWRIGHT\out\prompts
  */
 
 import postgres from 'postgres';
 import { drizzle } from 'drizzle-orm/postgres-js';
 import { prompts, promptVersions } from './src/index';
-import { readFileSync, readdirSync, mkdirSync, writeFileSync, existsSync } from 'fs';
+import { readFileSync, readdirSync, mkdirSync, writeFileSync, existsSync, rmSync } from 'fs';
 import { join, basename } from 'path';
 import { randomUUID } from 'crypto';
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 
-const PROMPTS_DIR = process.env.PROMPTS_DIR || '/tmp/playwright-prompts';
+const PROMPTS_DIR = process.env.PROMPTS_DIR || 'C:\\X\\ARSENAL\\_DEV_SPACE\\@PROJECTS\\PLAYWRIGHT\\out\\prompts';
 const CONTENT_DIR = join(process.cwd(), '../../apps/backend/src/prompts');
-const SAMPLE_SIZE = 200;
 const PREVIEW_MAX_CHARS = 220;
+const CLEANUP_SOURCE = process.env.CLEANUP_SOURCE === 'true';
 
 const connectionString = process.env.DATABASE_URL || 'postgres://postgres:postgres@localhost:5432/superprompt';
 const client = postgres(connectionString);
@@ -100,36 +99,31 @@ function parseRecommendedTools(content: string): string {
   return tools[0] || '';
 }
 
-/** Reservoir sampling — picks k random items from an array in O(n) */
-function sampleArray<T>(arr: T[], k: number): T[] {
-  const result = arr.slice(0, k);
-  for (let i = k; i < arr.length; i++) {
-    const j = Math.floor(Math.random() * (i + 1));
-    if (j < k) result[j] = arr[i];
-  }
-  return result;
-}
-
 // ─── Main ─────────────────────────────────────────────────────────────────────
+
+/** Generate a slug from filename */
+function generateSlug(filename: string): string {
+  return basename(filename, '.md')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+}
 
 async function seed() {
   if (!existsSync(PROMPTS_DIR)) {
     console.error(`❌ PROMPTS_DIR not found: ${PROMPTS_DIR}`);
-    console.error('   Copy the PLAYWRIGHT prompts directory into the container first:');
-    console.error('   docker cp C:\\...\\PLAYWRIGHT\\out\\prompts devcontainer-backend-1:/tmp/playwright-prompts');
+    console.error('   Set PROMPTS_DIR environment variable to the source prompts directory');
     process.exit(1);
   }
 
   const allFiles = readdirSync(PROMPTS_DIR).filter(f => f.endsWith('.md'));
   console.log(`📂 Found ${allFiles.length} prompt files in ${PROMPTS_DIR}`);
 
-  const sampled = sampleArray(allFiles, Math.min(SAMPLE_SIZE, allFiles.length));
-  console.log(`🎲 Sampled ${sampled.length} files`);
-
   let inserted = 0;
   let skipped = 0;
+  const slugToId = new Map<string, string>();
 
-  for (const filename of sampled) {
+  for (const filename of allFiles) {
     const filepath = join(PROMPTS_DIR, filename);
     let raw: string;
     try {
@@ -150,12 +144,24 @@ async function seed() {
     const [category, secondaryTags] = parseCategories(raw);
     const primaryTag = parseRecommendedTools(raw);
 
+    const slug = generateSlug(filename);
+    if (!slug) { skipped++; continue; }
+
+    // Handle duplicate slugs by appending counter
+    let finalSlug = slug;
+    let counter = 1;
+    while (slugToId.has(finalSlug)) {
+      finalSlug = `${slug}-${counter}`;
+      counter++;
+    }
+
     const id = randomUUID();
-    const basePath = `prompts/${id}`;
+    slugToId.set(finalSlug, id);
+    const basePath = `prompts/${finalSlug}`;
     const versionId = randomUUID();
 
     // Write content file to filesystem
-    const contentDir = join(CONTENT_DIR, id, 'v1');
+    const contentDir = join(CONTENT_DIR, finalSlug, 'v1');
     mkdirSync(contentDir, { recursive: true });
     writeFileSync(join(contentDir, 'prompt.md'), raw, 'utf-8');
 
@@ -183,8 +189,8 @@ async function seed() {
       }).onConflictDoNothing();
 
       inserted++;
-      if (inserted % 20 === 0) {
-        console.log(`  ✅ ${inserted} / ${sampled.length} inserted...`);
+      if (inserted % 100 === 0) {
+        console.log(`  ✅ ${inserted} / ${allFiles.length} inserted...`);
       }
     } catch (err) {
       console.warn(`  ⚠️  Failed to insert "${title}": ${err}`);
@@ -193,6 +199,17 @@ async function seed() {
   }
 
   console.log(`\n✅ Done — ${inserted} prompts inserted, ${skipped} skipped`);
+
+  // Cleanup source files if requested
+  if (CLEANUP_SOURCE && existsSync(PROMPTS_DIR)) {
+    try {
+      rmSync(PROMPTS_DIR, { recursive: true, force: true });
+      console.log(`🗑️  Cleaned up source directory: ${PROMPTS_DIR}`);
+    } catch (err) {
+      console.warn(`⚠️  Failed to cleanup source directory: ${err}`);
+    }
+  }
+
   await client.end();
 }
 

@@ -1,6 +1,5 @@
 ---
 title: "🕸️ Develop Cybersecurity And Marketing Systems"
-source: godofprompt.ai
 slug: "promptsdevelop-cybersecurity-and-marketing-systems"
 ---
 

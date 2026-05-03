@@ -1,6 +1,5 @@
 ---
 title: "🪴 Identify Business Drains"
-source: godofprompt.ai
 slug: "promptsidentify-business-drains"
 ---
 

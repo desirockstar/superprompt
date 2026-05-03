@@ -1,6 +1,5 @@
 ---
 title: "📊 Draft Project Budget Proposal"
-source: godofprompt.ai
 slug: "promptsdraft-project-budget-proposal"
 ---
 

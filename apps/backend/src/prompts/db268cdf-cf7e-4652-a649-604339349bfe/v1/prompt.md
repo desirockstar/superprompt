@@ -1,6 +1,5 @@
 ---
 title: "🧠 Optimize Business Problem Solving"
-source: godofprompt.ai
 slug: "promptsoptimize-business-problem-solving"
 ---
 

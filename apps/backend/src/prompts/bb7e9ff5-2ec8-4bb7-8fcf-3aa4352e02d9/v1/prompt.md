@@ -1,6 +1,5 @@
 ---
 title: "✍️ Create Blog Content"
-source: godofprompt.ai
 slug: "promptscreate-blog-content"
 ---
 

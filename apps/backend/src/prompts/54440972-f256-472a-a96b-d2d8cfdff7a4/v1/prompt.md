@@ -1,6 +1,5 @@
 ---
 title: "🗂️ Organize Customer Feedback By Themes"
-source: godofprompt.ai
 slug: "promptsorganize-customer-feedback-by-themes"
 ---
 

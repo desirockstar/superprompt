@@ -1,6 +1,5 @@
 ---
 title: "🔒 Build Task Management APIs"
-source: godofprompt.ai
 slug: "promptsbuild-task-management-apis"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🧿 Generate Fashion Beauty Portrait Closeups"
-source: godofprompt.ai
 slug: "promptsgenerate-fashion-beauty-portrait-closeups"
 ---
 

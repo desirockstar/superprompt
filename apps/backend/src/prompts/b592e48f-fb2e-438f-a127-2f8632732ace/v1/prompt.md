@@ -1,6 +1,5 @@
 ---
 title: "🧬 Create Hyper-Realistic DNA Renders"
-source: godofprompt.ai
 slug: "promptscreate-hyper-realistic-dna-renders"
 ---
 

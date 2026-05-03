@@ -1,6 +1,5 @@
 ---
 title: "📘 Develop Educational Resources"
-source: godofprompt.ai
 slug: "promptsdevelop-educational-resources"
 ---
 

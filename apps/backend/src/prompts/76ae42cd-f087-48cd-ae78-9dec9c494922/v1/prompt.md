@@ -1,6 +1,5 @@
 ---
 title: "🌍 Expand Network Globally"
-source: godofprompt.ai
 slug: "promptsexpand-network-globally"
 ---
 

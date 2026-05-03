@@ -1,0 +1,73 @@
+# Development docker-compose WITHOUT caching
+# Use: docker-compose --file .devcontainer/docker-compose.dev.yml up
+# This version disables all caching for instant hot reload
+
+services:
+  backend:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    container_name: superprompt_backend
+    volumes:
+      - ..:/workspace                # No caching - instant file propagation
+      # - /workspace/apps/backend/node_modules      # Exclude node_modules
+    command: pnpm dev:backend
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - CHOKIDAR_INTERVAL=300               # Fast polling (default, not 1000ms)
+      - DATABASE_URL=postgres://postgres:postgres@db:5432/superprompt
+    ports:
+      - target: 4000
+        published: 4000
+        protocol: tcp
+        host_ip: 0.0.0.0
+    depends_on:
+      - db
+
+  frontend:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    container_name: superprompt_frontend
+    volumes:
+      - ..:/workspace                # No caching - instant file propagation
+      # - /workspace/apps/frontend/node_modules
+      - /workspace/apps/frontend/.next            # Exclude .next cache
+    command: pnpm dev:frontend
+    environment:
+      - WATCHPACK_POLLING=true
+      - CHOKIDAR_USEPOLLING=true
+      - CHOKIDAR_INTERVAL=300               # Fast polling (300ms, not 1000ms)
+      - HOST=0.0.0.0
+      - NEXT_PUBLIC_API_URL=http://localhost:4000/api
+      # Disable Next.js caching
+      - NEXT_DISABLE_SWC_MINIFY=1
+      - NEXT_PUBLIC_ENV_CLEAR_CACHE=true
+    ports:
+      - target: 3000
+        published: 3000
+        protocol: tcp
+        host_ip: 0.0.0.0
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15
+    container_name: superprompt_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: superprompt
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres-data:

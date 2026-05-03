@@ -1,6 +1,5 @@
 ---
 title: "🧭 Build Onboarding Progress Reports"
-source: godofprompt.ai
 slug: "promptsbuild-onboarding-progress-reports"
 ---
 

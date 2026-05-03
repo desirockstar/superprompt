@@ -1,6 +1,5 @@
 ---
 title: "🧩 Rewrite Complex Joins"
-source: godofprompt.ai
 slug: "promptsrewrite-complex-joins"
 ---
 

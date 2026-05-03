@@ -1,6 +1,5 @@
 ---
 title: "📊 Inspect Data Structure"
-source: godofprompt.ai
 slug: "promptsinspect-data-structure"
 ---
 

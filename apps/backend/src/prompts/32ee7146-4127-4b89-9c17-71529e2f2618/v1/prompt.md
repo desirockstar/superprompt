@@ -1,6 +1,5 @@
 ---
 title: "📈 Generate Targeted Sales Strategy"
-source: godofprompt.ai
 slug: "promptsgenerate-targeted-sales-strategy"
 ---
 

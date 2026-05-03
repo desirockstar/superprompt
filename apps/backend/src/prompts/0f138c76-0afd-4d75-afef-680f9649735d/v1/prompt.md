@@ -1,6 +1,5 @@
 ---
 title: "🤝 Draft Win-Back Emails"
-source: godofprompt.ai
 slug: "promptsdraft-win-back-emails"
 ---
 

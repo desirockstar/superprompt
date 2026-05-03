@@ -1,6 +1,5 @@
 ---
 title: "📈 Improve Trade Execution Process"
-source: godofprompt.ai
 slug: "promptsimprove-trade-execution-process"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🚀 Build Tracking Systems"
-source: godofprompt.ai
 slug: "promptsbuild-tracking-systems"
 ---
 

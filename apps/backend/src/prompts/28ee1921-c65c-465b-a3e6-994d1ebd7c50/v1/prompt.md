@@ -1,6 +1,5 @@
 ---
 title: "🤝 Create Customer-Driven Product Development"
-source: godofprompt.ai
 slug: "promptscreate-customer-driven-product-development"
 ---
 

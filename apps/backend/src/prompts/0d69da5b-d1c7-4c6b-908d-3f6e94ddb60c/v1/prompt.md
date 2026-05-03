@@ -1,6 +1,5 @@
 ---
 title: "🔄 Optimize Supply Chains"
-source: godofprompt.ai
 slug: "promptsoptimize-supply-chains"
 ---
 

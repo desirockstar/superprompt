@@ -1,6 +1,5 @@
 ---
 title: "🎥 Generate Video Sales Letter Scripts"
-source: godofprompt.ai
 slug: "promptsgenerate-video-sales-letter-scripts"
 ---
 

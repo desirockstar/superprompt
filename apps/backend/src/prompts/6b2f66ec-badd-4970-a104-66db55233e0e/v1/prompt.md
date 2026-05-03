@@ -1,6 +1,5 @@
 ---
 title: "🛡️ Analyze Security Vulnerabilities"
-source: godofprompt.ai
 slug: "promptsanalyze-security-vulnerabilities"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🛒 Optimize Checkout Conversion Rates"
-source: godofprompt.ai
 slug: "promptsoptimize-checkout-conversion-rates"
 ---
 

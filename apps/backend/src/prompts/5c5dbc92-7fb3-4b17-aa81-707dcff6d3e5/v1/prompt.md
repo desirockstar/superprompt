@@ -1,6 +1,5 @@
 ---
 title: "🧩 Build Affiliate Program"
-source: godofprompt.ai
 slug: "promptsbuild-affiliate-program"
 ---
 

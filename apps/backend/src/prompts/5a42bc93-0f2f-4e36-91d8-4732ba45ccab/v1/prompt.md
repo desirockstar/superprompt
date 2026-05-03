@@ -1,6 +1,5 @@
 ---
 title: "🌐 Create Virtual Event Strategies"
-source: godofprompt.ai
 slug: "promptscreate-virtual-event-strategies"
 ---
 

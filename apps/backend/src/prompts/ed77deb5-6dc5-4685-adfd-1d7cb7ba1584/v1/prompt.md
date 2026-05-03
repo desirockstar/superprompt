@@ -1,6 +1,5 @@
 ---
 title: "📊 Create Insightful Data Visualizations"
-source: godofprompt.ai
 slug: "promptscreate-insightful-data-visualizations"
 ---
 

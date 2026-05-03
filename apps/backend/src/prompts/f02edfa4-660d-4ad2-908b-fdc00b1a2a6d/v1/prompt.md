@@ -1,6 +1,5 @@
 ---
 title: "📊 Create Competitive Analysis Framework"
-source: godofprompt.ai
 slug: "promptscreate-competitive-analysis-framework"
 ---
 

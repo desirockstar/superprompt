@@ -1,6 +1,5 @@
 ---
 title: "📚 Train Staff on Risks"
-source: godofprompt.ai
 slug: "promptstrain-staff-on-risks"
 ---
 

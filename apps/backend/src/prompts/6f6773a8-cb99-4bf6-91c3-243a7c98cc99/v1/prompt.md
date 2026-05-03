@@ -1,6 +1,5 @@
 ---
 title: "🧩 Generate CSV Merger"
-source: godofprompt.ai
 slug: "promptsgenerate-csv-merger"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🎥 Generate Viral Video Ideas"
-source: godofprompt.ai
 slug: "promptsgenerate-viral-video-ideas"
 ---
 

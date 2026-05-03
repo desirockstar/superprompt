@@ -1,6 +1,5 @@
 ---
 title: "📝 Compile Meeting Minutes"
-source: godofprompt.ai
 slug: "promptscompile-meeting-minutes"
 ---
 

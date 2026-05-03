@@ -1,6 +1,5 @@
 ---
 title: "🖼️ Create Visual Communication Strategy"
-source: godofprompt.ai
 slug: "promptscreate-visual-communication-strategy"
 ---
 

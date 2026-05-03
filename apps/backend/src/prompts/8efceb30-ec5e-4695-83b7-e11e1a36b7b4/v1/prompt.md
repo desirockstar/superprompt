@@ -1,6 +1,5 @@
 ---
 title: "📊 Prepare Crisis Management Plan"
-source: godofprompt.ai
 slug: "promptsprepare-crisis-management-plan"
 ---
 

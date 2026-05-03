@@ -1,6 +1,5 @@
 ---
 title: "🎭 Build Customer Personas And Resolution Scripts"
-source: godofprompt.ai
 slug: "promptsbuild-customer-personas-and-resolution-scripts"
 ---
 

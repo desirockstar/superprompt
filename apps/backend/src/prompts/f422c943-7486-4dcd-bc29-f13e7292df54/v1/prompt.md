@@ -1,6 +1,5 @@
 ---
 title: "🤖 Humanize Your SEO Text"
-source: godofprompt.ai
 slug: "promptshumanize-your-seo-text"
 ---
 

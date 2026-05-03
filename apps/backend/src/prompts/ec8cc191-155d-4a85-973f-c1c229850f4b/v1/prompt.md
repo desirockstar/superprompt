@@ -1,6 +1,5 @@
 ---
 title: "🧩 Simplify Programming Concepts"
-source: godofprompt.ai
 slug: "promptssimplify-programming-concepts"
 ---
 

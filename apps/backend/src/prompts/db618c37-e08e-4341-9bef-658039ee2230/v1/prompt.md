@@ -1,6 +1,5 @@
 ---
 title: "🏺 Render Gallery-Style Interior Visualizations"
-source: godofprompt.ai
 slug: "promptsrender-gallery-style-interior-visualizations"
 ---
 

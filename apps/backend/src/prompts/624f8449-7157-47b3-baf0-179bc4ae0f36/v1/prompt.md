@@ -1,6 +1,5 @@
 ---
 title: "📈 Develop Exit Strategy"
-source: godofprompt.ai
 slug: "promptsdevelop-exit-strategy"
 ---
 

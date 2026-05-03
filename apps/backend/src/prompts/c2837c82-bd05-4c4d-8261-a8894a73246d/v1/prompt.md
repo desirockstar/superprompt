@@ -1,6 +1,5 @@
 ---
 title: "🚀 Create Test Execution Checklists"
-source: godofprompt.ai
 slug: "promptscreate-test-execution-checklists"
 ---
 

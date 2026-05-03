@@ -1,6 +1,5 @@
 ---
 title: "🧠 Generate Blog Posts With Images"
-source: godofprompt.ai
 slug: "promptsgenerate-blog-posts-with-images"
 ---
 

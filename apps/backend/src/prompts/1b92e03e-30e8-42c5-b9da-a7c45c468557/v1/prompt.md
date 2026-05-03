@@ -1,6 +1,5 @@
 ---
 title: "🎨 Get Playful 3D Icons"
-source: godofprompt.ai
 slug: "promptsget-playful-3d-icons"
 ---
 

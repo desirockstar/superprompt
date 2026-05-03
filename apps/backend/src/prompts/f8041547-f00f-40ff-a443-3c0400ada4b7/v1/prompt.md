@@ -1,6 +1,5 @@
 ---
 title: "🧲 Craft Social Media Posts"
-source: godofprompt.ai
 slug: "promptscraft-social-media-posts"
 ---
 

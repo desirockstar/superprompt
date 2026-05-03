@@ -1,6 +1,5 @@
 ---
 title: "🛡️ Build Secure OAuth Systems"
-source: godofprompt.ai
 slug: "promptsbuild-secure-oauth-systems"
 ---
 

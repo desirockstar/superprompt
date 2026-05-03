@@ -1,6 +1,5 @@
 ---
 title: "📊 Recommend Performance Metrics"
-source: godofprompt.ai
 slug: "promptsrecommend-performance-metrics"
 ---
 

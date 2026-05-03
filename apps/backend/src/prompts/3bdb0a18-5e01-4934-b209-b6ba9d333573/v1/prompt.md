@@ -1,6 +1,5 @@
 ---
 title: "🏗️ Develop Real Estate Financing Strategies"
-source: godofprompt.ai
 slug: "promptsdevelop-real-estate-financing-strategies"
 ---
 

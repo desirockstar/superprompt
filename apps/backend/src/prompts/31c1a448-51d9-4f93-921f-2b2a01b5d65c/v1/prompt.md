@@ -1,6 +1,5 @@
 ---
 title: "📝 Optimize Writing Style"
-source: godofprompt.ai
 slug: "promptsoptimize-writing-style"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "📘 Automate Business Tasks"
-source: godofprompt.ai
 slug: "promptsautomate-business-tasks"
 ---
 

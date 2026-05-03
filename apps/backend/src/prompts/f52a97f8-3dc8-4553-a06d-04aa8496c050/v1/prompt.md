@@ -1,6 +1,5 @@
 ---
 title: "🔍 Explain Data Types"
-source: godofprompt.ai
 slug: "promptsexplain-data-types"
 ---
 

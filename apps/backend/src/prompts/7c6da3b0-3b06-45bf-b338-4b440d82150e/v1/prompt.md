@@ -1,6 +1,5 @@
 ---
 title: "🎯 Build Interactive Quiz Applications"
-source: godofprompt.ai
 slug: "promptsbuild-interactive-quiz-applications"
 ---
 

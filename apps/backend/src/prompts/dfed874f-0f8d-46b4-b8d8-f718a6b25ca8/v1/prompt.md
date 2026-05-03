@@ -1,6 +1,5 @@
 ---
 title: "🪑 Create Minimalistic Furniture Displays"
-source: godofprompt.ai
 slug: "promptscreate-minimalistic-furniture-displays"
 ---
 

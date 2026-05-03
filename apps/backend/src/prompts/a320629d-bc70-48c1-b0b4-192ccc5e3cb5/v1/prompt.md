@@ -1,6 +1,5 @@
 ---
 title: "🧭 Create Customer Onboarding Email Sequences"
-source: godofprompt.ai
 slug: "promptscreate-customer-onboarding-email-sequences"
 ---
 

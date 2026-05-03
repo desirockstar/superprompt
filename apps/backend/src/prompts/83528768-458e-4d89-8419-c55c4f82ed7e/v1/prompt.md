@@ -1,6 +1,5 @@
 ---
 title: "🤵 Generate Elevator Pitches"
-source: godofprompt.ai
 slug: "promptsgenerate-elevator-pitches"
 ---
 

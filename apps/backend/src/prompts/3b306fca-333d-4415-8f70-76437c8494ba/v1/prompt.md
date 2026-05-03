@@ -1,6 +1,5 @@
 ---
 title: "📝 Draft Release Notes"
-source: godofprompt.ai
 slug: "promptsdraft-release-notes"
 ---
 

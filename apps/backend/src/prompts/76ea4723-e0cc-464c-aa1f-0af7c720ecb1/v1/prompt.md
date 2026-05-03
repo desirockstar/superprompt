@@ -1,6 +1,5 @@
 ---
 title: "📧 Develop Gmail Add-Ons"
-source: godofprompt.ai
 slug: "promptsdevelop-gmail-add-ons"
 ---
 

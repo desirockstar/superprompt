@@ -1,6 +1,5 @@
 ---
 title: "🎨 Generate Icon Designs"
-source: godofprompt.ai
 slug: "promptsgenerate-icon-designs"
 ---
 

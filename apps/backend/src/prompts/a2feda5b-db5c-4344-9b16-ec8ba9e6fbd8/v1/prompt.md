@@ -1,6 +1,5 @@
 ---
 title: "🧙‍♂️ Build Content Marketing Ecosystem"
-source: godofprompt.ai
 slug: "promptsbuild-content-marketing-ecosystem"
 ---
 

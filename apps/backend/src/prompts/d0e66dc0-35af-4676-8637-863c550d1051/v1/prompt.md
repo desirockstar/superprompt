@@ -1,6 +1,5 @@
 ---
 title: "🔍 Generate Market Trend Analysis"
-source: godofprompt.ai
 slug: "promptsgenerate-market-trend-analysis"
 ---
 

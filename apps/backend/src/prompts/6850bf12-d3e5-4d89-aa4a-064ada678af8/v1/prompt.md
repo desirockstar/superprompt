@@ -1,6 +1,5 @@
 ---
 title: "🗿 Render Sculptural Architecture Facades"
-source: godofprompt.ai
 slug: "promptsrender-sculptural-architecture-facades"
 ---
 

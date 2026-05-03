@@ -1,6 +1,5 @@
 ---
 title: "🎮 Build Gamified Task Management Apps"
-source: godofprompt.ai
 slug: "promptsbuild-gamified-task-management-apps"
 ---
 

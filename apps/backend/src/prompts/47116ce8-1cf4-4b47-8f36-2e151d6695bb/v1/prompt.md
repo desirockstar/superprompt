@@ -1,6 +1,5 @@
 ---
 title: "📖 Create Engaging Business Stories"
-source: godofprompt.ai
 slug: "promptscreate-engaging-business-stories"
 ---
 

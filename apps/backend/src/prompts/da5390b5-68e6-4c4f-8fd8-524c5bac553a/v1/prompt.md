@@ -1,6 +1,5 @@
 ---
 title: "🤖 Use Chatbots for Support"
-source: godofprompt.ai
 slug: "promptsuse-chatbots-for-support"
 ---
 

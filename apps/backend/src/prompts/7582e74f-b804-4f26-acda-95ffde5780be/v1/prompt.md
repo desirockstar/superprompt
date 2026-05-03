@@ -1,6 +1,5 @@
 ---
 title: "🔑 Design User Registration Flows"
-source: godofprompt.ai
 slug: "promptsdesign-user-registration-flows"
 ---
 

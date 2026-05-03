@@ -1,6 +1,5 @@
 ---
 title: "🤝 Generate Negotiation Strategy Plan"
-source: godofprompt.ai
 slug: "promptsgenerate-negotiation-strategy-plan"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🏡 Create Minimalist Architecture Designs"
-source: godofprompt.ai
 slug: "promptscreate-minimalist-architecture-designs"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🧬 Render Vertical Ecosystem Tower"
-source: godofprompt.ai
 slug: "promptsrender-vertical-ecosystem-tower"
 ---
 

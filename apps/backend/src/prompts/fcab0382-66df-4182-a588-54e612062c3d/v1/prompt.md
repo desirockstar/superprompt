@@ -1,6 +1,5 @@
 ---
 title: "🏛️ Build Content Pillars"
-source: godofprompt.ai
 slug: "promptsbuild-content-pillars"
 ---
 

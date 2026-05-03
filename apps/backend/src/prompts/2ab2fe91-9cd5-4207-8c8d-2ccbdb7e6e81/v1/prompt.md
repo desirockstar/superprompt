@@ -1,6 +1,5 @@
 ---
 title: "📧 Create Personalized Customer Communications"
-source: godofprompt.ai
 slug: "promptscreate-personalized-customer-communications"
 ---
 

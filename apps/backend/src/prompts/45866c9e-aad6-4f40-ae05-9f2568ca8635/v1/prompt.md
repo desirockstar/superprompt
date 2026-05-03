@@ -1,6 +1,5 @@
 ---
 title: "📝 Generate Captivating Headlines"
-source: godofprompt.ai
 slug: "promptsgenerate-captivating-headlines-2"
 ---
 

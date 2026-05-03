@@ -1,6 +1,5 @@
 ---
 title: "🛠️ Build Industry-Specific Resume Builders"
-source: godofprompt.ai
 slug: "promptsbuild-industry-specific-resume-builders"
 ---
 

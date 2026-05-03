@@ -1,6 +1,5 @@
 ---
 title: "🌱 Teach HTML From Scratch"
-source: godofprompt.ai
 slug: "promptsteach-html-from-scratch"
 ---
 

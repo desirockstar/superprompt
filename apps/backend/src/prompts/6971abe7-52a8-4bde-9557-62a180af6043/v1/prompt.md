@@ -1,6 +1,5 @@
 ---
 title: "🌊 Create Abstract Gradient Wallpapers"
-source: godofprompt.ai
 slug: "promptscreate-abstract-gradient-wallpapers"
 ---
 

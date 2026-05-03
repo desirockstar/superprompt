@@ -1,6 +1,5 @@
 ---
 title: "🎋 Render Climate Responsive Green Tower"
-source: godofprompt.ai
 slug: "promptsrender-climate-responsive-green-tower"
 ---
 

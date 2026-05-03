@@ -1,6 +1,5 @@
 ---
 title: "💡 Design Multi-Step Checkout Flows"
-source: godofprompt.ai
 slug: "promptsdesign-multi-step-checkout-flows"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🔔 Build Real-Time Notification Systems"
-source: godofprompt.ai
 slug: "promptsbuild-real-time-notification-systems"
 ---
 

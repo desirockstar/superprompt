@@ -1,6 +1,5 @@
 ---
 title: "🏄 Generate Vibe Coding Product Ideas"
-source: godofprompt.ai
 slug: "promptsgenerate-vibe-coding-product-ideas"
 ---
 

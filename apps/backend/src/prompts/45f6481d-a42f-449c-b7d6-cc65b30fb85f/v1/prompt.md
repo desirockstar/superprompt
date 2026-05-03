@@ -1,6 +1,5 @@
 ---
 title: "📝 Generate USP-Driven Taglines"
-source: godofprompt.ai
 slug: "promptsgenerate-usp-driven-taglines"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🔮 Create 3D Metallic Pins"
-source: godofprompt.ai
 slug: "promptscreate-3d-metallic-pins"
 ---
 

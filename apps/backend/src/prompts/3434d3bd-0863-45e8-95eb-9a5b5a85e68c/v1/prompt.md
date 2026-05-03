@@ -1,6 +1,5 @@
 ---
 title: "🔍 Conduct Market Research"
-source: godofprompt.ai
 slug: "promptsconduct-market-research"
 ---
 

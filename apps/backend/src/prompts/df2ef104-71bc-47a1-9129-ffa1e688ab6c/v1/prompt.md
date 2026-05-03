@@ -1,6 +1,5 @@
 ---
 title: "🎯 Segment Target Customer Base"
-source: godofprompt.ai
 slug: "promptssegment-target-customer-base"
 ---
 

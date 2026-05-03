@@ -1,6 +1,5 @@
 ---
 title: "🔍 Conduct Compliance Audits"
-source: godofprompt.ai
 slug: "promptsconduct-compliance-audits"
 ---
 

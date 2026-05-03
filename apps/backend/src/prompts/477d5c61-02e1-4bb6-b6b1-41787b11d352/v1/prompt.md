@@ -1,6 +1,5 @@
 ---
 title: "🗺️ Analyze Software Architecture"
-source: godofprompt.ai
 slug: "promptsanalyze-software-architecture"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "📧 Generate Lead-Nurturing Emails"
-source: godofprompt.ai
 slug: "promptsgenerate-lead-nurturing-emails"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "📝 Develop Content Strategy Plan"
-source: godofprompt.ai
 slug: "promptsdevelop-content-strategy-plan-2"
 ---
 

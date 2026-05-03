@@ -1,6 +1,5 @@
 ---
 title: "🧮 Build Calculator Apps"
-source: godofprompt.ai
 slug: "promptsbuild-calculator-apps"
 ---
 

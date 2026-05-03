@@ -1,6 +1,5 @@
 ---
 title: "📊 Analyze Economic Indicator Impact"
-source: godofprompt.ai
 slug: "promptsanalyze-economic-indicator-impact"
 ---
 

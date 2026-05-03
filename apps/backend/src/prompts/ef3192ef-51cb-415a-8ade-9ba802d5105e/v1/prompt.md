@@ -1,6 +1,5 @@
 ---
 title: "🔍 Discover High-Volume Keyword Opportunities"
-source: godofprompt.ai
 slug: "promptsdiscover-high-volume-keyword-opportunities"
 ---
 

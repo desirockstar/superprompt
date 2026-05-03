@@ -1,6 +1,5 @@
 ---
 title: "🎮 Immersive Gaming Merch Landing Page"
-source: godofprompt.ai
 slug: "promptsimmersive-gaming-merch-landing-page"
 ---
 

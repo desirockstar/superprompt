@@ -1,6 +1,5 @@
 ---
 title: "🚀 Craft Pitch Deck"
-source: godofprompt.ai
 slug: "promptscraft-pitch-deck"
 ---
 

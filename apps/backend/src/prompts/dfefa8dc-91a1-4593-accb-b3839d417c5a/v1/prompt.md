@@ -1,6 +1,5 @@
 ---
 title: "📋 Create SOP Templates"
-source: godofprompt.ai
 slug: "promptscreate-sop-templates"
 ---
 

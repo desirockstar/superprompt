@@ -1,6 +1,5 @@
 ---
 title: "🎄 Craft Holiday Messages"
-source: godofprompt.ai
 slug: "promptscraft-holiday-messages"
 ---
 

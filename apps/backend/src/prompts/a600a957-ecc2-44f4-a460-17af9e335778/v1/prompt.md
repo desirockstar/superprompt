@@ -1,6 +1,5 @@
 ---
 title: "🕊️ Create Tattoo on Back"
-source: godofprompt.ai
 slug: "promptscreate-tattoo-on-back"
 ---
 

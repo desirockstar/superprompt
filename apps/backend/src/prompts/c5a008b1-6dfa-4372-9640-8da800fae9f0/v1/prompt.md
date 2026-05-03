@@ -1,6 +1,5 @@
 ---
 title: "🛡️ Design Role-Based Access Controls"
-source: godofprompt.ai
 slug: "promptsdesign-role-based-access-controls"
 ---
 

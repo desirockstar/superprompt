@@ -1,6 +1,5 @@
 ---
 title: "📊 Review Grant Criteria"
-source: godofprompt.ai
 slug: "promptsreview-grant-criteria"
 ---
 

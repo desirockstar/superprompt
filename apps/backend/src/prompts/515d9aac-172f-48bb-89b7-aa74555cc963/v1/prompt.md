@@ -1,6 +1,5 @@
 ---
 title: "🛠️ Generate REST Client"
-source: godofprompt.ai
 slug: "promptsgenerate-rest-client"
 ---
 

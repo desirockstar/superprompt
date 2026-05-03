@@ -1,6 +1,5 @@
 ---
 title: "🏨 Create Hotel Booking App Mockups"
-source: godofprompt.ai
 slug: "promptscreate-hotel-booking-app-mockups"
 ---
 

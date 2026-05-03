@@ -1,6 +1,5 @@
 ---
 title: "🔮 Increase Product Page Conversions"
-source: godofprompt.ai
 slug: "promptsincrease-product-page-conversions"
 ---
 

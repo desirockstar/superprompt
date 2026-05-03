@@ -1,6 +1,5 @@
 ---
 title: "💌 Draft Loyalty Thank-You Emails"
-source: godofprompt.ai
 slug: "promptsdraft-loyalty-thank-you-emails"
 ---
 

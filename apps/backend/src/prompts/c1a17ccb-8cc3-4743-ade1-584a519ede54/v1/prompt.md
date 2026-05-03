@@ -1,6 +1,5 @@
 ---
 title: "📊 Analyze Market Investment Trends"
-source: godofprompt.ai
 slug: "promptsanalyze-market-investment-trends"
 ---
 

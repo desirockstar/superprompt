@@ -1,6 +1,5 @@
 ---
 title: "🎮 Create PlayStation 5 Product Shots"
-source: godofprompt.ai
 slug: "promptscreate-playstation-5-product-shots"
 ---
 

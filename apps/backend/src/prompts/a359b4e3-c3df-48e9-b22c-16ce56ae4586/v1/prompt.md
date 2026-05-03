@@ -1,6 +1,5 @@
 ---
 title: "🔒 Build Password Strength Analyzers"
-source: godofprompt.ai
 slug: "promptsbuild-password-strength-analyzers"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🦢 Generate Retro Fashion Portrait Mockups"
-source: godofprompt.ai
 slug: "promptsgenerate-retro-fashion-portrait-mockups"
 ---
 

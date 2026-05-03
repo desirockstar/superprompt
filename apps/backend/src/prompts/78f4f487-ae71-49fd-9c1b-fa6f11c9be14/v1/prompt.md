@@ -1,6 +1,5 @@
 ---
 title: "🧪 DraftLanding Page Copy"
-source: godofprompt.ai
 slug: "promptsdraft-landing-page-copy"
 ---
 

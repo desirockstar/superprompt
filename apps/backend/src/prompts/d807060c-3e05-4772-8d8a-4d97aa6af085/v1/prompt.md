@@ -1,6 +1,5 @@
 ---
 title: "🔍 Analyze SQL Query Performances"
-source: godofprompt.ai
 slug: "promptsanalyze-sql-query-performances"
 ---
 

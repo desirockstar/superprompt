@@ -1,6 +1,5 @@
 ---
 title: "🔍 Analyze InApp Feedback Tools"
-source: godofprompt.ai
 slug: "promptsanalyze-inapp-feedback-tools"
 ---
 

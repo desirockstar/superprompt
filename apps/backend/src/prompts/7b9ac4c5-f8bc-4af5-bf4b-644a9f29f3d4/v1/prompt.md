@@ -1,6 +1,5 @@
 ---
 title: "📈 Boost Social Media Engagement Ideas"
-source: godofprompt.ai
 slug: "promptsboost-social-media-engagement-ideas"
 ---
 

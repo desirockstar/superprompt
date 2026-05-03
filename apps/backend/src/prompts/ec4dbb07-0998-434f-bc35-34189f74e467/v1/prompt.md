@@ -1,6 +1,5 @@
 ---
 title: "🌌 Create Surreal Landscape Illustrations"
-source: godofprompt.ai
 slug: "promptscreate-surreal-landscape-illustrations"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "📊 Evaluate Team Skills"
-source: godofprompt.ai
 slug: "promptsevaluate-team-skills"
 ---
 

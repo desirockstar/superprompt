@@ -1,6 +1,5 @@
 ---
 title: "🐝 Generate Adaptive Workspace Renders"
-source: godofprompt.ai
 slug: "promptsgenerate-adaptive-workspace-renders"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "📊 Analyze Team Productivity Trends"
-source: godofprompt.ai
 slug: "promptsanalyze-team-productivity-trends"
 ---
 

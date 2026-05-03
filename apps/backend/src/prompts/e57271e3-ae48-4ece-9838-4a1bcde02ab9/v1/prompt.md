@@ -1,6 +1,5 @@
 ---
 title: "🔍 Identify Competitive Gaps Strategies"
-source: godofprompt.ai
 slug: "promptsidentify-competitive-gaps-strategies"
 ---
 

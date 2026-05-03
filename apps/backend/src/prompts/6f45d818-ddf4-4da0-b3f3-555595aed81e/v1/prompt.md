@@ -1,6 +1,5 @@
 ---
 title: "🚂 Prepare AI Coding Assistants"
-source: godofprompt.ai
 slug: "promptsprepare-ai-coding-assistants"
 ---
 

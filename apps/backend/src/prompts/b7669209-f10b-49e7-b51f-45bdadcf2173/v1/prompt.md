@@ -1,6 +1,5 @@
 ---
 title: "🗞️ Design Editorial Brunch Menus"
-source: godofprompt.ai
 slug: "promptsdesign-editorial-brunch-menus"
 ---
 

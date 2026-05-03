@@ -1,6 +1,5 @@
 ---
 title: "🧩 Research High-Margin Dropshipping Categories"
-source: godofprompt.ai
 slug: "promptsresearch-high-margin-dropshipping-categories"
 ---
 

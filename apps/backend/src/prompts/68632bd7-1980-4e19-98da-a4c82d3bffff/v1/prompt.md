@@ -1,6 +1,5 @@
 ---
 title: "🧠 Master Business Concept Understandings"
-source: godofprompt.ai
 slug: "promptsmaster-business-concept-understandings"
 ---
 

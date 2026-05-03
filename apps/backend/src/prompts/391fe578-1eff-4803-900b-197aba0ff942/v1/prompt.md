@@ -1,6 +1,5 @@
 ---
 title: "🔑 Draft New Product Intro Email"
-source: godofprompt.ai
 slug: "promptsdraft-new-product-intro-email"
 ---
 

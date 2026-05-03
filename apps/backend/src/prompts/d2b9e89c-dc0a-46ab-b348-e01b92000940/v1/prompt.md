@@ -1,6 +1,5 @@
 ---
 title: "📈 Explore Research Techniques"
-source: godofprompt.ai
 slug: "promptsexplore-research-techniques"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "📈 Plan Funding Needs"
-source: godofprompt.ai
 slug: "promptsplan-funding-needs"
 ---
 

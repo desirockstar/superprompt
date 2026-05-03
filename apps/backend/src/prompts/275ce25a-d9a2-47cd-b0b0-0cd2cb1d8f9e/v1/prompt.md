@@ -1,6 +1,5 @@
 ---
 title: "🕵️‍♂️ Analyze Missing Data"
-source: godofprompt.ai
 slug: "promptsanalyze-missing-data"
 ---
 

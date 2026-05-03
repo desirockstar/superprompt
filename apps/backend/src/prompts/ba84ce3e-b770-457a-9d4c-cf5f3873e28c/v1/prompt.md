@@ -1,6 +1,5 @@
 ---
 title: "📝 Copywriting Review Checklist"
-source: godofprompt.ai
 slug: "promptscopywriting-review-checklist"
 ---
 

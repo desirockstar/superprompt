@@ -1,6 +1,5 @@
 ---
 title: "📊 Strategic Business Analyst"
-source: godofprompt.ai
 slug: "promptsstrategic-business-analyst"
 ---
 

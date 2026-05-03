@@ -1,6 +1,5 @@
 ---
 title: "📊 Develop Split-Apply-Combine Aggregations"
-source: godofprompt.ai
 slug: "promptsdevelop-split-apply-combine-aggregations"
 ---
 

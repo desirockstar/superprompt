@@ -1,6 +1,5 @@
 ---
 title: "🪞 Generate Smartphone Screen Mockups"
-source: godofprompt.ai
 slug: "promptsgenerate-smartphone-screen-mockups"
 ---
 

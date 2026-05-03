@@ -1,6 +1,5 @@
 ---
 title: "🎯 Generate Priority Coaching Plan"
-source: godofprompt.ai
 slug: "promptsgenerate-priority-coaching-plan"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🔄 Transform Empty State Experiences"
-source: godofprompt.ai
 slug: "promptstransform-empty-state-experiences"
 ---
 

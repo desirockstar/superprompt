@@ -1,6 +1,5 @@
 ---
 title: "🦴 Simplify Complex Details"
-source: godofprompt.ai
 slug: "promptssimplify-complex-details"
 ---
 

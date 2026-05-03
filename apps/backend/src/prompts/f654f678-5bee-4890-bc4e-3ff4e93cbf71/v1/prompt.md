@@ -1,6 +1,5 @@
 ---
 title: "⚡ Optimize Network Performance"
-source: godofprompt.ai
 slug: "promptsoptimize-network-performance"
 ---
 

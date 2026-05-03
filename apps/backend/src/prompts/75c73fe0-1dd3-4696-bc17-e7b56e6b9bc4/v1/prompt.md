@@ -1,6 +1,5 @@
 ---
 title: "🌬️ Generate Chat Conversion Messages"
-source: godofprompt.ai
 slug: "promptsgenerate-chat-conversion-messages"
 ---
 

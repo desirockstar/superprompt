@@ -1,6 +1,5 @@
 ---
 title: "🤝 Build Team Culture"
-source: godofprompt.ai
 slug: "promptsbuild-team-culture"
 ---
 

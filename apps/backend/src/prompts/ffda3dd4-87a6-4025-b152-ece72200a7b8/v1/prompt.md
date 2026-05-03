@@ -1,6 +1,5 @@
 ---
 title: "🎮 Design Loyalty Dashboards"
-source: godofprompt.ai
 slug: "promptsdesign-loyalty-dashboards"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "📅 Plan Content Topics"
-source: godofprompt.ai
 slug: "promptsplan-content-topics"
 ---
 

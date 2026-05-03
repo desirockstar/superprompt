@@ -1,6 +1,5 @@
 ---
 title: "📅 Create Social Media Content"
-source: godofprompt.ai
 slug: "promptscreate-social-media-content"
 ---
 

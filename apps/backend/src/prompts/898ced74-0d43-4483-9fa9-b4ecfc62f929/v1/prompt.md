@@ -1,6 +1,5 @@
 ---
 title: "🔍 Filter Dataset Rows"
-source: godofprompt.ai
 slug: "promptsfilter-dataset-rows"
 ---
 

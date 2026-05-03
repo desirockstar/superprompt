@@ -1,6 +1,5 @@
 ---
 title: "🌌 Create Abstract Light Sphere Designs"
-source: godofprompt.ai
 slug: "promptscreate-abstract-light-sphere-designs"
 ---
 

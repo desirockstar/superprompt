@@ -1,6 +1,5 @@
 ---
 title: "🗽 Generate Isometric Statue Concepts"
-source: godofprompt.ai
 slug: "promptsgenerate-isometric-statue-concepts"
 ---
 

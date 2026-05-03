@@ -1,6 +1,5 @@
 ---
 title: "🔍 Get Data-Driven Analysis"
-source: godofprompt.ai
 slug: "promptsget-data-driven-analysis"
 ---
 

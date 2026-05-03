@@ -1,6 +1,5 @@
 ---
 title: "🛡️ Develop Private Messaging Platforms"
-source: godofprompt.ai
 slug: "promptsdevelop-private-messaging-platforms"
 ---
 

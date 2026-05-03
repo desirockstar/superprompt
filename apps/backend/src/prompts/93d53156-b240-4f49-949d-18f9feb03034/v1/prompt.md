@@ -1,6 +1,5 @@
 ---
 title: "📊 Monitor Operational KPIs"
-source: godofprompt.ai
 slug: "promptsmonitor-operational-kpis"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "👔 Generate Leadership Development Plan"
-source: godofprompt.ai
 slug: "promptsgenerate-leadership-development-plan"
 ---
 

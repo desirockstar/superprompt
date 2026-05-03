@@ -1,6 +1,5 @@
 ---
 title: "🔍 Design Search Bar Interfaces"
-source: godofprompt.ai
 slug: "promptsdesign-search-bar-interfaces"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🛠️ Create Product Prototypes"
-source: godofprompt.ai
 slug: "promptscreate-product-prototypes"
 ---
 

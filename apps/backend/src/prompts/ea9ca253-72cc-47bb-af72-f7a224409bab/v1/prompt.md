@@ -1,6 +1,5 @@
 ---
 title: "🏡 Generate Elegant Minimalist Living Room Photos"
-source: godofprompt.ai
 slug: "promptsgenerate-elegant-minimalist-living-room-photos"
 ---
 

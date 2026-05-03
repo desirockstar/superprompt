@@ -1,6 +1,5 @@
 ---
 title: "🔄 Develop API Retry System"
-source: godofprompt.ai
 slug: "promptsdevelop-api-retry-system"
 ---
 

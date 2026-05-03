@@ -1,6 +1,5 @@
 ---
 title: "📝 Edit Grant Proposal"
-source: godofprompt.ai
 slug: "promptsedit-grant-proposal"
 ---
 

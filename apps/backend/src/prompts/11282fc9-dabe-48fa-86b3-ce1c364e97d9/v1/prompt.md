@@ -1,6 +1,5 @@
 ---
 title: "🛒 Design Checkout Flow"
-source: godofprompt.ai
 slug: "promptsdesign-checkout-flow"
 ---
 

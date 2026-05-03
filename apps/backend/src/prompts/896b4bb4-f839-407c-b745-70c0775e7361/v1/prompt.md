@@ -1,6 +1,5 @@
 ---
 title: "📊 Generate Sales Performance Dashboards"
-source: godofprompt.ai
 slug: "promptsgenerate-sales-performance-dashboards"
 ---
 

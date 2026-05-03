@@ -1,6 +1,5 @@
 ---
 title: "♟️ Solve Challenges With Game Theory"
-source: godofprompt.ai
 slug: "promptssolve-challenges-with-game-theory"
 ---
 

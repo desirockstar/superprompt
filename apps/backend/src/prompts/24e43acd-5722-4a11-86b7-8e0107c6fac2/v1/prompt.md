@@ -1,6 +1,5 @@
 ---
 title: "🛒 Optimize E-Commerce Category Pages"
-source: godofprompt.ai
 slug: "promptsoptimize-e-commerce-category-pages"
 ---
 

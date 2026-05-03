@@ -1,6 +1,5 @@
 ---
 title: "🏔️ Generate Epic Fantasy Landscapes"
-source: godofprompt.ai
 slug: "promptsgenerate-epic-fantasy-landscapes"
 ---
 

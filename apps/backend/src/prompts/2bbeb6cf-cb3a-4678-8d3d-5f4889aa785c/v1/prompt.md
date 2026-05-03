@@ -1,6 +1,5 @@
 ---
 title: "📈 Generate Lead Generation Plan"
-source: godofprompt.ai
 slug: "promptsgenerate-lead-generation-plan"
 ---
 

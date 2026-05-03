@@ -1,6 +1,5 @@
 ---
 title: "🔄 Optimize Lean Innovation Processes"
-source: godofprompt.ai
 slug: "promptsoptimize-lean-innovation-processes"
 ---
 

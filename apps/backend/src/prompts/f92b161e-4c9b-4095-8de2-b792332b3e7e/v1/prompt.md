@@ -1,6 +1,5 @@
 ---
 title: "⚗️ Organize Messy Thoughts"
-source: godofprompt.ai
 slug: "promptsorganize-messy-thoughts"
 ---
 

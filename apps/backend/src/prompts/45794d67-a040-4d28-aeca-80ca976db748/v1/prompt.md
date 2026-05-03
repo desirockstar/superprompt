@@ -1,6 +1,5 @@
 ---
 title: "📊 Develop Sales Reports"
-source: godofprompt.ai
 slug: "promptsdevelop-sales-reports"
 ---
 

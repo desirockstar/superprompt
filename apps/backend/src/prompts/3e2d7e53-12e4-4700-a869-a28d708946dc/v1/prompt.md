@@ -1,6 +1,5 @@
 ---
 title: "🎨 Create Anatomical Art Concepts"
-source: godofprompt.ai
 slug: "promptscreate-anatomical-art-concepts"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🤖 Automate Business Processes"
-source: godofprompt.ai
 slug: "promptsautomate-business-processes"
 ---
 

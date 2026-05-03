@@ -1,6 +1,5 @@
 ---
 title: "🌐 Join Industry Associations"
-source: godofprompt.ai
 slug: "promptsjoin-industry-associations"
 ---
 

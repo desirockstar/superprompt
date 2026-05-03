@@ -1,6 +1,5 @@
 ---
 title: "🛤️ Build Customer Issue Decision Trees"
-source: godofprompt.ai
 slug: "promptsbuild-customer-issue-decision-trees"
 ---
 

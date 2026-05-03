@@ -1,6 +1,5 @@
 ---
 title: "🛠️ Generate Environment Setup Scripts"
-source: godofprompt.ai
 slug: "promptsgenerate-environment-setup-scripts"
 ---
 

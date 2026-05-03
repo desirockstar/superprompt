@@ -1,6 +1,5 @@
 ---
 title: "🗿 Create Annotation Guide"
-source: godofprompt.ai
 slug: "promptscreate-annotation-guide"
 ---
 

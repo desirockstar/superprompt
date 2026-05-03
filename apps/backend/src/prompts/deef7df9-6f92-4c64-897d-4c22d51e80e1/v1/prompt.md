@@ -1,6 +1,5 @@
 ---
 title: "🧩 Break Down Complex Code"
-source: godofprompt.ai
 slug: "promptsbreak-down-complex-code"
 ---
 

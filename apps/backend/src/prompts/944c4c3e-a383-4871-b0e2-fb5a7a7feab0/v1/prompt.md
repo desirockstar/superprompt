@@ -1,6 +1,5 @@
 ---
 title: "🔧 Debug Configuration Failures"
-source: godofprompt.ai
 slug: "promptsdebug-configuration-failures"
 ---
 

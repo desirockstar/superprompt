@@ -1,6 +1,5 @@
 ---
 title: "🛠️ Build Production-Ready Apps"
-source: godofprompt.ai
 slug: "promptsbuild-production-ready-apps"
 ---
 

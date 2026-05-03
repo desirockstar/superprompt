@@ -1,6 +1,5 @@
 ---
 title: "🎼 Generate Postman Collection"
-source: godofprompt.ai
 slug: "promptsgenerate-postman-collection"
 ---
 

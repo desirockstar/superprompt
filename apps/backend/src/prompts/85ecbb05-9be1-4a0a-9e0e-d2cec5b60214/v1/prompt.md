@@ -1,6 +1,5 @@
 ---
 title: "💎 Generate Hyperrealistic Product Photography Shots"
-source: godofprompt.ai
 slug: "promptsgenerate-hyperrealistic-product-photography-shots"
 ---
 

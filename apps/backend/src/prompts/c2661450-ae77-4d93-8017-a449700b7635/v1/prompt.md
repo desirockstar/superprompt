@@ -1,6 +1,5 @@
 ---
 title: "🎡 Generate Circular Product Dial Compositions"
-source: godofprompt.ai
 slug: "promptsgenerate-circular-product-dial-compositions"
 ---
 

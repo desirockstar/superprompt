@@ -1,6 +1,5 @@
 ---
 title: "🧠 Implement Design Thinking Strategy"
-source: godofprompt.ai
 slug: "promptsimplement-design-thinking-strategy"
 ---
 

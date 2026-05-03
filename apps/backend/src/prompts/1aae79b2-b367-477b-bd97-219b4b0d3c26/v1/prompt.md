@@ -1,6 +1,5 @@
 ---
 title: "📊 Control Inventory Management"
-source: godofprompt.ai
 slug: "promptscontrol-inventory-management"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "👜 Generate Minimal E-Commerce UIs"
-source: godofprompt.ai
 slug: "promptsgenerate-minimal-e-commerce-uis"
 ---
 

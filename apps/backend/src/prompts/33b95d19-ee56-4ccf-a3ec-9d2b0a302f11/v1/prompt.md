@@ -1,6 +1,5 @@
 ---
 title: "🌍 Write String Formatting Code"
-source: godofprompt.ai
 slug: "promptswrite-string-formatting-code"
 ---
 

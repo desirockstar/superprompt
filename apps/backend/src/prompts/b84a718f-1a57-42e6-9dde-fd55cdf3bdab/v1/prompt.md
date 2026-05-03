@@ -1,6 +1,5 @@
 ---
 title: "🛤️ Build Sales Funnels"
-source: godofprompt.ai
 slug: "promptsbuild-sales-funnels"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "📊 Identify Audience Needs for Content"
-source: godofprompt.ai
 slug: "promptsidentify-audience-needs-for-content"
 ---
 

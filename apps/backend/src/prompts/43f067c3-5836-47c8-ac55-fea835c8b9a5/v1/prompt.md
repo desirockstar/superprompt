@@ -1,6 +1,5 @@
 ---
 title: "🔍 Generate Jobs-To-Be-Done Features"
-source: godofprompt.ai
 slug: "promptsgenerate-jobs-to-be-done-features"
 ---
 

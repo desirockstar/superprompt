@@ -1,6 +1,5 @@
 ---
 title: "🪁 Create Animated Film Posters"
-source: godofprompt.ai
 slug: "promptscreate-animated-film-posters"
 ---
 

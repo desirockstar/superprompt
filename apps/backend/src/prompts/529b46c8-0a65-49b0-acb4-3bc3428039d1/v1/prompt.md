@@ -1,6 +1,5 @@
 ---
 title: "🔑 Master Keyword Research"
-source: godofprompt.ai
 slug: "promptsmaster-keyword-research"
 ---
 

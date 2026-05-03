@@ -1,6 +1,5 @@
 ---
 title: "🚲 Design Sustainable Urban Neighborhood Scenes"
-source: godofprompt.ai
 slug: "promptsdesign-sustainable-urban-neighborhood-scenes"
 ---
 

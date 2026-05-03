@@ -1,6 +1,5 @@
 ---
 title: "🗣️ Create Communication Training Program"
-source: godofprompt.ai
 slug: "promptscreate-communication-training-program"
 ---
 

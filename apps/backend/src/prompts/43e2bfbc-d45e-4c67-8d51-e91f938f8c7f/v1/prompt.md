@@ -1,6 +1,5 @@
 ---
 title: "🗺️ Create XML Sitemap"
-source: godofprompt.ai
 slug: "promptscreate-xml-sitemap"
 ---
 

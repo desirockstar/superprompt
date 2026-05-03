@@ -1,6 +1,5 @@
 ---
 title: "📊 Monitor Risk Indicators"
-source: godofprompt.ai
 slug: "promptsmonitor-risk-indicators"
 ---
 

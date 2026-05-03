@@ -1,6 +1,5 @@
 ---
 title: "🎛️ Achieve Anything With Cognitive Behavioral Techniques"
-source: godofprompt.ai
 slug: "promptsachieve-anything-with-cognitive-behavioral-techniques"
 ---
 

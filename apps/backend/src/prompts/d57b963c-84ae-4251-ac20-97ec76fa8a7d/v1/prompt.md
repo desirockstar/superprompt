@@ -1,6 +1,5 @@
 ---
 title: "🔍 Improve Exception Handling"
-source: godofprompt.ai
 slug: "promptsimprove-exception-handling"
 ---
 

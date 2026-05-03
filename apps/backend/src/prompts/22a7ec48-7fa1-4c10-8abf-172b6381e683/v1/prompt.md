@@ -1,6 +1,5 @@
 ---
 title: "🧊 Design Editorial Cocktail Menu Layouts"
-source: godofprompt.ai
 slug: "promptsdesign-editorial-cocktail-menu-layouts"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🏞️ Create Adventure Game Concepts"
-source: godofprompt.ai
 slug: "promptscreate-adventure-game-concepts"
 ---
 

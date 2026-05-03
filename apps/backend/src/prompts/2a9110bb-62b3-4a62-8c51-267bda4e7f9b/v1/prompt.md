@@ -1,6 +1,5 @@
 ---
 title: "📊 Analyze Market Trends Data"
-source: godofprompt.ai
 slug: "promptsanalyze-market-trends-data"
 ---
 

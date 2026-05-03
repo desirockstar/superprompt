@@ -1,6 +1,5 @@
 ---
 title: "🪜 Build Chat Applications"
-source: godofprompt.ai
 slug: "promptsbuild-chat-applications"
 ---
 

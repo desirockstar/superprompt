@@ -1,6 +1,5 @@
 ---
 title: "📊 Optimize Product Development Strategy"
-source: godofprompt.ai
 slug: "promptsoptimize-product-development-strategy"
 ---
 

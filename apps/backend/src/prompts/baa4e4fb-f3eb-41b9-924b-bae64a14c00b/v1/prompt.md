@@ -1,6 +1,5 @@
 ---
 title: "📊 Monitor Team Progress"
-source: godofprompt.ai
 slug: "promptsmonitor-team-progress"
 ---
 

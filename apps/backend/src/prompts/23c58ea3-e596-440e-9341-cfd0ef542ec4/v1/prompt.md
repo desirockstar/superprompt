@@ -1,6 +1,5 @@
 ---
 title: "🌅 Create Hyper-Realistic Outdoor Scenes"
-source: godofprompt.ai
 slug: "promptscreate-hyper-realistic-outdoor-scenes"
 ---
 

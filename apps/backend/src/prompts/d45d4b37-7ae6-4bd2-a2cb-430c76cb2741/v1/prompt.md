@@ -1,6 +1,5 @@
 ---
 title: "🦢 Generate Natural Portrait Photography Variations"
-source: godofprompt.ai
 slug: "promptsgenerate-natural-portrait-photography-variations"
 ---
 

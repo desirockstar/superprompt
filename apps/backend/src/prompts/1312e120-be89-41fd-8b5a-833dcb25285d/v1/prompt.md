@@ -1,6 +1,5 @@
 ---
 title: "🎯 Create Customer Persona Profiles"
-source: godofprompt.ai
 slug: "promptscreate-customer-persona-profiles"
 ---
 

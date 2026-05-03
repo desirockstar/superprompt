@@ -1,6 +1,5 @@
 ---
 title: "🧹 Draft CRM Data Hygiene Checklist"
-source: godofprompt.ai
 slug: "promptsdraft-crm-data-hygiene-checklist"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🔍 Conduct Keyword Research for Content"
-source: godofprompt.ai
 slug: "promptsconduct-keyword-research-for-content"
 ---
 

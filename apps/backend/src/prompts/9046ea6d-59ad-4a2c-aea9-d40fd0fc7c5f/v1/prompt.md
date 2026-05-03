@@ -1,6 +1,5 @@
 ---
 title: "📘 Automate Reporting Processes"
-source: godofprompt.ai
 slug: "promptsautomate-reporting-processes"
 ---
 

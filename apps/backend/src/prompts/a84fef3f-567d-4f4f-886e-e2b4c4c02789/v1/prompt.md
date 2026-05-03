@@ -1,6 +1,5 @@
 ---
 title: "🧩 Clarify Error Messages"
-source: godofprompt.ai
 slug: "promptsclarify-error-messages"
 ---
 

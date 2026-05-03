@@ -1,6 +1,5 @@
 ---
 title: "📊 Create Investor Pitch Deck"
-source: godofprompt.ai
 slug: "promptscreate-investor-pitch-deck-2"
 ---
 

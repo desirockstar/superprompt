@@ -1,6 +1,5 @@
 ---
 title: "🛡️ Draft Return Policy Snippets"
-source: godofprompt.ai
 slug: "promptsdraft-return-policy-snippets"
 ---
 

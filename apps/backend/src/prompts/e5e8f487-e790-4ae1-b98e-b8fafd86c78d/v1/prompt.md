@@ -1,6 +1,5 @@
 ---
 title: "🔗 Build Booking Platforms"
-source: godofprompt.ai
 slug: "promptsbuild-booking-platforms"
 ---
 

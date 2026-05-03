@@ -1,6 +1,5 @@
 ---
 title: "📝 Write Grant Proposal"
-source: godofprompt.ai
 slug: "promptswrite-grant-proposal"
 ---
 

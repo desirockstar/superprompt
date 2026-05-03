@@ -1,6 +1,5 @@
 ---
 title: "🚀 Build Testing Dashboards"
-source: godofprompt.ai
 slug: "promptsbuild-testing-dashboards"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🔍 Identify High-Value Business Problems"
-source: godofprompt.ai
 slug: "promptsidentify-high-value-business-problems"
 ---
 

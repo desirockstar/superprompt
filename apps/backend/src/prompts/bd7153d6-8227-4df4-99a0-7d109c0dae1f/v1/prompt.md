@@ -1,6 +1,5 @@
 ---
 title: "🕵️‍♂️ Discover Product SEO Gaps"
-source: godofprompt.ai
 slug: "promptsdiscover-product-seo-gaps"
 ---
 

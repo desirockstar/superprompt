@@ -1,6 +1,5 @@
 ---
 title: "⏳ Set Request Timeouts"
-source: godofprompt.ai
 slug: "promptsset-request-timeouts"
 ---
 

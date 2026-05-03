@@ -1,6 +1,5 @@
 ---
 title: "📊 Develop Risk Mitigation Plan"
-source: godofprompt.ai
 slug: "promptsdevelop-risk-mitigation-plan"
 ---
 

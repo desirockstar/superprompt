@@ -1,6 +1,5 @@
 ---
 title: "📈 Create Performance Management System"
-source: godofprompt.ai
 slug: "promptscreate-performance-management-system"
 ---
 

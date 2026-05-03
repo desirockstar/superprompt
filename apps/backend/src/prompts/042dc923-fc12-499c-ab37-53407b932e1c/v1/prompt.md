@@ -1,6 +1,5 @@
 ---
 title: "🧱 Design Photorealistic Urban District Renders"
-source: godofprompt.ai
 slug: "promptsdesign-photorealistic-urban-district-renders"
 ---
 

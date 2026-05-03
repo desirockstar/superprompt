@@ -1,6 +1,5 @@
 ---
 title: "📊 Design Data Visualizations"
-source: godofprompt.ai
 slug: "promptsdesign-data-visualizations"
 ---
 

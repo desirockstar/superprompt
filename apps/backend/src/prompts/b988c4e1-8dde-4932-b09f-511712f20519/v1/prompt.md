@@ -1,6 +1,5 @@
 ---
 title: "🧊 Uncover Pre-Launch Knowledge Gaps"
-source: godofprompt.ai
 slug: "promptsuncover-pre-launch-knowledge-gaps"
 ---
 

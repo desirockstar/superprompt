@@ -1,6 +1,5 @@
 ---
 title: "📝 Implement Automation Tools"
-source: godofprompt.ai
 slug: "promptsimplement-automation-tools"
 ---
 

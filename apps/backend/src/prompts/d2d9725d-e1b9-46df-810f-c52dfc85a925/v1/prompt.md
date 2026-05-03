@@ -1,6 +1,5 @@
 ---
 title: "🛠️ Build Form Validations"
-source: godofprompt.ai
 slug: "promptsbuild-form-validations"
 ---
 

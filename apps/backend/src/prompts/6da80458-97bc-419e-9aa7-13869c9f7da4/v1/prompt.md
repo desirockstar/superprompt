@@ -1,6 +1,5 @@
 ---
 title: "🐚 Design Axonometric Core Interiors"
-source: godofprompt.ai
 slug: "promptsdesign-axonometric-core-interiors"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🍔 Create Food E-Commerce Hero Sections"
-source: godofprompt.ai
 slug: "promptscreate-food-e-commerce-hero-sections"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🔍 Identify SEO Content Opportunities"
-source: godofprompt.ai
 slug: "promptsidentify-seo-content-opportunities"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "📊 Perform Competitor Analysis Report"
-source: godofprompt.ai
 slug: "promptsperform-competitor-analysis-report"
 ---
 

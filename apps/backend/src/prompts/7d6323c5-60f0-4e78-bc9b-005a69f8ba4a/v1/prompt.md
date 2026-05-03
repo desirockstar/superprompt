@@ -1,6 +1,5 @@
 ---
 title: "⚡ Generate Divine Business Transformations"
-source: godofprompt.ai
 slug: "promptsgenerate-divine-business-transformations"
 ---
 

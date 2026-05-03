@@ -1,6 +1,5 @@
 ---
 title: "💡 Generate Revenue Stream Ideas"
-source: godofprompt.ai
 slug: "promptsgenerate-revenue-stream-ideas"
 ---
 

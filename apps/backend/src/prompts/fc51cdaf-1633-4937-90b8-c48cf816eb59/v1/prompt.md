@@ -1,6 +1,5 @@
 ---
 title: "📋 Create Onboarding Feedback Form"
-source: godofprompt.ai
 slug: "promptscreate-onboarding-feedback-form"
 ---
 

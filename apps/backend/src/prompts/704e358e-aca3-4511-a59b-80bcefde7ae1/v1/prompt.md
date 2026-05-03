@@ -1,6 +1,5 @@
 ---
 title: "🚀 Generate Innovative Product Ideas"
-source: godofprompt.ai
 slug: "promptsgenerate-innovative-product-ideas"
 ---
 

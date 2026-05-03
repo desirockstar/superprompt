@@ -1,6 +1,5 @@
 ---
 title: "🏡 Generate Interior Photography Concepts"
-source: godofprompt.ai
 slug: "promptsgenerate-interior-photography-concepts"
 ---
 

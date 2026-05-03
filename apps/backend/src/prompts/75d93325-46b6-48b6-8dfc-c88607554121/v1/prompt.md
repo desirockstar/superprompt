@@ -1,6 +1,5 @@
 ---
 title: "📐 Generate Product Documentation Layouts"
-source: godofprompt.ai
 slug: "promptsgenerate-product-documentation-layouts"
 ---
 

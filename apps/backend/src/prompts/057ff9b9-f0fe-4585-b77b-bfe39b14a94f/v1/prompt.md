@@ -1,6 +1,5 @@
 ---
 title: "📐 Build Knowledge Base Style Guides"
-source: godofprompt.ai
 slug: "promptsbuild-knowledge-base-style-guides"
 ---
 

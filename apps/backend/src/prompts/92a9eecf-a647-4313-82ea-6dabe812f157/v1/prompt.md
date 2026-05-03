@@ -1,6 +1,5 @@
 ---
 title: "🍬 Create Ultra-Realistic Candy Renders"
-source: godofprompt.ai
 slug: "promptscreate-ultra-realistic-candy-renders-2"
 ---
 

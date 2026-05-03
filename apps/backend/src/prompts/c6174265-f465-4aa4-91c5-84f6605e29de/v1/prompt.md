@@ -1,6 +1,5 @@
 ---
 title: "🚀 Create Futuristic Automotive Displays"
-source: godofprompt.ai
 slug: "promptscreate-futuristic-automotive-displays"
 ---
 

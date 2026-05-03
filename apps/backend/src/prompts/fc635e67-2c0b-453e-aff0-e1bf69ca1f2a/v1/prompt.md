@@ -1,6 +1,5 @@
 ---
 title: "📊 Analyze Financial Risks"
-source: godofprompt.ai
 slug: "promptsanalyze-financial-risks"
 ---
 

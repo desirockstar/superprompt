@@ -1,6 +1,5 @@
 ---
 title: "📅 Create Project Schedule with Gantt Chart"
-source: godofprompt.ai
 slug: "promptscreate-project-schedule-with-gantt-chart"
 ---
 

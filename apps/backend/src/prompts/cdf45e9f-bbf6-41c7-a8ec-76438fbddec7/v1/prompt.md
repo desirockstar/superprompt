@@ -1,6 +1,5 @@
 ---
 title: "🎯 Set Business Objectives"
-source: godofprompt.ai
 slug: "promptsset-business-objectives"
 ---
 

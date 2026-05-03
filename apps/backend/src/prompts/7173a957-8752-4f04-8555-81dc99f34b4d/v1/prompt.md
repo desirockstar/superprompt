@@ -1,6 +1,5 @@
 ---
 title: "⚡ Master Complex Topics Faster"
-source: godofprompt.ai
 slug: "promptsmaster-complex-topics-faster"
 ---
 

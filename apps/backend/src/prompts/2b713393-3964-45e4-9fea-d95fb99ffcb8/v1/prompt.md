@@ -1,6 +1,5 @@
 ---
 title: "🧩 Create Software Architecture"
-source: godofprompt.ai
 slug: "promptscreate-software-architecture"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🐆 Create Designer Product Advertisement"
-source: godofprompt.ai
 slug: "promptscreate-designer-product-advertisement"
 ---
 

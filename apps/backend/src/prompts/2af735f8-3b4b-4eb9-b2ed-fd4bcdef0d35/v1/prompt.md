@@ -1,6 +1,5 @@
 ---
 title: "🔍 Develop Plugin Architectures"
-source: godofprompt.ai
 slug: "promptsdevelop-plugin-architectures"
 ---
 

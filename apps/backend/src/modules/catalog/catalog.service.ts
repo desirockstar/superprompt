@@ -113,6 +113,41 @@ export class CatalogService {
     return this.evaluationRepo.getEvaluation(promptId);
   }
 
+  async getRelatedPrompts(promptId: string, limit: number = 3) {
+    const tierMap = await this.getEvaluationsWithTiers();
+    
+    const currentPrompt = await this.findOne(promptId, false);
+    const categoryParts = currentPrompt.category.split(',').map((c: string) => c.trim());
+    const mainCategory = categoryParts[0];
+
+    const relatedPrompts = await this.db.select()
+      .from(promptsTable)
+      .where(eq(promptsTable.status, 'approved'))
+      .limit(limit * 3);
+
+    const filtered = relatedPrompts.filter((p: any) => {
+      if (p.id === promptId) return false;
+      const promptCategoryParts = p.category.split(',').map((c: string) => c.trim());
+      return promptCategoryParts.includes(mainCategory);
+    }).slice(0, limit);
+
+    return filtered.map((p: any) => ({
+      id: p.id,
+      title: p.title,
+      category: p.category,
+      basePath: p.basePath,
+      currentVersion: p.currentVersion,
+      isMultiVersion: p.isMultiVersion,
+      createdAt: p.createdAt,
+      preview: p.preview || '',
+      tier: tierMap.get(p.id.toString())?.level || null,
+      primaryTag: p.primaryTag,
+      isViral: p.isViral,
+      isNano: p.isNano,
+      views: p.views,
+    }));
+  }
+
   async createWithUser(userId: string, data: { title: string; category: string; content: Record<string, string>; isMultiVersion?: boolean }) {
     const basePath = `prompts/${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
     const isMulti = data.isMultiVersion || Object.keys(data.content).some(k => k !== 'content');

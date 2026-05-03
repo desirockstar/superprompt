@@ -1,6 +1,5 @@
 ---
 title: "🤝 Generate Industry Networking Opportunities"
-source: godofprompt.ai
 slug: "promptsgenerate-industry-networking-opportunities"
 ---
 

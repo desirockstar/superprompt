@@ -1,6 +1,5 @@
 ---
 title: "🌱 Review Student's Code"
-source: godofprompt.ai
 slug: "promptsreview-students-code"
 ---
 

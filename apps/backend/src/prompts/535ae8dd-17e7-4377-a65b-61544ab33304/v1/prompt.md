@@ -1,6 +1,5 @@
 ---
 title: "🎨 Develop Color Palettes"
-source: godofprompt.ai
 slug: "promptsdevelop-color-palettes"
 ---
 

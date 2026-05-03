@@ -1,6 +1,5 @@
 ---
 title: "💌 Draft Customer Retention Notes"
-source: godofprompt.ai
 slug: "promptsdraft-customer-retention-notes"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🦴 Design Industrial Minimalist Office Interiors"
-source: godofprompt.ai
 slug: "promptsdesign-industrial-minimalist-office-interiors-2"
 ---
 

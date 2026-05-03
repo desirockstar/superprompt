@@ -1,6 +1,5 @@
 ---
 title: "✈️ Generate Rapid OODA Loop Phases"
-source: godofprompt.ai
 slug: "promptsgenerate-rapid-ooda-loop-phases"
 ---
 

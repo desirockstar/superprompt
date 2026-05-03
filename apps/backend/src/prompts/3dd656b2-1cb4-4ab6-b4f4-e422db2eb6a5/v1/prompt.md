@@ -1,6 +1,5 @@
 ---
 title: "🔍 Generate App Ideas"
-source: godofprompt.ai
 slug: "promptsgenerate-app-ideas"
 ---
 

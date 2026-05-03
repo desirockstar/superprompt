@@ -1,6 +1,5 @@
 ---
 title: "🔄 Design CSV Import Systems"
-source: godofprompt.ai
 slug: "promptsdesign-csv-import-systems"
 ---
 

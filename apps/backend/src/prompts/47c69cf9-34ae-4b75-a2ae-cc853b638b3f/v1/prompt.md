@@ -1,6 +1,5 @@
 ---
 title: "🏡 Create Modern Minimalist House Designs"
-source: godofprompt.ai
 slug: "promptscreate-modern-minimalist-house-designs"
 ---
 

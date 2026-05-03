@@ -1,6 +1,5 @@
 ---
 title: "🤖 Build Return Automation Systems"
-source: godofprompt.ai
 slug: "promptsbuild-return-automation-systems"
 ---
 

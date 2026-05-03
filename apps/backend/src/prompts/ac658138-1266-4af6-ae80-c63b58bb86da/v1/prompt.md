@@ -1,6 +1,5 @@
 ---
 title: "🛋️ Generate Minimalist Sofa Images"
-source: godofprompt.ai
 slug: "promptsgenerate-minimalist-sofa-images"
 ---
 

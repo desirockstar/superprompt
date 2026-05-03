@@ -1,6 +1,5 @@
 ---
 title: "🔍 Identify Predictive Analytics Tactics"
-source: godofprompt.ai
 slug: "promptsidentify-predictive-analytics-tactics"
 ---
 

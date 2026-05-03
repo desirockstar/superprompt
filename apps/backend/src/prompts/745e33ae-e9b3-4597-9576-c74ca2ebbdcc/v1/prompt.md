@@ -1,6 +1,5 @@
 ---
 title: "🏙️ Generate Architectural Photography Examples"
-source: godofprompt.ai
 slug: "promptsgenerate-architectural-photography-examples"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🛒 Draft Checkout Help Notes"
-source: godofprompt.ai
 slug: "promptsdraft-checkout-help-notes"
 ---
 

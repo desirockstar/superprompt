@@ -1,6 +1,5 @@
 ---
 title: "🍱 Plan Productive Weekly Schedules"
-source: godofprompt.ai
 slug: "promptsplan-productive-weekly-schedules"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🔗 Build Supplier Conflict Resolution Workflow"
-source: godofprompt.ai
 slug: "promptsbuild-supplier-conflict-resolution-workflow"
 ---
 

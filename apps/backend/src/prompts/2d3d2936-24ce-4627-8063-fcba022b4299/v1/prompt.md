@@ -1,6 +1,5 @@
 ---
 title: "🔍 Draft Product Requirements"
-source: godofprompt.ai
 slug: "promptsdraft-product-requirements"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "📖 Explain API Usage"
-source: godofprompt.ai
 slug: "promptsexplain-api-usage"
 ---
 

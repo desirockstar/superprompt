@@ -1,6 +1,5 @@
 ---
 title: "🪄 Build Support Agent Macro Systems"
-source: godofprompt.ai
 slug: "promptsbuild-support-agent-macro-systems"
 ---
 

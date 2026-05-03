@@ -1,6 +1,5 @@
 ---
 title: "👗 Create Fashion Editorial Shots"
-source: godofprompt.ai
 slug: "promptscreate-fashion-editorial-shots-2"
 ---
 

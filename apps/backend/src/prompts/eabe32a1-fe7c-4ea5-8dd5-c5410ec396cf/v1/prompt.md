@@ -1,6 +1,5 @@
 ---
 title: "📅 Plan Blog Posts Schedule"
-source: godofprompt.ai
 slug: "promptsplan-blog-posts-schedule"
 ---
 

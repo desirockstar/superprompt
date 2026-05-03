@@ -1,6 +1,5 @@
 ---
 title: "🗣️ Design Data Collection Forms"
-source: godofprompt.ai
 slug: "promptsdesign-data-collection-forms"
 ---
 

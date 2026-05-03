@@ -1,6 +1,5 @@
 ---
 title: "✂️ Generate Premium Sticker Illustrations"
-source: godofprompt.ai
 slug: "promptsgenerate-premium-sticker-illustrations"
 ---
 

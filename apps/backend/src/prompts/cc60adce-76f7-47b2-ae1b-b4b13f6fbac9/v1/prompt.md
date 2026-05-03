@@ -1,6 +1,5 @@
 ---
 title: "🌱 Draft Homepage Welcome Text"
-source: godofprompt.ai
 slug: "promptsdraft-homepage-welcome-text"
 ---
 

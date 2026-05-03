@@ -1,6 +1,5 @@
 ---
 title: "📈 Create Strategic Business Planning"
-source: godofprompt.ai
 slug: "promptscreate-strategic-business-planning"
 ---
 

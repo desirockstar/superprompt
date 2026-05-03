@@ -1,6 +1,5 @@
 ---
 title: "📅 Set Project Milestones Timeline"
-source: godofprompt.ai
 slug: "promptsset-project-milestones-timeline"
 ---
 

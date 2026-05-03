@@ -1,6 +1,5 @@
 ---
 title: "🧙‍♂️ Build Social Media Campaigns"
-source: godofprompt.ai
 slug: "promptsbuild-social-media-campaigns"
 ---
 

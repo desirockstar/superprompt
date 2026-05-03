@@ -1,6 +1,5 @@
 ---
 title: "📧 Create Candidate Engagement Email"
-source: godofprompt.ai
 slug: "promptscreate-candidate-engagement-email"
 ---
 

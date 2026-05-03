@@ -1,6 +1,5 @@
 ---
 title: "🔗 Create LinkedIn Profile Strategy"
-source: godofprompt.ai
 slug: "promptscreate-linkedin-profile-strategy"
 ---
 

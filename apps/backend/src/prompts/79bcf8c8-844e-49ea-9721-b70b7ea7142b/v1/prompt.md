@@ -1,6 +1,5 @@
 ---
 title: "📊 Standardize Naming Conventions"
-source: godofprompt.ai
 slug: "promptsstandardize-naming-conventions"
 ---
 

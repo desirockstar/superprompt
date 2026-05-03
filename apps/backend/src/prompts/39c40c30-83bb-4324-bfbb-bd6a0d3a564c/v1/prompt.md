@@ -1,6 +1,5 @@
 ---
 title: "🤝 Automate Cross-Sell Campaigns"
-source: godofprompt.ai
 slug: "promptsautomate-cross-sell-campaigns"
 ---
 

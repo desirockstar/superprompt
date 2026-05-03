@@ -1,6 +1,5 @@
 ---
 title: "🧠 Generate SEO Blog Posts"
-source: godofprompt.ai
 slug: "promptsgenerate-seo-blog-posts"
 ---
 

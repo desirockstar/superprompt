@@ -1,6 +1,5 @@
 ---
 title: "🌵 Create Desert Fashion Shoots"
-source: godofprompt.ai
 slug: "promptscreate-desert-fashion-shoots"
 ---
 

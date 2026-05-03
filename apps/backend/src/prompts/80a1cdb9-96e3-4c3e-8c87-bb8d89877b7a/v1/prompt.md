@@ -1,6 +1,5 @@
 ---
 title: "🛡️ Design Rate Limiting System"
-source: godofprompt.ai
 slug: "promptsdesign-rate-limiting-system"
 ---
 

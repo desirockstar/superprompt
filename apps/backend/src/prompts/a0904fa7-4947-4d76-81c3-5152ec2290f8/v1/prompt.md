@@ -1,6 +1,5 @@
 ---
 title: "🔍 Build GraphQL Queries"
-source: godofprompt.ai
 slug: "promptsbuild-graphql-queries"
 ---
 

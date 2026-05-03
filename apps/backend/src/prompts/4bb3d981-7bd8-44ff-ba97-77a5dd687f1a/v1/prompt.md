@@ -1,6 +1,5 @@
 ---
 title: "🤖 Identify Customer Support Automations"
-source: godofprompt.ai
 slug: "promptsidentify-customer-support-automations"
 ---
 

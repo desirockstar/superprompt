@@ -1,6 +1,5 @@
 ---
 title: "🩻 Identify Workflow Automation Opportunities"
-source: godofprompt.ai
 slug: "promptsidentify-workflow-automation-opportunities"
 ---
 

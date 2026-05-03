@@ -1,6 +1,5 @@
 ---
 title: "📜 Review Contract Legal Soundness"
-source: godofprompt.ai
 slug: "promptsreview-contract-legal-soundness"
 ---
 

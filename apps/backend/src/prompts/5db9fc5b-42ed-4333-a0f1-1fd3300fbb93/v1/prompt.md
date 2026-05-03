@@ -1,6 +1,5 @@
 ---
 title: "📅 Automate Social Media Posting"
-source: godofprompt.ai
 slug: "promptsautomate-social-media-posting-2"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "💡 Generate Business Innovation Ideas"
-source: godofprompt.ai
 slug: "promptsgenerate-business-innovation-ideas"
 ---
 

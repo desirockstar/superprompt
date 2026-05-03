@@ -1,6 +1,5 @@
 ---
 title: "📝 Create Comprehensive Project Brief"
-source: godofprompt.ai
 slug: "promptscreate-comprehensive-project-brief"
 ---
 

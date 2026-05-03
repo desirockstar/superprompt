@@ -1,6 +1,5 @@
 ---
 title: "🩻 Test Business Plan Assumptions"
-source: godofprompt.ai
 slug: "promptstest-business-plan-assumptions"
 ---
 

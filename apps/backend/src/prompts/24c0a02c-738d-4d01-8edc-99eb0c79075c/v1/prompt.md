@@ -1,6 +1,5 @@
 ---
 title: "📅 Plan Email Newsletters Content"
-source: godofprompt.ai
 slug: "promptsplan-email-newsletters-content"
 ---
 

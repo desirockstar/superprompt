@@ -1,6 +1,5 @@
 ---
 title: "🏛️ Create Architectural Design Concept Images"
-source: godofprompt.ai
 slug: "promptscreate-architectural-design-concepts-images"
 ---
 

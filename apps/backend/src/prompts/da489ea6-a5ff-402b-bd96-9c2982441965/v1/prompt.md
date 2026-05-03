@@ -1,6 +1,5 @@
 ---
 title: "📊 Manage Project Deliverables Tracking"
-source: godofprompt.ai
 slug: "promptsmanage-project-deliverables-tracking"
 ---
 

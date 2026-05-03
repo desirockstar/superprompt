@@ -1,6 +1,5 @@
 ---
 title: "🧠 Identify Common Programming Mistakes"
-source: godofprompt.ai
 slug: "promptsidentify-common-programming-mistakes"
 ---
 

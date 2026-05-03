@@ -1,6 +1,5 @@
 ---
 title: "🧭 Create Personalized Learning Roadmap"
-source: godofprompt.ai
 slug: "promptscreate-personalized-learning-roadmap"
 ---
 

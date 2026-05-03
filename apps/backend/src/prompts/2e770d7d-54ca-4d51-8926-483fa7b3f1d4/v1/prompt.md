@@ -1,6 +1,5 @@
 ---
 title: "🔍 Research Market Opportunities"
-source: godofprompt.ai
 slug: "promptsresearch-market-opportunities"
 ---
 

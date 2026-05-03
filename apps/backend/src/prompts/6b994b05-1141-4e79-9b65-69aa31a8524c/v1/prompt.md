@@ -1,6 +1,5 @@
 ---
 title: "📝 Research Content Ideas"
-source: godofprompt.ai
 slug: "promptsresearch-content-ideas"
 ---
 

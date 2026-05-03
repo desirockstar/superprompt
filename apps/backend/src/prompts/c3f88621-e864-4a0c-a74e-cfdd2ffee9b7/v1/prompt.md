@@ -1,6 +1,5 @@
 ---
 title: "💎 Create Luxurious Jewelry Website Designs"
-source: godofprompt.ai
 slug: "promptscreate-luxurious-jewelry-website-designs"
 ---
 

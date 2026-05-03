@@ -1,6 +1,5 @@
 ---
 title: "📊 Prepare Budget Reports"
-source: godofprompt.ai
 slug: "promptsprepare-budget-reports"
 ---
 

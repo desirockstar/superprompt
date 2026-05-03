@@ -1,6 +1,5 @@
 ---
 title: "🏗️ Build Full-Stack Software Architectures"
-source: godofprompt.ai
 slug: "promptsbuild-full-stack-software-architectures"
 ---
 

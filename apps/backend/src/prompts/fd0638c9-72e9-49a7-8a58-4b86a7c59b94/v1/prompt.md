@@ -1,6 +1,5 @@
 ---
 title: "🎤 Optimize for Voice Search"
-source: godofprompt.ai
 slug: "promptsoptimize-for-voice-search"
 ---
 

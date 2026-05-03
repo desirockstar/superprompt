@@ -1,6 +1,5 @@
 ---
 title: "📊 Generate Histogram With Code"
-source: godofprompt.ai
 slug: "promptsgenerate-histogram-with-code"
 ---
 

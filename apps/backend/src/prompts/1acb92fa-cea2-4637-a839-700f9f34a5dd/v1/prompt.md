@@ -1,6 +1,5 @@
 ---
 title: "🪂 Strategize Real Estate Financing Exits"
-source: godofprompt.ai
 slug: "promptsstrategize-real-estate-financing-exits"
 ---
 

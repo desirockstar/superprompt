@@ -1,6 +1,5 @@
 ---
 title: "💡 Design Pricing Tables"
-source: godofprompt.ai
 slug: "promptsdesign-pricing-tables"
 ---
 

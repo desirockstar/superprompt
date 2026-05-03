@@ -1,6 +1,5 @@
 ---
 title: "🔍 Set Data Validation Rules"
-source: godofprompt.ai
 slug: "promptsset-data-validation-rules"
 ---
 

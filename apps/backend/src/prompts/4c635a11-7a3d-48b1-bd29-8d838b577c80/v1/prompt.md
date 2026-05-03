@@ -1,6 +1,5 @@
 ---
 title: "🎨 Create Clean UI Design Concepts"
-source: godofprompt.ai
 slug: "promptscreate-clean-ui-design-concepts"
 ---
 

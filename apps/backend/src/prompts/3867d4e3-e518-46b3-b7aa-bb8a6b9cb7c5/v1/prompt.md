@@ -1,6 +1,5 @@
 ---
 title: "🪗 Design Modular Packaging Concepts"
-source: godofprompt.ai
 slug: "promptsdesign-modular-packaging-concepts"
 ---
 

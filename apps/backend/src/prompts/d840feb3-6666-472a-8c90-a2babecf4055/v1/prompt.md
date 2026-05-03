@@ -1,6 +1,5 @@
 ---
 title: "🛒 Recover Cart Abandonments"
-source: godofprompt.ai
 slug: "promptsrecover-cart-abandonments"
 ---
 

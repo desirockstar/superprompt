@@ -1,6 +1,5 @@
 ---
 title: "🪃 Draft Referral Program Messages"
-source: godofprompt.ai
 slug: "promptsdraft-referral-program-messages"
 ---
 

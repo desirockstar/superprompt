@@ -1,6 +1,5 @@
 ---
 title: "🐉 Create NFT Creature Designs"
-source: godofprompt.ai
 slug: "promptscreate-nft-creature-designs"
 ---
 

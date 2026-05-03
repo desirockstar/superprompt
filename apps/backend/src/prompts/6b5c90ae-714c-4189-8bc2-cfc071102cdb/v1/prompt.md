@@ -1,6 +1,5 @@
 ---
 title: "📦 Develop Customer Delivery Communication Plans"
-source: godofprompt.ai
 slug: "promptsdevelop-customer-delivery-communication-plans"
 ---
 

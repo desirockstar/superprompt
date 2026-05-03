@@ -1,6 +1,5 @@
 ---
 title: "🔦 Craft Customer Outage Response Templates"
-source: godofprompt.ai
 slug: "promptscraft-customer-outage-response-templates"
 ---
 

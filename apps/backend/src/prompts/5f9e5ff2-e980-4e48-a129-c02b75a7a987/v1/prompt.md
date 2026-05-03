@@ -1,6 +1,5 @@
 ---
 title: "🤝 Create Conflict Resolution Strategy"
-source: godofprompt.ai
 slug: "promptscreate-conflict-resolution-strategy"
 ---
 

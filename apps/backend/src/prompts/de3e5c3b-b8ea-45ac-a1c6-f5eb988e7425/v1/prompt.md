@@ -1,6 +1,5 @@
 ---
 title: "🎨 Create Pantone Color Cards"
-source: godofprompt.ai
 slug: "promptscreate-pantone-color-cards"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🔧 Create Innovation Management System"
-source: godofprompt.ai
 slug: "promptscreate-innovation-management-system"
 ---
 

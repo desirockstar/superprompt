@@ -1,6 +1,5 @@
 ---
 title: "📊 Develop SQLite Database Loader"
-source: godofprompt.ai
 slug: "promptsdevelop-sqlite-database-loader"
 ---
 

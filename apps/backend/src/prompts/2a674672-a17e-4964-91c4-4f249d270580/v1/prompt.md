@@ -1,6 +1,5 @@
 ---
 title: "🛠️ Research Tooling Options"
-source: godofprompt.ai
 slug: "promptsresearch-tooling-options"
 ---
 

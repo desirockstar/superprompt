@@ -1,6 +1,5 @@
 ---
 title: "🧭 Design Onboarding Chatbot Conversation Flows"
-source: godofprompt.ai
 slug: "promptsdesign-onboarding-chatbot-conversation-flows"
 ---
 

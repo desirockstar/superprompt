@@ -1,6 +1,5 @@
 ---
 title: "🌱 Design Review System"
-source: godofprompt.ai
 slug: "promptsdesign-review-system"
 ---
 

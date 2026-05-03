@@ -1,6 +1,5 @@
 ---
 title: "📊 Set Performance Indicators"
-source: godofprompt.ai
 slug: "promptsset-performance-indicators"
 ---
 

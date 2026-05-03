@@ -1,6 +1,5 @@
 ---
 title: "📅 Plan Social Media Content"
-source: godofprompt.ai
 slug: "promptsplan-social-media-content"
 ---
 

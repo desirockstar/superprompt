@@ -1,6 +1,5 @@
 ---
 title: "📅 Automate Appointment Scheduling"
-source: godofprompt.ai
 slug: "promptsautomate-appointment-scheduling"
 ---
 

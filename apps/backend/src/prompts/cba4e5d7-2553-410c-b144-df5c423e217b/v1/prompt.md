@@ -1,6 +1,5 @@
 ---
 title: "📝 Generate Custom Writing Style"
-source: godofprompt.ai
 slug: "promptsgenerate-custom-writing-style"
 ---
 

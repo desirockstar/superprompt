@@ -1,6 +1,5 @@
 ---
 title: "🔗 Draft Follow-Up Messages"
-source: godofprompt.ai
 slug: "promptsdraft-follow-up-messages"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🏔️ Create Isometric Fantasy Villages"
-source: godofprompt.ai
 slug: "promptscreate-isometric-fantasy-villages"
 ---
 

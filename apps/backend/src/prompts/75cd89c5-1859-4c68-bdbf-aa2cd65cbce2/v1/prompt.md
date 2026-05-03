@@ -1,6 +1,5 @@
 ---
 title: "🪂 Design Financing Exit Strategies"
-source: godofprompt.ai
 slug: "promptsdesign-financing-exit-strategies"
 ---
 

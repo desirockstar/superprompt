@@ -1,6 +1,5 @@
 ---
 title: "🪃 Generate Automated Refund Processing Scripts"
-source: godofprompt.ai
 slug: "promptsgenerate-automated-refund-processing-scripts"
 ---
 

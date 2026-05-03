@@ -1,6 +1,5 @@
 ---
 title: "🔗 Analyze Sourcing Network Opportunities"
-source: godofprompt.ai
 slug: "promptsanalyze-sourcing-network-opportunities"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🗿 Design Brutalist Landscape Architectures"
-source: godofprompt.ai
 slug: "promptsdesign-brutalist-landscape-architectures"
 ---
 

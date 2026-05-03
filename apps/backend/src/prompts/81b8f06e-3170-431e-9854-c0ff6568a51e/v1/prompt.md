@@ -1,6 +1,5 @@
 ---
 title: "🚀 Generate Innovation Strategies"
-source: godofprompt.ai
 slug: "promptsgenerate-innovation-strategies"
 ---
 

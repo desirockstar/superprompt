@@ -1,6 +1,5 @@
 ---
 title: "📊 Generate Company Strategy Overview"
-source: godofprompt.ai
 slug: "promptsgenerate-company-strategy-overview"
 ---
 

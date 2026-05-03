@@ -1,6 +1,5 @@
 ---
 title: "📜 Analyze Legal Risks"
-source: godofprompt.ai
 slug: "promptsanalyze-legal-risks"
 ---
 

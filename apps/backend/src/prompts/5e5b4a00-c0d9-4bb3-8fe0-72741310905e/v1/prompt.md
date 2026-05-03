@@ -1,6 +1,5 @@
 ---
 title: "📐 Design Corporate Data Illustrations"
-source: godofprompt.ai
 slug: "promptsdesign-corporate-data-illustrations"
 ---
 

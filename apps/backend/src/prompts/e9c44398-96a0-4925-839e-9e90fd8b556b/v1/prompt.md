@@ -1,6 +1,5 @@
 ---
 title: "🧅 Build Secure Login Authentication Scripts"
-source: godofprompt.ai
 slug: "promptsbuild-secure-login-authentication-scripts"
 ---
 

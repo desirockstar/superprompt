@@ -1,6 +1,5 @@
 ---
 title: "🧭 Build Onboarding FAQ Documents"
-source: godofprompt.ai
 slug: "promptsbuild-onboarding-faq-documents"
 ---
 

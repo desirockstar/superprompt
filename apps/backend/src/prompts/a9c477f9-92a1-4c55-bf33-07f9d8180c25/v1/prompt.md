@@ -1,6 +1,5 @@
 ---
 title: "♟️ Optimize Regex Performance"
-source: godofprompt.ai
 slug: "promptsoptimize-regex-performance"
 ---
 

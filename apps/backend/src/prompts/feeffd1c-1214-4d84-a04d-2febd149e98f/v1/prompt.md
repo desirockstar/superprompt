@@ -1,6 +1,5 @@
 ---
 title: "🌐 Optimize Website Structure Mapping"
-source: godofprompt.ai
 slug: "promptsoptimize-website-structure-mapping"
 ---
 

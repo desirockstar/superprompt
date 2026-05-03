@@ -1,6 +1,5 @@
 ---
 title: "🔄 Optimize Task Management"
-source: godofprompt.ai
 slug: "promptsoptimize-task-management"
 ---
 

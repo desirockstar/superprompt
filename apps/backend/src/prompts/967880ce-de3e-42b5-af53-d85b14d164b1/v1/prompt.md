@@ -1,6 +1,5 @@
 ---
 title: "🔗 Generate SEO-Friendly URL Structures"
-source: godofprompt.ai
 slug: "promptsgenerate-seo-friendly-url-structures"
 ---
 

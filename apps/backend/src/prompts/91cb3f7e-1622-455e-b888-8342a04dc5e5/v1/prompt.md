@@ -1,6 +1,5 @@
 ---
 title: "🪢 Draft Subscription Renewal Communication Sequences"
-source: godofprompt.ai
 slug: "promptsdraft-subscription-renewal-communication-sequences"
 ---
 

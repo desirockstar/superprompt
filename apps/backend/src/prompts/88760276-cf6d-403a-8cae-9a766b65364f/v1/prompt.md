@@ -1,6 +1,5 @@
 ---
 title: "📘 Automate Data Entry"
-source: godofprompt.ai
 slug: "promptsautomate-data-entry"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🗺️ Explain Library Usage"
-source: godofprompt.ai
 slug: "promptsexplain-library-usage"
 ---
 

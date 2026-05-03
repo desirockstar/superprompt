@@ -1,6 +1,5 @@
 ---
 title: "✨ Build Poll Creation Tool"
-source: godofprompt.ai
 slug: "promptsbuild-poll-creation-tool"
 ---
 

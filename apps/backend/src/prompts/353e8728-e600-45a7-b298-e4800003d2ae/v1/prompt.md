@@ -1,6 +1,5 @@
 ---
 title: "🤝 Resolve Team Conflicts"
-source: godofprompt.ai
 slug: "promptsresolve-team-conflicts"
 ---
 

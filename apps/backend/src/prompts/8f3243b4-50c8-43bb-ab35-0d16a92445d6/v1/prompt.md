@@ -1,6 +1,5 @@
 ---
 title: "🪃 Design Automated Win-Back Campaigns"
-source: godofprompt.ai
 slug: "promptsdesign-automated-win-back-campaigns"
 ---
 

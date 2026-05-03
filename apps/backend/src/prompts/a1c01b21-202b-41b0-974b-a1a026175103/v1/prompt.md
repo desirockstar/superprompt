@@ -1,6 +1,5 @@
 ---
 title: "📊 Optimize Business Value Chain"
-source: godofprompt.ai
 slug: "promptsoptimize-business-value-chain"
 ---
 

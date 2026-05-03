@@ -1,6 +1,5 @@
 ---
 title: "🌌 Create Abstract Alien Patterns"
-source: godofprompt.ai
 slug: "promptscreate-abstract-alien-patterns"
 ---
 

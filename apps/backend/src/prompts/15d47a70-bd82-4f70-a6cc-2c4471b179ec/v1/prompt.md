@@ -1,6 +1,5 @@
 ---
 title: "🌱 Build Diet Tracking Apps"
-source: godofprompt.ai
 slug: "promptsbuild-diet-tracking-apps"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "📊 Discover Market Opportunities"
-source: godofprompt.ai
 slug: "promptsdiscover-market-opportunities"
 ---
 

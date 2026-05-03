@@ -1,6 +1,5 @@
 ---
 title: "🛠️ Build Profession-Specific Kanban Apps"
-source: godofprompt.ai
 slug: "promptsbuild-profession-specific-kanban-apps"
 ---
 

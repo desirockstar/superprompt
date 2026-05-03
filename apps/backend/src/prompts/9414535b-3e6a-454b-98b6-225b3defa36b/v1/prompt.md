@@ -1,6 +1,5 @@
 ---
 title: "🧩 Generate ML Testing Scenarios"
-source: godofprompt.ai
 slug: "promptsgenerate-ml-testing-scenarios"
 ---
 

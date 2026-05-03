@@ -1,6 +1,5 @@
 ---
 title: "🌍 Analyze Cross-Cultural UX Challenges"
-source: godofprompt.ai
 slug: "promptsanalyze-cross-cultural-ux-challenges"
 ---
 

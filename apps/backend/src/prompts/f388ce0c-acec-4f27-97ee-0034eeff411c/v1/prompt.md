@@ -1,6 +1,5 @@
 ---
 title: "♟️ Analyze Mortgage Offer Tradeoffs"
-source: godofprompt.ai
 slug: "promptsanalyze-mortgage-offer-tradeoffs"
 ---
 

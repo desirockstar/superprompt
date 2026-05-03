@@ -1,6 +1,5 @@
 ---
 title: "🌈 Create Whimsical Fantasy Illustrations"
-source: godofprompt.ai
 slug: "promptscreate-whimsical-fantasy-illustrations"
 ---
 

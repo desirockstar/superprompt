@@ -1,6 +1,5 @@
 ---
 title: "⚙️ Analyze Compiler Configurations"
-source: godofprompt.ai
 slug: "promptsanalyze-compiler-configurations"
 ---
 

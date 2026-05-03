@@ -1,6 +1,5 @@
 ---
 title: "🩺 Resolve Customer Complaints"
-source: godofprompt.ai
 slug: "promptsresolve-customer-complaints"
 ---
 

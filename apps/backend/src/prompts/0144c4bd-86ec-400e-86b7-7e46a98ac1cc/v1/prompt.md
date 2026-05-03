@@ -1,6 +1,5 @@
 ---
 title: "📐 Transform Requests Into AI Prompts"
-source: godofprompt.ai
 slug: "promptstransform-requests-into-ai-prompts"
 ---
 

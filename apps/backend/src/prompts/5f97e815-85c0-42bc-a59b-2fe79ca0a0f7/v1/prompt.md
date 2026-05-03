@@ -1,6 +1,5 @@
 ---
 title: "🎀 Generate Cinematic Flash Selfie Portraits"
-source: godofprompt.ai
 slug: "promptsgenerate-cinematic-flash-selfie-portraits"
 ---
 

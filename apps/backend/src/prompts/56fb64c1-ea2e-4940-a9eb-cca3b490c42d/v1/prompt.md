@@ -1,6 +1,5 @@
 ---
 title: "🧩 Brainstorm Blog Post Ideas"
-source: godofprompt.ai
 slug: "promptsbrainstorm-blog-post-ideas"
 ---
 

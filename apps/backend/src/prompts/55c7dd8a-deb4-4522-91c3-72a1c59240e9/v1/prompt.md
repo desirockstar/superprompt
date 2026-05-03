@@ -1,6 +1,5 @@
 ---
 title: "📘 Utilize AI for Automation"
-source: godofprompt.ai
 slug: "promptsutilize-ai-for-automation"
 ---
 

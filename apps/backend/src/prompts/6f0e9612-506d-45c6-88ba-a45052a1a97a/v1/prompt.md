@@ -1,6 +1,5 @@
 ---
 title: "🛠️ Develop Regex Replacement Script"
-source: godofprompt.ai
 slug: "promptsdevelop-regex-replacement-script"
 ---
 

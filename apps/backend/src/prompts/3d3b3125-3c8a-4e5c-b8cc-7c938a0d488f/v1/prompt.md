@@ -1,6 +1,5 @@
 ---
 title: "📊 Rank Feature Requests"
-source: godofprompt.ai
 slug: "promptsrank-feature-requests"
 ---
 

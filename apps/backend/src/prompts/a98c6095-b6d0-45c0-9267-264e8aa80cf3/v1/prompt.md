@@ -1,6 +1,5 @@
 ---
 title: "🖤 Create Dramatic Fashion Photoshoots"
-source: godofprompt.ai
 slug: "promptscreate-dramatic-fashion-photoshoots"
 ---
 

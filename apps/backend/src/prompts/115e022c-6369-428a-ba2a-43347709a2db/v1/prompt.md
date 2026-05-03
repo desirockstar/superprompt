@@ -1,6 +1,5 @@
 ---
 title: "🔍 Fix Code Syntax Errors"
-source: godofprompt.ai
 slug: "promptsfix-code-syntax-errors"
 ---
 

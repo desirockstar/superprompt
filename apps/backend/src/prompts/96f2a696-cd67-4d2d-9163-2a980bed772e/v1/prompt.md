@@ -1,6 +1,5 @@
 ---
 title: "🔍 Build SEO Analytics Tracking Systems"
-source: godofprompt.ai
 slug: "promptsbuild-seo-analytics-tracking-systems"
 ---
 

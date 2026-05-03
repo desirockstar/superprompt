@@ -1,6 +1,5 @@
 ---
 title: "📦 Create Order Tracking Notifications"
-source: godofprompt.ai
 slug: "promptscreate-order-tracking-notifications"
 ---
 

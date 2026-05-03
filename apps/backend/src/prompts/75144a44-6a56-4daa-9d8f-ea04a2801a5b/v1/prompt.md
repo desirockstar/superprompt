@@ -1,6 +1,5 @@
 ---
 title: "📊 Study Consumer Behavior Patterns"
-source: godofprompt.ai
 slug: "promptsstudy-consumer-behavior-patterns"
 ---
 

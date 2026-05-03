@@ -1,6 +1,5 @@
 ---
 title: "🔍 Validate SaaS Business Ideas"
-source: godofprompt.ai
 slug: "promptsvalidate-saas-business-ideas"
 ---
 

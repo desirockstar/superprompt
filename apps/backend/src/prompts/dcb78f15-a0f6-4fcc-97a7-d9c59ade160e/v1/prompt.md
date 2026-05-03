@@ -1,6 +1,5 @@
 ---
 title: "💧 Build Hydration Trackers"
-source: godofprompt.ai
 slug: "promptsbuild-hydration-trackers"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🧑💼 Entrepreneurial AI Coach"
-source: godofprompt.ai
 slug: "promptsentrepreneurial-ai-coach"
 ---
 

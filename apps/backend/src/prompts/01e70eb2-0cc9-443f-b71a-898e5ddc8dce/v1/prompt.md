@@ -1,6 +1,5 @@
 ---
 title: "⚙️ Design Behavior-Improving Compensations"
-source: godofprompt.ai
 slug: "promptsdesign-behavior-improving-compensations"
 ---
 

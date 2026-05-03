@@ -1,6 +1,5 @@
 ---
 title: "🔭 Estimate Market Rent"
-source: godofprompt.ai
 slug: "promptsestimate-market-rent"
 ---
 

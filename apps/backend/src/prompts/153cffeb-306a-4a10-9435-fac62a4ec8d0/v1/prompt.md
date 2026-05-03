@@ -1,6 +1,5 @@
 ---
 title: "✏️ Refine Your Writing"
-source: godofprompt.ai
 slug: "promptsrefine-your-writing"
 ---
 

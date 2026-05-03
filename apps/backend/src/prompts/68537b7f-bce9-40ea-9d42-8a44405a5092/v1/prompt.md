@@ -1,6 +1,5 @@
 ---
 title: "📚 Generate Knowledge Management System"
-source: godofprompt.ai
 slug: "promptsgenerate-knowledge-management-system"
 ---
 

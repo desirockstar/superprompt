@@ -1,6 +1,5 @@
 ---
 title: "🎨 Develop Homepage Layouts"
-source: godofprompt.ai
 slug: "promptsdevelop-homepage-layouts"
 ---
 

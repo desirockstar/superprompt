@@ -1,6 +1,5 @@
 ---
 title: "📚 Create Machine Learning Experiment Logs"
-source: godofprompt.ai
 slug: "promptscreate-machine-learning-experiment-logs"
 ---
 

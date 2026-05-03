@@ -1,6 +1,5 @@
 ---
 title: "🔒 Build PDF Split-And-Merge Tool"
-source: godofprompt.ai
 slug: "promptsbuild-pdf-split-and-merge-tool"
 ---
 

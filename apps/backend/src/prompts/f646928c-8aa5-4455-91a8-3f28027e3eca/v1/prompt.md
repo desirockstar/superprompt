@@ -1,6 +1,5 @@
 ---
 title: "🚀 Innovate Service Offerings"
-source: godofprompt.ai
 slug: "promptsinnovate-service-offerings"
 ---
 

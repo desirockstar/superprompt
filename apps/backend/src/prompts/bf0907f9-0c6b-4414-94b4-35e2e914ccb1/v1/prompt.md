@@ -1,6 +1,5 @@
 ---
 title: "🧩 Audit Code Comments"
-source: godofprompt.ai
 slug: "promptsaudit-code-comments"
 ---
 

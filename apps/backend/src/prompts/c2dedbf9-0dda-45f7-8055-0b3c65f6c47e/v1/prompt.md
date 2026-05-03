@@ -1,6 +1,5 @@
 ---
 title: "🛡️ Develop Input Validations"
-source: godofprompt.ai
 slug: "promptsdevelop-input-validations"
 ---
 

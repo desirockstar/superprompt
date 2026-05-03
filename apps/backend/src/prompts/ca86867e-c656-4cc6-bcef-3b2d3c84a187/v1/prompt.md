@@ -1,6 +1,5 @@
 ---
 title: "🛠️ Build Document Template Studios"
-source: godofprompt.ai
 slug: "promptsbuild-document-template-studios"
 ---
 

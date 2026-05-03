@@ -1,6 +1,5 @@
 ---
 title: "🛒 Resolve Abandoned Cart Issues"
-source: godofprompt.ai
 slug: "promptsresolve-abandoned-cart-issues"
 ---
 

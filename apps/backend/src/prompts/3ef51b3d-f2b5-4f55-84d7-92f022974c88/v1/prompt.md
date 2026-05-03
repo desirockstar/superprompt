@@ -1,6 +1,5 @@
 ---
 title: "💠 Design Minimal Geometric Logos"
-source: godofprompt.ai
 slug: "promptsdesign-minimal-geometric-logos"
 ---
 

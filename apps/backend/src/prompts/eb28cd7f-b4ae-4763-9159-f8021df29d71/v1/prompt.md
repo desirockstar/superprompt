@@ -1,6 +1,5 @@
 ---
 title: "🤝 Practice Active Listening"
-source: godofprompt.ai
 slug: "promptspractice-active-listening"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🌱 Build Customer Advocacy Program"
-source: godofprompt.ai
 slug: "promptsbuild-customer-advocacy-program"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "➰ Create Minimal Line Art Illustrations"
-source: godofprompt.ai
 slug: "promptscreate-minimal-line-art-illustrations"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🔄 Reshape Wide-Format Data"
-source: godofprompt.ai
 slug: "promptsreshape-wide-format-data"
 ---
 

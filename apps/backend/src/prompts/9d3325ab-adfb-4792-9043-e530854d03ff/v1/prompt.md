@@ -1,6 +1,5 @@
 ---
 title: "🤝 Design Customer Review Section"
-source: godofprompt.ai
 slug: "promptsdesign-customer-review-section"
 ---
 

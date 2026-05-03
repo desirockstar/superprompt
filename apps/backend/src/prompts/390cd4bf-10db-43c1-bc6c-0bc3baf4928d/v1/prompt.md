@@ -1,6 +1,5 @@
 ---
 title: "🔒 Build File Compression Apps"
-source: godofprompt.ai
 slug: "promptsbuild-file-compression-apps"
 ---
 

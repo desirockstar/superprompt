@@ -1,6 +1,5 @@
 ---
 title: "📧 Automate Email Marketing"
-source: godofprompt.ai
 slug: "promptsautomate-email-marketing"
 ---
 

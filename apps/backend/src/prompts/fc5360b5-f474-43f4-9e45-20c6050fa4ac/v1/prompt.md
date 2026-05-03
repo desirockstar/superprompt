@@ -1,6 +1,5 @@
 ---
 title: "🌐 Launch Multilingual Communication System"
-source: godofprompt.ai
 slug: "promptslaunch-multilingual-communication-system"
 ---
 

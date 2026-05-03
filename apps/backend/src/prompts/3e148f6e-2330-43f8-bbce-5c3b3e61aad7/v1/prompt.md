@@ -1,6 +1,5 @@
 ---
 title: "🔴 Get Reddit Content Ideas"
-source: godofprompt.ai
 slug: "promptsget-reddit-content-ideas"
 ---
 

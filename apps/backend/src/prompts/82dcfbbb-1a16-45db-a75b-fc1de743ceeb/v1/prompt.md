@@ -1,6 +1,5 @@
 ---
 title: "📅 Create Marketing Content Calendar"
-source: godofprompt.ai
 slug: "promptscreate-marketing-content-calendar"
 ---
 

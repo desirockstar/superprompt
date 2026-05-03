@@ -92,6 +92,14 @@ export class CatalogController {
     return this.catalogService.getEvaluation(id);
   }
 
+  @Get(':id/related')
+  async getRelated(
+    @Param('id') id: string,
+    @Query('limit') limit: number = 3,
+  ) {
+    return this.catalogService.getRelatedPrompts(id, limit);
+  }
+
   @UseGuards(RequiredAuthGuard)
   @Post()
   async create(@Req() req: any, @Body() body: { title: string; category: string; content: Record<string, string>; isMultiVersion?: boolean }) {

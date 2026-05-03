@@ -1,6 +1,5 @@
 ---
 title: "📜 Simplify Complex Code"
-source: godofprompt.ai
 slug: "promptssimplify-complex-code"
 ---
 

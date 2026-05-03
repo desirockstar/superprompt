@@ -1,6 +1,5 @@
 ---
 title: "🏛️ 🏗️ NestJS API Developer Guide"
-source: godofprompt.ai
 slug: "promptsnestjs-api-developer-guide"
 ---
 

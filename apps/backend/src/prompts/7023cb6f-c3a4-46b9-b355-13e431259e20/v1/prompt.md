@@ -1,6 +1,5 @@
 ---
 title: "🪆 Design Wraparound Mortgage Structures"
-source: godofprompt.ai
 slug: "promptsdesign-wraparound-mortgage-structures"
 ---
 

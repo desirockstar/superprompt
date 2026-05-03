@@ -1,6 +1,5 @@
 ---
 title: "🎥 Create Video Topic Ideas"
-source: godofprompt.ai
 slug: "promptscreate-video-topic-ideas"
 ---
 

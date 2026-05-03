@@ -1,6 +1,5 @@
 ---
 title: "🚀 Draft Homepage Banner Copy"
-source: godofprompt.ai
 slug: "promptsdraft-homepage-banner-copy"
 ---
 

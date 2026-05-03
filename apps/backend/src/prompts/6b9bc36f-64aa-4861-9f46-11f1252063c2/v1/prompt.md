@@ -1,6 +1,5 @@
 ---
 title: "🔒 Design Cookie Banners"
-source: godofprompt.ai
 slug: "promptsdesign-cookie-banners"
 ---
 

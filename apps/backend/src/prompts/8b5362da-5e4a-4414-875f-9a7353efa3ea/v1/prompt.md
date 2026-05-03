@@ -1,6 +1,5 @@
 ---
 title: "🍵 Create Automated Review Systems"
-source: godofprompt.ai
 slug: "promptscreate-automated-review-systems"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🐠 Create Underwater Coloring Pages"
-source: godofprompt.ai
 slug: "promptscreate-underwater-coloring-pages"
 ---
 

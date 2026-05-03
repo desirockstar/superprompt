@@ -1,6 +1,5 @@
 ---
 title: "🪜 Structure Lease Option Deals"
-source: godofprompt.ai
 slug: "promptsstructure-lease-option-deals"
 ---
 

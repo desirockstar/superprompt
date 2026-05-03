@@ -1,6 +1,5 @@
 ---
 title: "🧩 Format Code Snippets"
-source: godofprompt.ai
 slug: "promptsformat-code-snippets"
 ---
 

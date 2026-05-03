@@ -1,6 +1,5 @@
 ---
 title: "🧙‍♂️ Generate NFT Artwork Designs"
-source: godofprompt.ai
 slug: "promptsgenerate-nft-artwork-designs"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🧬 Generate Hyper-Realistic Anatomy Models"
-source: godofprompt.ai
 slug: "promptsgenerate-hyper-realistic-anatomy-models"
 ---
 

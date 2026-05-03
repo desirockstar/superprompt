@@ -1,6 +1,5 @@
 ---
 title: "🎨 Create Cohesive Branding Strategy"
-source: godofprompt.ai
 slug: "promptscreate-cohesive-branding-strategy"
 ---
 

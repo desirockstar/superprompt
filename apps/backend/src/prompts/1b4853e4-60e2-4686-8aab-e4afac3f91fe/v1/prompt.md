@@ -1,6 +1,5 @@
 ---
 title: "📝 Develop Needs Statement"
-source: godofprompt.ai
 slug: "promptsdevelop-needs-statement"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "📚 Create Adaptive Code Examples"
-source: godofprompt.ai
 slug: "promptscreate-adaptive-code-examples"
 ---
 

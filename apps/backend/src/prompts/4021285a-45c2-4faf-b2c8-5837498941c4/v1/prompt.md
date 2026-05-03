@@ -1,6 +1,5 @@
 ---
 title: "🔍 Conduct Competitor Analysis"
-source: godofprompt.ai
 slug: "promptsconduct-competitor-analysis-5"
 ---
 

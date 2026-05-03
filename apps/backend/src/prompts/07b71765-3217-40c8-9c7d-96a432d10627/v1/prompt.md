@@ -1,6 +1,5 @@
 ---
 title: "🏭 Oversee Production Processes"
-source: godofprompt.ai
 slug: "promptsoversee-production-processes"
 ---
 

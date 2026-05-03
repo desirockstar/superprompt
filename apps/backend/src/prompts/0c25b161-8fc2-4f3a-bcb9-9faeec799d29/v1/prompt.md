@@ -1,6 +1,5 @@
 ---
 title: "🌌 Create Game UI Design Concepts"
-source: godofprompt.ai
 slug: "promptscreate-game-ui-design-concepts"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "📉 Perform Dependency Analysis"
-source: godofprompt.ai
 slug: "promptsperform-dependency-analysis"
 ---
 

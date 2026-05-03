@@ -1,6 +1,5 @@
 ---
 title: "📊 Automate Feedback Collection System"
-source: godofprompt.ai
 slug: "promptsautomate-feedback-collection-system"
 ---
 

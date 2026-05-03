@@ -1,6 +1,5 @@
 ---
 title: "📊 Perform PESTEL Analysis"
-source: godofprompt.ai
 slug: "promptsperform-pestel-analysis"
 ---
 

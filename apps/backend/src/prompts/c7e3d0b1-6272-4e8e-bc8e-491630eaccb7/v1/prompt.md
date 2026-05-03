@@ -1,6 +1,5 @@
 ---
 title: "📈 Streamline Business Processes"
-source: godofprompt.ai
 slug: "promptsstreamline-business-processes"
 ---
 

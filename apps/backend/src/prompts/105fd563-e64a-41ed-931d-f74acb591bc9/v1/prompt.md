@@ -1,6 +1,5 @@
 ---
 title: "🧭 Create User Journey Maps"
-source: godofprompt.ai
 slug: "promptscreate-user-journey-maps"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "🤝 Plan Team Building Activities"
-source: godofprompt.ai
 slug: "promptsplan-team-building-activities"
 ---
 
