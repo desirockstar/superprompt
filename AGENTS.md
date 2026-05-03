@@ -674,6 +674,24 @@ steps:
 - Config: `NEXT_PUBLIC_POSTHOG_KEY` + `NEXT_PUBLIC_POSTHOG_HOST` in `.env`
 - PostHog is **no-op when key is not set** — safe for local dev
 - All event calls go through `apps/frontend/src/lib/analytics.ts` — never call `posthog.capture()` directly
+
+#### Feature Flags
+- Use `isFeatureEnabled(flagName)` from `@/lib/analytics` to check feature flags
+- Returns `true` when PostHog key is not set (local dev: all features enabled)
+- Returns the flag value from PostHog when configured
+
+```ts
+import { isFeatureEnabled } from '@/lib/analytics';
+
+const showReviews = isFeatureEnabled('reviews');
+```
+
+**Available flags:**
+
+| Flag | Default | Description |
+|---|---|---|
+| `reviews` | `true` (local) | Show Reviews tab and testimonials in Social Proof card |
+
 - **Key events to track:**
 
 | Event | When |

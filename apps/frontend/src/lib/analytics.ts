@@ -2,6 +2,11 @@ import posthog from 'posthog-js';
 
 const enabled = () => typeof window !== 'undefined' && !!process.env.NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN;
 
+export const isFeatureEnabled = (flag: string): boolean => {
+  if (!enabled()) return true;
+  return posthog.isFeatureEnabled(flag) ?? true;
+};
+
 export const analytics = {
   // User identity
   identify: (userId: string, email: string) => {
