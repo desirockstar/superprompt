@@ -44,6 +44,7 @@ services:
       - NEXT_DISABLE_SWC_MINIFY=1
       - NEXT_PUBLIC_ENV_CLEAR_CACHE=true
     ports:
+      - 8239:8239
       - target: 3000
         published: 3000
         protocol: tcp

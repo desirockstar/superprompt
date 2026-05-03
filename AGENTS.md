@@ -671,7 +671,7 @@ steps:
 
 ### 15.3 PostHog Analytics (frontend)
 - Library: `posthog-js` — initialized in `PostHogProvider` (`apps/frontend/src/components/posthog-provider.tsx`)
-- Config: `NEXT_PUBLIC_POSTHOG_KEY` + `NEXT_PUBLIC_POSTHOG_HOST` in `.env`
+- Config: `NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN` + `NEXT_PUBLIC_POSTHOG_HOST` in `.env`
 - PostHog is **no-op when key is not set** — safe for local dev
 - All event calls go through `apps/frontend/src/lib/analytics.ts` — never call `posthog.capture()` directly
 
@@ -743,8 +743,8 @@ SENTRY_DSN_BACKEND=
 SENTRY_DSN_FRONTEND=
 
 # PostHog
-NEXT_PUBLIC_POSTHOG_KEY=
-NEXT_PUBLIC_POSTHOG_HOST=https://us.i.posthog.com
+NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN=
+NEXT_PUBLIC_POSTHOG_HOST=https://eu.i.posthog.com
 ```
 
 **Rules:**

@@ -6,7 +6,7 @@ import posthog from 'posthog-js';
 import { PostHogProvider as PHProvider } from 'posthog-js/react';
 
 const POSTHOG_PROJECT_TOKEN = process.env.NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN;
-const POSTHOG_HOST = process.env.NEXT_PUBLIC_POSTHOG_HOST || 'https://us.i.posthog.com';
+const POSTHOG_HOST = process.env.NEXT_PUBLIC_POSTHOG_HOST || 'https://eu.i.posthog.com';
 
 function PageViewTrackerInner() {
   const pathname = usePathname();
@@ -33,9 +33,10 @@ export function PostHogProvider({ children }: { children: React.ReactNode }) {
     if (!POSTHOG_PROJECT_TOKEN) return;
     posthog.init(POSTHOG_PROJECT_TOKEN, {
       api_host: POSTHOG_HOST,
-      capture_pageview: false, // handled manually by PageViewTracker
+      capture_pageview: false,
       capture_pageleave: true,
       persistence: 'localStorage',
+      defaults: '2026-01-30',
     });
   }, []);
 
