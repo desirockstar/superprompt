@@ -1,4 +1,9 @@
+import 'dotenv/config';
+import { drizzle } from 'drizzle-orm/node-postgres';
 import { pgTable, text, uuid, timestamp, boolean, integer, pgEnum, uniqueIndex, index } from 'drizzle-orm/pg-core';
+
+const db = drizzle(process.env.DATABASE_URL!);
+export { db };
 
 export const promptStatusEnum = pgEnum('prompt_status', ['pending', 'approved', 'rejected']);
 export const promptLevelEnum = pgEnum('prompt_level', ['starter', 'builder', 'pro', 'super']);
@@ -23,18 +28,17 @@ export const sessions = pgTable('sessions', {
 });
 
 export const prompts = pgTable('prompts', {
-  id: uuid('id').primaryKey().defaultRandom(),
+  slug: text('slug').primaryKey(),
   userId: uuid('user_id').references(() => users.id, { onDelete: 'cascade' }),
   title: text('title').notNull(),
-  category: text('category').notNull(),
+  category: text('category').notNull().default('uncategorized'),
   primaryTag: text('primary_tag'),
   secondaryTags: text('secondary_tags'),
-  isViral: boolean('is_viral'),
-  isNano: boolean('is_nano'),
+  isViral: boolean('is_viral').default(false),
+  isNano: boolean('is_nano').default(false),
   status: promptStatusEnum('status').default('pending').notNull(),
   basePath: text('base_path').notNull(),
   currentVersion: integer('current_version').default(1).notNull(),
-  isMultiVersion: boolean('is_multi_version').default(false).notNull(),
   views: integer('views').default(0).notNull(),
   preview: text('preview'),
   searchVector: text('search_vector'),
@@ -48,7 +52,7 @@ export const prompts = pgTable('prompts', {
 
 export const promptVersions = pgTable('prompt_versions', {
   id: uuid('id').primaryKey().defaultRandom(),
-  promptId: uuid('prompt_id').notNull().references(() => prompts.id, { onDelete: 'cascade' }),
+  promptSlug: text('prompt_slug').notNull().references(() => prompts.slug, { onDelete: 'cascade' }),
   versionNumber: integer('version_number').notNull(),
   level: promptLevelEnum('level'),
   needsGrading: boolean('needs_grading').default(true).notNull(),
@@ -65,21 +69,21 @@ export const promptVersionFiles = pgTable('prompt_version_files', {
 export const ratings = pgTable('ratings', {
   id: uuid('id').primaryKey().defaultRandom(),
   userId: uuid('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
-  promptId: uuid('prompt_id').notNull().references(() => prompts.id, { onDelete: 'cascade' }),
+  promptSlug: text('prompt_slug').notNull().references(() => prompts.slug, { onDelete: 'cascade' }),
   rating: integer('rating').notNull(),
   createdAt: timestamp('created_at').defaultNow().notNull(),
 }, (table) => ({
-  userPromptIdx: uniqueIndex('idx_ratings_user_prompt').on(table.userId, table.promptId),
+  userPromptIdx: uniqueIndex('idx_ratings_user_prompt').on(table.userId, table.promptSlug),
 }));
 
 export const unlocks = pgTable('unlocks', {
   id: uuid('id').primaryKey().defaultRandom(),
   userId: uuid('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
-  promptId: uuid('prompt_id').notNull().references(() => prompts.id, { onDelete: 'cascade' }),
+  promptSlug: text('prompt_slug').notNull().references(() => prompts.slug, { onDelete: 'cascade' }),
   unlockedVia: unlockMethodEnum('unlocked_via').notNull(),
   createdAt: timestamp('created_at').defaultNow().notNull(),
 }, (table) => ({
-  userPromptIdx: uniqueIndex('idx_unlocks_user_prompt').on(table.userId, table.promptId),
+  userPromptIdx: uniqueIndex('idx_unlocks_user_prompt').on(table.userId, table.promptSlug),
 }));
 
 export const subscriptions = pgTable('subscriptions', {
@@ -100,9 +104,9 @@ export const rubrics = pgTable('rubrics', {
 
 export const evaluations = pgTable('evaluations', {
   id: uuid('id').primaryKey().defaultRandom(),
-  promptId: uuid('prompt_id').notNull().unique(),
+  promptSlug: text('prompt_slug').notNull().unique(),
   category: text('category').notNull(),
-  level: text('level').notNull(), // Tier level (starter/builder/pro/super)
+  level: text('level').notNull(),
   overallScore: text('overall_score'),
   overallFeedback: text('overall_feedback'),
   rubric: text('rubric'),

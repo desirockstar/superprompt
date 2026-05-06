@@ -61,7 +61,7 @@ export class GradingService {
         await this.evaluatePrompt(prompt);
         graded++;
       } catch (error) {
-        console.error('Evaluation failed for prompt:', prompt.id, error);
+        console.error('Evaluation failed for prompt:', prompt.slug, error);
         failed++;
       }
     }
@@ -71,16 +71,16 @@ export class GradingService {
 
   private async evaluatePrompt(promptRow: typeof prompts.$inferSelect): Promise<void> {
     const rubric = await this.getRubric(promptRow.category);
-    const promptContent = await this.getPromptContent(promptRow.id.toString());
-    const level = promptRow.isMultiVersion ? 'pro' : 'starter';
+    const promptContent = await this.getPromptContent(promptRow.slug);
+    const level = 'starter';
 
     await this.db.insert(evaluations).values({
-      promptId: promptRow.id,
+      promptSlug: promptRow.slug,
       category: promptRow.category,
       level: level,
       status: 'pending',
     }).onConflictDoUpdate({
-      target: evaluations.promptId,
+      target: evaluations.promptSlug,
       set: {
         status: 'pending',
         level: level,
@@ -99,7 +99,7 @@ export class GradingService {
           const overallScore = this.computeWeightedScore(llmResponse.scores, rubric.criteria);
 
           const [evaluation] = await this.db.select().from(evaluations)
-            .where(eq(evaluations.promptId, promptRow.id))
+            .where(eq(evaluations.promptSlug, promptRow.slug))
             .limit(1);
 
           if (evaluation) {
@@ -133,7 +133,7 @@ export class GradingService {
 
     if (!success) {
       const [evaluation] = await this.db.select().from(evaluations)
-        .where(eq(evaluations.promptId, promptRow.id))
+        .where(eq(evaluations.promptSlug, promptRow.slug))
         .limit(1);
 
       if (evaluation) {
@@ -180,10 +180,11 @@ export class GradingService {
     };
   }
 
-  private async getPromptContent(promptId: string): Promise<string> {
-    const filePath = path.join(this.promptsBasePath, promptId, 'v1', 'super.md');
+  private async getPromptContent(promptSlug: string): Promise<string> {
+    const filePath = path.join(this.promptsBasePath, promptSlug, 'prompt.md');
     if (!fs.existsSync(filePath)) {
-      return 'Sample prompt content for evaluation';
+      console.error(`Prompt file not found: ${filePath}`);
+      return '';
     }
     return fs.readFileSync(filePath, 'utf-8');
   }

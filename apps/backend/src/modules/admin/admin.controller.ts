@@ -23,19 +23,19 @@ export class AdminController {
     return this.adminService.getPendingPrompts();
   }
 
-  @Post(':id/approve')
-  async approve(@Req() req: any, @Param('id') id: string) {
+  @Post(':slug/approve')
+  async approve(@Req() req: any, @Param('slug') slug: string) {
     if (!req.user || !req.user.isAdmin) {
       throw new UnauthorizedException('Admin access required');
     }
-    return this.adminService.approvePrompt(id);
+    return this.adminService.approvePrompt(slug);
   }
 
-  @Post(':id/reject')
-  async reject(@Req() req: any, @Param('id') id: string) {
+  @Post(':slug/reject')
+  async reject(@Req() req: any, @Param('slug') slug: string) {
     if (!req.user || !req.user.isAdmin) {
       throw new UnauthorizedException('Admin access required');
     }
-    return this.adminService.rejectPrompt(id);
+    return this.adminService.rejectPrompt(slug);
   }
 }

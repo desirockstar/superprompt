@@ -23,19 +23,19 @@ export class ModerationController {
     return this.moderationService.getPendingPrompts();
   }
 
-  @Post(':id/approve')
-  async approve(@Req() req: any, @Param('id') id: string) {
+  @Post(':slug/approve')
+  async approve(@Req() req: any, @Param('slug') slug: string) {
     if (!req.user || !req.user.isAdmin) {
       throw new UnauthorizedException('Admin access required');
     }
-    return this.moderationService.approvePrompt(id);
+    return this.moderationService.approvePrompt(slug);
   }
 
-  @Post(':id/reject')
-  async reject(@Req() req: any, @Param('id') id: string) {
+  @Post(':slug/reject')
+  async reject(@Req() req: any, @Param('slug') slug: string) {
     if (!req.user || !req.user.isAdmin) {
       throw new UnauthorizedException('Admin access required');
     }
-    return this.moderationService.rejectPrompt(id);
+    return this.moderationService.rejectPrompt(slug);
   }
 }

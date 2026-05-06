@@ -90,17 +90,17 @@ export class AuthController {
     if (cached) return cached;
 
     const [userUnlocks, userSubscription, userRatings] = await Promise.all([
-      this.db.select({ promptId: unlocks.promptId }).from(unlocks).where(eq(unlocks.userId, userId)),
+      this.db.select({ promptSlug: unlocks.promptSlug }).from(unlocks).where(eq(unlocks.userId, userId)),
       this.db.select().from(subscriptions)
         .where(and(eq(subscriptions.userId, userId), eq(subscriptions.status, 'active'), gt(subscriptions.expiresAt, new Date())))
         .limit(1),
-      this.db.select({ promptId: ratings.promptId, rating: ratings.rating }).from(ratings).where(eq(ratings.userId, userId)),
+      this.db.select({ promptSlug: ratings.promptSlug, rating: ratings.rating }).from(ratings).where(eq(ratings.userId, userId)),
     ]);
 
     const state = {
       subscription: userSubscription[0] ?? null,
-      unlocks: userUnlocks.map((u) => u.promptId),
-      ratings: Object.fromEntries(userRatings.map((r) => [r.promptId, r.rating])),
+      unlocks: userUnlocks.map((u) => u.promptSlug),
+      ratings: Object.fromEntries(userRatings.map((r) => [r.promptSlug, r.rating])),
     };
 
     this.cache.set(cacheKey, state, 5 * 60_000);

@@ -4,7 +4,8 @@ import { useEffect, useState, useMemo } from 'react';
 import { useParams } from 'next/navigation';
 import { api } from '@/lib/api';
 import { useAuthStore } from '@/lib/store';
-import { isFeatureEnabled } from '@/lib/analytics';
+import { Button } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import type { PromptLevel } from '@/lib/types';
 import Link from 'next/link';
 import { Copy, Check, Play, Eye, Share2, ChevronDown, Loader2, Rocket, Bookmark, Users, Globe, Cpu, ChevronRight, BookOpen, ThumbsUp, ThumbsDown, Tag as TagIcon } from 'lucide-react';
@@ -252,8 +253,7 @@ export default function PromptPage() {
   const preview = getPreview();
   const hasAccess = hasFullAccess();
 
-  const showReviews = isFeatureEnabled('reviews');
-  const TABS = ['overview', 'preview', 'prompt', 'examples', ...(showReviews ? ['reviews'] : [])];
+  const TABS = ['overview', 'preview', 'prompt', 'examples', 'reviews'];
 
   const BREAKDOWN_SECTIONS = [
     { id: 'system',    color: 'bg-blue-500',   label: 'System Prompt', desc: 'The role and behavior instructions for the AI' },
@@ -390,10 +390,10 @@ export default function PromptPage() {
                     <Copy className="h-4 w-4" />
                     Copy
                   </Button>
-                  <Button variant="outline" className="flex items-center gap-2 rounded-lg text-sm h-10 px-4 whitespace-nowrap">
+                  {/* <Button variant="outline" className="flex items-center gap-2 rounded-lg text-sm h-10 px-4 whitespace-nowrap">
                     <Bookmark className="h-4 w-4" />
                     Save
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
             </div>
@@ -553,8 +553,8 @@ export default function PromptPage() {
                     className="w-full flex items-center justify-between px-5 py-4 hover:bg-muted/30 transition-colors"
                   >
                     <div>
-                      <h2 className="text-base font-semibold">3. Prompt Breakdown</h2>
-                      <p className="text-xs text-muted-foreground">See exactly how this prompt works under the hood.</p>
+                      <h2 className="text-base ">3. Prompt Breakdown</h2>
+                      {/* <p className="text-xs text-muted-foreground">See exactly how this prompt works under the hood.</p> */}
                     </div>
                     <ChevronDown className={`h-5 w-5 transition-transform shrink-0 ${expandedOverviewCards.includes('breakdown') ? 'rotate-180' : ''}`} />
                   </button>
@@ -653,7 +653,7 @@ export default function PromptPage() {
             )}
 
             {/* ── Reviews tab ── */}
-            {activeTab === 'reviews' && showReviews && (
+            {activeTab === 'reviews' && (
               <div className="space-y-6">
                 <div className="flex flex-wrap items-center gap-4">
                   <RatingDisplay promptId={promptId} />
@@ -715,8 +715,8 @@ export default function PromptPage() {
 
                     return (
                       <Link
-                        key={related.id}
-                        href={`/prompts/${related.id}`}
+                        key={related.slug}
+                        href={`/prompts/${related.slug}`}
                         className="group shrink-0 w-[200px] rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all p-4 flex flex-col gap-2.5"
                       >
                         {/* Icon + bookmark row */}
@@ -839,11 +839,11 @@ export default function PromptPage() {
                 {/* Stats row */}
                 <div className="flex gap-8">
                   <div>
-                    <div className="text-2xl font-bold text-gray-900 dark:text-white">{formatCount(prompt.views)}</div>
+                    <div className="text-2xl font-bold">{formatCount(prompt.views)}</div>
                     <div className="text-xs text-gray-600 dark:text-gray-400 leading-snug">People used this<br />prompt</div>
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-gray-900 dark:text-white">4.8</div>
+                    <div className="text-2xl font-bold">4.8</div>
                     <div className="text-xs text-gray-600 dark:text-gray-400">Average rating</div>
                   </div>
                 </div>
@@ -856,8 +856,7 @@ export default function PromptPage() {
                 </div>
 
                 {/* Testimonials */}
-                {showReviews && (
-                <div className="space-y-3">
+                {/* <div className="space-y-3">
                   <div className="bg-gray-50 dark:bg-slate-800 rounded-lg p-3">
                     <p className="text-sm text-gray-900 dark:text-gray-100 leading-snug mb-2">"This prompt helped us increase our email epest rates by 32%."</p>
                     <div className="flex items-center gap-2">
@@ -890,9 +889,8 @@ export default function PromptPage() {
                       </div>
                     </div>
                   </div>
-</div>
-                </div>
-                )}
+                </div> */}
+              </div>
 
               {/* Details card */}
               <div className="rounded-lg border p-4">

@@ -35,7 +35,7 @@ app.get('/api/prompts', async (req, res) => {
 
 app.get('/api/prompts/:id', async (req, res) => {
   try {
-    const [prompt] = await db.select().from(prompts).where(eq(prompts.id, req.params.id));
+    const [prompt] = await db.select().from(prompts).where(eq(prompts.slug, req.params.id));
     if (!prompt) return res.status(404).json({ error: 'Not found' });
     res.json({ ...prompt, preview: 'Preview for ' + prompt.title });
   } catch(e) {

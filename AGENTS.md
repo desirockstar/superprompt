@@ -160,13 +160,12 @@ sessions(
 
 // prompts
 prompts(
-  id: uuid PK,
+  slug: text PK,                         -- slug-based ID (e.g., "achieve-your-2025-action-plan")
   title: text NOT NULL,
-  category: text NOT NULL,
+  category: text NOT NULL DEFAULT 'uncategorized',
   status: prompt_status DEFAULT 'pending',
   base_path: text NOT NULL,
   current_version: integer DEFAULT 1,
-  is_multi_version: boolean DEFAULT false,
   preview: text,                         -- first ~220 chars of body, stored at ingest
   primary_tag: text,
   secondary_tags: text,
@@ -177,11 +176,12 @@ prompts(
   created_at: timestamptz DEFAULT now()
 )
 -- indexes: idx_prompts_category, idx_prompts_status, idx_prompts_search (GIN on search_vector)
+-- Note: slug is primary key, replacing UUID-based id
 
 // prompt_versions
 prompt_versions(
   id: uuid PK,
-  prompt_id: uuid FK → prompts.id,
+  prompt_slug: text FK → prompts.slug,
   version_number: integer NOT NULL,
   needs_grading: boolean DEFAULT true,
   created_at: timestamptz DEFAULT now()
@@ -199,20 +199,20 @@ prompt_version_files(
 ratings(
   id: uuid PK,
   user_id: uuid FK → users.id,
-  prompt_id: uuid FK → prompts.id,
+  prompt_slug: text FK → prompts.slug,
   rating: integer NOT NULL CHECK (rating >= 1 AND rating <= 5),
   created_at: timestamptz DEFAULT now(),
-  UNIQUE (user_id, prompt_id)
+  UNIQUE (user_id, prompt_slug)
 )
 
 // unlocks
 unlocks(
   id: uuid PK,
   user_id: uuid FK → users.id,
-  prompt_id: uuid FK → prompts.id,
+  prompt_slug: text FK → prompts.slug,
   unlocked_via: unlock_method NOT NULL,
   created_at: timestamptz DEFAULT now(),
-  UNIQUE (user_id, prompt_id)           -- permanent, enforced at DB level
+  UNIQUE (user_id, prompt_slug)           -- permanent, enforced at DB level
 )
 
 // subscriptions
@@ -339,9 +339,9 @@ function canAccess(user: User, promptId: string): boolean {
 
 **Rules:**
 - `hasActiveSubscription`: `subscriptions` row exists with `status = 'active'` AND `expires_at > now()`
-- `hasUnlock`: row exists in `unlocks` with matching `user_id` AND `prompt_id`
+- `hasUnlock`: row exists in `unlocks` with matching `user_id` AND `prompt_slug`
 - Unlock is **permanent**. There is no session-based or time-limited unlock.
-- The unique constraint `UNIQUE(user_id, prompt_id)` on `unlocks` enforces deduplication at DB level.
+- The unique constraint `UNIQUE(user_id, prompt_slug)` on `unlocks` enforces deduplication at DB level.
 - **NEVER** evaluate entitlement from frontend state. Always query from backend.
 - **NEVER** grant unlock without a verified ad token: `adProvider.verifyCompletion(token) === true`
 
@@ -531,7 +531,7 @@ interface AdProvider {
 4. Frontend shows AdMob rewarded ad
 5. Ad provider server-side callback → POST /api/ads/callback { token }
 6. Backend: verifyCompletion(token) === true
-7. Backend: INSERT INTO unlocks (user_id, prompt_id, unlocked_via='ad')
+7. Backend: INSERT INTO unlocks (user_id, prompt_slug, unlocked_via='ad')
 8. Backend: returns 200 OK
 9. Frontend: re-fetches prompt content (now unlocked)
 ```
@@ -756,37 +756,74 @@ NEXT_PUBLIC_POSTHOG_HOST=https://eu.i.posthog.com
 
 ## 17. File Storage Contract
 
-Prompt content is stored as Markdown files on the local filesystem.
+Prompt content is stored as Markdown files on the local filesystem with YAML frontmatter for metadata.
 
-**Single-version prompt:**
+**Current prompt structure (slug-based):**
 ```
 apps/backend/src/prompts/
-  {promptId}/
-    v1/
-      prompt.md          ← full content
+  {slug}/
+    prompt.md          ← latest version (with YAML frontmatter)
+    prompt-v1.md      ← archived version 1
+    prompt-v2.md      ← archived version 2
+    ...
 ```
 
-**Multi-version prompt (4 tiers):**
+**prompt.md content format:**
+```yaml
+---
+title: "Achieve Your 2025 Action Plan"
+slug: "achieve-your-2025-action-plan"
+category: "uncategorized"
+status: "approved"
+isViral: false
+isNano: false
+version: 3
+---
+
+#CONTENT HERE...
+
+Your markdown content here...
 ```
-apps/backend/src/prompts/
-  {promptId}/
-    v1/
-      content/
-        starter.md
-        builder.md
-        pro.md
-        super.md
-    v2/
-      content/
-        ...
+
+**Archived versions (prompt-vN.md):**
+```yaml
+---
+version: 2
+---
+
+#OLD CONTENT HERE...
 ```
 
 **Rules:**
-- DB stores `base_path` and `current_version` only. Backend composes the full file path.
-- Versioning is immutable. When a prompt is updated, a new version directory is created. Old versions are never modified.
-- `isMultiVersion = false` → single `prompt.md`. `isMultiVersion = true` → `content/{tier}.md` files.
-- Files are pure content (Markdown). No metadata or manifest files — all structured data lives in DB.
+- DB stores `slug` as primary key (replacing UUID), plus `base_path` and `current_version`.
+- Backend composes the full file path from slug.
+- Version is stored in frontmatter (`version: N`), latest in `prompt.md`, older versions as `prompt-vN.md`.
+- Files contain YAML frontmatter for metadata + markdown content.
 - `preview` text (first ~220 chars) is stored in the `prompts.preview` DB column at ingest time — never read from filesystem on listing pages.
+- Temp folder for sync: `apps/backend/src/prompts/temp/` — source files placed here before running sync.
+
+### Sync Script
+
+**Location:** `packages/db/scripts/sync-prompts.ts`
+
+**Purpose:** Copy prompts from temp folder to proper slug-based structure and update DB.
+
+**Workflow:**
+1. Scan `apps/backend/src/prompts/temp/*.md` files
+2. Parse YAML frontmatter, generate slug from filename if needed
+3. Copy to `apps/backend/src/prompts/{slug}/prompt.md`
+4. Move files (delete from temp after copy)
+5. Upsert metadata to DB (using slug as key)
+6. Hard delete: slugs in DB but not in source
+
+**Commands:**
+```bash
+# Run sync (inside container)
+pnpm db:sync
+
+# Run seed after sync
+pnpm db:seed
+```
 
 ---
 

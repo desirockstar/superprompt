@@ -6,7 +6,7 @@ export const promptStatusEnum = pgEnum('prompt_status', ['pending', 'approved', 
 export const promptLevelEnum = pgEnum('prompt_level', ['starter', 'builder', 'pro', 'super']);
 
 export const prompts = pgTable('prompts', {
-  id: uuid('id').primaryKey().defaultRandom(),
+  slug: text('slug').primaryKey(),
   userId: uuid('user_id').references(() => users.id, { onDelete: 'cascade' }),
   title: text('title').notNull(),
   category: text('category').notNull(),
@@ -31,7 +31,7 @@ export const prompts = pgTable('prompts', {
 
 export const promptVersions = pgTable('prompt_versions', {
   id: uuid('id').primaryKey().defaultRandom(),
-  promptId: uuid('prompt_id').notNull().references(() => prompts.id, { onDelete: 'cascade' }),
+  promptSlug: text('prompt_slug').notNull().references(() => prompts.slug, { onDelete: 'cascade' }),
   versionNumber: integer('version_number').notNull(),
   level: promptLevelEnum('level'),
   needsGrading: boolean('needs_grading').default(true).notNull(),

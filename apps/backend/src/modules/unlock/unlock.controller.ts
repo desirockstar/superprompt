@@ -1,4 +1,4 @@
-import { Controller, Post, Get, Body, UseGuards, Req, UnauthorizedException } from '@nestjs/common';
+import { Controller, Post, Get, Body, UseGuards, Req, UnauthorizedException, Param } from '@nestjs/common';
 import { UnlockService } from './unlock.service';
 import { RequiredAuthGuard } from '../../common/guards/auth.guard';
 import { AdMobProvider } from '../ad/ad.provider';
@@ -11,12 +11,12 @@ export class UnlockController {
   ) {}
 
   @UseGuards(RequiredAuthGuard)
-  @Post(':id/unlock')
+  @Post(':slug/unlock')
   async unlock(
     @Req() req: any,
     @Body() body: { adToken?: string },
   ) {
-    const promptId = req.params.id;
+    const promptSlug = req.params.slug;
     const userId = req.user.id;
 
     if (body.adToken) {
@@ -26,19 +26,19 @@ export class UnlockController {
       }
     }
 
-    const unlocked = await this.unlockService.unlockViaAd(userId, promptId);
+    const unlocked = await this.unlockService.unlockViaAd(userId, promptSlug);
     return { ...unlocked, unlockedVia: 'ad' };
   }
 
   @UseGuards(RequiredAuthGuard)
-  @Post(':id/unlock-intent')
+  @Post(':slug/unlock-intent')
   async startUnlock(
     @Req() req: any,
   ) {
-    const promptId = req.params.id;
+    const promptSlug = req.params.slug;
     const userId = req.user.id;
 
-    const adData = await this.adProvider.loadAd(userId, promptId);
+    const adData = await this.adProvider.loadAd(userId, promptSlug);
     return { token: adData.token };
   }
 }

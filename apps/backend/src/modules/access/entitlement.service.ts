@@ -21,14 +21,14 @@ export class EntitlementService {
     private readonly db: Database,
   ) {}
 
-  async canAccess(userId: string, promptId: string): Promise<boolean> {
-    const result = await this.checkEntitlement(userId, promptId);
+  async canAccess(userId: string, promptSlug: string): Promise<boolean> {
+    const result = await this.checkEntitlement(userId, promptSlug);
     return result.hasAccess;
   }
 
-  async checkEntitlement(userId: string, promptId: string): Promise<EntitlementResult> {
+  async checkEntitlement(userId: string, promptSlug: string): Promise<EntitlementResult> {
     const hasSubscription = await this.hasActiveSubscription(userId);
-    const hasUnlock = await this.hasUnlock(userId, promptId);
+    const hasUnlock = await this.hasUnlock(userId, promptSlug);
 
     return {
       hasAccess: hasSubscription || hasUnlock,
@@ -46,11 +46,11 @@ export class EntitlementService {
     return sub.status === 'active' && !!sub.expiresAt && new Date(sub.expiresAt) > new Date();
   }
 
-  async hasUnlock(userId: string, promptId: string): Promise<boolean> {
+  async hasUnlock(userId: string, promptSlug: string): Promise<boolean> {
     const [unlock] = await this.db.select().from(unlocks)
       .where(and(
         eq(unlocks.userId, userId),
-        eq(unlocks.promptId, promptId),
+        eq(unlocks.promptSlug, promptSlug),
       ))
       .limit(1);
     return !!unlock;

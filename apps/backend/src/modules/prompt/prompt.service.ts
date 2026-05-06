@@ -84,7 +84,7 @@ export class PromptService {
 
     if (options?.tier && options.tier !== 'All') {
       allPrompts = allPrompts.filter(p => {
-        const evalTier = tierMap.get(p.id.toString())?.level;
+        const evalTier = tierMap.get(p.slug)?.level;
         return evalTier === options.tier;
       });
     }
@@ -98,7 +98,7 @@ export class PromptService {
       paginated.map(async (p) => ({
         ...p,
         preview: await this.getPreview(p.basePath, p.currentVersion, p.isMultiVersion),
-        tier: finalTierMap.get(p.id.toString())?.level || null,
+        tier: finalTierMap.get(p.slug)?.level || null,
         primaryTag: p.primaryTag,
         isViral: p.isViral,
         isNano: p.isNano,
@@ -114,14 +114,14 @@ export class PromptService {
     };
   }
 
-  async findOne(id: string, includeContent: boolean = false) {
+  async findOne(slug: string, includeContent: boolean = false) {
     const result = await this.db.select()
       .from(promptsTable)
-      .where(eq(promptsTable.id, id))
+      .where(eq(promptsTable.slug, slug))
       .limit(1);
 
     if (result.length === 0) {
-      throw new NotFoundException(`Prompt ${id} not found`);
+      throw new NotFoundException(`Prompt ${slug} not found`);
     }
 
     const prompt = result[0];
@@ -190,9 +190,22 @@ export class PromptService {
   private readFileWithPreview(filePath: string): string {
     const content = readFileSync(filePath, 'utf-8');
     const lines = content.split('\n');
-    const totalLines = lines.length;
+    
+    let startIndex = 0;
+    // Skip YAML frontmatter if present
+    if (lines.length > 0 && lines[0].trim() === '---') {
+      for (let i = 1; i < lines.length; i++) {
+        if (lines[i].trim() === '---') {
+          startIndex = i + 1;
+          break;
+        }
+      }
+    }
+    
+    const contentLines = lines.slice(startIndex);
+    const totalLines = contentLines.length;
     const previewLineCount = Math.max(10, Math.ceil(totalLines * 0.35));
-    return lines.slice(0, previewLineCount).join('\n');
+    return contentLines.slice(0, previewLineCount).join('\n');
   }
 
   async getContentByPath(basePath: string, level: string, version?: number): Promise<string> {
@@ -262,30 +275,30 @@ export class PromptService {
     return {
       prompts: results.map(p => ({
         ...p,
-        tier: tierMap.get(p.id.toString())?.level || null,
+        tier: tierMap.get(p.slug)?.level || null,
       })),
     };
   }
 
-  async update(id: string, data: { content: Record<string, string> }) {
+  async update(slug: string, data: { content: Record<string, string> }) {
     const [updated] = await this.db.update(promptsTable)
       .set({
         currentVersion: 1,
         isMultiVersion: Object.keys(data.content).length > 1,
       })
-      .where(eq(promptsTable.id, id))
+      .where(eq(promptsTable.slug, slug))
       .returning();
     return updated;
   }
 
-  async updateWithUser(id: string, data: { content: Record<string, string>; isMultiVersion?: boolean }) {
+  async updateWithUser(slug: string, data: { content: Record<string, string>; isMultiVersion?: boolean }) {
     const isMulti = data.isMultiVersion || Object.keys(data.content).some(k => k !== 'content');
     const [updated] = await this.db.update(promptsTable)
       .set({
         currentVersion: 1,
         isMultiVersion: isMulti,
       })
-      .where(eq(promptsTable.id, id))
+      .where(eq(promptsTable.slug, slug))
       .returning();
     return updated;
   }
@@ -300,7 +313,7 @@ export class PromptService {
     const [unlock] = await this.db.select().from(unlocks)
       .where(and(
         eq(unlocks.userId, userId),
-        eq(unlocks.promptId, promptId)
+        eq(unlocks.promptSlug, promptId)
       ))
       .limit(1);
     
@@ -309,10 +322,10 @@ export class PromptService {
     return { hasAccess: hasSubscription || hasUnlock, hasSubscription, hasUnlock };
   }
 
-  async getEvaluation(promptId: string) {
+  async getEvaluation(promptSlug: string) {
     const [evaluation] = await this.db.select()
       .from(evaluations)
-      .where(eq(evaluations.promptId, promptId))
+      .where(eq(evaluations.promptSlug, promptSlug))
       .limit(1);
 
     if (!evaluation) {
@@ -336,9 +349,9 @@ export class PromptService {
 
     const tierMap = new Map<string, { level: string; score: string }>();
     for (const evaluation of allEvaluations) {
-      const existing = tierMap.get(evaluation.promptId.toString());
+      const existing = tierMap.get(evaluation.promptSlug);
       if (!existing || (evaluation.overallScore && parseFloat(evaluation.overallScore) > parseFloat(existing.score))) {
-        tierMap.set(evaluation.promptId.toString(), {
+        tierMap.set(evaluation.promptSlug, {
           level: evaluation.level,
           score: evaluation.overallScore || '0',
         });

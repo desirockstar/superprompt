@@ -34,14 +34,14 @@ export class GradingOrchestrator {
       .where(eq(promptVersions.needsGrading, true));
 
     // Get the parent prompts for pending versions
-    const promptIds = [...new Set(pendingVersions.map(v => v.promptId))];
+    const promptSlugs = [...new Set(pendingVersions.map(v => v.promptSlug))];
 
     let graded = 0;
     let failed = 0;
 
-    for (const promptId of promptIds) {
+    for (const promptSlug of promptSlugs) {
       const [promptRow] = await this.db.select().from(prompts)
-        .where(and(eq(prompts.id, promptId), eq(prompts.status, 'approved')));
+        .where(and(eq(prompts.slug, promptSlug), eq(prompts.status, 'approved')));
 
       if (!promptRow) continue;
 
@@ -52,16 +52,16 @@ export class GradingOrchestrator {
         await this.db.update(promptVersions)
           .set({ needsGrading: false })
           .where(and(
-            eq(promptVersions.promptId, promptId),
+            eq(promptVersions.promptSlug, promptSlug),
             eq(promptVersions.needsGrading, true),
           ));
 
         graded++;
       } catch (error) {
-        console.error('Evaluation failed for prompt:', promptId, error);
+        console.error('Evaluation failed for prompt:', promptSlug, error);
         this.eventEmitter.emit(
           DOMAIN_EVENTS.EVALUATION_FAILED,
-          new EvaluationFailedEvent(promptId, (error as Error).message),
+          new EvaluationFailedEvent(promptSlug, (error as Error).message),
         );
         failed++;
       }
@@ -72,10 +72,10 @@ export class GradingOrchestrator {
 
   private async evaluatePrompt(promptRow: typeof prompts.$inferSelect): Promise<void> {
     const rubric = await this.rubricService.getRubric(promptRow.category);
-    const promptContent = await this.getPromptContent(promptRow.id.toString());
-    const level: PromptLevel = promptRow.isMultiVersion ? 'pro' : 'starter';
+    const promptContent = await this.getPromptContent(promptRow.slug);
+    const level: PromptLevel = 'starter';
 
-    await this.evaluationRepo.upsertPending(promptRow.id, promptRow.category, level);
+    await this.evaluationRepo.upsertPending(promptRow.slug, promptRow.category, level);
 
     let lastError: Error | null = null;
 
@@ -117,20 +117,14 @@ export class GradingOrchestrator {
 
     this.eventEmitter.emit(
       DOMAIN_EVENTS.EVALUATION_FAILED,
-      new EvaluationFailedEvent(promptRow.id, lastError?.message || 'Max retries exceeded'),
+      new EvaluationFailedEvent(promptRow.slug, lastError?.message || 'Max retries exceeded'),
     );
   }
 
-  private async getPromptContent(promptId: string): Promise<string> {
-    const filePath = path.join(this.promptsBasePath, promptId, 'v1', 'super.md');
+  private async getPromptContent(promptSlug: string): Promise<string> {
+    const filePath = path.join(this.promptsBasePath, promptSlug, 'prompt.md');
     if (!fs.existsSync(filePath)) {
-      // Try other levels if super.md not found
-      for (const level of ['pro', 'builder', 'starter', 'content']) {
-        const altPath = path.join(this.promptsBasePath, promptId, 'v1', `${level}.md`);
-        if (fs.existsSync(altPath)) {
-          return fs.readFileSync(altPath, 'utf-8');
-        }
-      }
+      console.error(`Prompt file not found: ${filePath}`);
       return '';
     }
     return fs.readFileSync(filePath, 'utf-8');

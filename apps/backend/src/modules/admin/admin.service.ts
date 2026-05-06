@@ -17,20 +17,20 @@ export class AdminService {
     return this.db.select().from(promptsTable).where(eq(promptsTable.status, 'pending'));
   }
 
-  async approvePrompt(id: string) {
+  async approvePrompt(slug: string) {
     const [updated] = await this.db.update(promptsTable)
       .set({ status: 'approved' })
-      .where(eq(promptsTable.id, id))
+      .where(eq(promptsTable.slug, slug))
       .returning();
     this.cache.deleteByPrefix('prompts:list');
     this.cache.deleteByPrefix('evaluations:tiers');
     return updated;
   }
 
-  async rejectPrompt(id: string) {
+  async rejectPrompt(slug: string) {
     const [updated] = await this.db.update(promptsTable)
       .set({ status: 'rejected' })
-      .where(eq(promptsTable.id, id))
+      .where(eq(promptsTable.slug, slug))
       .returning();
     this.cache.deleteByPrefix('prompts:list');
     return updated;

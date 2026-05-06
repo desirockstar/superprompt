@@ -12,14 +12,14 @@ export class EvaluationRepository {
     private readonly db: Database,
   ) {}
 
-  async upsertPending(promptId: string, category: string, level: string) {
+  async upsertPending(promptSlug: string, category: string, level: string) {
     await this.db.insert(evaluations).values({
-      promptId,
+      promptSlug,
       category,
       level,
       status: 'pending',
     }).onConflictDoUpdate({
-      target: evaluations.promptId,
+      target: evaluations.promptSlug,
       set: {
         status: 'pending',
         level,
@@ -29,7 +29,7 @@ export class EvaluationRepository {
   }
 
   async markCompleted(
-    promptId: string,
+    promptSlug: string,
     overallScore: number,
     overallFeedback: string,
     rubricSnapshot: Criterion[],
@@ -37,7 +37,7 @@ export class EvaluationRepository {
     scores: EvaluationResult['scores'],
   ) {
     const [evaluation] = await this.db.select().from(evaluations)
-      .where(eq(evaluations.promptId, promptId))
+      .where(eq(evaluations.promptSlug, promptSlug))
       .limit(1);
 
     if (!evaluation) return;
@@ -62,9 +62,9 @@ export class EvaluationRepository {
     }
   }
 
-  async markFailed(promptId: string, reason: string) {
+  async markFailed(promptSlug: string, reason: string) {
     const [evaluation] = await this.db.select().from(evaluations)
-      .where(eq(evaluations.promptId, promptId))
+      .where(eq(evaluations.promptSlug, promptSlug))
       .limit(1);
 
     if (!evaluation) return;
@@ -77,10 +77,10 @@ export class EvaluationRepository {
       .where(eq(evaluations.id, evaluation.id));
   }
 
-  async getEvaluation(promptId: string) {
+  async getEvaluation(promptSlug: string) {
     const [evaluation] = await this.db.select()
       .from(evaluations)
-      .where(eq(evaluations.promptId, promptId))
+      .where(eq(evaluations.promptSlug, promptSlug))
       .limit(1);
 
     if (!evaluation) return null;

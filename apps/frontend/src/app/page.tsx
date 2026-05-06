@@ -14,11 +14,13 @@ const CATEGORIES = ['All', 'Business Communication', 'Content Marketing', 'Devel
 const TIERS = ['All', 'starter', 'builder', 'pro', 'super'];
 const DATES = ['All', 'newest', 'oldest'];
 
-type PromptWithPreview = Prompt & {
+type PromptWithPreview = Omit<Prompt, 'id'> & {
     preview?: string;
+    slug: string;
 };
 
 type RenderCard = {
+    key: string;
     id: string;
     titleLines: string[];
     category: string;
@@ -369,7 +371,8 @@ export default function TestPromptsPage() {
             const score = scoreOptions[index % scoreOptions.length];
 
             return {
-                id: prompt.id,
+                key: `${prompt.slug}-${index}`, // Unique key for React
+                id: prompt.slug, // Original slug for navigation
                 titleLines: titleToLines(prompt.title),
                 category: prompt.category,
                 previewTop: split.top,
@@ -396,7 +399,7 @@ export default function TestPromptsPage() {
 
                         return (
                             <div
-                                key={card.id}
+                                key={card.key}
                                 className="w-full cursor-pointer"
                                 data-card-index={index}
                                 onClick={() => router.push(`/prompts/${card.id}`)}

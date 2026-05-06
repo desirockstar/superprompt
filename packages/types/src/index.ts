@@ -6,7 +6,7 @@ export type SubscriptionStatus = 'active' | 'canceled' | 'past_due';
 export type GradingJobStatus = 'pending' | 'running' | 'done' | 'failed';
 
 export interface PromptWithVersion {
-  id: string;
+  slug: string;
   title: string;
   category: string;
   status: PromptStatus;

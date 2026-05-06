@@ -95,18 +95,18 @@ export class AuthService {
     return sub.status === 'active' && !!sub.expiresAt && new Date(sub.expiresAt) > new Date();
   }
 
-  async hasUnlock(userId: string, promptId: string): Promise<boolean> {
+  async hasUnlock(userId: string, promptSlug: string): Promise<boolean> {
     const result = await this.db.select().from(unlocks)
       .where(eq(unlocks.userId, userId))
       .limit(1);
-    return result.some(u => u.promptId === promptId);
+    return result.some(u => u.promptSlug === promptSlug);
   }
 
-  async canAccess(userId: string | null, promptId: string): Promise<boolean> {
+  async canAccess(userId: string | null, promptSlug: string): Promise<boolean> {
     if (!userId) return false;
     const hasSub = await this.hasActiveSubscription(userId);
     if (hasSub) return true;
-    return this.hasUnlock(userId, promptId);
+    return this.hasUnlock(userId, promptSlug);
   }
 
   async handleGoogleOAuth(code: string) {

@@ -48,8 +48,8 @@ export class CatalogService {
 
     const promptsWithPreview = prompts.map((p) => ({
       ...p,
-      preview: p.preview || '',
-      tier: tierMap.get(p.id.toString())?.level || null,
+      preview: this.stripFrontmatter(p.preview || ''),
+      tier: tierMap.get(p.slug)?.level || null,
       primaryTag: p.primaryTag,
       isViral: p.isViral,
       isNano: p.isNano,
@@ -61,25 +61,26 @@ export class CatalogService {
     return result;
   }
 
-  async findOne(id: string, includeContent: boolean = false) {
-    const cacheKey = `prompts:detail:${id}`;
+  async findOne(slug: string, includeContent: boolean = false) {
+    const cacheKey = `prompts:detail:${slug}`;
     const cached = this.cache.get<Record<string, any>>(cacheKey);
     if (cached && !includeContent) return cached;
 
     const result = await this.db.select()
       .from(promptsTable)
-      .where(eq(promptsTable.id, id))
+      .where(eq(promptsTable.slug, slug))
       .limit(1);
 
     if (result.length === 0) {
-      throw new NotFoundException(`Prompt ${id} not found`);
+      throw new NotFoundException(`Prompt ${slug} not found`);
     }
 
     const prompt = result[0];
 
+    const rawPreview = prompt.preview || await this.contentRepo.getPreview(prompt.basePath, prompt.currentVersion, prompt.isMultiVersion);
     const response: Record<string, any> = {
       ...prompt,
-      preview: prompt.preview || await this.contentRepo.getPreview(prompt.basePath, prompt.currentVersion, prompt.isMultiVersion),
+      preview: this.stripFrontmatter(rawPreview),
     };
 
     if (includeContent) {
@@ -91,8 +92,8 @@ export class CatalogService {
     return response;
   }
 
-  invalidatePrompt(id: string): void {
-    this.cache.delete(`prompts:detail:${id}`);
+  invalidatePrompt(slug: string): void {
+    this.cache.delete(`prompts:detail:${slug}`);
     this.cache.deleteByPrefix('prompts:list');
   }
 
@@ -105,18 +106,18 @@ export class CatalogService {
     return this.contentRepo.getFullContent(basePath, version, isMultiVersion);
   }
 
-  async checkEntitlement(userId: string, promptId: string) {
-    return this.entitlementService.checkEntitlement(userId, promptId);
+  async checkEntitlement(userId: string, promptSlug: string) {
+    return this.entitlementService.checkEntitlement(userId, promptSlug);
   }
 
-  async getEvaluation(promptId: string) {
-    return this.evaluationRepo.getEvaluation(promptId);
+  async getEvaluation(promptSlug: string) {
+    return this.evaluationRepo.getEvaluation(promptSlug);
   }
 
-  async getRelatedPrompts(promptId: string, limit: number = 3) {
+  async getRelatedPrompts(promptSlug: string, limit: number = 3) {
     const tierMap = await this.getEvaluationsWithTiers();
     
-    const currentPrompt = await this.findOne(promptId, false);
+    const currentPrompt = await this.findOne(promptSlug, false);
     const categoryParts = currentPrompt.category.split(',').map((c: string) => c.trim());
     const mainCategory = categoryParts[0];
 
@@ -126,21 +127,21 @@ export class CatalogService {
       .limit(limit * 3);
 
     const filtered = relatedPrompts.filter((p: any) => {
-      if (p.id === promptId) return false;
+      if (p.slug === promptSlug) return false;
       const promptCategoryParts = p.category.split(',').map((c: string) => c.trim());
       return promptCategoryParts.includes(mainCategory);
     }).slice(0, limit);
 
     return filtered.map((p: any) => ({
-      id: p.id,
+      slug: p.slug,
       title: p.title,
       category: p.category,
       basePath: p.basePath,
       currentVersion: p.currentVersion,
       isMultiVersion: p.isMultiVersion,
       createdAt: p.createdAt,
-      preview: p.preview || '',
-      tier: tierMap.get(p.id.toString())?.level || null,
+      preview: this.stripFrontmatter(p.preview || ''),
+      tier: tierMap.get(p.slug)?.level || null,
       primaryTag: p.primaryTag,
       isViral: p.isViral,
       isNano: p.isNano,
@@ -149,10 +150,12 @@ export class CatalogService {
   }
 
   async createWithUser(userId: string, data: { title: string; category: string; content: Record<string, string>; isMultiVersion?: boolean }) {
-    const basePath = `prompts/${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+    const slug = data.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') + '-' + Date.now();
+    const basePath = `prompts/${slug}`;
     const isMulti = data.isMultiVersion || Object.keys(data.content).some(k => k !== 'content');
 
     const [created] = await this.db.insert(promptsTable).values({
+      slug,
       userId,
       title: data.title,
       category: data.category,
@@ -178,19 +181,19 @@ export class CatalogService {
     return {
       prompts: results.map(p => ({
         ...p,
-        tier: tierMap.get(p.id.toString())?.level || null,
+        tier: tierMap.get(p.slug)?.level || null,
       })),
     };
   }
 
-  async update(id: string, data: { content: Record<string, string>; isMultiVersion?: boolean }) {
+  async update(slug: string, data: { content: Record<string, string>; isMultiVersion?: boolean }) {
     const isMulti = data.isMultiVersion || Object.keys(data.content).some(k => k !== 'content');
     const [updated] = await this.db.update(promptsTable)
       .set({
         currentVersion: 1,
         isMultiVersion: isMulti,
       })
-      .where(eq(promptsTable.id, id))
+      .where(eq(promptsTable.slug, slug))
       .returning();
     return updated;
   }
@@ -204,9 +207,9 @@ export class CatalogService {
 
     const tierMap = new Map<string, { level: string; score: string }>();
     for (const evaluation of allEvaluations) {
-      const existing = tierMap.get(evaluation.promptId.toString());
+      const existing = tierMap.get(evaluation.promptSlug);
       if (!existing || (evaluation.overallScore && parseFloat(evaluation.overallScore) > parseFloat(existing.score))) {
-        tierMap.set(evaluation.promptId.toString(), {
+        tierMap.set(evaluation.promptSlug, {
           level: evaluation.level,
           score: evaluation.overallScore || '0',
         });
@@ -215,5 +218,20 @@ export class CatalogService {
 
     this.cache.set(cacheKey, tierMap, TTL_TIERS);
     return tierMap;
+  }
+
+  private stripFrontmatter(content: string): string {
+    if (!content) return '';
+    const lines = content.split('\n');
+    let startIndex = 0;
+    if (lines.length > 0 && lines[0].trim() === '---') {
+      for (let i = 1; i < lines.length; i++) {
+        if (lines[i].trim() === '---') {
+          startIndex = i + 1;
+          break;
+        }
+      }
+    }
+    return lines.slice(startIndex).join('\n');
   }
 }

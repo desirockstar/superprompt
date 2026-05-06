@@ -10,7 +10,7 @@ export class RatingService {
     private readonly db: Database,
   ) {}
 
-  async submitRating(userId: string, promptId: string, rating: number) {
+  async submitRating(userId: string, promptSlug: string, rating: number) {
     if (rating < 1 || rating > 5) {
       throw new Error('Rating must be between 1 and 5');
     }
@@ -19,7 +19,7 @@ export class RatingService {
       .from(ratings)
       .where(and(
         eq(ratings.userId, userId),
-        eq(ratings.promptId, promptId)
+        eq(ratings.promptSlug, promptSlug)
       ))
       .limit(1);
 
@@ -33,16 +33,16 @@ export class RatingService {
 
     const [created] = await this.db.insert(ratings).values({
       userId,
-      promptId,
+      promptSlug,
       rating,
     }).returning();
     return created;
   }
 
-  async getRating(promptId: string) {
+  async getRating(promptSlug: string) {
     const result = await this.db.select()
       .from(ratings)
-      .where(eq(ratings.promptId, promptId));
+      .where(eq(ratings.promptSlug, promptSlug));
 
     if (result.length === 0) {
       return { average: null, count: 0 };

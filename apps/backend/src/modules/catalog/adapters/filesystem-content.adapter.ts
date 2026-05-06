@@ -146,8 +146,21 @@ export class FilesystemContentAdapter implements ContentRepository {
   private readFileWithPreview(filePath: string): string {
     const content = readFileSync(filePath, 'utf-8');
     const lines = content.split('\n');
-    const totalLines = lines.length;
+    
+    let startIndex = 0;
+    // Skip YAML frontmatter if present
+    if (lines.length > 0 && lines[0].trim() === '---') {
+      for (let i = 1; i < lines.length; i++) {
+        if (lines[i].trim() === '---') {
+          startIndex = i + 1;
+          break;
+        }
+      }
+    }
+    
+    const contentLines = lines.slice(startIndex);
+    const totalLines = contentLines.length;
     const previewLineCount = Math.max(10, Math.ceil(totalLines * 0.35));
-    return lines.slice(0, previewLineCount).join('\n');
+    return contentLines.slice(0, previewLineCount).join('\n');
   }
 }

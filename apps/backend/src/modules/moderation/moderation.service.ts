@@ -18,26 +18,26 @@ export class ModerationService {
     return this.db.select().from(promptsTable).where(eq(promptsTable.status, 'pending'));
   }
 
-  async approvePrompt(id: string) {
+  async approvePrompt(slug: string) {
     const [updated] = await this.db.update(promptsTable)
       .set({ status: 'approved' })
-      .where(eq(promptsTable.id, id))
+      .where(eq(promptsTable.slug, slug))
       .returning();
 
     if (updated) {
       this.eventEmitter.emit(
         DOMAIN_EVENTS.PROMPT_APPROVED,
-        new PromptApprovedEvent(updated.id, updated.category, updated.currentVersion),
+        new PromptApprovedEvent(updated.slug, updated.category, updated.currentVersion),
       );
     }
 
     return updated;
   }
 
-  async rejectPrompt(id: string) {
+  async rejectPrompt(slug: string) {
     const [updated] = await this.db.update(promptsTable)
       .set({ status: 'rejected' })
-      .where(eq(promptsTable.id, id))
+      .where(eq(promptsTable.slug, slug))
       .returning();
     return updated;
   }

@@ -12,7 +12,7 @@ export const rubrics = pgTable('rubrics', {
 
 export const evaluations = pgTable('evaluations', {
   id: uuid('id').primaryKey().defaultRandom(),
-  promptId: uuid('prompt_id').notNull().unique(),
+  promptSlug: text('prompt_slug').notNull().unique(),
   category: text('category').notNull(),
   level: text('level').notNull(), // Tier level (starter/builder/pro/super)
   overallScore: text('overall_score'),

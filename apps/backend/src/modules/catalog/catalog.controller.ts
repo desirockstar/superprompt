@@ -14,20 +14,30 @@ export class CatalogController {
   async findAll(
     @Query('category') category?: string,
     @Query('search') search?: string,
-    @Query('page') page?: number,
-    @Query('limit') limit?: number,
-    @Query('rating') rating?: number,
+    @Query('page') page?: string,
+    @Query('limit') limit?: string,
+    @Query('rating') rating?: string,
     @Query('date') date?: string,
     @Query('tier') tier?: string,
   ) {
-    return this.catalogService.findAll({ category, search, page, limit, rating, date, tier });
+    const pageNum = page ? parseInt(page, 10) : 1;
+    const limitNum = limit ? parseInt(limit, 10) : 10;
+    return this.catalogService.findAll({ 
+      category, 
+      search, 
+      page: pageNum, 
+      limit: limitNum, 
+      rating: rating ? parseInt(rating, 10) : undefined, 
+      date, 
+      tier 
+    });
   }
 
-  @Get(':id/preview')
-  async getPreview(@Param('id') id: string) {
-    const prompt = await this.catalogService.findOne(id, false);
+  @Get(':slug/preview')
+  async getPreview(@Param('slug') slug: string) {
+    const prompt = await this.catalogService.findOne(slug, false);
     return {
-      id: prompt.id,
+      slug: prompt.slug,
       title: prompt.title,
       category: prompt.category,
       status: prompt.status,
@@ -40,18 +50,18 @@ export class CatalogController {
   }
 
   @UseGuards(AuthGuard)
-  @Get(':id')
-  async findOne(@Param('id') id: string, @Req() req: any) {
+  @Get(':slug')
+  async findOne(@Param('slug') slug: string, @Req() req: any) {
     const userId = req.user?.id;
     const isLoggedIn = !!userId;
 
-    this.viewCounter.increment(id);
+    this.viewCounter.increment(slug);
 
     const entitlement = isLoggedIn
-      ? await this.catalogService.checkEntitlement(userId, id)
+      ? await this.catalogService.checkEntitlement(userId, slug)
       : { hasAccess: false, hasSubscription: false, hasUnlock: false };
 
-    const prompt = await this.catalogService.findOne(id, false);
+    const prompt = await this.catalogService.findOne(slug, false);
     prompt.isLoggedIn = isLoggedIn;
 
     if (!isLoggedIn) {
@@ -68,36 +78,36 @@ export class CatalogController {
     return { ...prompt, content: fullContent };
   }
 
-  @Get(':id/version/:v')
+  @Get(':slug/version/:v')
   async getVersion(
-    @Param('id') id: string,
+    @Param('slug') slug: string,
     @Param('v') version: number,
     @Query('level') level: string = 'starter',
     @Req() req: any,
   ) {
-    const prompt = await this.catalogService.findOne(id);
+    const prompt = await this.catalogService.findOne(slug);
     const userId = req.user?.id;
     let hasAccess = false;
 
     if (userId) {
-      const entitlement = await this.catalogService.checkEntitlement(userId, id);
+      const entitlement = await this.catalogService.checkEntitlement(userId, slug);
       hasAccess = entitlement.hasAccess;
     }
 
     return { prompt, hasAccess };
   }
 
-  @Get(':id/evaluation')
-  async getEvaluation(@Param('id') id: string) {
-    return this.catalogService.getEvaluation(id);
+  @Get(':slug/evaluation')
+  async getEvaluation(@Param('slug') slug: string) {
+    return this.catalogService.getEvaluation(slug);
   }
 
-  @Get(':id/related')
+  @Get(':slug/related')
   async getRelated(
-    @Param('id') id: string,
+    @Param('slug') slug: string,
     @Query('limit') limit: number = 3,
   ) {
-    return this.catalogService.getRelatedPrompts(id, limit);
+    return this.catalogService.getRelatedPrompts(slug, limit);
   }
 
   @UseGuards(RequiredAuthGuard)
@@ -107,9 +117,9 @@ export class CatalogController {
   }
 
   @UseGuards(RequiredAuthGuard)
-  @Put(':id')
-  async update(@Param('id') id: string, @Body() body: { content: Record<string, string>; isMultiVersion?: boolean }) {
-    return this.catalogService.update(id, body);
+  @Put(':slug')
+  async update(@Param('slug') slug: string, @Body() body: { content: Record<string, string>; isMultiVersion?: boolean }) {
+    return this.catalogService.update(slug, body);
   }
 
   @UseGuards(RequiredAuthGuard)

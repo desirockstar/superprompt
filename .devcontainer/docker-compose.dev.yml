@@ -35,6 +35,7 @@ services:
       - /workspace/apps/frontend/.next            # Exclude .next cache
     command: pnpm dev:frontend
     environment:
+      - TURBOPACK_POLLING=true 
       - WATCHPACK_POLLING=true
       - CHOKIDAR_USEPOLLING=true
       - CHOKIDAR_INTERVAL=300               # Fast polling (300ms, not 1000ms)

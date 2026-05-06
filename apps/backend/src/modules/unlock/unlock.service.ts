@@ -11,11 +11,11 @@ export class UnlockService {
     private readonly db: Database,
   ) {}
 
-  async unlockViaAd(userId: string, promptId: string) {
+  async unlockViaAd(userId: string, promptSlug: string) {
     const existing = await this.db.select().from(unlocksTable)
       .where(and(
         eq(unlocksTable.userId, userId),
-        eq(unlocksTable.promptId, promptId)
+        eq(unlocksTable.promptSlug, promptSlug)
       ))
       .limit(1);
 
@@ -25,18 +25,18 @@ export class UnlockService {
 
     const [created] = await this.db.insert(unlocksTable).values({
       userId,
-      promptId,
+      promptSlug,
       unlockedVia: 'ad',
     }).returning();
 
     return created;
   }
 
-  async unlockViaSubscription(userId: string, promptId: string) {
+  async unlockViaSubscription(userId: string, promptSlug: string) {
     const existing = await this.db.select().from(unlocksTable)
       .where(and(
         eq(unlocksTable.userId, userId),
-        eq(unlocksTable.promptId, promptId)
+        eq(unlocksTable.promptSlug, promptSlug)
       ))
       .limit(1);
 
@@ -46,7 +46,7 @@ export class UnlockService {
 
     const [created] = await this.db.insert(unlocksTable).values({
       userId,
-      promptId,
+      promptSlug,
       unlockedVia: 'subscription',
     }).returning();
 
@@ -57,11 +57,11 @@ export class UnlockService {
     return this.db.select().from(unlocksTable).where(eq(unlocksTable.userId, userId));
   }
 
-  async hasUnlock(userId: string, promptId: string): Promise<boolean> {
+  async hasUnlock(userId: string, promptSlug: string): Promise<boolean> {
     const result = await this.db.select().from(unlocksTable)
       .where(and(
         eq(unlocksTable.userId, userId),
-        eq(unlocksTable.promptId, promptId)
+        eq(unlocksTable.promptSlug, promptSlug)
       ))
       .limit(1);
     return result.length > 0;

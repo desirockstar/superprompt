@@ -29,7 +29,7 @@ export function PromptCard({ prompt, preview, tier }: PromptCardProps) {
   const handleShare = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    navigator.clipboard.writeText(`${window.location.origin}/prompts/${prompt.id}`);
+    navigator.clipboard.writeText(`${window.location.origin}/prompts/${prompt.slug}`);
   };
 
   const handleLike = (e: React.MouseEvent) => {
@@ -46,7 +46,7 @@ export function PromptCard({ prompt, preview, tier }: PromptCardProps) {
   };
 
   return (
-    <Link href={`/prompts/${prompt.id}`}>
+    <Link href={`/prompts/${prompt.slug}`}>
       <Card className="h-full hover:border-primary/50 transition-colors cursor-pointer">
         <CardHeader className="pb-2">
           <div className="flex items-start justify-between">

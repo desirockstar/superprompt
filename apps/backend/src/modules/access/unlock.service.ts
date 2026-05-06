@@ -14,11 +14,11 @@ export class UnlockService {
     private readonly eventEmitter: EventEmitter2,
   ) {}
 
-  async unlockViaAd(userId: string, promptId: string) {
+  async unlockViaAd(userId: string, promptSlug: string) {
     const existing = await this.db.select().from(unlocksTable)
       .where(and(
         eq(unlocksTable.userId, userId),
-        eq(unlocksTable.promptId, promptId),
+        eq(unlocksTable.promptSlug, promptSlug),
       ))
       .limit(1);
 
@@ -28,23 +28,23 @@ export class UnlockService {
 
     const [created] = await this.db.insert(unlocksTable).values({
       userId,
-      promptId,
+      promptSlug,
       unlockedVia: 'ad',
     }).returning();
 
     this.eventEmitter.emit(
       DOMAIN_EVENTS.UNLOCK_GRANTED,
-      new UnlockGrantedEvent(userId, promptId),
+      new UnlockGrantedEvent(userId, promptSlug),
     );
 
     return created;
   }
 
-  async unlockViaSubscription(userId: string, promptId: string) {
+  async unlockViaSubscription(userId: string, promptSlug: string) {
     const existing = await this.db.select().from(unlocksTable)
       .where(and(
         eq(unlocksTable.userId, userId),
-        eq(unlocksTable.promptId, promptId),
+        eq(unlocksTable.promptSlug, promptSlug),
       ))
       .limit(1);
 
@@ -54,13 +54,13 @@ export class UnlockService {
 
     const [created] = await this.db.insert(unlocksTable).values({
       userId,
-      promptId,
+      promptSlug,
       unlockedVia: 'subscription',
     }).returning();
 
     this.eventEmitter.emit(
       DOMAIN_EVENTS.UNLOCK_GRANTED,
-      new UnlockGrantedEvent(userId, promptId),
+      new UnlockGrantedEvent(userId, promptSlug),
     );
 
     return created;

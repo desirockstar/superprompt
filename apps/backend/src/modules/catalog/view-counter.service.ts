@@ -19,8 +19,8 @@ export class ViewCounterService {
     private readonly cache: CacheService,
   ) {}
 
-  increment(promptId: string): void {
-    this.viewBuffer.set(promptId, (this.viewBuffer.get(promptId) ?? 0) + 1);
+  increment(promptSlug: string): void {
+    this.viewBuffer.set(promptSlug, (this.viewBuffer.get(promptSlug) ?? 0) + 1);
   }
 
   @Interval(FLUSH_INTERVAL_MS)
@@ -30,13 +30,13 @@ export class ViewCounterService {
     const entries = [...this.viewBuffer.entries()];
     this.viewBuffer.clear();
 
-    for (const [promptId, count] of entries) {
+    for (const [promptSlug, count] of entries) {
       try {
         await this.db.update(promptsTable)
           .set({ views: sql`coalesce(${promptsTable.views}, 0) + ${count}` })
-          .where(eq(promptsTable.id, promptId));
+          .where(eq(promptsTable.slug, promptSlug));
       } catch (err) {
-        this.logger.error(`Failed to flush view count for prompt ${promptId}`, err);
+        this.logger.error(`Failed to flush view count for prompt ${promptSlug}`, err);
       }
     }
 
