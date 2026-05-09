@@ -1,0 +1,3 @@
+name: superprompt-dev-github-secrets
+runtime: nodejs
+main: ./index.ts

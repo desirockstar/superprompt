@@ -84,6 +84,71 @@ Create these files in `.devcontainer/`:
 
 ---
 
+## 2.2 Docker-Only Developer Environment
+
+This project uses a Docker-only developer environment strategy. AI agents must understand this to work correctly.
+
+**What this means:**
+- NO local Node.js, npm, or pnpm installed on the host machine
+- NO local CLI tools (gh, vercel, docker, etc.)
+- NO system package installations (apt-get, brew, scoop, etc.)
+- ALL development, testing, and tooling runs in containers
+
+**Required local tools:**
+- Docker Desktop
+- Git
+- IDE/editor (VS Code recommended)
+
+**Why this approach:**
+- Eliminates environment drift between developers
+- Ensures reproducible builds across machines
+- Simplifies onboarding (just install Docker)
+- Creates consistent CI parity
+- Makes the system disposable and rebuildable
+
+### How to Work with This Project
+
+**1. Development (inside container):**
+```bash
+# Start dev environment
+docker compose up
+
+# Run commands inside the container
+docker compose exec app pnpm <command>
+```
+
+**2. Infrastructure (infra tools container):**
+```bash
+# Start infra shell for provisioning
+docker compose -f infra/tools/docker-compose.yml run --rm infra bash
+
+# Run bootstrap
+pnpm tsx infra/scripts/bootstrap-infra.ts
+```
+
+**3. Testing:**
+```bash
+# Run tests in container
+docker compose exec app pnpm test
+```
+
+### Directory Structure for Containerized Workflow
+
+```
+infra/
+├── tools/           # Infra tooling container
+│   ├── Dockerfile
+│   └── docker-compose.yml
+├── scripts/         # Provisioning scripts
+│   └── bootstrap-infra.ts
+└── templates/       # Environment templates
+    └── .env.template
+```
+
+**AI Agent Rule:** Never assume any tool is installed locally. Always use containerized commands.
+
+---
+
 ## 3. Tech Stack (Final — No Deviations)
 
 | Layer | Technology | Notes |

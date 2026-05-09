@@ -1,0 +1,45 @@
+# Global settings
+{
+    email admin@example.com
+    admin off
+}
+
+# Frontend (static files served from local directory)
+# For now, proxy to backend - frontend is on Cloudflare
+app.example.com {
+    reverse_proxy localhost:4000
+    encode gzip
+
+    # Security headers
+    header {
+        X-Frame-Options "DENY"
+        X-Content-Type-Options "nosniff"
+        Referrer-Policy "strict-origin-when-cross-origin"
+        X-XSS-Protection "1; mode=block"
+        Content-Security-Policy "frame-ancestors 'none'"
+    }
+}
+
+# Backend API
+api.example.com {
+    reverse_proxy localhost:4000
+    encode gzip
+
+    # Security headers
+    header {
+        X-Frame-Options "DENY"
+        X-Content-Type-Options "nosniff"
+        Referrer-Policy "strict-origin-when-cross-origin"
+        X-XSS-Protection "1; mode=block"
+    }
+
+    # CORS headers (can be customized)
+    header Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+    header Access-Control-Allow-Headers "Authorization, Content-Type"
+}
+
+# Health check endpoint
+health.example.com {
+    reverse_proxy localhost:4000
+    header Connection "close"
+}

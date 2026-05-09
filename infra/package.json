@@ -1,0 +1,21 @@
+{
+  "name": "@superprompt/infra",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "bootstrap": "tsx scripts/bootstrap-infra.ts --env dev",
+    "destroy": "tsx scripts/bootstrap-infra.ts --destroy"
+  },
+  "dependencies": {
+    "@pulumi/pulumi": "^3.236.0",
+    "tsx": "^4.21.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=8"
+  }
+}

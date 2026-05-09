@@ -1,0 +1,59 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres:15-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: superprompt
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: superprompt
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - superprompt-net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U superprompt -d superprompt"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    image: ${DOCKER_IMAGE:-superprompt-prod:latest}
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      NODE_ENV: production
+      DATABASE_URL: postgres://superprompt:${POSTGRES_PASSWORD}@db:5432/superprompt
+      JWT_SECRET: ${JWT_SECRET}
+      CORS_ORIGIN: ${CORS_ORIGIN}
+      PORT: 4000
+    ports:
+      - "4000:4000"
+    networks:
+      - superprompt-net
+
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    depends_on:
+      - backend
+      - frontend
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy-data:/data
+      - caddy-config:/config
+
+networks:
+  superprompt-net:
+    driver: bridge
+
+volumes:
+  pgdata:
+  caddy-data:
+  caddy-config:
