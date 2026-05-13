@@ -1,4 +1,5 @@
 import { Controller, Post, Get, Body, UseGuards, Req, Res, HttpCode, Inject } from '@nestjs/common';
+import { ApiTags, ApiOperation, ApiResponse, ApiBearerAuth, ApiCookieAuth } from '@nestjs/swagger';
 import { AuthService } from './auth.service';
 import { RequiredAuthGuard } from '../../common/guards/auth.guard';
 import { Response } from 'express';
@@ -11,6 +12,7 @@ import { CacheService } from '../cache/cache.service';
 const SESSION_COOKIE_NAME = 'sp_session';
 const SESSION_MAX_AGE = 30 * 24 * 60 * 60 * 1000;
 
+@ApiTags('Auth')
 @Controller('auth')
 export class AuthController {
   constructor(
@@ -20,6 +22,10 @@ export class AuthController {
   ) {}
 
   @Post('register')
+  @ApiOperation({ summary: 'Register new user', description: 'Creates a new user account and returns session cookie' })
+  @ApiResponse({ status: 201, description: 'User registered successfully', schema: { example: { id: 'uuid', email: 'user@example.com' } } })
+  @ApiResponse({ status: 400, description: 'Invalid email or password' })
+  @ApiResponse({ status: 409, description: 'Email already exists' })
   async register(
     @Body() body: { email: string; password: string },
     @Res({ passthrough: true }) res: Response,

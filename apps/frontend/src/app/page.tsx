@@ -2,28 +2,30 @@
 
 import React, { useEffect, useMemo, useState, useCallback, useRef } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
-import { api } from '@/lib/api';
+import { api, ApiError } from '@/lib/api';
 import { Button } from '@/components/ui/button';
 import { BottomSearchBar } from '@/components/bottom-search-bar';
 import { CircularScore } from '@/components/circular-score';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { useTheme } from '@/components/theme-provider';
 import type { Prompt } from '@/lib/types';
+import { useCategories } from '@/lib/hooks/use-categories';
+import { useTags } from '@/lib/hooks/use-tags';
 
-const CATEGORIES = ['All', 'Business Communication', 'Content Marketing', 'Developer Tools', 'Productivity', 'Marketing', 'Product Marketing', 'Customer Success', 'Content Creation', 'Corporate Communications', 'Video Production'];
 const TIERS = ['All', 'starter', 'builder', 'pro', 'super'];
 const DATES = ['All', 'newest', 'oldest'];
 
 type PromptWithPreview = Omit<Prompt, 'id'> & {
     preview?: string;
     slug: string;
+    tagNames: string[];
 };
 
 type RenderCard = {
     key: string;
     id: string;
-    titleLines: string[];
-    category: string;
+    title: string;
+    categoryNames: string[];
     previewTop: string;
     tags: string[];
     score: number;
@@ -55,18 +57,7 @@ function splitPreview(preview?: string): { top: string; bottom: string } {
     };
 }
 
-function titleToLines(title: string): string[] {
-    const words = title.trim().split(/\s+/).filter(Boolean);
-    if (words.length <= 2) return [title];
 
-    const lines: string[] = [];
-    const chunk = Math.ceil(words.length / 3);
-    for (let i = 0; i < words.length; i += chunk) {
-        lines.push(words.slice(i, i + chunk).join(' '));
-    }
-
-    return lines.slice(0, 4);
-}
 
 function OpenAILogo({ className }: { className?: string }) {
     return (
@@ -189,6 +180,9 @@ export default function TestPromptsPage() {
     const [error, setError] = useState('');
     const [selectedCardIndex, setSelectedCardIndex] = useState<number | null>(null);
 
+    const { data: categoryList } = useCategories();
+    const { data: tagList } = useTags();
+
     const [search, setSearch] = useState(urlSearch);
     const [debouncedSearch, setDebouncedSearch] = useState('');
 
@@ -197,6 +191,7 @@ export default function TestPromptsPage() {
         setSearch(urlSearch);
     }, [urlSearch]);
     const [category, setCategory] = useState('All');
+    const [tag, setTag] = useState('All');
     const [tier, setTier] = useState('All');
     const [date, setDate] = useState('All');
     const [loadingMore, setLoadingMore] = useState(false);
@@ -229,6 +224,7 @@ export default function TestPromptsPage() {
                 limit: 20,
             };
             if (category !== 'All') params.category = category;
+            if (tag !== 'All') params.tag = tag;
             if (tier !== 'All') params.tier = tier;
             if (date !== 'All') params.date = date;
             if (debouncedSearch.trim()) params.search = debouncedSearch.trim();
@@ -247,7 +243,27 @@ export default function TestPromptsPage() {
             setPage(pageNum);
         } catch (err) {
             console.error('Failed to load prompts:', err);
-            setError(err instanceof Error ? err.message : 'Failed to load prompts');
+            
+            let message = 'Failed to load prompts';
+            if (err instanceof ApiError) {
+                if (err.status === 0) {
+                    message = 'Unable to connect to server. Retrying...';
+                } else if (err.status === 500) {
+                    message = 'Server error. Please try again later.';
+                } else if (err.status === 503) {
+                    message = 'Service unavailable. Retrying...';
+                } else if (err.status === 404) {
+                    message = 'No prompts found.';
+                } else {
+                    message = err.message || 'Something went wrong.';
+                }
+            } else if (err instanceof TypeError) {
+                message = 'Network error. Please check your connection.';
+            } else if (err instanceof Error) {
+                message = err.message;
+            }
+            
+            setError(message);
         } finally {
             setLoading(false);
             setLoadingMore(false);
@@ -265,7 +281,7 @@ export default function TestPromptsPage() {
 
     useEffect(() => {
         loadPrompts(1, true);
-    }, [loadPrompts, category, tier, date, debouncedSearch]);
+    }, [loadPrompts, category, tag, tier, date, debouncedSearch]);
 
     // Keyboard shortcuts listener
     useEffect(() => {
@@ -344,18 +360,20 @@ export default function TestPromptsPage() {
         }
     }, [selectedCardIndex]);
 
-    const hasActiveFilters = category !== 'All' || tier !== 'All' || date !== 'All' || search.trim() !== '';
+    const hasActiveFilters = category !== 'All' || tag !== 'All' || tier !== 'All' || date !== 'All' || search.trim() !== '';
 
     function clearFilters() {
         setCategory('All');
+        setTag('All');
         setTier('All');
         setDate('All');
         setSearch('');
     }
 
-    function removeFilter(type: 'category' | 'tier' | 'date') {
+    function removeFilter(type: 'category' | 'tag' | 'tier' | 'date') {
         switch (type) {
             case 'category': setCategory('All'); break;
+            case 'tag': setTag('All'); break;
             case 'tier': setTier('All'); break;
             case 'date': setDate('All'); break;
         }
@@ -366,17 +384,17 @@ export default function TestPromptsPage() {
 
     return prompts.map<RenderCard>((prompt: PromptWithPreview, index: number) => {
             const split = splitPreview(prompt.preview);
-            // Generate pseudo-random score based on prompt ID (deterministic demo data)
             const scoreOptions = [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9];
             const score = scoreOptions[index % scoreOptions.length];
+            const tagNames = prompt.tagNames || [];
 
             return {
-                key: `${prompt.slug}-${index}`, // Unique key for React
-                id: prompt.slug, // Original slug for navigation
-                titleLines: titleToLines(prompt.title),
-                category: prompt.category,
+                key: `${prompt.slug}-${index}`,
+                id: prompt.slug,
+                title: prompt.title,
+                categoryNames: prompt.categoryNames || [],
                 previewTop: split.top,
-                tags: (prompt as any).tags?.slice(0, 3) || DUMMY_TAGS.slice(0, 3),
+                tags: tagNames.slice(0, 3),
                 score: score,
             };
         });
@@ -386,7 +404,17 @@ export default function TestPromptsPage() {
         <main className="min-h-[calc(100vh-4rem)] pt-20 px-2 py-12 sm:px-3 lg:px-4 xl:px-6 pb-40">
             <section className="mx-auto w-full max-w-[1720px]">
                 <div className="mb-6">
-                    {error ? <p className="text-sm text-[#a33b3b]">{error}</p> : null}
+                    {error ? (
+                        <div className="flex items-center gap-3">
+                            <p className="text-sm text-[#a33b3b]">{error}</p>
+                            <button 
+                                onClick={() => loadPrompts(1, true)}
+                                className="text-xs px-3 py-1 bg-[#2b2d32] text-white rounded hover:bg-[#4a4d52] transition-colors"
+                            >
+                                Retry
+                            </button>
+                        </div>
+                    ) : null}
                 </div>
 
                 {loading && renderCards.length === 0 ? (
@@ -499,13 +527,8 @@ export default function TestPromptsPage() {
                                         <p className={`text-[44px] font-bold leading-none ${isLight ? 'text-[#303237]' : 'text-[#f0f0f2]'}`}>”</p>
                                     </div>
 
-                                    <h2 className={`mt-8 text-[46px] font-bold leading-[0.9] tracking-[-0.04em] ${isLight ? 'text-[#222429]' : 'text-[#f0f0f2]'}`}>
-                                        {card.titleLines.map((line: string) => (
-                                            <span key={`${card.id}-${line}`}>
-                                                {line}
-                                                <br />
-                                            </span>
-                                        ))}
+                                    <h2 title={card.title} className={`mt-8 text-[46px] font-bold leading-[0.9] tracking-[-0.04em] ${isLight ? 'text-[#222429]' : 'text-[#f0f0f2]'}`}>
+                                        {card.title.length > 29 ? card.title.slice(0, 29) + '...' : card.title}
                                     </h2>
 
                                     <Button
@@ -517,7 +540,7 @@ export default function TestPromptsPage() {
                                             // : 'bg-white/5 text-[#f0f0f2] border-white/10 hover:bg-white/10'
                                             }`}
                                     >
-                                        {card.category}
+                                        {(() => { const c = card.categoryNames[0]; return (typeof c === 'string' ? c : (c as any)?.name) || 'All'; })()}
                                     </Button>
 
                                     <p className={`mt-6 text-[14px] leading-[1.3] tracking-[-0.01em] ${isLight ? 'text-[#1f2126]' : 'text-[#e2e2e5]'}`}>
@@ -562,11 +585,15 @@ export default function TestPromptsPage() {
                 setSearch={setSearch}
                 category={category}
                 setCategory={setCategory}
+                tag={tag}
+                setTag={setTag}
                 tier={tier}
                 setTier={setTier}
                 date={date}
                 setDate={setDate}
                 onClearAll={clearFilters}
+                categories={categoryList}
+                tags={tagList}
             />
         </main>
     );

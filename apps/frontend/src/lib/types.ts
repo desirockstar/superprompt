@@ -3,13 +3,16 @@ export type PromptStatus = 'pending' | 'approved' | 'rejected';
 
 export interface Prompt {
   id: string;
+  slug: string;
   title: string;
-  category: string;
+  categoryNames: string[];
+  tagNames: string[];
   status: PromptStatus;
   basePath: string;
   currentVersion: number;
   isMultiVersion: boolean;
   createdAt: string;
+  preview?: string;
 }
 
 export interface PromptVersion {

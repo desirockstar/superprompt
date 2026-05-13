@@ -8,6 +8,20 @@
       "when": 1777901750151,
       "tag": "0000_keen_dreadnoughts",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1778342852606,
+      "tag": "0001_curvy_jimmy_woo",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1778351188583,
+      "tag": "0002_clever_warbound",
+      "breakpoints": true
     }
   ]
 }
