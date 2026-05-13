@@ -112,7 +112,7 @@ Modules:
 * Unlock/Entitlement
 * Subscription (Stripe)
 * Ratings
-* Grading (scheduler + manual trigger)
+* Tier (offline pipeline — data in `prompts.complexity_tier`)
 * Ad Mediation Adapter
 * Cache
 * Admin
@@ -238,41 +238,69 @@ grading_history(
 
 ### API Design (Frontend ↔ Backend)
 
+> **Note**: All API endpoints are prefixed with `/api/v1/` (versionable via `API_VERSION` env var)
+
 #### Auth
 
-* POST /auth/register
-* POST /auth/login
-* GET /auth/me
+* POST /api/v1/auth/register
+* POST /api/v1/auth/login
+* POST /api/v1/auth/logout
+* GET /api/v1/auth/me
+* GET /api/v1/auth/me/state (returns subscription, unlocks, ratings)
 
 #### Prompts
 
-* GET /prompts?category=&search=
-* GET /prompts/:id
-* GET /prompts/:id/version/:v
+* GET /api/v1/prompts?category=&search=&page=&limit=&fields=&sort=
+* GET /api/v1/prompts/:slug
+* GET /api/v1/prompts/:slug/preview
+* GET /api/v1/prompts/:slug/version/:v
+* GET /api/v1/prompts/:slug/related
+* GET /api/v1/prompts/categories
+* GET /api/v1/prompts/tags
 
 #### Prompt Versioning
 
-* POST /prompts (create v1)
-* PUT /prompts/:id (creates new version vN+1)
+* POST /api/v1/prompts (create v1) - requires auth
+* PUT /api/v1/prompts/:id (creates new version vN+1) - requires auth
 
 #### Unlock
 
-* POST /prompts/:id/unlock
-* POST /ads/callback
+* POST /api/v1/prompts/:id/unlock
+* POST /api/v1/ads/callback
 
-#### Subscription
+#### Subscription (Billing)
 
-* POST /billing/checkout
-* GET /billing/status
+* POST /api/v1/billing/checkout
+* GET /api/v1/billing/status
+* POST /api/v1/billing/webhook (Stripe webhook)
 
 #### Ratings
 
-* POST /prompts/:id/rate
+* POST /api/v1/prompts/:id/rate
 
 #### Admin
 
-* POST /admin/grading/run (manual trigger)
-* GET /admin/prompts/pending
+* GET /api/v1/admin/prompts?status=pending
+* POST /api/v1/admin/prompts/:slug/approve
+* POST /api/v1/admin/prompts/:slug/reject
+
+#### Health Checks (unversioned)
+
+* GET /health - full status with uptime
+* GET /health/ready - readiness probe
+* GET /health/live - liveness probe
+
+---
+
+#### Query Parameters
+
+| Parameter | Description | Example |
+|-----------|-------------|---------|
+| `fields` | Comma-separated fields to return | `?fields=title,slug,tier` |
+| `sort` | Sort field:direction | `?sort=views:desc` |
+| `tier` | Filter by complexity tier | `?tier=pro` |
+| `page` | Page number | `?page=2` |
+| `limit` | Results per page | `?limit=20` |
 
 ---
 
@@ -301,11 +329,78 @@ Access = TRUE if:
 
 Cache keys:
 
-* prompt:{id}:meta
-* prompt:{id}:preview
-* prompt:{id}:grading
+* `prompts:list:p{page}:l{limit}:c{category}:s{search}:t{tier}` - paginated list
+* `prompts:detail:{slug}` - single prompt
+* `prompts:categories` - all categories
+* `user:state:{userId}` - user state (subs, unlocks, ratings)
 
-Never cache user-specific data
+**Cache Tags** (for selective invalidation):
+* `prompts` - all prompt-related caches
+* `categories` - category caches
+* `user` - user state caches
+* `catalog` - catalog listing caches
+
+**Invalidation Methods**:
+* `invalidatePromptsList()` - bust all list caches
+* `invalidatePromptDetail(slug)` - bust single prompt cache
+* `invalidateCategories()` - bust category caches
+* `invalidateUserState(userId)` - bust user state cache
+* `invalidateByTags(tags[])` - bust by tags
+
+Never cache user-specific data except via explicit state endpoint.
+
+---
+
+### Error Response Format
+
+All errors return a consistent JSON format:
+
+```json
+{
+  "code": "NOT_FOUND",
+  "message": "Prompt with slug 'xyz' not found",
+  "details": {},
+  "timestamp": "2026-05-13T12:00:00Z",
+  "path": "/api/v1/prompts/xyz",
+  "requestId": "uuid-v4"
+}
+```
+
+**Error Codes**:
+* `BAD_REQUEST` - 400
+* `UNAUTHORIZED` - 401
+* `FORBIDDEN` - 403
+* `NOT_FOUND` - 404
+* `CONFLICT` - 409
+* `UNPROCESSABLE_ENTITY` - 422
+* `RATE_LIMIT_EXCEEDED` - 429
+* `INTERNAL_SERVER_ERROR` - 500
+
+**Custom Exceptions**:
+* `PromptNotFoundException`
+* `CategoryNotFoundException`
+* `InsufficientPermissionException`
+* `PaymentRequiredException`
+* `UserAlreadyExistsException`
+* `InvalidCredentialsException`
+* `SubscriptionRequiredException`
+* `UnlockAlreadyExistsException`
+* `RateLimitExceededException`
+* `InvalidStripeSignatureException`
+
+---
+
+### Interceptors & Logging
+
+**Logging Interceptor** (global):
+- Logs all HTTP requests/responses
+- Sanitizes sensitive data (passwords, tokens)
+- Includes request ID for tracing
+- Logs: method, url, status, duration
+
+**Response Format**:
+- Wraps responses in `{ data, meta }` structure (opt-in)
+- Meta includes: requestId, timestamp, pagination
 
 ---
 
@@ -384,3 +479,17 @@ Backend -> DB : update category
 | State         | React Query (TanStack Query) |
 | Forms         | React Hook Form              |
 | Auth client   | BetterAuth client            |
+
+---
+
+## Environment Variables
+
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `API_VERSION` | API version prefix | `v1` |
+| `PORT` | Server port | `4000` |
+| `DATABASE_URL` | PostgreSQL connection string | - |
+| `NODE_ENV` | Environment (production/development) | - |
+| `CORS_ORIGIN` | Allowed CORS origins | FRONTEND_URL or localhost:3000 |
+
+Frontend uses `NEXT_PUBLIC_API_VERSION` to match backend.

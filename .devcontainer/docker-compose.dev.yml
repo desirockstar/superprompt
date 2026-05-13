@@ -8,9 +8,7 @@ services:
       context: ..
       dockerfile: .devcontainer/Dockerfile
     container_name: superprompt_backend
-    volumes:
-      - ..:/workspace                # No caching - instant file propagation
-      # - /workspace/apps/backend/node_modules      # Exclude node_modules
+    volumes: []
     command: pnpm dev:backend
     environment:
       - CHOKIDAR_USEPOLLING=true
@@ -29,10 +27,8 @@ services:
       context: ..
       dockerfile: .devcontainer/Dockerfile
     container_name: superprompt_frontend
-    volumes:
-      - ..:/workspace                # No caching - instant file propagation
-      # - /workspace/apps/frontend/node_modules
-      - /workspace/apps/frontend/.next            # Exclude .next cache
+    volumes: []
+      # - /workspace/apps/frontend/.next            # Exclude .next cache
     command: pnpm dev:frontend
     environment:
       - TURBOPACK_POLLING=true 

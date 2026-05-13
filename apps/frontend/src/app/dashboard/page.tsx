@@ -11,7 +11,7 @@ import { TierBadge } from '@/components/tier-badge';
 interface Submission {
   id: string;
   title: string;
-  category: string;
+  categoryNames: string[];
   status: 'pending' | 'approved' | 'rejected';
   createdAt: string;
   tier?: string;
@@ -97,7 +97,7 @@ export default function DashboardPage() {
                   <div className="flex items-center justify-between">
                     <div>
                       <h3 className="font-semibold">{submission.title}</h3>
-                      <p className="text-sm text-muted-foreground">{submission.category}</p>
+                      <p className="text-sm text-muted-foreground">{submission.categoryNames[0] || 'Uncategorized'}</p>
                     </div>
                     <div className="flex items-center gap-4">
                       {submission.tier && <TierBadge level={submission.tier as any} />}

@@ -1,7 +1,9 @@
 import { Controller, Post, Get, Body, UseGuards, Req, Headers, HttpCode } from '@nestjs/common';
+import { ApiTags, ApiOperation, ApiResponse, ApiBearerAuth } from '@nestjs/swagger';
 import { BillingService } from './billing.service';
 import { RequiredAuthGuard } from '../../common/guards/auth.guard';
 
+@ApiTags('Billing')
 @Controller('billing')
 export class BillingController {
   constructor(private readonly billingService: BillingService) {}

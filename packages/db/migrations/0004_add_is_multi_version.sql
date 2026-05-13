@@ -1,0 +1,1 @@
+ALTER TABLE "prompts" ADD COLUMN "is_multi_version" boolean DEFAULT false NOT NULL;

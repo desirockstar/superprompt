@@ -30,11 +30,6 @@ interface AuthState {
   loadUnlocks: () => Promise<void>;
 }
 
-function hasSessionCookie(): boolean {
-  if (typeof document === 'undefined') return false;
-  return document.cookie.split('; ').some(c => c.startsWith('better-auth.session_token='));
-}
-
 export const useAuthStore = create<AuthState>((set, get) => ({
   user: null,
   subscription: null,
@@ -79,29 +74,19 @@ export const useAuthStore = create<AuthState>((set, get) => ({
     } catch {
       // Ignore logout errors
     }
-    // Clear session cookie
-    document.cookie = 'better-auth.session_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT';
     analytics.reset();
     set({ user: null, subscription: null, isAuthenticated: false, isLoading: false, unlockedPrompts: new Set<string>(), ratings: {}, hasSubscription: false });
   },
   
   checkAuth: async () => {
-    const sessionCookie = hasSessionCookie();
-    
-    if (!sessionCookie) {
-      set({ user: null, isAuthenticated: false, isLoading: false, authChecked: true });
-      return;
-    }
-    
-    set({ isAuthenticated: true, isLoading: true, authChecked: true });
-    
+    set({ isLoading: true });
     try {
       const user = await api.get<User>('/auth/me');
-      set({ user, isLoading: false });
+      set({ user, isAuthenticated: true, isLoading: false, authChecked: true });
       analytics.identify(user.id, user.email);
       await get().hydrateUserState();
     } catch {
-      set({ user: null, isAuthenticated: false, isLoading: false });
+      set({ user: null, isAuthenticated: false, isLoading: false, authChecked: true });
     }
   },
 

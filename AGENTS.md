@@ -192,7 +192,9 @@ infra/
 
 ## 4. Database Schema
 
-All tables are implemented using Drizzle ORM in `packages/db/schema.ts`. This is the complete, authoritative schema.
+All tables are implemented using Drizzle ORM in `packages/db/src/index.ts`. This is the complete, authoritative schema.
+
+> **Important**: The `@superprompt/db` package exports directly from source (`./src/index.ts`) rather than compiled dist. This is required for the NestJS dev server to resolve the schema at runtime. Do not change to `./dist/` unless you also build the package.
 
 ### 4.1 Enums
 
@@ -200,12 +202,20 @@ All tables are implemented using Drizzle ORM in `packages/db/schema.ts`. This is
 export const promptStatusEnum = pgEnum('prompt_status', ['pending', 'approved', 'rejected']);
 export const promptLevelEnum = pgEnum('prompt_level', ['starter', 'builder', 'pro', 'super']);
 export const unlockMethodEnum = pgEnum('unlock_method', ['ad', 'subscription']);
-export const gradingTriggerEnum = pgEnum('grading_trigger', ['system', 'admin']);
+export const subscriptionStatusEnum = pgEnum('subscription_status', ['active', 'canceled', 'past_due']);
 ```
 
 ### 4.2 Tables
 
 ```ts
+// categories
+categories(
+  id: uuid PK,
+  name: text UNIQUE NOT NULL,
+  slug: text UNIQUE NOT NULL,
+  created_at: timestamptz DEFAULT now()
+)
+
 // users
 users(
   id: uuid PK,
@@ -225,40 +235,25 @@ sessions(
 
 // prompts
 prompts(
-  slug: text PK,                         -- slug-based ID (e.g., "achieve-your-2025-action-plan")
+  slug: text PK,                         -- slug-based ID
+  user_id: uuid FK → users.id,
   title: text NOT NULL,
-  category: text NOT NULL DEFAULT 'uncategorized',
+  category_ids: uuid[] NOT NULL,          -- references categories.id
+  primary_tag: text,
+  secondary_tags: text,
+  is_viral: boolean DEFAULT false,
+  is_nano: boolean DEFAULT false,
   status: prompt_status DEFAULT 'pending',
   base_path: text NOT NULL,
   current_version: integer DEFAULT 1,
-  preview: text,                         -- first ~220 chars of body, stored at ingest
-  primary_tag: text,
-  secondary_tags: text,
   views: integer DEFAULT 0,
-  is_viral: boolean DEFAULT false,
-  is_nano: boolean DEFAULT false,
-  search_vector: tsvector,               -- populated via trigger
+  preview: text,
+  search_vector: tsvector,
+  complexity_score: text,                  -- from offline pipeline (e.g. "6.4")
+  complexity_tier: text,                   -- 'starter' | 'builder' | 'pro' | 'super'
   created_at: timestamptz DEFAULT now()
 )
--- indexes: idx_prompts_category, idx_prompts_status, idx_prompts_search (GIN on search_vector)
--- Note: slug is primary key, replacing UUID-based id
-
-// prompt_versions
-prompt_versions(
-  id: uuid PK,
-  prompt_slug: text FK → prompts.slug,
-  version_number: integer NOT NULL,
-  needs_grading: boolean DEFAULT true,
-  created_at: timestamptz DEFAULT now()
-)
-
-// prompt_version_files
-prompt_version_files(
-  id: uuid PK,
-  prompt_version_id: uuid FK → prompt_versions.id,
-  level: prompt_level NOT NULL,
-  file_name: text NOT NULL
-)
+// indexes: idx_prompts_category_ids, idx_prompts_status, idx_prompts_complexity_tier
 
 // ratings
 ratings(
@@ -277,7 +272,7 @@ unlocks(
   prompt_slug: text FK → prompts.slug,
   unlocked_via: unlock_method NOT NULL,
   created_at: timestamptz DEFAULT now(),
-  UNIQUE (user_id, prompt_slug)           -- permanent, enforced at DB level
+  UNIQUE (user_id, prompt_slug)
 )
 
 // subscriptions
@@ -286,22 +281,7 @@ subscriptions(
   user_id: uuid FK → users.id,
   status: text NOT NULL,               -- 'active' | 'canceled' | 'past_due'
   stripe_subscription_id: text,
-  expires_at: timestamptz
-)
-
-// grading_jobs
-grading_jobs(
-  id: uuid PK,
-  status: text NOT NULL,               -- 'pending' | 'running' | 'done' | 'failed'
-  triggered_by: grading_trigger NOT NULL,
-  created_at: timestamptz DEFAULT now()
-)
-
-// grading_history
-grading_history(
-  id: uuid PK,
-  prompt_version_id: uuid FK → prompt_versions.id,
-  score: jsonb NOT NULL,
+  expires_at: timestamptz,
   created_at: timestamptz DEFAULT now()
 )
 ```
@@ -324,12 +304,10 @@ apps/backend/src/
 │   ├── user/           # User profile management
 │   ├── catalog/        # Prompt CRUD, preview, search (DDD Catalog BC)
 │   ├── access/         # Entitlement checks (DDD Access BC)
-│   ├── evaluation/     # AI grading pipeline (DDD Evaluation BC)
 │   ├── moderation/     # Admin approve/reject (DDD Moderation BC)
 │   ├── unlock/         # Unlock events
 │   ├── billing/        # Stripe subscription
 │   ├── rating/         # User ratings
-│   ├── grading/        # AI grading scheduler + manual trigger
 │   ├── ad/             # Ad provider abstraction
 │   ├── admin/          # Admin-only endpoints
 │   └── cache/          # In-memory TTL cache service (CacheService)
@@ -344,37 +322,48 @@ apps/backend/src/
 
 ## 6. API Contract (Full)
 
-All endpoints are prefixed with `/api`. Frontend calls `/api/...`.
+> **Important**: All endpoints are prefixed with `/api/v1/`. Set `API_VERSION` env var to change version prefix. Frontend uses `NEXT_PUBLIC_API_VERSION` to match.
+
+### Health Checks (unversioned)
+```
+GET    /health                             # Full status with uptime
+GET    /health/ready                       # Readiness probe
+GET    /health/live                        # Liveness probe
+```
 
 ### Auth
 ```
-POST   /api/auth/register
-POST   /api/auth/login
-POST   /api/auth/logout
-GET    /api/auth/me
-GET    /api/auth/me/state          # Returns { subscription, unlocks[], ratings{} } — single hydration call
+POST   /api/v1/auth/register
+POST   /api/v1/auth/login
+POST   /api/v1/auth/logout
+GET    /api/v1/auth/me
+GET    /api/v1/auth/me/state               # Returns { subscription, unlocks[], ratings{} } — single hydration call
 ```
 
 ### Prompts
 ```
-GET    /api/prompts                        # ?category=&search=&page=&limit=&rating=&date=
-GET    /api/prompts/:id                    # Returns preview or full based on entitlement
-GET    /api/prompts/:id/version/:v         # Specific version content
-POST   /api/prompts                        # Creator submission → status=pending
-PUT    /api/prompts/:id                    # Creates new version (vN+1), immutable
+GET    /api/v1/prompts                     # ?category=&search=&page=&limit=&fields=&sort=&tier=
+GET    /api/v1/prompts/categories
+GET    /api/v1/prompts/tags
+GET    /api/v1/prompts/:slug               # Returns preview or full based on entitlement
+GET    /api/v1/prompts/:slug/preview
+GET    /api/v1/prompts/:slug/version/:v   # Specific version content
+GET    /api/v1/prompts/:slug/related
+POST   /api/v1/prompts                     # Creator submission → status=pending (auth required)
+PUT    /api/v1/prompts/:slug               # Creates new version (vN+1), immutable (auth required)
 ```
 
 ### Unlock
 ```
-POST   /api/prompts/:id/unlock             # Body: { adToken: string }
-POST   /api/ads/callback                   # Ad provider server-side callback
+POST   /api/v1/prompts/:slug/unlock        # Body: { adToken: string }
+POST   /api/v1/ads/callback                # Ad provider server-side callback
 ```
 
 ### Billing
 ```
-POST   /api/billing/checkout               # Creates Stripe checkout session
-GET    /api/billing/status                 # Returns subscription status
-POST   /api/billing/webhook                # Stripe webhook (raw body, signature verified)
+POST   /api/v1/billing/checkout            # Creates Stripe checkout session
+GET    /api/v1/billing/status              # Returns subscription status
+POST   /api/v1/billing/webhook             # Stripe webhook (raw body, signature verified)
 ```
 
 ### Ratings
@@ -450,79 +439,11 @@ export const auth = betterAuth({
 
 ---
 
-## 9. AI Grading Pipeline
+## 9. Tier System
 
-**Provider:** Groq  
-**Primary model:** `llama-3.1-8b-instant`  
-**Fallback model:** `llama-3.3-70b-versatile` (used only when primary fails JSON parsing)
+**Tier data is sourced from an offline pipeline.** The `prompts.complexity_tier` and `prompts.complexity_score` columns are written by an external system. The backend reads these columns directly — no AI grading runs inside this repo.
 
-### 9.1 Grading Prompt Template
-
-```
-You are an expert AI prompt evaluator.
-
-Evaluate the following prompt based on these criteria:
-
-1. Clarity (0–10)
-2. Specificity (0–10)
-3. Effectiveness (0–10)
-4. Structure (0–10)
-5. Reusability (0–10)
-
-Also:
-- Identify weaknesses
-- Suggest improvements
-
-Return STRICT JSON only. No markdown, no explanation outside JSON:
-
-{
-  "scores": {
-    "clarity": number,
-    "specificity": number,
-    "effectiveness": number,
-    "structure": number,
-    "reusability": number
-  },
-  "overall": number,
-  "feedback": string,
-  "improvements": string[]
-}
-
-PROMPT:
-"""
-{{prompt_content}}
-"""
-```
-
-### 9.2 Validation Layer (Mandatory)
-
-```ts
-if (!parsed.scores || typeof parsed.overall !== 'number') {
-  // retry with fallback model once, then throw
-  throw new Error('Invalid AI grading response');
-}
-```
-
-### 9.3 Score → Tier Mapping
-
-```
-overall > 8.5  →  SUPER
-overall > 7.0  →  PRO
-overall > 5.0  →  BUILDER
-else           →  STARTER
-```
-
-### 9.4 Scheduler
-
-- Runs every 24 hours via NestJS `@Cron`
-- Only processes `prompt_versions` where `needs_grading = true`
-- After successful grading: set `needs_grading = false`, insert `grading_history` row
-- Manual trigger: `POST /api/admin/grading/run`
-
-**Rules:**
-- Never re-grade prompts that have not changed
-- Groq API key stored in environment only, never committed
-- JSON parse failure on primary model → retry once with fallback model → if still fails, log error and skip (do not crash scheduler)
+Tier values: `starter`, `builder`, `pro`, `super`.
 
 ---
 
@@ -782,6 +703,14 @@ All environment variables are defined in `.env` at the root. The `config/` modul
 # Database
 DATABASE_URL=
 
+# API Configuration
+API_VERSION=v1                           # API version prefix (backend)
+NEXT_PUBLIC_API_VERSION=v1               # API version prefix (frontend)
+
+# Server
+PORT=4000                                # Backend server port
+NODE_ENV=development                     # production or development
+
 # Auth
 BETTER_AUTH_SECRET=
 GOOGLE_CLIENT_ID=
@@ -795,9 +724,6 @@ STRIPE_SECRET_KEY=
 STRIPE_PRICE_ID_MONTHLY=
 STRIPE_PRICE_ID_YEARLY=
 STRIPE_WEBHOOK_SECRET=
-
-# Groq
-GROQ_API_KEY=
 
 # AdMob
 ADMOB_APP_ID=
@@ -919,10 +845,10 @@ Admin clicks Reject  → POST /api/admin/prompts/:id/reject  → status = 'rejec
 - Subscription access (Stripe, monthly + yearly)
 - Prompt categorization (Starter / Builder / Pro / Super)
 - Prompt versioning (multi-version tabs + single-version badge)
-- Daily AI grading (Groq) + manual admin trigger
+- Tier data from offline pipeline (via `prompts.complexity_tier` column)
 - Creator prompt submission (pending → admin approval)
 - PostgreSQL full-text search
-- Admin panel (pending queue, approve/reject, manual grading trigger)
+- Admin panel (pending queue, approve/reject)
 - CI/CD pipeline (GitHub Actions)
 - Error monitoring (Sentry) + structured logging (pino)
 - Product analytics (PostHog Cloud)
@@ -939,6 +865,8 @@ Admin clicks Reject  → POST /api/admin/prompts/:id/reject  → status = 'rejec
 - S3 or any external file storage
 - Auto-approval based on grading score
 - Multi-model AI evaluation
+- Groq or any in-repo AI provider
+- ScheduleModule (cron jobs)
 - Mobile apps (web only for MVP)
 
 ---
@@ -952,7 +880,7 @@ Read these when implementing the corresponding feature:
 | `docs/BRD1.md` | Verifying feature scope, acceptance criteria, user flows |
 | `docs/software_aarchitecture.md` | DB schema details, API design, ad abstraction interface, entitlement logic |
 | `docs/build_blueprint.md` | Monorepo layout, NestJS module list, Drizzle starter schema, sprint plan |
-| `docs/highleverage-pieces.md` | BetterAuth setup, Drizzle migration workflow, Stripe webhook pattern, AI grading prompt template, testing strategy |
+| `docs/highleverage-pieces.md` | BetterAuth setup, Drizzle migration workflow, Stripe webhook pattern, testing strategy |
 | `docs/userstories.md` | GIVEN-WHEN-THEN scenarios for all P0 features, acceptance criteria tables |
 
 ---
@@ -1001,20 +929,31 @@ A feature is complete when ALL of the following are true:
 
 ### Backend — CacheService (`modules/cache/cache.service.ts`)
 
-In-memory `Map<string, { value, expiresAt }>` with TTL. No Redis.
+In-memory `Map<string, { value, expiresAt, tags? }>` with TTL. No Redis.
 
 **Cache key conventions:**
 
 | Key pattern | TTL | Busted by |
 |---|---|---|
-| `prompts:list:p{page}:l{limit}:c{cat}:s{search}:t{tier}:d{date}` | 5 min | Admin approve/reject, view flush |
-| `prompts:detail:{id}` | 10 min | Prompt update, new version |
-| `evaluations:tiers` | 5 min | Grading completion, admin approve |
+| `prompts:list:p{page}:l{limit}:c{cat}:s{search}:t{tier}:f{fields}:so{sort}` | 5 min | Admin approve/reject, view flush |
+| `prompts:detail:{slug}` | 10 min | Prompt update, new version |
+| `prompts:categories` | 5 min | Admin approve/reject |
 | `user:state:{userId}` | 5 min | Unlock, rating, Stripe webhook |
 
-**Invalidation methods on `CatalogService`:**
-- `invalidatePrompt(id)` — busts `prompts:detail:{id}` + all listing keys
-- `invalidateListings()` — busts all listing + evaluation keys
+**Cache tags for selective invalidation:**
+- `prompts` - all prompt-related caches
+- `categories` - category caches
+- `user` - user state caches
+- `catalog` - catalog listing caches
+
+**Invalidation methods on `CacheService`:**
+- `invalidatePromptsList()` — bust all list caches
+- `invalidatePromptDetail(slug)` — bust single prompt cache
+- `invalidateCategories()` — bust category caches
+- `invalidateUserState(userId)` — bust user state cache
+- `invalidateByTags(tags[])` — bust by tags
+- `deleteByPrefix(prefix)` — bust by key prefix
+- `getStats()` — debug cache health
 
 ### Backend — ViewCounterService (`modules/catalog/view-counter.service.ts`)
 
@@ -1036,4 +975,4 @@ In-memory `Map<string, { value, expiresAt }>` with TTL. No Redis.
 
 ---
 
-*Last updated: April 2026 | Version: 1.1 | Status: Approved for implementation*
+*Last updated: May 2026 | Version: 1.2 | Status: Approved for implementation*

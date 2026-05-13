@@ -1,5 +1,4 @@
-import { Injectable } from '@nestjs/common';
-import { ConfigService } from '@nestjs/config';
+import { Injectable, OnModuleInit } from '@nestjs/common';
 
 export interface AdLoadResult {
   adId: string;
@@ -18,14 +17,14 @@ export interface AdProvider {
 }
 
 @Injectable()
-export class AdMobProvider implements AdProvider {
-  private readonly appId: string;
-  private readonly adUnitId: string;
+export class AdMobProvider implements AdProvider, OnModuleInit {
+  private appId: string = '';
+  private adUnitId: string = '';
   private readonly rewardedAdIds = new Map<string, { userId: string; promptId: string; timestamp: number }>();
 
-  constructor(private readonly config: ConfigService) {
-    this.appId = this.config.get('ADMOB_APP_ID') || '';
-    this.adUnitId = this.config.get('ADMOB_AD_UNIT_ID') || '';
+  async onModuleInit() {
+    this.appId = process.env.ADMOB_APP_ID || '';
+    this.adUnitId = process.env.ADMOB_AD_UNIT_ID || '';
   }
 
   async loadAd(userId: string, promptId: string): Promise<AdLoadResult> {

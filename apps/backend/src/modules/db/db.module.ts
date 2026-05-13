@@ -1,13 +1,15 @@
 import { Module, Global } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import * as PostgresPkg from 'postgres';
+import postgres from 'postgres';
 import { drizzle } from 'drizzle-orm/postgres-js';
 import type { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
-import * as schema from '@superprompt/db';
+import { categories, tags, users, sessions, prompts, ratings, unlocks, subscriptions } from '@superprompt/db';
 
-const DEFAULT_CONNECTION_STRING = 'postgres://postgres:postgres@db:5432/superprompt';
+const DEFAULT_CONNECTION_STRING = 'postgres://postgres:postgres@localhost:5432/superprompt';
 
 export const DB_KEY = 'DB_CONNECTION';
+
+const schema = { categories, tags, users, sessions, prompts, ratings, unlocks, subscriptions };
 export type Database = PostgresJsDatabase<typeof schema>;
 
 export const databaseproviders = {
@@ -16,14 +18,14 @@ export const databaseproviders = {
   useFactory: (config: ConfigService): Database => {
     const connectionString = config.get('DATABASE_URL') || DEFAULT_CONNECTION_STRING;
     console.log('DB: using connection string:', connectionString.replace(/:(?:[^:@\n]+)@/, ':*****@'));
-    const Postgres = (PostgresPkg as any)?.default ? (PostgresPkg as any).default : PostgresPkg;
-    try {
-      const client = Postgres(connectionString);
-      return drizzle(client, { schema });
-    } catch (e) {
-      console.error('DB: connection error:', e);
-      throw e;
-    }
+    
+    const client = postgres(connectionString, {
+      max: 1,
+      idle_timeout: 20,
+      connect_timeout: 10,
+    });
+    
+    return drizzle(client, { schema });
   },
 };
 

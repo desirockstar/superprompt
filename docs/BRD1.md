@@ -248,29 +248,23 @@ Prompts are categorized into four levels:
 
 ---
 
-## 4.5 Prompt Grading System
+## 4.5 Prompt Tier System
 
-* Runs every **24 hours**
-* Based on:
-
-  * AI evaluation
-  * User ratings
+* Tier data sourced from **offline grading pipeline**
+* `prompts.complexity_tier` and `prompts.complexity_score` written externally
+* Backend reads tier directly from `prompts` table — no in-repo AI processing
 
 ### Transparency Requirements
 
 Each prompt displays:
 
-* Category level
+* Category level (tier)
 * User rating
 * Usage metrics
 
-### Additional Controls
-
-* Admin manual override for top prompts
-
 ---
 
-## 4.6 Prompt Structuring & Versioning Model
+## 4.6 Prompt Structing & Versioning Model
 
 ---
 

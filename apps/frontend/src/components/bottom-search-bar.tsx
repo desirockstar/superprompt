@@ -10,19 +10,23 @@ import {
   SelectValue,
 } from './ui/select';
 import { useTheme } from './theme-provider';
-
-const CATEGORIES = ['All', 'Business Communication', 'Content Marketing', 'Developer Tools', 'Productivity', 'Marketing', 'Product Marketing', 'Customer Success', 'Content Creation', 'Corporate Communications', 'Video Production'];
+import { useCategories } from '@/lib/hooks/use-categories';
+import { useTags } from '@/lib/hooks/use-tags';
 
 interface BottomSearchBarProps {
   search: string;
   setSearch: (value: string) => void;
   category: string;
   setCategory: (value: string) => void;
+  tag: string;
+  setTag: (value: string) => void;
   tier: string;
   setTier: (value: string) => void;
   date: string;
   setDate: (value: string) => void;
   onClearAll: () => void;
+  categories?: string[];
+  tags?: string[];
 }
 
 export function BottomSearchBar({
@@ -30,18 +34,32 @@ export function BottomSearchBar({
   setSearch,
   category,
   setCategory,
+  tag,
+  setTag,
   tier,
   setTier,
   date,
   setDate,
   onClearAll,
+  categories: categoriesProp,
+  tags: tagsProp,
 }: BottomSearchBarProps) {
   const { isDark } = useTheme();
+  const { data: hookCategories } = useCategories();
+  const { data: hookTags } = useTags();
+  const rawCategories = categoriesProp ?? hookCategories;
+  const categories: string[] = (rawCategories ?? ['All']).map((c: any) =>
+    typeof c === 'string' ? c : (c?.name ?? String(c))
+  );
+  const rawTags = tagsProp ?? hookTags;
+  const tags: string[] = (rawTags ?? ['All']).map((t: any) =>
+    typeof t === 'string' ? t : (t?.name ?? String(t))
+  );
   const categoriesRef = React.useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = React.useState(false);
   const [canScrollRight, setCanScrollRight] = React.useState(true);
 
-  const hasActiveFilters = search.trim() !== '' || category !== 'All' || tier !== 'All' || date !== 'All';
+  const hasActiveFilters = search.trim() !== '' || category !== 'All' || tag !== 'All' || tier !== 'All' || date !== 'All';
 
   const containerBackground = isDark
     ? [
@@ -115,7 +133,15 @@ export function BottomSearchBar({
                   onClick={() => setCategory('All')}
                   className="flex shrink-0 items-center gap-1 rounded-full border border-white/10 bg-white/10 px-2 py-1 text-xs text-white"
                 >
-                  {category} <X className="h-3 w-3" />
+                  {typeof category === 'string' ? category : (category as any)?.name} <X className="h-3 w-3" />
+                </button>
+              )}
+              {tag !== 'All' && (
+                <button
+                  onClick={() => setTag('All')}
+                  className="flex shrink-0 items-center gap-1 rounded-full border border-white/10 bg-white/10 px-2 py-1 text-xs text-white"
+                >
+                  {typeof tag === 'string' ? tag : (tag as any)?.name} <X className="h-3 w-3" />
                 </button>
               )}
               {tier !== 'All' && (
@@ -178,6 +204,18 @@ export function BottomSearchBar({
                 <SelectItem value="super">Super</SelectItem>
               </SelectContent>
             </Select>
+
+            <Select value={tag} onValueChange={setTag}>
+              <SelectTrigger className="h-10 w-[110px] rounded-full border-white/10 bg-black/16 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.04),0_10px_30px_rgba(0,0,0,0.12)]">
+                <SelectValue placeholder="Tag" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="All">All Tags</SelectItem>
+                {tags.filter(t => t !== 'All').map((t) => (
+                  <SelectItem key={t} value={t}>{t}</SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
           </div>
 
           <div className="flex items-center gap-2 px-2 pb-3">
@@ -194,12 +232,12 @@ export function BottomSearchBar({
               className="flex-1 flex gap-2 overflow-x-auto scrollbar-hide px-1"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
-              {CATEGORIES.map((cat) => (
+              {categories.map((cat, idx) => (
                 <button
-                  key={cat}
+                  key={`${cat}-${idx}`}
                   onClick={() => setCategory(cat)}
                   className={`shrink-0 px-3 py-1.5 rounded-full text-sm uppercase transition-colors ${
-                    category === cat
+                    (typeof category === 'string' ? category : (category as any)?.name) === cat
                       ? (isDark
                         ? 'bg-white/30  shadow-[0_10px_24px_rgba(107,95,240,0.34)]'
                         : 'bg-white/30 text-white shadow-[0_10px_24px_rgba(126,240,182,0.22)]')

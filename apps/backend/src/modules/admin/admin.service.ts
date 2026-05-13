@@ -23,7 +23,6 @@ export class AdminService {
       .where(eq(promptsTable.slug, slug))
       .returning();
     this.cache.deleteByPrefix('prompts:list');
-    this.cache.deleteByPrefix('evaluations:tiers');
     return updated;
   }
 

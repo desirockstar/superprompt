@@ -4,6 +4,7 @@ import { Header } from '@/components/header';
 import { AuthProvider } from '@/components/auth-provider';
 import { ThemeProvider } from '@/components/theme-provider';
 import { PostHogProvider } from '@/components/posthog-provider';
+import { QueryProvider } from '@/components/query-provider';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -21,14 +22,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <PostHogProvider>
-          <AuthProvider>
-            <ThemeProvider>
-              <Header />
-              {children}
-            </ThemeProvider>
-          </AuthProvider>
-        </PostHogProvider>
+        <QueryProvider>
+          <PostHogProvider>
+            <AuthProvider>
+              <ThemeProvider>
+                <Header />
+                {children}
+              </ThemeProvider>
+            </AuthProvider>
+          </PostHogProvider>
+        </QueryProvider>
       </body>
     </html>
   );

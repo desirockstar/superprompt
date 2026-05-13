@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { notFound } from 'next/navigation';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
 type RouteCard = {
@@ -56,7 +57,7 @@ type ThreatCard = {
 type MonochromePromptCard = {
   id: string;
   theme: 'light' | 'dark';
-  titleLines: string[];
+  title: string;
   category: string;
   previewTop: string;
   previewBottom: string;
@@ -272,7 +273,7 @@ const MONOCHROME_PROMPT_CARDS: MonochromePromptCard[] = [
   {
     id: 'professional-email-responder',
     theme: 'light',
-    titleLines: ['Professional', 'Email', 'Responder'],
+    title: 'Professional Email Responder',
     category: 'Business Communications',
     previewTop:
       'Write a clear and professional reply to the message below. Confirm the main request, provide a concise response, and keep the tone polite and solution-focused.',
@@ -282,7 +283,7 @@ const MONOCHROME_PROMPT_CARDS: MonochromePromptCard[] = [
   {
     id: 'blog-post-writer',
     theme: 'dark',
-    titleLines: ['Blog Post', 'Writer'],
+    title: 'Blog Post Writer',
     category: 'Productivity',
     previewTop:
       'Create a practical blog post with a strong hook, three actionable sections, and a short conclusion. Use plain language, examples, and readable subheadings.',
@@ -322,6 +323,8 @@ function BrandIcon({ icon }: { icon: GlowCard['icon'] }) {
 }
 
 export default function TestCardsPage() {
+  if (process.env.NODE_ENV === 'production') notFound();
+
   const [expanded, setExpanded] = useState<Record<string, boolean>>({
     embercrest: true,
     frostspire: false,
@@ -1716,17 +1719,12 @@ export default function TestCardsPage() {
                     </p>
                   </div>
 
-                  <h2 className={`mt-11 text-[74px] font-bold leading-[0.9] tracking-[-0.04em] ${isLight ? 'text-[#222429]' : 'text-[#f0f0f2]'}`}>
-                    {card.titleLines.map((line) => (
-                      <span key={`${card.id}-${line}`}>
-                        {line}
-                        <br />
-                      </span>
-                    ))}
-                  </h2>
+<h2 title={card.title} className={`mt-11 text-[74px] font-bold leading-[0.9] tracking-[-0.04em] ${isLight ? 'text-[#222429]' : 'text-[#f0f0f2]'}`}>
+                                        {card.title.length > 29 ? card.title.slice(0, 29) + '...' : card.title}
+                                    </h2>
 
                   <p className={`mt-11 text-[18px] font-semibold uppercase tracking-[0.02em] ${isLight ? 'text-[#33353a]' : 'text-[#f0f0f2]'}`}>
-                    {card.category}
+                    {card.categoryNames[0] || 'All'}
                   </p>
 
                   <p className={`mt-11 text-[17px] leading-[1.24] tracking-[-0.01em] ${isLight ? 'text-[#1f2126]' : 'text-[#e2e2e5]'}`}>

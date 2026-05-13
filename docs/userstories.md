@@ -232,45 +232,11 @@
 
 ---
 
-**US-6: Daily AI Grading System**
+**US-6: Tier Data via Offline Pipeline** `[x] Removed`
 
-*As a platform, I want prompts graded every 24 hours via AI + user feedback, so that quality is maintained dynamically.*
+*As a platform, I want tier data sourced from an offline grading pipeline, so that prompt quality is maintained without in-repo AI processing.*
 
-- **Independent**: Yes - background job
-- **Negotiable**: Grading algorithm adjustable
-- **Valuable**: Core differentiator
-- **Estimable**: ~6 days
-- **Small**: Contains multiple components but testable
-- **Testable**: Yes
-
-**Acceptance Criteria:**
-
-| # | Category | Criteria |
-|---|----------|----------|
-| 1 | Functionality | Grading job runs automatically every 24 hours |
-| 2 | Functionality | Each prompt evaluated by AI model |
-| 3 | Functionality | User ratings factored into grading calculation |
-| 4 | Functionality | Category tier updates if criteria met |
-| 5 | Functionality | Grading timestamp recorded for each prompt |
-| 6 | Functionality | Admin can manually override top prompt grades |
-| 7 | Functionality | Grading history maintained for audit |
-| 8 | Performance | Grading job processes 1000 prompts/hour minimum |
-| 9 | Performance | Dashboard reflects updated grades within 1 hour |
-| 10 | Reliability | Job execution 99.9% successful |
-| 11 | Reliability | Failed jobs auto-retry up to 3 times |
-| 12 | Error Handling | Failed grading logged with error details |
-| 13 | Error Handling | Admin notification if job fails 3 consecutive times |
-| 14 | Security | AI model access secured via API key |
-| 15 | Compliance | Grading algorithm explainable if audited |
-
-**GIVEN-WHEN-THEN Scenarios:**
-
-- GIVEN a prompt in the system
-- WHEN 24 hours have passed since last grading
-- THEN the system runs AI evaluation
-- AND updates the category tier if criteria met
-- AND displays updated rating to users
-- AND grading runs automatically without manual trigger
+- **Reason Removed**: AI grading pipeline removed from MVP. Tier data (`complexity_score`, `complexity_tier`) is sourced from an external offline pipeline and written directly to `prompts.complexity_score` and `prompts.complexity_tier` columns. See `AGENTS.md` §9.
 
 ---
 
@@ -559,12 +525,12 @@
 
 #### Grading & Quality
 
-| ID  | Requirement         | Description                                |
-| --- | ------------------- | ----------------------------------------- |
-| FR-19 | AI Grading Job    | Run every 24 hours automatically        |
-| FR-20 | Category Updates | Dynamically update tier based on grading  |
-| FR-21 | User Ratings      | 1-5 star rating system                   |
-| FR-22 | Rating Display    | Show average rating + count              |
+| ID  | Requirement         | Description                                | Status |
+| --- | ------------------- | ----------------------------------------- |--------|
+| FR-19 | Tier Data Source | Offline pipeline writes `complexity_tier` to DB | `[x] Removed` |
+| FR-20 | Category Updates | Tier from `prompts.complexity_tier` column | `[x] Removed` |
+| FR-21 | User Ratings      | 1-5 star rating system                   | Pending |
+| FR-22 | Rating Display    | Show average rating + count              | Pending |
 
 #### Creator Ecosystem
 

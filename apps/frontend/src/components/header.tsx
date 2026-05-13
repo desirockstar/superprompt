@@ -14,25 +14,35 @@ import {
 } from './ui/dropdown-menu';
 import { useAuthStore } from '@/lib/store';
 import { useTheme } from './theme-provider';
+import { useCategories } from '@/lib/hooks/use-categories';
 
-const CATEGORIES = [
-  { name: 'All', description: 'Browse the full prompt library' },
-  { name: 'Business Communication', description: 'Professional emails, proposals, and memos' },
-  { name: 'Content Marketing', description: 'Blog posts, newsletters, and content strategy' },
-  { name: 'Developer Tools', description: 'Code review, documentation, and debugging' },
-  { name: 'Productivity', description: 'Task management, planning, and focus techniques' },
-  { name: 'Marketing', description: 'Campaigns, ad copy, and brand messaging' },
-  { name: 'Product Marketing', description: 'Launch plans, positioning, and go-to-market' },
-  { name: 'Customer Success', description: 'Onboarding, support scripts, and retention' },
-  { name: 'Content Creation', description: 'Scripts, captions, and creative writing' },
-  { name: 'Corporate Communications', description: 'Internal comms and announcements' },
-  { name: 'Video Production', description: 'Scripts, storyboards, and production plans' },
-];
+const CATEGORY_DESCRIPTIONS: Record<string, string> = {
+  'Business Communication': 'Professional emails, proposals, and memos',
+  'Content Marketing': 'Blog posts, newsletters, and content strategy',
+  'Developer Tools': 'Code review, documentation, and debugging',
+  'Productivity': 'Task management, planning, and focus techniques',
+  'Marketing': 'Campaigns, ad copy, and brand messaging',
+  'Product Marketing': 'Launch plans, positioning, and go-to-market',
+  'Customer Success': 'Onboarding, support scripts, and retention',
+  'Content Creation': 'Scripts, captions, and creative writing',
+  'Corporate Communications': 'Internal comms and announcements',
+  'Video Production': 'Scripts, storyboards, and production plans',
+  'All': 'Browse the full prompt library',
+};
+
+function buildCategories(categories: string[]) {
+  return categories.map(name => ({
+    name,
+    description: CATEGORY_DESCRIPTIONS[name] || `Browse ${name} prompts`,
+  }));
+}
 
 export function Header() {
   const { isAuthenticated, user, logout } = useAuthStore();
   const { theme, setTheme } = useTheme();
   const router = useRouter();
+  const { data: categories = ['All'] } = useCategories();
+  const CATEGORIES = buildCategories(categories);
   const [categoriesOpen, setCategoriesOpen] = React.useState(false);
 
   const handleCategorySelect = (category: string) => {
@@ -47,7 +57,7 @@ export function Header() {
     <header className="fixed left-1/2 top-4 z-50 -translate-x-1/2">
       <nav className="flex items-center gap-6 rounded-full border border-white/20 bg-black/80 backdrop-blur-sm px-8 py-3 shadow-lg">
         <Link href="/" className="flex items-center shrink-0">
-          <Image src="/logo.png" alt="SuperPrompt" width={140} height={32} style={{ height: 'auto', width: 'auto' }} priority className="hidden md:block" />
+          <Image src="/logo.png" alt="SuperPrompt" width={140} height={32} style={{ height: 'auto' }} priority className="hidden md:block lg:w-[300px]" />
           <Image src="/logo_small.png" alt="SuperPrompt" width={32} height={32} priority className="block md:hidden" />
         </Link>
 

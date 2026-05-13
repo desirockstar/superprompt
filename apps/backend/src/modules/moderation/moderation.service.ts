@@ -27,7 +27,7 @@ export class ModerationService {
     if (updated) {
       this.eventEmitter.emit(
         DOMAIN_EVENTS.PROMPT_APPROVED,
-        new PromptApprovedEvent(updated.slug, updated.category, updated.currentVersion),
+        new PromptApprovedEvent(updated.slug, updated.categoryIds?.[0] || '', updated.currentVersion),
       );
     }
 

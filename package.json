@@ -12,6 +12,7 @@
     "lint": "pnpm -r lint",
     "typecheck": "pnpm -r typecheck",
     "test": "pnpm -r test",
+    "db:drop": "pnpm --filter db drop",
     "db:generate": "pnpm --filter db generate",
     "db:migrate": "pnpm --filter db migrate",
     "db:push": "pnpm --filter db push",
@@ -28,6 +29,22 @@
     "pnpm": ">=8"
   },
   "packageManager": "pnpm@8.15.0",
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "kysely",
+        "@types/pg",
+        "pg",
+        "mysql2",
+        "better-sqlite3",
+        "bun:sqlite"
+      ]
+    },
+    "supportedArchitectures": {
+      "os": ["linux", "win32", "current"],
+      "cpu": ["x64", "current"]
+    }
+  },
   "dependencies": {
     "@octokit/rest": "^22.0.1",
     "@pulumi/pulumi": "^3.236.0",

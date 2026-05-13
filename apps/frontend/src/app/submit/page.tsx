@@ -9,25 +9,15 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
-
-const CATEGORIES = [
-  'Business Communication',
-  'Content Marketing',
-  'Developer Tools',
-  'Productivity',
-  'Marketing',
-  'Product Marketing',
-  'Customer Success',
-  'Content Creation',
-  'Corporate Communications',
-  'Video Production',
-];
+import { useCategories } from '@/lib/hooks/use-categories';
 
 const TIER_LEVELS = ['starter', 'builder', 'pro', 'super'];
 
 export default function SubmitPage() {
   const router = useRouter();
   const { isAuthenticated, authChecked } = useAuthStore();
+  const { data: allCategories = [] } = useCategories();
+  const submitCategories = allCategories.filter(c => c !== 'All');
 
   const [title, setTitle] = useState('');
   const [category, setCategory] = useState('');
@@ -175,7 +165,7 @@ export default function SubmitPage() {
                   required
                 >
                   <option value="">Select a category</option>
-                  {CATEGORIES.map((cat) => (
+                  {submitCategories.map((cat) => (
                     <option key={cat} value={cat}>{cat}</option>
                   ))}
                 </select>

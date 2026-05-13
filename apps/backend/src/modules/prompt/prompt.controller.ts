@@ -1,23 +1,12 @@
 import { Controller, Get, Post, Put, Param, Query, Body, Req, UseGuards } from '@nestjs/common';
+import { ApiTags, ApiBearerAuth } from '@nestjs/swagger';
 import { PromptService } from './prompt.service';
 import { AuthGuard, RequiredAuthGuard } from '../../common/guards/auth.guard';
 
+@ApiTags('User Prompts')
 @Controller('prompts')
 export class PromptController {
   constructor(private readonly promptService: PromptService) {}
-
-  @Get()
-  async findAll(
-    @Query('category') category?: string,
-    @Query('search') search?: string,
-    @Query('page') page?: number,
-    @Query('limit') limit?: number,
-    @Query('rating') rating?: number,
-    @Query('date') date?: string,
-    @Query('tier') tier?: string,
-  ) {
-    return this.promptService.findAll({ category, search, page, limit, rating, date, tier });
-  }
 
   @Get(':id/preview')
   async getPreview(@Param('id') id: string) {
@@ -25,13 +14,13 @@ export class PromptController {
     return {
       id: prompt.id,
       title: prompt.title,
-      category: prompt.category,
       status: prompt.status,
       basePath: prompt.basePath,
       currentVersion: prompt.currentVersion,
       isMultiVersion: prompt.isMultiVersion,
       createdAt: prompt.createdAt,
       preview: prompt.preview,
+      tier: prompt.complexityTier || null,
     };
   }
 
@@ -95,7 +84,7 @@ export class PromptController {
 
   @UseGuards(RequiredAuthGuard)
   @Post()
-  async create(@Body() body: { title: string; category: string; content: Record<string, string>; isMultiVersion?: boolean }, @Req() req: any) {
+  async create(@Body() body: { title: string; categoryIds: string[]; content: Record<string, string>; isMultiVersion?: boolean }, @Req() req: any) {
     return this.promptService.createWithUser(req.user.id, body);
   }
 
@@ -106,14 +95,5 @@ export class PromptController {
     @Body() body: { content: Record<string, string>; isMultiVersion?: boolean },
   ) {
     return this.promptService.updateWithUser(id, body);
-  }
-
-  @Get(':id/evaluation')
-  async getEvaluation(@Param('id') id: string) {
-    const evaluation = await this.promptService.getEvaluation(id);
-    if (!evaluation) {
-      return { level: null, status: 'not_evaluated', scores: [] };
-    }
-    return evaluation;
   }
 }

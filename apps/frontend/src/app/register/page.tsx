@@ -13,7 +13,7 @@ const CardHeader = (props: any) => <div {...props} />;
 const CardTitle = (props: any) => <h3 {...props} />;
 const Input = (props: any) => <input {...props} className={"flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 " + (props.className || '')} />;
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api';
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api/v1';
 
 export default function RegisterPage() {
   const router = useRouter();

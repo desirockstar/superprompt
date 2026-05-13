@@ -1,7 +1,7 @@
 import { Injectable, Inject } from '@nestjs/common';
 import { DB_KEY } from '../db/db.module';
 import type { Database } from '../db/db.module';
-import { prompts as promptsTable } from '@superprompt/db';
+import { prompts as promptsTable, categories, tags } from '@superprompt/db';
 import { eq, desc, asc, sql, and, count } from 'drizzle-orm';
 
 @Injectable()
@@ -11,14 +11,24 @@ export class SearchService {
     private readonly db: Database,
   ) {}
 
+  private async resolveCategoryId(categoryName: string): Promise<string | null> {
+    const [cat] = await this.db.select().from(categories).where(eq(categories.name, categoryName)).limit(1);
+    return cat?.id || null;
+  }
+
+  private async resolveTagId(tagName: string): Promise<string | null> {
+    const [tag] = await this.db.select().from(tags).where(eq(tags.name, tagName)).limit(1);
+    return tag?.id || null;
+  }
+
   async search(options: {
     search?: string;
     category?: string;
+    tag?: string;
     date?: string;
     tier?: string;
     page?: number;
     limit?: number;
-    tierMap?: Map<string, { level: string; score: string }>;
   }) {
     const page = options.page || 1;
     const limit = options.limit || 10;
@@ -30,12 +40,20 @@ export class SearchService {
       orderByClause = asc(promptsTable.createdAt);
     }
 
-    // Build where clause
-    let baseCondition = eq(promptsTable.status, 'approved');
+    let baseCondition: ReturnType<typeof eq> | undefined = eq(promptsTable.status, 'approved');
     
-    // Add category filter to SQL if possible
     if (options.category && options.category !== 'All') {
-      baseCondition = and(baseCondition, eq(promptsTable.category, options.category));
+      const categoryId = await this.resolveCategoryId(options.category);
+      if (categoryId) {
+        baseCondition = and(baseCondition, sql`${categoryId} = ANY(${promptsTable.categoryIds})`);
+      }
+    }
+
+    if (options.tag && options.tag !== 'All') {
+      const tagId = await this.resolveTagId(options.tag);
+      if (tagId) {
+        baseCondition = and(baseCondition, sql`${tagId} = ANY(${promptsTable.tagIds})`);
+      }
     }
 
     if (options.search && options.search.trim()) {
@@ -51,18 +69,16 @@ export class SearchService {
       if (fuzzyTsQuery) {
         baseCondition = and(
           baseCondition,
-          sql`to_tsvector('english', coalesce(${promptsTable.title}, '') || ' ' || coalesce(${promptsTable.category}, '')) @@ to_tsquery('english', ${fuzzyTsQuery})`,
+          sql`to_tsvector('english', coalesce(${promptsTable.title}, '')) @@ to_tsquery('english', ${fuzzyTsQuery})`,
         );
       }
     }
 
-    // Get total count for pagination info
     const totalResult = await this.db.select({ count: count() })
       .from(promptsTable)
       .where(baseCondition);
     const total = totalResult[0]?.count || 0;
 
-    // Build order by expressions
     let orderByExpressions: any[] = [];
     if (options.search && options.search.trim()) {
       const searchTerm = options.search.trim();
@@ -76,7 +92,7 @@ export class SearchService {
       
       if (fuzzyTsQuery) {
         orderByExpressions = [
-          desc(sql`ts_rank_cd(to_tsvector('english', coalesce(${promptsTable.title}, '') || ' ' || coalesce(${promptsTable.category}, '')), to_tsquery('english', ${fuzzyTsQuery}))`),
+          desc(sql`ts_rank_cd(to_tsvector('english', coalesce(${promptsTable.title}, '')), to_tsquery('english', ${fuzzyTsQuery}))`),
           orderByClause,
         ];
       }
@@ -84,36 +100,13 @@ export class SearchService {
       orderByExpressions = [orderByClause];
     }
 
-    // Get paginated results with proper ordering - fetch extra to handle tier filter
-    const fetchLimit = options.tier ? limit * 3 : limit;
     const paginatedPrompts = await this.db.select()
       .from(promptsTable)
       .where(baseCondition)
       .orderBy(...orderByExpressions)
-      .limit(fetchLimit)
+      .limit(limit)
       .offset(start);
 
-    // Apply tier filter in memory (only tier, since category is now in SQL)
-    let filteredPrompts = paginatedPrompts;
-    if (options.tier && options.tier !== 'All' && options.tierMap) {
-      filteredPrompts = paginatedPrompts.filter(p => {
-        const evalTier = options.tierMap!.get(p.slug)?.level;
-        return evalTier?.toLowerCase() === options.tier.toLowerCase();
-      });
-    }
-
-    // Ensure we return exactly 'limit' items if possible by fetching more if needed
-    if (filteredPrompts.length < limit && fetchLimit > limit) {
-      const morePrompts = await this.db.select()
-        .from(promptsTable)
-        .where(baseCondition)
-        .orderBy(...orderByExpressions)
-        .limit(limit - filteredPrompts.length)
-        .offset(start + paginatedPrompts.length);
-      
-      filteredPrompts = [...filteredPrompts, ...morePrompts];
-    }
-
-    return { prompts: filteredPrompts.slice(0, limit), total, page, limit };
+    return { prompts: paginatedPrompts, total, page, limit };
   }
 }

@@ -1,41 +1,30 @@
-import { Controller, Get, Post, Param, Query, UseGuards, Req, UnauthorizedException } from '@nestjs/common';
+import { Controller, Get, Post, Param, Query, UseGuards, Req } from '@nestjs/common';
 import { AdminService } from './admin.service';
-import { AuthGuard } from '../../common/guards/auth.guard';
+import { RequiredAuthGuard } from '../../common/guards/auth.guard';
+import { AdminGuard } from '../../common/guards/admin.guard';
 
 @Controller('admin/prompts')
-@UseGuards(AuthGuard)
+@UseGuards(RequiredAuthGuard, AdminGuard)
 export class AdminController {
   constructor(private readonly adminService: AdminService) {}
 
   @Get()
-  async getPrompts(@Req() req: any, @Query('status') status?: string) {
-    if (!req.user || !req.user.isAdmin) {
-      throw new UnauthorizedException('Admin access required');
-    }
+  async getPrompts(@Query('status') status?: string) {
     return this.adminService.getAllPrompts(status);
   }
 
   @Get('pending')
-  async getPending(@Req() req: any) {
-    if (!req.user || !req.user.isAdmin) {
-      throw new UnauthorizedException('Admin access required');
-    }
+  async getPending() {
     return this.adminService.getPendingPrompts();
   }
 
   @Post(':slug/approve')
-  async approve(@Req() req: any, @Param('slug') slug: string) {
-    if (!req.user || !req.user.isAdmin) {
-      throw new UnauthorizedException('Admin access required');
-    }
+  async approve(@Param('slug') slug: string) {
     return this.adminService.approvePrompt(slug);
   }
 
   @Post(':slug/reject')
-  async reject(@Req() req: any, @Param('slug') slug: string) {
-    if (!req.user || !req.user.isAdmin) {
-      throw new UnauthorizedException('Admin access required');
-    }
+  async reject(@Param('slug') slug: string) {
     return this.adminService.rejectPrompt(slug);
   }
 }

@@ -3,7 +3,7 @@ import { existsSync, readFileSync } from 'fs';
 import { join } from 'path';
 import { DB_KEY } from '../db/db.module';
 import type { Database } from '../db/db.module';
-import { prompts as promptsTable, evaluations, evaluationScores, subscriptions, unlocks } from '@superprompt/db';
+import { prompts as promptsTable, subscriptions, unlocks } from '@superprompt/db';
 import { eq, desc, asc, sql, and } from 'drizzle-orm';
 
 @Injectable()
@@ -22,7 +22,6 @@ export class PromptService {
     limit?: number;
     rating?: number;
     date?: string;
-    tier?: string;
   }) {
     const page = options?.page || 1;
     const limit = options?.limit || 10;
@@ -45,61 +44,35 @@ export class PromptService {
         .map((token) => `${token}:*`)
         .join(' & ');
 
-      if (!fuzzyTsQuery) {
-        allPrompts = [];
-      } else {
-      
-        const searchResults = await this.db.select()
+      if (fuzzyTsQuery) {
+        allPrompts = await this.db.select()
           .from(promptsTable)
           .where(
             and(
               eq(promptsTable.status, 'approved'),
-              sql`to_tsvector('english', coalesce(${promptsTable.title}, '') || ' ' || coalesce(${promptsTable.category}, '')) @@ to_tsquery('english', ${fuzzyTsQuery})`
+              sql`to_tsvector('english', coalesce(${promptsTable.title}, '')) @@ to_tsquery('english', ${fuzzyTsQuery})`
             )
           )
           .orderBy(
-            desc(sql`ts_rank_cd(to_tsvector('english', coalesce(${promptsTable.title}, '') || ' ' || coalesce(${promptsTable.category}, '')), to_tsquery('english', ${fuzzyTsQuery}))`),
+            desc(sql`ts_rank_cd(to_tsvector('english', coalesce(${promptsTable.title}, '')), to_tsquery('english', ${fuzzyTsQuery}))`),
             orderByClause
           );
-
-        allPrompts = searchResults;
       }
     } else {
-      const normalResults = await this.db.select()
+      allPrompts = await this.db.select()
         .from(promptsTable)
         .where(eq(promptsTable.status, 'approved'))
         .orderBy(orderByClause);
-      
-      allPrompts = normalResults;
-    }
-    
-    if (options?.category && options.category !== 'All') {
-      allPrompts = allPrompts.filter(p => p.category === options.category);
-    }
-
-    let tierMap: Map<string, { level: string; score: string }> = new Map();
-    if (options?.tier && options.tier !== 'All') {
-      tierMap = await this.getEvaluationsWithTiers();
-    }
-
-    if (options?.tier && options.tier !== 'All') {
-      allPrompts = allPrompts.filter(p => {
-        const evalTier = tierMap.get(p.slug)?.level;
-        return evalTier === options.tier;
-      });
     }
 
     const total = allPrompts.length;
     const paginated = allPrompts.slice(start, start + limit);
 
-    const finalTierMap = await this.getEvaluationsWithTiers();
-
     const promptsWithPreview = await Promise.all(
       paginated.map(async (p) => ({
         ...p,
         preview: await this.getPreview(p.basePath, p.currentVersion, p.isMultiVersion),
-        tier: finalTierMap.get(p.slug)?.level || null,
-        primaryTag: p.primaryTag,
+        tier: p.complexityTier || null,
         isViral: p.isViral,
         isNano: p.isNano,
         views: p.views,
@@ -149,7 +122,6 @@ export class PromptService {
         }
       }
     } else {
-      // Single version: read content.md
       try {
         content.content = await this.getContentByPath(basePath, 'content', version);
       } catch {
@@ -163,10 +135,8 @@ export class PromptService {
     const ver = version || 1;
     const cleanPath = basePath.replace(/^prompts\//, '');
     
-    // Try content.md first (single version), then starter.md (multi version)
     let filePath = join(this.promptsBasePath, cleanPath, `v${ver}`, 'content.md');
     if (!existsSync(filePath) && !isMultiVersion) {
-      // Single version fallback - check if there's any content
       const dirPath = join(this.promptsBasePath, cleanPath, `v${ver}`);
       if (existsSync(dirPath)) {
         const fs = require('fs');
@@ -190,47 +160,36 @@ export class PromptService {
   private readFileWithPreview(filePath: string): string {
     const content = readFileSync(filePath, 'utf-8');
     const lines = content.split('\n');
-    
-    let startIndex = 0;
-    // Skip YAML frontmatter if present
-    if (lines.length > 0 && lines[0].trim() === '---') {
-      for (let i = 1; i < lines.length; i++) {
-        if (lines[i].trim() === '---') {
-          startIndex = i + 1;
-          break;
-        }
-      }
-    }
-    
-    const contentLines = lines.slice(startIndex);
-    const totalLines = contentLines.length;
+    const totalLines = lines.length;
     const previewLineCount = Math.max(10, Math.ceil(totalLines * 0.35));
-    return contentLines.slice(0, previewLineCount).join('\n');
+    return lines.slice(0, previewLineCount).join('\n');
   }
 
   async getContentByPath(basePath: string, level: string, version?: number): Promise<string> {
     const ver = version || 1;
     const cleanPath = basePath.replace(/^prompts\//, '');
     const filePath = join(this.promptsBasePath, cleanPath, `v${ver}`, `${level}.md`);
-    
+
     if (!existsSync(filePath)) {
       throw new NotFoundException('Prompt content not found');
     }
     return readFileSync(filePath, 'utf-8');
   }
 
-  async createWithUser(userId: string, data: { title: string; category: string; content: Record<string, string>; isMultiVersion?: boolean }) {
+  async createWithUser(userId: string, data: { title: string; categoryIds: string[]; content: Record<string, string>; isMultiVersion?: boolean }) {
     const basePath = `prompts/${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
     const isMulti = data.isMultiVersion || Object.keys(data.content).some(k => k !== 'content');
+    const slug = data.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') + '-' + Date.now().toString(36);
     
     const [created] = await this.db.insert(promptsTable).values({
+      slug,
       userId,
       title: data.title,
-      category: data.category,
+      categoryIds: data.categoryIds || [],
+      tagIds: [],
       status: 'pending',
       basePath,
       currentVersion: 1,
-      isMultiVersion: isMulti,
     }).returning();
     
     await this.savePromptFiles(basePath, data.content, 1, isMulti);
@@ -248,7 +207,6 @@ export class PromptService {
     }
     
     if (isMultiVersion) {
-      // Save multiple tier files
       for (const [level, text] of Object.entries(content)) {
         if (text.trim() && level !== 'content') {
           const filePath = join(versionDir, `${level}.md`);
@@ -256,7 +214,6 @@ export class PromptService {
         }
       }
     } else {
-      // Single version: save as content.md
       const singleContent = content.content || Object.values(content)[0] || '';
       if (singleContent.trim()) {
         fs.writeFileSync(join(versionDir, 'content.md'), singleContent);
@@ -265,8 +222,6 @@ export class PromptService {
   }
 
   async findByUser(userId: string) {
-    const tierMap = await this.getEvaluationsWithTiers();
-    
     const results = await this.db.select()
       .from(promptsTable)
       .where(eq(promptsTable.userId, userId))
@@ -275,7 +230,7 @@ export class PromptService {
     return {
       prompts: results.map(p => ({
         ...p,
-        tier: tierMap.get(p.slug)?.level || null,
+        tier: p.complexityTier || null,
       })),
     };
   }
@@ -320,44 +275,5 @@ export class PromptService {
     const hasUnlock = !!unlock;
 
     return { hasAccess: hasSubscription || hasUnlock, hasSubscription, hasUnlock };
-  }
-
-  async getEvaluation(promptSlug: string) {
-    const [evaluation] = await this.db.select()
-      .from(evaluations)
-      .where(eq(evaluations.promptSlug, promptSlug))
-      .limit(1);
-
-    if (!evaluation) {
-      return null;
-    }
-
-    const scores = await this.db.select()
-      .from(evaluationScores)
-      .where(eq(evaluationScores.evaluationId, evaluation.id));
-
-    return {
-      ...evaluation,
-      scores,
-    };
-  }
-
-  async getEvaluationsWithTiers() {
-    const allEvaluations = await this.db.select()
-      .from(evaluations)
-      .where(eq(evaluations.status, 'completed'));
-
-    const tierMap = new Map<string, { level: string; score: string }>();
-    for (const evaluation of allEvaluations) {
-      const existing = tierMap.get(evaluation.promptSlug);
-      if (!existing || (evaluation.overallScore && parseFloat(evaluation.overallScore) > parseFloat(existing.score))) {
-        tierMap.set(evaluation.promptSlug, {
-          level: evaluation.level,
-          score: evaluation.overallScore || '0',
-        });
-      }
-    }
-
-    return tierMap;
   }
 }

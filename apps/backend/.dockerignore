@@ -1,0 +1,8 @@
+node_modules
+dist
+src/prompts-tmp
+*.spec.ts
+*.e2e-spec.ts
+__tests__
+coverage
+.env

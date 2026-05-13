@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useState, useCallback, useRef } from 'react';
+import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { api } from '@/lib/api';
 import { PromptCard } from '@/components/prompt-card';
@@ -14,8 +15,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-
-const CATEGORIES = ['All', 'Business Communication', 'Content Marketing', 'Developer Tools', 'Productivity', 'Marketing', 'Product Marketing', 'Customer Success', 'Content Creation', 'Corporate Communications', 'Video Production'];
+import { useCategories } from '@/lib/hooks/use-categories';
 
 const TIERS = ['All', 'starter', 'builder', 'pro', 'super'];
 const DATES = ['All', 'newest', 'oldest'];
@@ -30,6 +30,8 @@ interface PromptWithPreview extends Prompt {
 }
 
 export default function Home() {
+  if (process.env.NODE_ENV === 'production') notFound();
+
   const [prompts, setPrompts] = useState<PromptWithPreview[]>([]);
   const [loading, setLoading] = useState(true);
   const [loadingMore, setLoadingMore] = useState(false);
@@ -41,6 +43,7 @@ export default function Home() {
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
   const loadMoreRef = useRef<HTMLDivElement>(null);
+  const { data: categories = ['All'] } = useCategories();
 
   const loadPrompts = useCallback(async (pageNum = 1, reset = true) => {
     if (pageNum === 1) {
@@ -163,7 +166,7 @@ export default function Home() {
           </div>
           
           <div className="flex flex-wrap gap-2">
-            {CATEGORIES.map((cat) => (
+            {categories.map((cat) => (
               <Button
                 key={cat}
                 variant={category === cat ? 'default' : 'outline'}

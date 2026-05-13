@@ -9,7 +9,7 @@ import type { Prompt } from '@/lib/types';
 import { Share2 } from 'lucide-react';
 
 interface PromptCardProps {
-  prompt: Prompt & { primaryTag?: string; views?: number; isViral?: boolean; isNano?: boolean; likes?: number };
+  prompt: Prompt & { primaryTag?: string; views?: number; isViral?: boolean; isNano?: boolean; likes?: number; categoryNames?: string[] };
   preview?: string;
   tier?: 'starter' | 'builder' | 'pro' | 'super' | null;
 }
@@ -18,8 +18,11 @@ export function PromptCard({ prompt, preview, tier }: PromptCardProps) {
   const [liked, setLiked] = useState(false);
   const [likeCount, setLikeCount] = useState(prompt.likes || 0);
 
+  const catNames = prompt.categoryNames || [];
+  const firstCategory = catNames[0] || 'Uncategorized';
+
   const getCategoryVariant = () => {
-    const cat = prompt.category.toLowerCase();
+    const cat = firstCategory.toLowerCase();
     if (cat.includes('business')) return 'secondary';
     if (cat.includes('content')) return 'default';
     if (cat.includes('developer')) return 'destructive';
@@ -73,7 +76,7 @@ export function PromptCard({ prompt, preview, tier }: PromptCardProps) {
         <CardFooter className="flex items-center justify-between text-xs text-muted-foreground">
           <div className="flex items-center gap-2">
             <span className={badgeVariants({ variant: getCategoryVariant() })}>
-              {prompt.category}
+              {firstCategory}
             </span>
           </div>
           <div className="flex items-center gap-3">

@@ -9,12 +9,14 @@ services:
     environment:
       - CHOKIDAR_USEPOLLING=true     # NestJS --watch (chokidar)
       - CHOKIDAR_INTERVAL=1000       # Poll every 1 s (default 300 ms is noisy)
-      - DATABASE_URL=postgres://postgres:postgres@db:5432/superprompt
+      - DATABASE_URL=postgres://postgres:postgres@host.docker.internal:5432/superprompt
     ports:
       - target: 4000
         published: 4000
         protocol: tcp
         host_ip: 0.0.0.0
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     depends_on:
       - db
 

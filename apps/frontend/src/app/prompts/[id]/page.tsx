@@ -25,9 +25,10 @@ interface PromptContent {
 }
 
 interface PromptData {
-  id: string;
+  id?: string;
+  slug?: string;
   title: string;
-  category: string;
+  categoryNames: string[];
   status: string;
   basePath: string;
   currentVersion: number;
@@ -42,6 +43,7 @@ interface PromptData {
 }
 
 interface RelatedPrompt extends PromptData {
+  slug: string;
   tier: string | null;
 }
 
@@ -57,7 +59,7 @@ export default function PromptPage() {
   const [unlocking, setUnlocking] = useState(false);
   const [unlocked, setUnlocked] = useState(false);
   const [showAdDialog, setShowAdDialog] = useState(false);
-  const [evaluationTier, setEvaluationTier] = useState<'starter' | 'builder' | 'pro' | 'super' | null>(null);
+  const [displayTier, setDisplayTier] = useState<'starter' | 'builder' | 'pro' | 'super' | null>(null);
   
   const [variables, setVariables] = useState<string[]>([]);
   const [variableValues, setVariableValues] = useState<Record<string, string>>({});
@@ -74,7 +76,6 @@ export default function PromptPage() {
     if (!authChecked) return;
     loadPrompt();
     checkIsUnlocked();
-    loadEvaluation();
     loadRelatedPrompts();
   }, [promptId, isAuthenticated, authChecked]);
 
@@ -91,35 +92,18 @@ export default function PromptPage() {
     }
   }, [prompt?.content, prompt?.preview, selectedLevel]);
 
+  useEffect(() => {
+    if (prompt?.tier) {
+      setDisplayTier(prompt.tier as 'starter' | 'builder' | 'pro' | 'super');
+    } else {
+      setDisplayTier(null);
+    }
+  }, [prompt?.tier]);
+
   async function checkIsUnlocked() {
     if (isAuthenticated && promptId) {
       const isUnlocked = unlockedPrompts.has(promptId);
       setUnlocked(isUnlocked);
-    }
-  }
-
-  async function loadEvaluation() {
-    try {
-      const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000';
-      const response = await fetch(`${baseUrl}/api/prompts/${promptId}/evaluation`, {
-        cache: 'no-store',
-      });
-      if (!response.ok || response.status === 204) {
-        setEvaluationTier(null);
-        return;
-      }
-      const text = await response.text();
-      if (!text) {
-        setEvaluationTier(null);
-        return;
-      }
-      const evalData = JSON.parse(text);
-      if (evalData.level) {
-        setEvaluationTier(evalData.level as 'starter' | 'builder' | 'pro' | 'super');
-      }
-    } catch (error) {
-      console.error('Failed to load evaluation:', error);
-      setEvaluationTier(null);
     }
   }
 
@@ -309,8 +293,8 @@ export default function PromptPage() {
         <div className="container mx-auto px-4 py-3 flex items-center gap-2 text-sm text-gray-400">
           <Link href="/" className="hover:text-gray-300 transition-colors">Home</Link>
           <span className="text-gray-400">›</span>
-          <Link href={`/?category=${encodeURIComponent(prompt.category)}`} className="hover:text-gray-300 transition-colors">
-            {prompt.category}
+          <Link href={`/?category=${encodeURIComponent(prompt.categoryNames[0] || 'all')}`} className="hover:text-gray-300 transition-colors">
+            {prompt.categoryNames[0] || 'All'}
           </Link>
           <span className="text-gray-400">›</span>
           <span className="text-gray-400 truncate max-w-[200px]">{prompt.primaryTag || prompt.title}</span>
@@ -364,11 +348,11 @@ export default function PromptPage() {
 
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2 mb-3">
-                      <span className="px-3 py-1 text-xs bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full font-medium">{prompt.category}</span>
+                      <span className="px-3 py-1 text-xs bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full font-medium">{prompt.categoryNames[0] || 'Uncategorized'}</span>
                       {prompt.primaryTag && (
                         <span className="px-3 py-1 text-xs bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full font-medium">{prompt.primaryTag}</span>
                       )}
-                      {evaluationTier && <TierBadge level={evaluationTier} />}
+                      {displayTier && <TierBadge level={displayTier} />}
                     </div>
 
                     {/* Description */}
@@ -709,7 +693,7 @@ export default function PromptPage() {
                       content: 'from-orange-500 to-amber-500',
                     };
                     const colorKey = Object.keys(categoryColors).find(k =>
-                      related.category.toLowerCase().includes(k)
+                      (related.categoryNames || []).some(c => c.toLowerCase().includes(k))
                     ) || 'default';
                     const gradient = categoryColors[colorKey] || 'from-slate-500 to-slate-600';
 
@@ -738,7 +722,7 @@ export default function PromptPage() {
                         </p>
 
                         {/* Category */}
-                        <span className="text-xs text-muted-foreground">{related.category}</span>
+                        <span className="text-xs text-muted-foreground">{(related.categoryNames || [])[0] || 'Uncategorized'}</span>
 
                         {/* Footer: rating + uses */}
                         <div className="mt-auto flex items-center justify-between text-xs text-muted-foreground pt-1 border-t">
@@ -900,7 +884,7 @@ export default function PromptPage() {
                     <TagIcon className="h-4 w-4 text-muted-foreground mt-0.5 shrink-0" />
                     <div>
                       <div className="text-xs text-muted-foreground">Category</div>
-                      <div className="text-sm font-medium">{prompt.category}</div>
+                      <div className="text-sm font-medium">{prompt.categoryNames[0] || 'Uncategorized'}</div>
                     </div>
                   </div>
                   {prompt.primaryTag && (
@@ -950,11 +934,11 @@ export default function PromptPage() {
                   <div>
                     <div className="text-xs text-muted-foreground mb-1.5">Tags</div>
                     <div className="flex flex-wrap gap-1.5">
-                      <span className="px-2 py-0.5 text-xs bg-muted rounded-md">{prompt.category.toLowerCase()}</span>
+                      <span className="px-2 py-0.5 text-xs bg-muted rounded-md">{(prompt.categoryNames[0] || 'uncategorized').toLowerCase()}</span>
                       {prompt.primaryTag && (
                         <span className="px-2 py-0.5 text-xs bg-muted rounded-md">{prompt.primaryTag.toLowerCase()}</span>
                       )}
-                      {evaluationTier && <TierBadge level={evaluationTier} />}
+                      {displayTier && <TierBadge level={displayTier} />}
                     </div>
                   </div>
                 </div>

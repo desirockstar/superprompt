@@ -1,8 +1,10 @@
-import { Controller, Post, Get, Body, UseGuards, Req, UnauthorizedException, Param } from '@nestjs/common';
+import { Controller, Post, Get, Body, UseGuards, Req, UnauthorizedException, BadRequestException, Param } from '@nestjs/common';
+import { ApiTags, ApiOperation, ApiResponse, ApiBearerAuth, ApiParam } from '@nestjs/swagger';
 import { UnlockService } from './unlock.service';
 import { RequiredAuthGuard } from '../../common/guards/auth.guard';
 import { AdMobProvider } from '../ad/ad.provider';
 
+@ApiTags('Unlocks')
 @Controller('prompts')
 export class UnlockController {
   constructor(
@@ -14,16 +16,18 @@ export class UnlockController {
   @Post(':slug/unlock')
   async unlock(
     @Req() req: any,
-    @Body() body: { adToken?: string },
+    @Body() body: { adToken: string },
   ) {
+    if (!body.adToken) {
+      throw new BadRequestException('Ad token required');
+    }
+
     const promptSlug = req.params.slug;
     const userId = req.user.id;
 
-    if (body.adToken) {
-      const verification = await this.adProvider.verifyCompletion(body.adToken);
-      if (!verification.valid) {
-        throw new UnauthorizedException('Invalid ad token');
-      }
+    const verification = await this.adProvider.verifyCompletion(body.adToken);
+    if (!verification.valid) {
+      throw new UnauthorizedException('Invalid ad token');
     }
 
     const unlocked = await this.unlockService.unlockViaAd(userId, promptSlug);

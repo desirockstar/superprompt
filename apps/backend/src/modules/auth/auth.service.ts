@@ -19,7 +19,16 @@ export class AuthService {
   ) {}
 
   private hashPassword(password: string): string {
-    return crypto.createHash('sha256').update(password).digest('hex');
+    const salt = crypto.randomBytes(16).toString('hex');
+    const hash = crypto.scryptSync(password, salt, 64).toString('hex');
+    return `${salt}:${hash}`;
+  }
+
+  private verifyPassword(password: string, storedHash: string): boolean {
+    const [salt, hash] = storedHash.split(':');
+    if (!salt || !hash) return false;
+    const derived = crypto.scryptSync(password, salt, 64).toString('hex');
+    return crypto.timingSafeEqual(Buffer.from(derived, 'hex'), Buffer.from(hash, 'hex'));
   }
 
   async createSession(userId: string): Promise<string> {
@@ -72,7 +81,7 @@ export class AuthService {
     }
 
     const user = result[0];
-    if (user.passwordHash !== this.hashPassword(password)) {
+    if (!user.passwordHash || !this.verifyPassword(password, user.passwordHash)) {
       throw new UnauthorizedException('Invalid credentials');
     }
 

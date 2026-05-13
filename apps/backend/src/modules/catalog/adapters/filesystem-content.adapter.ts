@@ -91,12 +91,7 @@ export class FilesystemContentAdapter implements ContentRepository {
       throw new NotFoundException(`Prompt content not found: ${filePath}`);
     }
 
-    try {
-      return readFileSync(filePath, 'utf-8');
-    } catch (error) {
-      this.logger.error(`Error reading content from ${filePath}:`, error);
-      throw error;
-    }
+    return readFileSync(filePath, 'utf-8');
   }
 
   async store(basePath: string, version: number, level: string, content: string): Promise<void> {
@@ -146,21 +141,8 @@ export class FilesystemContentAdapter implements ContentRepository {
   private readFileWithPreview(filePath: string): string {
     const content = readFileSync(filePath, 'utf-8');
     const lines = content.split('\n');
-    
-    let startIndex = 0;
-    // Skip YAML frontmatter if present
-    if (lines.length > 0 && lines[0].trim() === '---') {
-      for (let i = 1; i < lines.length; i++) {
-        if (lines[i].trim() === '---') {
-          startIndex = i + 1;
-          break;
-        }
-      }
-    }
-    
-    const contentLines = lines.slice(startIndex);
-    const totalLines = contentLines.length;
+    const totalLines = lines.length;
     const previewLineCount = Math.max(10, Math.ceil(totalLines * 0.35));
-    return contentLines.slice(0, previewLineCount).join('\n');
+    return lines.slice(0, previewLineCount).join('\n');
   }
 }

@@ -1,5 +1,6 @@
-# Dependencies
-node_modules
+# Dependencies - exclude ALL node_modules recursively
+**/node_modules
+**/.next
 .pnpm-store
 
 # Build artifacts

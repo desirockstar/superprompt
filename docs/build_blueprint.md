@@ -117,9 +117,7 @@ config/
 
 ### Grading Module
 
-* Scheduler (24h)
-* Manual trigger
-* AI integration
+*Removed.* Tier data (`complexity_score`, `complexity_tier`) is sourced from an offline pipeline and written directly to `prompts` table columns. See `AGENTS.md` §9.
 
 ---
 
@@ -135,10 +133,9 @@ config/
 Endpoints:
 
 ```ts
-POST /admin/grading/run
-GET  /admin/prompts?needs_grading=true
-POST /admin/prompts
-PUT  /admin/prompts/:id
+GET  /admin/prompts?status=pending
+POST /admin/prompts/:slug/approve
+POST /admin/prompts/:slug/reject
 ```
 
 ---
@@ -146,22 +143,14 @@ PUT  /admin/prompts/:id
 # 🧬 Drizzle Schema (Starter)
 
 ```ts
-// packages/db/schema.ts
-
 export const prompts = pgTable('prompts', {
-  id: uuid('id').primaryKey(),
-  title: text('title'),
-  category: text('category'),
-  basePath: text('base_path'),
-  currentVersion: integer('current_version'),
-  createdAt: timestamp('created_at').defaultNow(),
-})
-
-export const promptVersions = pgTable('prompt_versions', {
-  id: uuid('id').primaryKey(),
-  promptId: uuid('prompt_id'),
-  versionNumber: integer('version_number'),
-  needsGrading: boolean('needs_grading').default(true),
+  slug: text('slug').primaryKey(),
+  title: text('title').notNull(),
+  categoryIds: uuid('category_ids').notNull().array(),
+  complexityScore: text('complexity_score'),
+  complexityTier: text('complexity_tier'),
+  basePath: text('base_path').notNull(),
+  currentVersion: integer('current_version').default(1),
   createdAt: timestamp('created_at').defaultNow(),
 })
 
