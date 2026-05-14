@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { Search, ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { Search, ChevronLeft, ChevronRight, X, Hash, ChevronDown } from 'lucide-react';
 import {
   Select,
   SelectContent,
@@ -11,7 +11,8 @@ import {
 } from './ui/select';
 import { useTheme } from './theme-provider';
 import { useCategories } from '@/lib/hooks/use-categories';
-import { useTags } from '@/lib/hooks/use-tags';
+import { useSuggest } from '@/lib/hooks/use-suggest';
+import type { SuggestResponse } from '@/lib/types/suggest';
 
 interface BottomSearchBarProps {
   search: string;
@@ -42,22 +43,41 @@ export function BottomSearchBar({
   setDate,
   onClearAll,
   categories: categoriesProp,
-  tags: tagsProp,
+  tags: _tagsProp,
 }: BottomSearchBarProps) {
   const { isDark } = useTheme();
   const { data: hookCategories } = useCategories();
-  const { data: hookTags } = useTags();
   const rawCategories = categoriesProp ?? hookCategories;
   const categories: string[] = (rawCategories ?? ['All']).map((c: any) =>
     typeof c === 'string' ? c : (c?.name ?? String(c))
   );
-  const rawTags = tagsProp ?? hookTags;
-  const tags: string[] = (rawTags ?? ['All']).map((t: any) =>
-    typeof t === 'string' ? t : (t?.name ?? String(t))
-  );
+
+  const [tagInput, setTagInput] = React.useState('');
+  const [tagDropdownOpen, setTagDropdownOpen] = React.useState(false);
+  const [highlightedIndex, setHighlightedIndex] = React.useState(-1);
+  const tagInputRef = React.useRef<HTMLInputElement>(null);
+  const tagDropdownRef = React.useRef<HTMLDivElement>(null);
+  const containerRef = React.useRef<HTMLDivElement>(null);
   const categoriesRef = React.useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = React.useState(false);
   const [canScrollRight, setCanScrollRight] = React.useState(true);
+  const [debouncedTagInput, setDebouncedTagInput] = React.useState('');
+
+  const { data: suggestData } = useSuggest(debouncedTagInput, ['tags', 'categories'], 10);
+
+  const flatSuggestions = React.useMemo(() => {
+    if (!suggestData) return [];
+    const items: { name: string; slug: string; type: string }[] = [];
+    if (suggestData.categories) {
+      items.push(...suggestData.categories.map(c => ({ ...c, type: 'category' })));
+    }
+    if (suggestData.tags) {
+      items.push(...suggestData.tags.map(t => ({ ...t, type: 'tag' })));
+    }
+    return items;
+  }, [suggestData]);
+
+  const showDropdown = tagDropdownOpen && debouncedTagInput.length > 0 && flatSuggestions.length > 0;
 
   const hasActiveFilters = search.trim() !== '' || category !== 'All' || tag !== 'All' || tier !== 'All' || date !== 'All';
 
@@ -104,9 +124,70 @@ export function BottomSearchBar({
     }
   }, []);
 
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedTagInput(tagInput);
+      setHighlightedIndex(-1);
+    }, 200);
+    return () => clearTimeout(timer);
+  }, [tagInput]);
+
+  React.useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        tagDropdownRef.current &&
+        !tagDropdownRef.current.contains(event.target as Node) &&
+        containerRef.current &&
+        !containerRef.current.contains(event.target as Node)
+      ) {
+        setTagDropdownOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  const handleTagInputFocus = () => {
+    if (tagInput.length > 0 || tag !== 'All') {
+      setTagDropdownOpen(true);
+    }
+  };
+
+  const handleTagSelect = (name: string) => {
+    setTag(name);
+    setTagInput('');
+    setDebouncedTagInput('');
+    setTagDropdownOpen(false);
+    setHighlightedIndex(-1);
+  };
+
+  const handleTagInputKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (!showDropdown) return;
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      setHighlightedIndex(prev => Math.min(prev + 1, flatSuggestions.length - 1));
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      setHighlightedIndex(prev => Math.max(prev - 1, 0));
+    } else if (e.key === 'Enter' && highlightedIndex >= 0) {
+      e.preventDefault();
+      handleTagSelect(flatSuggestions[highlightedIndex].name);
+    } else if (e.key === 'Escape') {
+      setTagDropdownOpen(false);
+      setHighlightedIndex(-1);
+    }
+  };
+
+  const handleTagClear = () => {
+    setTag('All');
+    setTagInput('');
+    setDebouncedTagInput('');
+  };
+
   return (
-    <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-full max-w-[700px] px-4">
+    <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-full max-w-[900px] px-4">
       <div
+        ref={containerRef}
         className={`relative overflow-hidden rounded-3xl border ${isDark ? 'border-white/18 shadow-[0_28px_80px_rgba(27,19,130,0.5)]' : 'border-white/10 shadow-[0_28px_80px_rgba(3,34,24,0.45)]'}`}
         style={{
           background: containerBackground,
@@ -117,6 +198,7 @@ export function BottomSearchBar({
         <div className={`absolute bottom-[-26%] left-1/2 h-52 w-72 -translate-x-1/2 rounded-full blur-[18px] ${isDark ? 'bg-[radial-gradient(circle,_rgba(122,143,255,0.38)_0%,_rgba(122,143,255,0.16)_34%,_transparent_74%)]' : 'bg-[radial-gradient(circle,_rgba(41,210,136,0.34)_0%,_rgba(41,210,136,0.14)_34%,_transparent_74%)]'}`} />
         <div className="absolute inset-x-[18%] top-[8%] h-16 bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.05)_0%,_rgba(255,255,255,0.02)_32%,_transparent_70%)] blur-[10px]" />
         <div className={`relative rounded-[22px] backdrop-blur-[20px] ${isDark ? 'bg-[linear-gradient(180deg,rgba(15,14,68,0.2),rgba(16,18,81,0.32))]' : 'bg-[linear-gradient(180deg,rgba(6,36,27,0.14),rgba(6,36,27,0.24))]'}`}>
+
           {hasActiveFilters && (
             <div className="flex items-center gap-2 overflow-x-auto border-b border-white/10 px-4 py-2">
               <span className="shrink-0 text-xs text-white">Filters:</span>
@@ -138,10 +220,10 @@ export function BottomSearchBar({
               )}
               {tag !== 'All' && (
                 <button
-                  onClick={() => setTag('All')}
+                  onClick={handleTagClear}
                   className="flex shrink-0 items-center gap-1 rounded-full border border-white/10 bg-white/10 px-2 py-1 text-xs text-white"
                 >
-                  {typeof tag === 'string' ? tag : (tag as any)?.name} <X className="h-3 w-3" />
+                  #{tag} <X className="h-3 w-3" />
                 </button>
               )}
               {tier !== 'All' && (
@@ -162,7 +244,7 @@ export function BottomSearchBar({
               )}
               <button
                 onClick={onClearAll}
-                className={`ml-auto shrink-0 text-xs transition text-white`}
+                className="ml-auto shrink-0 text-xs transition text-white"
               >
                 Clear all
               </button>
@@ -205,17 +287,64 @@ export function BottomSearchBar({
               </SelectContent>
             </Select>
 
-            <Select value={tag} onValueChange={setTag}>
-              <SelectTrigger className="h-10 w-[110px] rounded-full border-white/10 bg-black/16 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.04),0_10px_30px_rgba(0,0,0,0.12)]">
-                <SelectValue placeholder="Tag" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="All">All Tags</SelectItem>
-                {tags.filter(t => t !== 'All').map((t) => (
-                  <SelectItem key={t} value={t}>{t}</SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+            <div ref={tagDropdownRef} className="relative">
+              <div className="relative flex items-center">
+                <Hash className="absolute left-3 h-4 w-4 text-white/48 pointer-events-none" />
+                <input
+                  ref={tagInputRef}
+                  type="text"
+                  placeholder={tag !== 'All' ? `#${tag}` : 'Tag...'}
+                  value={tagInput}
+                  onChange={(e) => setTagInput(e.target.value)}
+                  onFocus={handleTagInputFocus}
+                  onKeyDown={handleTagInputKeyDown}
+                  className={`h-10 w-[130px] rounded-full border border-white/10 bg-black/16 pl-8 pr-7 text-sm text-white placeholder:text-white/42 shadow-[inset_0_1px_0_rgba(255,255,255,0.04),0_10px_30px_rgba(0,0,0,0.12)] focus:outline-none ${isDark ? 'focus:border-[#8f9dff]' : 'focus:border-[#55d497]'}`}
+                />
+                {tagInput.length > 0 && (
+                  <button
+                    onClick={() => {
+                      setTagInput('');
+                      setDebouncedTagInput('');
+                      tagInputRef.current?.focus();
+                    }}
+                    className="absolute right-2.5 flex h-4 w-4 items-center justify-center rounded-full text-white/42 hover:text-white"
+                  >
+                    <X className="h-3 w-3" />
+                  </button>
+                )}
+                {tagInput.length === 0 && (
+                  <button
+                    onClick={() => {
+                      setTagDropdownOpen(prev => !prev);
+                      tagInputRef.current?.focus();
+                    }}
+                    className="absolute right-2.5 flex h-4 w-4 items-center justify-center text-white/42 hover:text-white"
+                  >
+                    <ChevronDown className="h-3 w-3" />
+                  </button>
+                )}
+              </div>
+
+              {showDropdown && (
+                <div className="absolute bottom-full mb-2 left-0 w-[220px] rounded-xl border border-white/10 bg-[#1a1a2e]/95 backdrop-blur-md shadow-xl overflow-hidden z-50">
+                  {flatSuggestions.map((item, idx) => (
+                    <button
+                      key={`${item.type}-${item.slug}`}
+                      onClick={() => handleTagSelect(item.name)}
+                      className={`flex w-full items-center gap-2 px-3 py-2 text-left text-sm text-white transition-colors ${
+                        idx === highlightedIndex ? 'bg-white/15' : 'hover:bg-white/10'
+                      }`}
+                    >
+                      <Hash className="h-3.5 w-3.5 shrink-0 text-white/40" />
+                      <span className="truncate">{item.name}</span>
+                      <span className="ml-auto shrink-0 rounded bg-white/10 px-1.5 py-0.5 text-[10px] uppercase text-white/60">
+                        {item.type}
+                      </span>
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
 
           <div className="flex items-center gap-2 px-2 pb-3">
